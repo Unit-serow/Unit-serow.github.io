@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>实验文章-1</title>
-    <url>/2020/01/28/%E5%AE%9E%E9%AA%8C%E6%96%87%E7%AB%A0-1/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>实验性文章</category>
-      </categories>
-      <tags>
-        <tag>实验性</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实验文章</title>
-    <url>/2020/01/28/%E5%AE%9E%E9%AA%8C%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h2 id="实验文章"><a href="#实验文章" class="headerlink" title="实验文章"></a>实验文章</h2><p>新主题的第一篇文章</p>
+    <title>基于debian使用hexo框架-next主题搭建并配置博客</title>
+    <url>/2020/01/28/%E5%9F%BA%E4%BA%8Edebian%E4%BD%BF%E7%94%A8hexo%E6%A1%86%E6%9E%B6-next%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%B9%B6%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h3 id="对于debian的基本配置"><a href="#对于debian的基本配置" class="headerlink" title="对于debian的基本配置"></a>对于debian的基本配置</h3><p>apt源的设置与一些基本软件的配置和准备这里就不过多阐述了<br>先修改一下/etc/hosts内的所配置IP,保证机器能ping通github.com<br><code>vim /etc/hosts</code> 内添加 <code>192.30.253.113 github.com</code></p>
+<p>接下来安装hexo所依赖的几个程序：npm，git，node.js<br><code>apt-get install npm*</code><br><code>apt-get install git*</code><br><code>apt-get install node.js*</code><br>安装完之后检查一下版本或者whereis一下看看所否健在<br>最后再安装hexo软件<br><code>npm install -g hexo-cli</code><br>安装完–version检查一下版本</p>
 <hr>
 ]]></content>
       <categories>
-        <category>实验性文案</category>
+        <category>软件</category>
       </categories>
+      <tags>
+        <tag>hexo,经验性</tag>
+      </tags>
   </entry>
 </search>

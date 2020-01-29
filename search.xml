@@ -35,7 +35,8 @@
   <entry>
     <title>GNU  Autotools</title>
     <url>/2020/01/29/Autotools/</url>
-    <content><![CDATA[<h3 id="GNU-Autotools-第一部分"><a href="#GNU-Autotools-第一部分" class="headerlink" title="GNU Autotools 第一部分"></a>GNU Autotools 第一部分</h3><p><strong>概述:</strong><br>autotools存在的目的就是用于生成makefile，从而实现降低makefile的维护难度与开发难度<br>autotools是一个工具集，它包含了一下程序<br>aclocal<br>autoscan<br>autoconf<br>autoheader<br>automake</p>
+    <content><![CDATA[<h3 id="GNU-Autotools-第一部分"><a href="#GNU-Autotools-第一部分" class="headerlink" title="GNU Autotools 第一部分"></a>GNU Autotools 第一部分</h3><p><strong>GNU 构建系统</strong></p>
+<p><strong>概述:</strong><br>autotools存在的目的就是用于生成makefile，从而实现降低makefile的维护难度与开发难度<br>autotools是一个工具集，它包含了一下程序<br>aclocal<br>autoscan<br>autoconf<br>autoheader<br>automake</p>
 <hr>
 <p><strong>aclocal</strong><br>aclocal(automake)<br>根据已安装的宏，用户定义宏和acinclude.m4文件中的宏将configure.ac文件所需要的宏集中定义到文件aclocal.m4文件中<br>aclocal由perl脚本所编写，定义为 <code>aclocal - create aclocal.m4 by scanning configure.ac</code></p>
 <hr>
@@ -74,7 +75,8 @@
   <entry>
     <title>GNU M4</title>
     <url>/2020/01/29/M4/</url>
-    <content><![CDATA[<h3 id="GNU-M4-第一部分"><a href="#GNU-M4-第一部分" class="headerlink" title="GNU M4 第一部分"></a>GNU M4 第一部分</h3><p><strong>概述:</strong><br>GNU M4是一种宏处理器<br>因为基于POSIX标准，所以兼容大部分SVR4<br>SVR4: UNIX操作系统的一种内核标准<br>其主要作用于GNU Autoconf project，通常是在安装autoconf时需要m4依赖才会安装它</p>
+    <content><![CDATA[<h3 id="GNU-M4-第一部分"><a href="#GNU-M4-第一部分" class="headerlink" title="GNU M4 第一部分"></a>GNU M4 第一部分</h3><p><strong>GNU 宏处理器</strong></p>
+<p><strong>概述:</strong><br>GNU M4是一种宏处理器<br>因为基于POSIX标准，所以兼容大部分SVR4<br>SVR4: UNIX操作系统的一种内核标准<br>其主要作用于GNU Autoconf project，通常是在安装autoconf时需要m4依赖才会安装它</p>
 <p>获取途径:<br>git: <code>git clone http://git.savannah.gnu.org/r/m4.git</code><br>http: <code>http://ftp.gnu.org/gnu/m4</code><br>ftp: <code>ftp://ftp.gnu.org/gnu/m4</code><br>apt-get: <code>apt-get install m4-doc或m4*</code></p>
 <hr>
 <p><strong>学习途径</strong></p>

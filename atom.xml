@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-29T04:40:30.914Z</updated>
+  <updated>2020-01-29T10:49:12.256Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GNU M4</title>
+    <link href="http://yoursite.com/2020/01/29/M4/"/>
+    <id>http://yoursite.com/2020/01/29/M4/</id>
+    <published>2020-01-29T10:16:43.000Z</published>
+    <updated>2020-01-29T10:49:12.256Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="GNU-M4-第一部分"><a href="#GNU-M4-第一部分" class="headerlink" title="GNU M4 第一部分"></a>GNU M4 第一部分</h3><p><strong>概述:</strong><br>GNU M4是一种宏处理器<br>因为基于POSIX标准，所以兼容大部分SVR4<br>SVR4: UNIX操作系统的一种内核标准<br>其主要作用于GNU Autoconf project，通常是在安装autoconf时需要m4依赖才会安装它</p><p>获取途径:<br>git: <code>git clone http://git.savannah.gnu.org/r/m4.git</code><br>http: <code>http://ftp.gnu.org/gnu/m4</code><br>ftp: <code>ftp://ftp.gnu.org/gnu/m4</code><br>apt-get: <code>apt-get install m4-doc或m4*</code></p><hr><p><strong>学习途径</strong></p><p>官方文档:<br><code>https://savannah.gnu.org/project/m4</code><br><a href="https://savannah.gnu.org/project/m4" target="_blank" rel="noopener">跳转</a></p><p>M4 宏语言手册<br><code>http://mbreen.com/m4.html</code><br><a href="http://mbreen.com/m4.html" target="_blank" rel="noopener">跳转</a></p><p>GNU M4 社区<br><code>http://savannah.gnu.org/projects/m4/</code><br><a href="http://savanah.gnu.org/project/m4" target="_blank" rel="noopener">跳转</a></p><p>默认帮助文档<br><code>m4 --help与man m4</code></p><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;GNU-M4-第一部分&quot;&gt;&lt;a href=&quot;#GNU-M4-第一部分&quot; class=&quot;headerlink&quot; title=&quot;GNU M4 第一部分&quot;&gt;&lt;/a&gt;GNU M4 第一部分&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;概述:&lt;/strong&gt;&lt;br&gt;GNU M4是一种宏
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="认识与概述" scheme="http://yoursite.com/tags/%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>基于debian使用hexo框架-next主题搭建并配置博客</title>

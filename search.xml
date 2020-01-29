@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>GNU M4</title>
+    <url>/2020/01/29/M4/</url>
+    <content><![CDATA[<h3 id="GNU-M4-第一部分"><a href="#GNU-M4-第一部分" class="headerlink" title="GNU M4 第一部分"></a>GNU M4 第一部分</h3><p><strong>概述:</strong><br>GNU M4是一种宏处理器<br>因为基于POSIX标准，所以兼容大部分SVR4<br>SVR4: UNIX操作系统的一种内核标准<br>其主要作用于GNU Autoconf project，通常是在安装autoconf时需要m4依赖才会安装它</p>
+<p>获取途径:<br>git: <code>git clone http://git.savannah.gnu.org/r/m4.git</code><br>http: <code>http://ftp.gnu.org/gnu/m4</code><br>ftp: <code>ftp://ftp.gnu.org/gnu/m4</code><br>apt-get: <code>apt-get install m4-doc或m4*</code></p>
+<hr>
+<p><strong>学习途径</strong></p>
+<p>官方文档:<br><code>https://savannah.gnu.org/project/m4</code><br><a href="https://savannah.gnu.org/project/m4" target="_blank" rel="noopener">跳转</a></p>
+<p>M4 宏语言手册<br><code>http://mbreen.com/m4.html</code><br><a href="http://mbreen.com/m4.html" target="_blank" rel="noopener">跳转</a></p>
+<p>GNU M4 社区<br><code>http://savannah.gnu.org/projects/m4/</code><br><a href="http://savanah.gnu.org/project/m4" target="_blank" rel="noopener">跳转</a></p>
+<p>默认帮助文档<br><code>m4 --help与man m4</code></p>
+<hr>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>认识与概述</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>基于debian使用hexo框架-next主题搭建并配置博客</title>
     <url>/2020/01/28/%E5%9F%BA%E4%BA%8Edebian%E4%BD%BF%E7%94%A8hexo%E6%A1%86%E6%9E%B6-next%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%B9%B6%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h3 id="对于debian的基本配置与hexo的安装"><a href="#对于debian的基本配置与hexo的安装" class="headerlink" title="对于debian的基本配置与hexo的安装"></a>对于debian的基本配置与hexo的安装</h3><p>apt源的设置与一些基本软件的配置和准备这里就不过多阐述了<br>先修改一下/etc/hosts内的所配置IP,保证机器能ping通github.com<br><code>vim /etc/hosts</code> 内添加 <code>192.30.253.113 github.com</code></p>

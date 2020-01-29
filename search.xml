@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>GNU  Autotools</title>
+    <url>/2020/01/29/Autotools/</url>
+    <content><![CDATA[<h3 id="GNU-Autotools-第一部分"><a href="#GNU-Autotools-第一部分" class="headerlink" title="GNU Autotools 第一部分"></a>GNU Autotools 第一部分</h3><p><strong>概述:</strong><br>autotools存在的目的就是用于生成makefile，从而实现降低makefile的维护难度与开发难度<br>autotools是一个工具集，它包含了一下程序<br>aclocal<br>autoscan<br>autoconf<br>autoheader<br>automake</p>
+<hr>
+<p><strong>aclocal</strong><br>aclocal(automake)<br>根据已安装的宏，用户定义宏和acinclude.m4文件中的宏将configure.ac文件所需要的宏集中定义到文件aclocal.m4文件中<br>aclocal由perl脚本所编写，定义为 <code>aclocal - create aclocal.m4 by scanning configure.ac</code></p>
+<hr>
+<p><strong>autoscan</strong><br>autoscan(autoconf)<br>用于扫描源代码以搜寻普通的可移植性问题，如检查编译器，库，头文件等<br>从而生成文件configure.scan，它是configure.ac的原型之一</p>
+<hr>
+<p><strong>autoheader</strong><br>autoheader(autoconf)<br>根据configure.ac中的某些宏，运行m4,<br>如ccp宏定义则声称config.h.in</p>
+<hr>
+<p><strong>Automake</strong><br>automake将makefile.am中定义的结构建立起makefile.in，然后configure脚本将生成的makefile.in文件转换为makefie<br>如果在configure.ac中有特殊定义的宏，比如AC-PROG-LIBTOOL,automake会调用libtoolize，否则产生config.guess和config.sub</p>
+<p>官方网站:<a href="https://www.gnu.org/software/automake/" target="_blank" rel="noopener">https://www.gnu.org/software/automake/</a><br><a href="https://www.gnu.org/software/automake/" target="_blank" rel="noopener">跳转</a></p>
+<p>官方文档:<code>https://www.gnu.org/software/automake/manual/automake.html</code><br><a href="https://www.gnu.org/software/automake/manual/automake.html" target="_blank" rel="noopener">跳转</a></p>
+<p>获取方式:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ftp: ftp:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;automake&#x2F; </span><br><span class="line">http: http:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;automake&#x2F;</span><br></pre></td></tr></table></figure>
+<p>帮助指令: <code>automake --help</code>与<code>man automake</code></p>
+<hr>
+<p><strong>Autoconf</strong><br>作用是将configure.ac中的宏展开，生成configure脚本/shell脚本，此过程中可能需要用到aclocal.m4中定义的宏<br>以达成自动配置软件源代码包</p>
+<p>官方网站: <code>https://www.gnu.org/software/autoconf/autoconf.html</code><br><a href="https://www.gnu.org/software/autoconf/autoconf.html" target="_blank" rel="noopener">跳转</a></p>
+<p>官方文档：<code>https://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.69/autconf.html</code><br><a href="https://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.69/autoconf.html" target="_blank" rel="noopener">跳转</a></p>
+<p>获取方式: </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ftp: ftp:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;autoconf&#x2F;</span><br><span class="line">http: http:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;autoconf&#x2F;</span><br><span class="line">git: git clone http:&#x2F;&#x2F;git.sv.gnu.org&#x2F;r&#x2F;autoconf.git</span><br><span class="line">apt-get: apt-get install autoconf*</span><br></pre></td></tr></table></figure>
+<p>帮助指令: <code>autoconf --help</code>与<code>man autoconf</code></p>
+<hr>
+<p><strong>Autotools</strong></p>
+<p>获取方式:<br><code>apt-get install autotools</code></p>
+<p>以上五个程序皆可称为M4宏的扩展包,文件处理的步骤与顺序，逻辑关系，应用等深度刨析第一部分里不做赘述<br>以上内容仅为主观理解，仅供参考</p>
+<hr>
+]]></content>
+      <categories>
+        <category>软件</category>
+        <category>GNU</category>
+      </categories>
+      <tags>
+        <tag>1.认识与概述</tag>
+        <tag>GNU/Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GNU M4</title>
     <url>/2020/01/29/M4/</url>
     <content><![CDATA[<h3 id="GNU-M4-第一部分"><a href="#GNU-M4-第一部分" class="headerlink" title="GNU M4 第一部分"></a>GNU M4 第一部分</h3><p><strong>概述:</strong><br>GNU M4是一种宏处理器<br>因为基于POSIX标准，所以兼容大部分SVR4<br>SVR4: UNIX操作系统的一种内核标准<br>其主要作用于GNU Autoconf project，通常是在安装autoconf时需要m4依赖才会安装它</p>

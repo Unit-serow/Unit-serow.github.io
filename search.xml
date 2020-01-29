@@ -61,4 +61,38 @@
         <tag>1.认识与概述</tag>
       </tags>
   </entry>
+  <entry>
+    <title>基于debian使用hexo框架-next主题搭建并配置博客</title>
+    <url>/2020/01/28/%E5%9F%BA%E4%BA%8Edebian%E4%BD%BF%E7%94%A8hexo%E6%A1%86%E6%9E%B6-next%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%B9%B6%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h3 id="对于debian的基本配置与hexo的安装"><a href="#对于debian的基本配置与hexo的安装" class="headerlink" title="对于debian的基本配置与hexo的安装"></a>对于debian的基本配置与hexo的安装</h3><p>apt源的设置与一些基本软件的配置和准备这里就不过多阐述了<br>先修改一下/etc/hosts内的所配置IP,保证机器能ping通github.com<br><code>vim /etc/hosts</code> 内添加 <code>192.30.253.113 github.com</code></p>
+<p>接下来安装hexo所依赖的几个程序：npm，git，node.js<br><code>apt-get install npm*</code><br><code>apt-get install git*</code><br><code>apt-get install node.js*</code><br>安装完之后检查一下版本或者whereis一下看看所否健在<br>最后再安装hexo软件<br><code>npm install -g hexo-cli</code><br>安装完–version检查一下版本</p>
+<hr>
+<h3 id="hexo的基本操作"><a href="#hexo的基本操作" class="headerlink" title="hexo的基本操作"></a>hexo的基本操作</h3><p>hexo –help<br><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">官方中文文档与手册</a><br>hexo安装完毕后可以先进行一下测试<br>于任意目录下新建一个文件夹 <code>mkdir blog</code><br>进入文件夹后分别执行<code>hexo init,hexo g,hexo s</code><br>然后使用浏览器访问<u>localhost:4000</u>查看所否成功 </p>
+<hr>
+<h3 id="hexo链接github库"><a href="#hexo链接github库" class="headerlink" title="hexo链接github库"></a>hexo链接github库</h3><p>利用npm安装hexo部署程序/插件<br><code>npm install --save hexo-deployer-git</code><br><code>vim /*/blog/_config.yml</code><br>修改最下方的#deployment配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;你所建立的仓库地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>执行<code>hexo d</code>开始远程部署，其中需要用户输入仓库所在帐号的帐号和密码</p>
+<hr>
+<h3 id="hexo修改主题"><a href="#hexo修改主题" class="headerlink" title="hexo修改主题"></a>hexo修改主题</h3><p>这里推荐两个个人感觉生态最好的两个hexo主题-next与yilia<br>进入blog目录下直接执行克隆命令<br><code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code><br>或<br><code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</code><br>此时的主题文件被存储于/blog/theme目录下<br><code>cd _condig.yml</code><br>修改#extensions中的theme，将原主题landscape修改为next或yilia</p>
+<hr>
+<h3 id="hexo安装搜索插件与RSS插件"><a href="#hexo安装搜索插件与RSS插件" class="headerlink" title="hexo安装搜索插件与RSS插件"></a>hexo安装搜索插件与RSS插件</h3><p>添加并配置RSS<br><code>npm install hexo-generator-feed --save</code><br>修改hexo配置文件为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">        plugins:</span><br><span class="line">                hexo-generator-feed</span><br><span class="line">                #Feed Atom</span><br><span class="line">        feed:</span><br><span class="line">                type: atom</span><br><span class="line">                path: atom.xml</span><br><span class="line">                limit: 20</span><br></pre></td></tr></table></figure>
+<p>对主题文件添加：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">        type: rss2</span><br><span class="line">        path: rss2.xml</span><br><span class="line">        limit: 5</span><br><span class="line">        hub:</span><br><span class="line">                content: &#39;true&#39;</span><br></pre></td></tr></table></figure>
+
+<p>添加并配置search-搜索<br><code>npm install hexo-generator-searchdb --save</code><br>修改hexo配置文件为</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 搜索</span><br><span class="line">  search:</span><br><span class="line">          path: search.xml</span><br><span class="line">          field: post</span><br><span class="line">          format: html</span><br><span class="line">          limit: 10000</span><br></pre></td></tr></table></figure>
+<p>修改主题配置文件为<br>找到local search，然后把enable设置为true</p>
+<p>其余类似于菜单，头像，链接与装饰的配置可以<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">参考官方文档</a></p>
+<hr>
+<h3 id="关于文章的书写格式与基本要求"><a href="#关于文章的书写格式与基本要求" class="headerlink" title="关于文章的书写格式与基本要求"></a>关于文章的书写格式与基本要求</h3><p>hexo文章书写的语法都来自于Markdown<br>Markdown所一种可以使用普通文本编辑器编写的标记语言<br>目的是通过简单的语法来让普通文本的内容具有一定的格式<br>详情参考: <a href="https://markdown-zh.readthedocs.io/en/latest" target="_blank" rel="noopener">Markdown中文文档</a></p>
+<hr>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
 </search>

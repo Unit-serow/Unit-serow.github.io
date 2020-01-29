@@ -7,7 +7,7 @@
 <p>获取途径:<br>git: <code>git clone http://git.savannah.gnu.org/r/m4.git</code><br>http: <code>http://ftp.gnu.org/gnu/m4</code><br>ftp: <code>ftp://ftp.gnu.org/gnu/m4</code><br>apt-get: <code>apt-get install m4-doc或m4*</code></p>
 <hr>
 <p><strong>学习途径</strong></p>
-<p>官方文档:<br><code>https://savannah.gnu.org/project/m4</code><br><a href="https://savannah.gnu.org/project/m4" target="_blank" rel="noopener">跳转</a></p>
+<p>官方文档:<br><code>https://www.gnu.org/software/m4/m4.html</code><br><a href="https://www.gnu.org/software/m4/m4.html" target="_blank" rel="noopener">跳转</a></p>
 <p>M4 宏语言手册<br><code>http://mbreen.com/m4.html</code><br><a href="http://mbreen.com/m4.html" target="_blank" rel="noopener">跳转</a></p>
 <p>GNU M4 社区<br><code>http://savannah.gnu.org/projects/m4/</code><br><a href="http://savanah.gnu.org/project/m4" target="_blank" rel="noopener">跳转</a></p>
 <p>默认帮助文档<br><code>m4 --help与man m4</code></p>
@@ -15,9 +15,11 @@
 ]]></content>
       <categories>
         <category>软件</category>
+        <category>Debian GNU/Linux</category>
       </categories>
       <tags>
-        <tag>认识与概述</tag>
+        <tag>1.认识与概述</tag>
+        <tag>GNU/Linux</tag>
       </tags>
   </entry>
   <entry>

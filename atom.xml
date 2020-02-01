@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-01T13:46:27.024Z</updated>
+  <updated>2020-02-01T14:13:23.508Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>GNU Binutils</title>
+    <link href="http://yoursite.com/2020/02/01/Binutils/"/>
+    <id>http://yoursite.com/2020/02/01/Binutils/</id>
+    <published>2020-02-01T13:52:49.000Z</published>
+    <updated>2020-02-01T14:13:23.508Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="GNU-Binutils-第一部分"><a href="#GNU-Binutils-第一部分" class="headerlink" title="GNU Binutils 第一部分"></a>GNU Binutils 第一部分</h3><p><strong>GNU 二进制工具包</strong></p><p><strong>工具包内包含程序</strong><br>主要包含ld与as，分别是GNU链接器-GAS与GNU汇编器-GLD</p><p><strong>其他程序</strong></p><ul><li>ar-用于建立，修改，提取归档文件(archive)<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>/用于对归档/静态库做创建，修改和提取的操作</li><li>addr2line-将目标文件的虚拟地址转换为文件的行号或符号</li><li>c++filt-解码C++的符号</li><li>dlltool-用于构建与使用DLL文件，也就是创建windows动态库</li><li>gold-正在测试的功能，一个新型且效率更高的ELF的链接器</li><li>ELF是一种用于可执行文件，目标文件，共享库和核心转储的标准文件格式，可执行与可连接格式，ELF所产生的数据结构与工具不做阐述</li><li>gprof-用于显示性能的分析信息/性能分析工具</li><li>nlmconv-将目标代码转换为NetWare Loadable Module/NLM文件格式</li><li>nm-列出并显示目标文件中的符号</li><li>objcopy-复制并编译目标文件，其过程中可以修改</li><li>objdump-显示目标文件中的相关信息，可用于反汇编</li><li>ranlib-生成静态库索引</li><li>readelf-用于显示任何ELF格式文件的内容</li><li>size-列出对象总体或归档文件的节数/大小</li><li>strings-列出目标二进制文件中的可打印/可显示字符串</li><li>strip-从目标文件中移除符号</li><li>windmc-兼容windows消息的编译器，用于产生windows的消息资源</li><li>windres-windows资源文件的编译器</li></ul><hr><p><strong>杂项及存在意义</strong></p><ul><li>大部分的复杂代码都存于Binary File Descriptor library和libopcodes库内</li><li>所以它是一整套编程语言工具程序,用于处理许多格式的目标文件</li><li>这些程序大多数使用BFD-二进制文件描述库</li><li>主要的目的还是为GNU项目用于解决不同格式的目标文件的可移植性问题的主要机制</li></ul><hr><p><strong>参考:</strong></p><p>获取：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;binutils</span><br><span class="line">http:&#x2F;&#x2F;ftpmirror.gnu.org&#x2F;binutils</span><br><span class="line">apt-get install binutils*</span><br><span class="line">克隆：git clone git:&#x2F;&#x2F;sourceware.org&#x2F;git&#x2F;binutils-gdb.git</span><br></pre></td></tr></table></figure><p>官网<a href="https://www.gnu.org/software/binutils/binutils.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/binutils/binutils.html</code></p><p>文档<a href="https://sourceware.org/binutils/docs-2.33.1/" target="_blank" rel="noopener">跳转</a><br><code>https://sourceware.org/binutils/docs-2.33.1/</code></p><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">archive是一个包含多个被包含文件的单一库文件,它可以保证从中检索到原始的被包含文件-mumber,而member用于保存archive的各种基本属性，当member被提取后，archive的属性将被还原到初始状态</span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;GNU-Binutils-第一部分&quot;&gt;&lt;a href=&quot;#GNU-Binutils-第一部分&quot; class=&quot;headerlink&quot; title=&quot;GNU Binutils 第一部分&quot;&gt;&lt;/a&gt;GNU Binutils 第一部分&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;GN
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="GNU" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
+    
+    
+      <category term="GNU/Linux" scheme="http://yoursite.com/tags/GNU-Linux/"/>
+    
+      <category term="1.认识与概述" scheme="http://yoursite.com/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>GNU Make</title>
     <link href="http://yoursite.com/2020/02/01/Make/"/>
     <id>http://yoursite.com/2020/02/01/Make/</id>
     <published>2020-02-01T13:40:08.000Z</published>
-    <updated>2020-02-01T13:46:27.024Z</updated>
+    <updated>2020-02-01T13:49:41.013Z</updated>
     
     <content type="html"><![CDATA[<h3 id="GNU-Make-第一部分"><a href="#GNU-Make-第一部分" class="headerlink" title="GNU Make 第一部分"></a>GNU Make 第一部分</h3><p><strong>GNU 自动化建构</strong></p><p><strong>概述:</strong></p><ul><li>在软件开发的过程中，make通常作为一个工具程序(unility software),经由makefile，从而实现自动化构建软件</li><li>在经由makefile时make工具会根据情况转换文件形式至target，转换的同时还会检查文件的依赖关系，检查依赖关系的方式本部分不做阐述</li><li>所以在编写软件时，应该先编写一个makefile，之后再让make去进行构建和安装</li></ul><p>或称为</p><ul><li><p>用于编译源代码，从而生成结果代码，然后将结果代码链接起来，最后生成可执行文件</p></li><li><p>其中名为makefile的文件用来确定某一target文件的以来关系，然后把生成target相关的命令转给机器的shell去执行</p></li><li><p>IDE通常包含了make，make多用于UNIX下的软件开发</p></li><li><p>本质如同UNIX底层的其他基本程序，批量执行生成目标的命令，同时检查文件的依赖关系</p></li></ul><hr><p>参考<br>官方网站<a href="https://www.gnu.org/software/make/make.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/make/make.html</code></p><p>获取<br><code>http: http://ftp.gnu.org/gnu/make/</code><br><code>ftp: ftp://ftp.gnu.org/gnu/make/</code></p><p>make手册<a href="https://www.gnu.org/software/make/manual/" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/make/manual/</code></p><p>makefile手册<a href="https://www.gnu.org/prep/standards/html_node/Makefile-Conventions.html#Makefile-Conventions" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/prep/standards/html_node/Makefile-Conventions.html#Makefile-Conventions</code></p><p>make源码所在目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;share&#x2F;doc&#x2F;make&#x2F;</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;doc&#x2F;make&#x2F;</span><br></pre></td></tr></table></figure><p>make帮助指令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make --help</span><br><span class="line">info make</span><br><span class="line">man make</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -40,9 +70,9 @@
       <category term="GNU" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
     
     
-      <category term="1.认识与概述" scheme="http://yoursite.com/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
+      <category term="GNU/Linux" scheme="http://yoursite.com/tags/GNU-Linux/"/>
     
-      <category term="GNU/Lnux" scheme="http://yoursite.com/tags/GNU-Lnux/"/>
+      <category term="1.认识与概述" scheme="http://yoursite.com/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
     
   </entry>
   

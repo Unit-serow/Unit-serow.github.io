@@ -7,12 +7,12 @@
 <p><strong>概述:</strong></p>
 <ul>
 <li>GNU/Linux操作系统一个重要的组成部分</li>
-<li>FSF为GNU所写，作用是配合linux内核,Linux下基于ANSI C<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>标准的GNU C<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>标准函数库</li>
+<li>FSF为GNU所写，作用是配合linux内核,是Linux下基于ANSI C<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>标准的GNU C<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>标准函数库</li>
 </ul>
 <p><strong>存在目的:</strong></p>
 <ul>
-<li>目的是为linux内核的操作系统提供核心库文件，库提供了关键的API，当然包括Linux内核的API</li>
-<li>虽说称为C的标准函数库，但还支持很多其他的语言</li>
+<li>目的是为linux内核的操作系统提供核心库文件，库提供了关键的API，当然也包括Linux内核的API</li>
+<li>虽说称为C的标准函数库，但还支持很多其他的程序语言</li>
 </ul>
 <hr>
 <p><strong>其它C 标准库</strong></p>
@@ -53,7 +53,7 @@
 <p>C POSIX库参考文献<a href="https://web.archive.org/web/20100724201155/http://www.space.unibe.ch/comp_doc/c_manual/C/FUNCTIONS/funcref.htm" target="_blank" rel="noopener">跳转</a><br><code>https://web.archive.org/web/20100724201155/http://www.space.unibe.ch/comp_doc/c_manual/C/FUNCTIONS/funcref.htm</code></p>
 <p>C 标准函式库<a href="https://pubs.opengroup.org/onlinepubs/9699919799/idx/head.html" target="_blank" rel="noopener">跳转</a><br><code>https://pubs.opengroup.org/onlinepubs/9699919799/idx/head.html</code></p>
 <p>C POSIX library-wiki<a href="https://zh.wikipedia.org/wiki/C_POSIX_library" target="_blank" rel="noopener">跳转</a><br><code>https://zh.wikipedia.org/wiki/C_POSIX_library</code></p>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">由美国国家标准局所制定的C语言发布标准-是最基本的C语言函数库，包含了C语言最基本的库函数并且是C语言最初的标准，包含了C语言最基本的库函数</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">由LGPL许可协议发布的，自由的，公开源代码并且方便下载的C编译程序</span><a href="#fnref:2" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">由美国国家标准局所制定的C语言发布标准-是最基本的C语言函数库，包含了C语言最基本的库函数并且是C语言最初的标准</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">由LGPL许可协议发布的，自由的，公开源代码并且方便下载的C编译程序</span><a href="#fnref:2" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
       <categories>
         <category>软件</category>
         <category>GNU</category>

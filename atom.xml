@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-01T15:08:45.039Z</updated>
+  <updated>2020-02-01T17:04:21.216Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>GNU C libary/Libc</title>
+    <link href="http://yoursite.com/2020/02/02/Libc/"/>
+    <id>http://yoursite.com/2020/02/02/Libc/</id>
+    <published>2020-02-01T16:47:10.000Z</published>
+    <updated>2020-02-01T17:04:21.216Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="GNU-C-Library-第一章节"><a href="#GNU-C-Library-第一章节" class="headerlink" title="GNU C Library 第一章节"></a>GNU C Library 第一章节</h3><p><strong>C 标准函数库 Libc</strong></p><p><strong>概述:</strong></p><ul><li>GNU/Linux操作系统一个重要的组成部分</li><li>FSF为GNU所写，作用是配合linux内核,Linux下基于ANSI C<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>标准的GNU C<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>标准函数库</li></ul><p><strong>存在目的:</strong></p><ul><li>目的是为linux内核的操作系统提供核心库文件，库提供了关键的API，当然包括Linux内核的API</li><li>虽说称为C的标准函数库，但还支持很多其他的语言</li></ul><hr><p><strong>其它C 标准库</strong></p><p>C POSIX library</p><ul><li>C 可移植标准接口库</li><li>包含了一些在C 标准库之外的函数，这里指ANSI所定制的C 标准库</li></ul><p>CRT/C Run-time Library</p><ul><li>C 运行时期库</li><li>C 程序运行时需要这些库中的函数</li><li>包含于程序运行时使用到的一些API集合，这里的API是预先编译后存放在linux系统中的二进制代码形式的文件</li><li>CRT通常作为C编译程序发布</li><li>CRT含有初始化代码，还有错误处理代码(例如divide by zero处理)</li></ul><hr><p><strong>其它资料:</strong><br>ANSI C库可以根据头文件划分为15个类别<br>其中包括:</p><ul><li>字符类型 ()</li><li>错误码()</li><li>浮点常数 ()</li><li>数学常数 ()</li><li>标准定义 ()</li><li>标准 I/O ()</li><li>工具函数 ()</li><li>字符串操作 ()</li><li>时间和日期 ()</li><li>可变参数表 ()</li><li>信号 ()</li><li>非局部跳转 ()</li><li>本地信息 ()</li><li>程序断言 () 等等</li><li>这在其他的C语言的IDE中都是有的</li></ul><h2 id="以上内容引用自百度百科条目"><a href="#以上内容引用自百度百科条目" class="headerlink" title="以上内容引用自百度百科条目"></a>以上内容引用自百度百科<a href="https://baike.baidu.com/item/libc" target="_blank" rel="noopener">条目</a></h2><p>参考资料:</p><p>GNU C Library连接<a href="https://www.gnu.org/software/libc/involved.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/libc/involved.html</code></p><p>C POSIX库参考文献<a href="https://web.archive.org/web/20100724201155/http://www.space.unibe.ch/comp_doc/c_manual/C/FUNCTIONS/funcref.htm" target="_blank" rel="noopener">跳转</a><br><code>https://web.archive.org/web/20100724201155/http://www.space.unibe.ch/comp_doc/c_manual/C/FUNCTIONS/funcref.htm</code></p><p>C 标准函式库<a href="https://pubs.opengroup.org/onlinepubs/9699919799/idx/head.html" target="_blank" rel="noopener">跳转</a><br><code>https://pubs.opengroup.org/onlinepubs/9699919799/idx/head.html</code></p><p>C POSIX library-wiki<a href="https://zh.wikipedia.org/wiki/C_POSIX_library" target="_blank" rel="noopener">跳转</a><br><code>https://zh.wikipedia.org/wiki/C_POSIX_library</code></p><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">由美国国家标准局所制定的C语言发布标准-是最基本的C语言函数库，包含了C语言最基本的库函数并且是C语言最初的标准，包含了C语言最基本的库函数</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;">由LGPL许可协议发布的，自由的，公开源代码并且方便下载的C编译程序</span><a href="#fnref:2" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;GNU-C-Library-第一章节&quot;&gt;&lt;a href=&quot;#GNU-C-Library-第一章节&quot; class=&quot;headerlink&quot; title=&quot;GNU C Library 第一章节&quot;&gt;&lt;/a&gt;GNU C Library 第一章节&lt;/h3&gt;&lt;p&gt;&lt;stron
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="GNU" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
+    
+    
+      <category term="GNU/Linux" scheme="http://yoursite.com/tags/GNU-Linux/"/>
+    
+      <category term="1.认识与概述" scheme="http://yoursite.com/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>GNU Libtool</title>
     <link href="http://yoursite.com/2020/02/01/Libtool/"/>
     <id>http://yoursite.com/2020/02/01/Libtool/</id>
     <published>2020-02-01T14:58:21.000Z</published>
-    <updated>2020-02-01T15:08:45.039Z</updated>
+    <updated>2020-02-01T17:05:09.878Z</updated>
     
     <content type="html"><![CDATA[<h3 id="GNU-libtool-第一章节"><a href="#GNU-libtool-第一章节" class="headerlink" title="GNU libtool 第一章节"></a>GNU libtool 第一章节</h3><p><strong>GNU 构建系统</strong></p><p><strong>概述与解释:</strong></p><ul><li>GNU Libtool是一种属于<a href="https://unit-serow.github.io/2020/01/29/Autotools/" target="_blank" rel="noopener">GNU构建系统</a>的GNU程序设计工具</li><li>GNU Libtool是一个用于支持通用库的脚本程序</li><li>用于解决在不同的操作系统中使用共享库进行代码移植的复杂性，在不同的系统中建立动态链接库，以隐藏不同系统之间的差异性</li><li>从而给开发人员提供一致的接口</li><li>但还是需要底层系统对所创建链接库的支持，所以libtool不能在不支持动态连接库的系统中创建动态链接库</li></ul><hr><p><strong>存在目的:</strong></p><ul><li>用于产生/建立便携式的库，它既可以建立动态链接库，也可以建立动态链接库，还可以包含两者</li><li>GNU libtool的目的是使每一个主机类型的完整功能都可以通过一个泛用接口来产生</li><li>GNU libtool的目标是使接口一致</li></ul><hr><p><strong>使用方法</strong><br>本章节不对应用进行过多阐述<br>libtool通常与GNU建构系统中的autoconf和automake这两个工具一起使用<br>需要参照系统手册（构建通用库所需要执行的命令）以及修改相应makefile的makefile.in或makefile.in文件<br>相关内容可查询<a href="https://www.gnu.org/software/libtool/manual/libtool.html" target="_blank" rel="noopener">libtool文档</a></p><hr><p>参考资料</p><p>GNU Libtool手册<a href="https://www.gnu.org/software/libtool/manual/libtool.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/libtool/manual/libtool.html</code></p><p>使用GNU Libtoo创建库<a href="https://www.ibm.com/developerworks/cn/aix/library/1007_wuxh_libtool/index.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.ibm.com/developerworks/cn/aix/library/1007_wuxh_libtool/index.html</code></p><p>官方网站<a href="https://www.gnu.org/software/libtool/news.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/libtool/news.html</code></p><p>autobook<a href="http://www.sourceware.org/autobook/" target="_blank" rel="noopener">跳转</a><br><code>http://www.sourceware.org/autobook/</code></p><p>获取:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http: http:&#x2F;&#x2F;ftpmirror.gnu.org&#x2F;libtool&#x2F;</span><br><span class="line">ftp: ftp:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;libtool&#x2F; </span><br><span class="line">克隆: git clone git:&#x2F;&#x2F;git.savannah.gnu.org&#x2F;libtool.git</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -42,7 +72,7 @@
     
       <category term="GNU/Linux" scheme="http://yoursite.com/tags/GNU-Linux/"/>
     
-      <category term="1.介绍与概述" scheme="http://yoursite.com/tags/1-%E4%BB%8B%E7%BB%8D%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
+      <category term="1.认识与概述" scheme="http://yoursite.com/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
     
   </entry>
   

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-01T17:10:47.552Z</updated>
+  <updated>2020-02-01T18:09:26.821Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GNU Portable Threads/Pth</title>
+    <link href="http://yoursite.com/2020/02/02/Pth/"/>
+    <id>http://yoursite.com/2020/02/02/Pth/</id>
+    <published>2020-02-01T17:57:11.000Z</published>
+    <updated>2020-02-01T18:09:26.821Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="GNU-Portable-Threads-第一章节"><a href="#GNU-Portable-Threads-第一章节" class="headerlink" title="GNU Portable Threads 第一章节"></a>GNU Portable Threads 第一章节</h3><p><strong>GNU 可移植线程库 Pth</strong></p><p><strong>概述:</strong></p><ul><li>GNU计划重要的一部分</li><li>GNU Pth 是用于UNIX平台下基于POSIX与ANSI C的用户空间线程库</li><li>GNU Pth还包含了POSIX线程的API，以达成向后兼容的目的</li></ul><p>GNU Pth使用到内核空间线程的N:1映射，所以说调度完全将完全由GNU Pth库进行<br>内核将不会干涉用户空间中任何数量的线程，所以利用不到SMP<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>所拥有的机制，因为SMP必须由内核派遣</p><p><strong>存在目的:</strong></p><ul><li>GNU Pth的目的是针对任意线程的处理达到高度的可移植性</li><li>其次是为了让多线程应用提供基于优先级的调度</li></ul><hr><p><strong>参考资料:</strong></p><p>官方网站<a href="https://www.gnu.org/software/pth/" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/pth</code></p><p>官方手册<a href="https://www.gnu.org/software/pth/pth-manual.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/pth/pth-manual.html</code></p><p>多线程库列表<a href="https://www.gnu.org/software/pth/related.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/pth/related.html</code></p><p><a href="https://www.gnu.org/software/pth/related.html" target="_blank" rel="noopener">多线程库文档，包含了Unix系统中所有对于已知多线程库的调用</a><br><code>https://www.gnu.org/software/pth/related.html</code></p><p>关于OSSP pth<a href="http://www.ossp.org/pkg/lib/pth/" target="_blank" rel="noopener">跳转</a><br><code>http://www.ossp.org/pkg/lib/pth</code></p><p>论文引用:<br><a href="http://heather.cs.ucdavis.edu/~matloff/pth.html" target="_blank" rel="noopener">对于GNU pth的使用与描述</a><br><code>http://heather.cs.ucdavis.edu/~matloff/pth.html</code></p><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">均衡多处理架构</span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;GNU-Portable-Threads-第一章节&quot;&gt;&lt;a href=&quot;#GNU-Portable-Threads-第一章节&quot; class=&quot;headerlink&quot; title=&quot;GNU Portable Threads 第一章节&quot;&gt;&lt;/a&gt;GNU Portabl
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="GNU" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
+    
+    
+      <category term="GNU/Linux" scheme="http://yoursite.com/tags/GNU-Linux/"/>
+    
+      <category term="1.认识与概述" scheme="http://yoursite.com/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>GNU C libary/Libc</title>

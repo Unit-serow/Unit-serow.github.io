@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-01T10:50:35.510Z</updated>
+  <updated>2020-02-01T13:46:27.024Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GNU Make</title>
+    <link href="http://yoursite.com/2020/02/01/Make/"/>
+    <id>http://yoursite.com/2020/02/01/Make/</id>
+    <published>2020-02-01T13:40:08.000Z</published>
+    <updated>2020-02-01T13:46:27.024Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="GNU-Make-第一部分"><a href="#GNU-Make-第一部分" class="headerlink" title="GNU Make 第一部分"></a>GNU Make 第一部分</h3><p><strong>GNU 自动化建构</strong></p><p><strong>概述:</strong></p><ul><li>在软件开发的过程中，make通常作为一个工具程序(unility software),经由makefile，从而实现自动化构建软件</li><li>在经由makefile时make工具会根据情况转换文件形式至target，转换的同时还会检查文件的依赖关系，检查依赖关系的方式本部分不做阐述</li><li>所以在编写软件时，应该先编写一个makefile，之后再让make去进行构建和安装</li></ul><p>或称为</p><ul><li><p>用于编译源代码，从而生成结果代码，然后将结果代码链接起来，最后生成可执行文件</p></li><li><p>其中名为makefile的文件用来确定某一target文件的以来关系，然后把生成target相关的命令转给机器的shell去执行</p></li><li><p>IDE通常包含了make，make多用于UNIX下的软件开发</p></li><li><p>本质如同UNIX底层的其他基本程序，批量执行生成目标的命令，同时检查文件的依赖关系</p></li></ul><hr><p>参考<br>官方网站<a href="https://www.gnu.org/software/make/make.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/make/make.html</code></p><p>获取<br><code>http: http://ftp.gnu.org/gnu/make/</code><br><code>ftp: ftp://ftp.gnu.org/gnu/make/</code></p><p>make手册<a href="https://www.gnu.org/software/make/manual/" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/make/manual/</code></p><p>makefile手册<a href="https://www.gnu.org/prep/standards/html_node/Makefile-Conventions.html#Makefile-Conventions" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/prep/standards/html_node/Makefile-Conventions.html#Makefile-Conventions</code></p><p>make源码所在目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;share&#x2F;doc&#x2F;make&#x2F;</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;doc&#x2F;make&#x2F;</span><br></pre></td></tr></table></figure><p>make帮助指令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make --help</span><br><span class="line">info make</span><br><span class="line">man make</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;GNU-Make-第一部分&quot;&gt;&lt;a href=&quot;#GNU-Make-第一部分&quot; class=&quot;headerlink&quot; title=&quot;GNU Make 第一部分&quot;&gt;&lt;/a&gt;GNU Make 第一部分&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;GNU 自动化建构&lt;/strong&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="GNU" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
+    
+    
+      <category term="1.认识与概述" scheme="http://yoursite.com/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
+    
+      <category term="GNU/Lnux" scheme="http://yoursite.com/tags/GNU-Lnux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GNU Compiler Collection</title>
+    <link href="http://yoursite.com/2020/02/01/GCC/"/>
+    <id>http://yoursite.com/2020/02/01/GCC/</id>
+    <published>2020-02-01T13:30:29.000Z</published>
+    <updated>2020-02-01T13:39:02.294Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="GNU-Compiler-Collection-第一部分"><a href="#GNU-Compiler-Collection-第一部分" class="headerlink" title="GNU Compiler Collection 第一部分"></a>GNU Compiler Collection 第一部分</h3><p><strong>GNU 编译器套装 GCC</strong></p><p><strong>概述:</strong></p><ul><li>它是GNU计划中关键的一环</li><li>基于GPL与LGPL软件许可,并且为free software-自由软件</li><li>UNIX-like，Linux，BSD类的操作系统都采用GCC为标准编译器</li><li>其他的C编译器LLVM,Clang</li><li>GCC通常是跨平台编译器的首选</li></ul><hr><p><strong>GCC的执行逻辑与过程</strong><br>GCC的作用是将源代码生成可执行文件大体需要四个步骤:</p><ul><li>预处理/预编译-preprocessing</li><li>编译-compilation</li><li>汇编-assembly</li><li>连接-linking</li></ul><p><strong>由下至上的处理过程</strong></p><ul><li>GCC先调用cpp进行预处理-预处理的作用是对源码文件中的文件包含-include,预编译语句-宏定义define等进行分析,预处理的主要功能大概分为三个:宏定义,文件包含,条件编译</li><li>然后调用cc1进行编译,这个阶段根据输入文件生成以.i为后缀的目标文件</li><li>然后调用as进行汇编工作,一般的汇编语言源码由.s为后缀,s为后缀的汇编语言文件经由编译器和汇编之后会生成.o后缀的目标文件</li><li>当所有目标文件都生成后,GCC就调用ld来完成最后阶段的工作-连接</li><li>在连接阶段,所有目标文件被自动生成并同时分配依赖条件/文件应该所处的位置</li><li>最后,该程序内所用的库函数也会被链接到所对应的位置</li></ul><hr><p><strong>GCC语言编译器的结构</strong><br>语言编译器的结构-由下至上/底层到顶层</p><ul><li>GCC内置了大量语言的编译器,每个语言的编译器都是独立的程序</li><li>编译器的作用是处理输入的源码,从而输出组合语言码</li><li>全部的语言编译器都有共同的中介架构</li><li>语言编译器的结构分为三个部分:前端接口,中介接口以及后端接口</li><li>前端接口负责解析符合此语言的原始码,并产生一个抽象语法树以及翻译此语法树,使其成为GCC的暂存器转换语言-RTL的后端，GCC编译器最佳化与静态程序解码技术应用于此时程序的代码上</li><li>最后适应于硬件架构的组合语言经由某一不可知算法产出</li></ul><hr><p><strong>参考:</strong></p><p>官方网站<a href="https://gcc.gnu.org" target="_blank" rel="noopener">跳转</a><br><code>https://gcc.gnu.org/</code></p><p>获取<br><code>apt-get install gcc*</code></p><p>涉及编译器深层原理的内容此章节不做阐述</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;GNU-Compiler-Collection-第一部分&quot;&gt;&lt;a href=&quot;#GNU-Compiler-Collection-第一部分&quot; class=&quot;headerlink&quot; title=&quot;GNU Compiler Collection 第一部分&quot;&gt;&lt;/a&gt;GN
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="GNU" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
+    
+    
+      <category term="GNU/Linux" scheme="http://yoursite.com/tags/GNU-Linux/"/>
+    
+      <category term="1.认识与概述" scheme="http://yoursite.com/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>GNU Debugger</title>

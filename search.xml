@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>测试文件</title>
+    <url>/2020/02/01/%E6%B5%8B%E8%AF%95%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>123</p>
+]]></content>
+  </entry>
+  <entry>
     <title>GNU Lib</title>
     <url>/2020/01/30/Lib/</url>
     <content><![CDATA[<h3 id="GNU-Lib-第一部分"><a href="#GNU-Lib-第一部分" class="headerlink" title="GNU Lib 第一部分"></a>GNU Lib 第一部分</h3><p><strong>GNU 可移植性库</strong></p>

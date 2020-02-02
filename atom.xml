@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-01T18:09:26.821Z</updated>
+  <updated>2020-02-02T06:11:48.627Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GNU Gettext</title>
+    <link href="http://yoursite.com/2020/02/02/Gettext/"/>
+    <id>http://yoursite.com/2020/02/02/Gettext/</id>
+    <published>2020-02-02T05:59:34.000Z</published>
+    <updated>2020-02-02T06:11:48.627Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="GNU-Gettext-第一章节"><a href="#GNU-Gettext-第一章节" class="headerlink" title="GNU Gettext 第一章节"></a>GNU Gettext 第一章节</h3><p><strong>GNU 国际化(i18n)库</strong></p><p><strong>概述:</strong></p><ul><li>国际化与本地化函数库</li><li>GNU gettext是GNU translation project中最重要的一步 </li><li>GNU通用性翻译计划</li><li>这个项目的达成将会让GNU拥有更大的经济与用户结构，从而拥有更多的资本</li></ul><p><strong>引用自官方文档:</strong></p><blockquote><p>在以前，通常GNU内部或大量其它的自由软件中的程序源代码都是拿英文编写或记录的，并且在与用户交互的界面所使用的也是英语<br>当世界上所有的开发人员之间使用一种通用的语言去交流会让开发的过程变得极为方便<br>但是，在全世界范围内的大多数人对于英文的理解能力和学习深度远不如母语，所以它们更愿意使用母语进行日常工作<br>并且大多数人只是希望让屏幕上其它晦涩难懂的语言少一点，而自己的母语多一点<br>所以就有了GNU Gettext<br>该软件包为程序员，翻译人员与用户提供了一套完善的工具和文档集<br>更准确的说，gnu gettext所使用的程序是一组工具，提供了一个框架来帮助其他GNU软件包生成多语言的消息</p></blockquote><p><strong>这个工具包括了以下的一组程序:</strong></p><ul><li>一套如何编写程序，从而让消息目录支持的规则</li><li>一套如何为目录本身和文件命名的规则</li><li>一个运行时库，用于支持检索翻译后的消息</li><li>一些独立程序，以各种方式处理可翻译的字符串或已翻译字符串的集合</li></ul><p>GNU Emacs拥有实现这套程序的插件或拓展，感兴趣的可以去查询有关GNU Emacs的消息</p><hr><p>逻辑简述:<br>以下内容参考自:<a href="https://www.gnu.org/software/gettext/manual/html_node/Program-Index.html#Program-Index" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/gettext/manual/html_node/Program-Index.html#Program-Index</code></p><ul><li>xgettext程序从源代码生成.pot文件，作为源代码中序翻译内容的模板</li><li>而翻译者需要工作的对象是.po文件，它是有msginit程序从.pot模板文件生成的</li><li>翻译者用maginit初始化中文翻译文件时可以执行<code>msginit --locale=cn --input=name.pot</code></li><li>然后编辑所生成的.po文件</li><li>最后.po文件需要使用msgfmt编译为.mo文件以用作发布</li><li>使其运行需要使用UNIX操作系统中的用户需要修改环境变量中的<code>LC_MESSAGES</code>或<code>LANG</code>，程序将自动从相应的.mo文件中读取语言信息</li></ul><p>使用方法:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在使用gettext()方法的时候通常以标记别名_的形式使用</span><br><span class="line">如printf(gettext(&quot;name is %s. \n&quot;), first_name);</span><br><span class="line">可以写作printf(_(&quot;name is %s.\n&quot;), first_name);</span><br></pre></td></tr></table></figure><hr><p>参考资料:<br>官方网站<a href="https://www.gnu.org/software/gettext/" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/gettext/</code><br>获取<a href="https://ftp.gnu.org/pub/gnu/gettext/gettext-0.20.1.tar.gz" target="_blank" rel="noopener">跳转</a><br><code>https://ftp.gnu.org/pub/gnu/gettext/gettext-0.20.1.tar.gz</code><br>社区<a href="https://savannah.gnu.org/projects/gettext/" target="_blank" rel="noopener">跳转</a><br><code>https://savannah.gnu.org/projects/gettext/</code><br>文档<a href="https://www.gnu.org/software/gettext/manual/gettext.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/gettext/manual/gettext.html</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;GNU-Gettext-第一章节&quot;&gt;&lt;a href=&quot;#GNU-Gettext-第一章节&quot; class=&quot;headerlink&quot; title=&quot;GNU Gettext 第一章节&quot;&gt;&lt;/a&gt;GNU Gettext 第一章节&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;GNU 国际
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="GNU" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
+    
+    
+      <category term="GNU/Linux" scheme="http://yoursite.com/tags/GNU-Linux/"/>
+    
+      <category term="1.认识与概述" scheme="http://yoursite.com/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>GNU Portable Threads/Pth</title>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-02T06:11:48.627Z</updated>
+  <updated>2020-02-02T07:11:52.367Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GNU CLISP</title>
+    <link href="http://yoursite.com/2020/02/02/CLISP/"/>
+    <id>http://yoursite.com/2020/02/02/CLISP/</id>
+    <published>2020-02-02T07:07:25.000Z</published>
+    <updated>2020-02-02T07:11:52.367Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="GNU-ANSI-Common-Lisp"><a href="#GNU-ANSI-Common-Lisp" class="headerlink" title="GNU ANSI Common Lisp"></a>GNU ANSI Common Lisp</h3><p><strong>概述:</strong></p><p>摘要:</p><blockquote><p>用于实现 ANSI Common Lisp <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>中所描述的语言标准，并且拥有许多拓展<br>CLISP于大多数GNU与Unix系统上运行，还包括windows NT,ME等等，只需要4MB的RAM<br>common lisp是一种面向对象的通用高级编程语言<br>common lisp算是lisp语言的一种方言吧</p></blockquote><p>参考文献:<br>ANSI Common Lisp 中文翻译版<a href="https://acl.readthedocs.io/en/latest/" target="_blank" rel="noopener">跳转</a><br><code>https://acl.readthedocs.io/en/latest/</code></p><p>电子书版本<a href="https://web.archive.org/web/20020805060924/http://www.lisp.org/HyperSpec/FrontMatter/index.html" target="_blank" rel="noopener">跳转</a><br><code>https://web.archive.org/web/20020805060924/http://www.lisp.org/HyperSpec/FrontMatter/index.html</code></p><p>官方网站<a href="https://clisp.sourceforge.io/summary.html" target="_blank" rel="noopener">跳转</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;clisp.sourceforge.io&#x2F;summary.html</span><br><span class="line">https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;clisp&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;clisp.sourceforge.io&#x2F;</span><br></pre></td></tr></table></figure><p>参考手册<a href="https://clisp.sourceforge.io/impnotes/clisp.html" target="_blank" rel="noopener">跳转</a><br><code>https://clisp.sourceforge.io/impnotes/clisp.html</code></p><p>获取:<br><a href="http/SF">跳转</a>/<a href="http://ftp.gnu.org/pub/gnu/clisp/" target="_blank" rel="noopener">跳转</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http&#x2F;SF</span><br><span class="line">http:&#x2F;&#x2F;ftp.gnu.org&#x2F;pub&#x2F;gnu&#x2F;clisp&#x2F;</span><br></pre></td></tr></table></figure><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;">基于ANSI标准的common lisp语言的实现(编译器、调试器和解释器)---</span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;GNU-ANSI-Common-Lisp&quot;&gt;&lt;a href=&quot;#GNU-ANSI-Common-Lisp&quot; class=&quot;headerlink&quot; title=&quot;GNU ANSI Common Lisp&quot;&gt;&lt;/a&gt;GNU ANSI Common Lisp&lt;/h3&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="GNU" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
+    
+    
+      <category term="GNU/Linux" scheme="http://yoursite.com/tags/GNU-Linux/"/>
+    
+      <category term="1.认识与概述" scheme="http://yoursite.com/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>GNU Gettext</title>

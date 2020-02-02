@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-02T09:37:35.267Z</updated>
+  <updated>2020-02-02T13:40:59.170Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GNU Binary File Descriptor/BFD</title>
+    <link href="https://unit-serow.github.io/2020/02/02/BFD/"/>
+    <id>https://unit-serow.github.io/2020/02/02/BFD/</id>
+    <published>2020-02-02T13:33:28.000Z</published>
+    <updated>2020-02-02T13:40:59.170Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Sun Feb 02 2020 21:41:03 GMT+0800 (中国标准时间) --><h3 id="GNU-Binary-File-Descriptor"><a href="#GNU-Binary-File-Descriptor" class="headerlink" title="GNU Binary File Descriptor"></a>GNU Binary File Descriptor</h3><p><strong>GNU 二进制文件描述 BFD</strong></p><p><strong>概述:</strong></p><ul><li>目的是用于解决GNU项目中不同的目标文件的可移植性的主要机制</li><li>在GNU项目中对于不同目标文件可移植EFL<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>性问题的主要解决机制</li><li>BFD库还可以用来读取核心转储的结构化数据</li><li>截至至2003年，它支持25中不同体系结构的CPU上的大约50中文件格式</li></ul><p><strong>BFD的设计逻辑与执行逻辑:</strong></p><ul><li>BFD通过对目标文件<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>提供抽象视图来达成工作</li><li>BFD在内部将数据从抽象视图转到目标处理器所规定的文件格式所要求的节与数据结构/字节布局等细节</li><li>它关键的作用是处理字节序的差异<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>,包括寻址<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>算术等细节</li><li>BFD最初的设计目的是可以成为被各种工具所使用的通用库，但为了达成这一目的就需要频繁修补API来解决系统所带来的影响与容纳新系统的功能，从而限制了它的使用模式与功能</li><li>DFD的主要用户是<a href="https://unit-serow.github.io/2020/02/01/Binutils/">GAS</a>，<a href="https://unit-serow.github.io/2020/02/01/Binutils/">GDL</a>，<a href="https://unit-serow.github.io/2020/02/01/Binutils/">GNU Binutils</a>和<a href="https://unit-serow.github.io/2020/02/01/Debugger/">GDB</a>，因此BFD不单独发行，所以它通常包括在Binutils和GDB的发行之中</li></ul><hr><p><strong>参考资料:</strong></p><p>参考网站-BFD的历史与故事<a href="https://www.oreilly.com/openbook/opensources/book/tiemans.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.oreilly.com/openbook/opensources/book/tiemans.html</code></p><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none;padding-left:0"><li id="fn:1"><span style="display:inline-block;vertical-align:top;padding-right:10px">1.</span><span style="display:inline-block;vertical-align:top">ELF-可执行与可链接格式，Executable and Linkable Format简称为ELF ---</span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display:inline-block;vertical-align:top;padding-right:10px">2.</span><span style="display:inline-block;vertical-align:top">目标文件的结构:有一个有描述信息的“头”，可变量目的“段”，每个段都有一个名字，一些属性和一块数据，一个符号表，一组重定位入口顶等等</span><a href="#fnref:2" rev="footnote"> ↩</a></li><li id="fn:3"><span style="display:inline-block;vertical-align:top;padding-right:10px">3.</span><span style="display:inline-block;vertical-align:top">比如在小端序主机和大端序目标之间，在32-bit和64-bit数据之间的正确转换和重定位入口项所指定的寻址算术的细节</span><a href="#fnref:3" rev="footnote"> ↩</a></li><li id="fn:4"><span style="display:inline-block;vertical-align:top;padding-right:10px">4.</span><span style="display:inline-block;vertical-align:top">寻址是每种计算机中央处理器的指令集架构中的一部分，各个指令集下有不同的寻址模式，寻址模式决定了此架构下计算机语言指令所对应的运算数</span><a href="#fnref:4" rev="footnote"> ↩</a></li></ol></div></div><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Sun Feb 02 2020 21:41:03 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;GNU-Binary-File-Descriptor&quot;&gt;&lt;a href=&quot;#GNU-Binary-File-Descriptor&quot; clas
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="GNU" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
+    
+    
+      <category term="1.认识与概述" scheme="https://unit-serow.github.io/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
+    
+      <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>GNU AutoGen</title>

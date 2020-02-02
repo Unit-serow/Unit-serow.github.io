@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>GNU AutoGen</title>
+    <url>/2020/02/02/AutoGen/</url>
+    <content><![CDATA[<h3 id="GNU-AutoGen"><a href="#GNU-AutoGen" class="headerlink" title="GNU AutoGen"></a>GNU AutoGen</h3><p><strong>GNU 代码维护工具</strong></p>
+<p><strong>概述:</strong></p>
+<ul>
+<li>AutoGen用于简化包含大量重复文本，指令集与宏定义的程序的创建和维护，所以在必须完全保持多个文本块同步的程序中，它能发挥很大的作用</li>
+<li>除了CGL数据与已有的AutoGen定义之外，AutoGen还可以自定义格式或将XML文件作为输入定义</li>
+<li>它经常被用于创建和维护处理程序选项所需的代码，处理选项需要在程序之间的不同位置同时维护多个构造，所以对于选件的维护是没有尽头的</li>
+<li>因此，autogen带有一个名为autoopts的附加软件包，它用于简化程序选项的维护和文档编制</li>
+<li>已知autogen可在GNU/Linux，BSD，OS/X，等其他操作系统上工作</li>
+<li>它的最终目的是在任何具有ANSI C编译器的现代UNIX系统上运行</li>
+</ul>
+<hr>
+<p><strong>参考资料:</strong></p>
+<p>源码获取:<a href="http://autogen.sourceforge.net/data/" target="_blank" rel="noopener">跳转</a><br><a href="http://autogen.sourceforge.net/data/" target="_blank" rel="noopener">http://autogen.sourceforge.net/data/</a></p>
+<p>手册<a href="https://www.gnu.org/software/autogen/manual/html_node/autogen.html" target="_blank" rel="noopener">跳转</a><br><a href="https://www.gnu.org/software/autogen/manual/html_node/autogen.html" target="_blank" rel="noopener">https://www.gnu.org/software/autogen/manual/html_node/autogen.html</a></p>
+<p>快捷参考<a href="https://www.gnu.org/software/autogen/man1-autogen.html" target="_blank" rel="noopener">跳转</a><br><a href="https://www.gnu.org/software/autogen/man1-autogen.html" target="_blank" rel="noopener">https://www.gnu.org/software/autogen/man1-autogen.html</a></p>
+<p>autogen官网<a href="https://www.gnu.org/savannah-checkouts/gnu/autogen/autogen.html" target="_blank" rel="noopener">跳转</a><br><a href="https://www.gnu.org/savannah-checkouts/gnu/autogen/autogen.html" target="_blank" rel="noopener">https://www.gnu.org/savannah-checkouts/gnu/autogen/autogen.html</a></p>
+<p>开发者社区<a href="http://savannah.gnu.org/projects/autogen" target="_blank" rel="noopener">跳转</a><br><a href="http://savannah.gnu.org/projects/autogen" target="_blank" rel="noopener">http://savannah.gnu.org/projects/autogen</a></p>
+]]></content>
+      <categories>
+        <category>软件</category>
+        <category>GNU</category>
+      </categories>
+      <tags>
+        <tag>GNU/Linux</tag>
+        <tag>1.认识与概述</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Data Display Debugger</title>
     <url>/2020/02/02/DDD/</url>
     <content><![CDATA[<h3 id="Data-Display-Debugger"><a href="#Data-Display-Debugger" class="headerlink" title="Data Display Debugger"></a>Data Display Debugger</h3><p><strong>GNU 调试器前端 DDD</strong></p>

@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>GNU Common Lisp</title>
+    <url>/2020/02/02/GCL/</url>
+    <content><![CDATA[<h3 id="GNU-Common-Lisp"><a href="#GNU-Common-Lisp" class="headerlink" title="GNU Common Lisp"></a>GNU Common Lisp</h3><p><strong>GNU Common Lisp编译器 GCL</strong></p>
+<p><strong>概述:</strong></p>
+<ul>
+<li>不要与GNU CLISP和Common Lisp的概念混淆</li>
+<li>GNU Common Lisp（GCL）是GNU计划中ANSI Common Lisp的编译器</li>
+<li>它是Kyoto Common Lisp的演化版</li>
+<li>它的执行过程通常是先生成C代码然后调用C的编译器来生成本机的目标代码</li>
+<li>GCL是包括数学工具maxima，AXIOM,HOL88和ACL2在内的几个大型项目的首选实现</li>
+<li>GCL可以在Linux或FreeBSD，microsoft windows等11种不同体系架构的系统下运行</li>
+</ul>
+<hr>
+<p><strong>参考资料:</strong></p>
+<p>FSF的GCL社区<a href="https://directory.fsf.org/wiki/Gcl" target="_blank" rel="noopener">跳转</a><br><code>https://directory.fsf.org/wiki/Gcl</code></p>
+<p>官网社区<a href="https://www.gnu.org/software/gcl/gcl.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/gcl/gcl.html</code></p>
+]]></content>
+      <categories>
+        <category>软件</category>
+        <category>GNU</category>
+      </categories>
+      <tags>
+        <tag>GNU/Linux</tag>
+        <tag>1.认识与概述</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GNU CLISP</title>
     <url>/2020/02/02/CLISP/</url>
     <content><![CDATA[<h3 id="GNU-ANSI-Common-Lisp"><a href="#GNU-ANSI-Common-Lisp" class="headerlink" title="GNU ANSI Common Lisp"></a>GNU ANSI Common Lisp</h3><p><strong>概述:</strong></p>

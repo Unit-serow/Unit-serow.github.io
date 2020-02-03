@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://unit-serow.github.io/about/index.html</loc>
+    
+    <lastmod>2020-02-03T12:57:24.549Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://unit-serow.github.io/2020/02/03/Git-1/</loc>
     
     <lastmod>2020-02-03T12:50:16.129Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://unit-serow.github.io/2020/02/03/hexo%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD/</loc>
     
     <lastmod>2020-02-03T12:49:57.189Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://unit-serow.github.io/about/index.html</loc>
-    
-    <lastmod>2020-02-02T13:54:20.287Z</lastmod>
     
   </url>
   

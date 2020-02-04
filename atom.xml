@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-03T12:49:57.189Z</updated>
+  <updated>2020-02-04T06:16:56.277Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>分布式版本控制系统-Git-2</title>
+    <link href="https://unit-serow.github.io/2020/02/04/Git-3/"/>
+    <id>https://unit-serow.github.io/2020/02/04/Git-3/</id>
+    <published>2020-02-04T06:13:34.000Z</published>
+    <updated>2020-02-04T06:16:56.277Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Tue Feb 04 2020 14:17:01 GMT+0800 (中国标准时间) --><h3 id="分布式版本控制系统-Distributed-Version-Control-Git-第二章节"><a href="#分布式版本控制系统-Distributed-Version-Control-Git-第二章节" class="headerlink" title="分布式版本控制系统(Distributed Version Control) Git-第二章节"></a>分布式版本控制系统(Distributed Version Control) Git-第二章节</h3><p><strong>基本操作</strong></p><ul><li>上篇文章的末尾写了一点关于git创建新仓库和克隆项目的基本操作</li><li>这一章着重对暂存区内快照的管理与操作和分支的管理与操作进行说明</li><li>在<code>git init</code>后，在工作区的根目录会生成<code>.git</code>子目录，它就是本地主机的Git仓库，所有关于工作区项目的快照数据都存放在此目录下</li><li>Git主要工作就是创建和保存工作区中项目的快照及与其他时间段的快照进行对比</li></ul><ol><li><p><code>git add</code><br>用于将工作区修改或进行操作的任何文件添加到缓存目录，也就是暂存区<br><code>git add .</code><br>添加当前项目的所有文件</p></li><li><p><code>git status</code><br>用于查看工作区当前的状态，执行完<code>git status</code>就能看到工作区向暂存区进行的任何操作<br>可以添加参数，比如添加<code>-s参数</code>，以输出经过简化的结果<br><code>A/M filename</code>的意思是这个文件在添加到暂存区之后又有改动了</p></li><li><p><code>git diff</code><br>用以查看执行git status 输出结果的详细信息<br>参数信息</p></li></ol><ul><li><code>git diff</code>命令会输出暂存区以修改但尚未写入暂存区的改动的区别</li><li><code>git diff</code>尚未写入暂存区的改动</li><li><code>git diff --cached</code>查看已写如暂存区的改动</li><li><code>git diff HEAD</code>查看已写入暂存区的与未写入暂存区的所有改动</li><li><code>git diff --stat</code>输出简明的diff结果</li></ul><ol start="4"><li><p><code>git commit</code><br>将暂存区的内容添加到仓库中<br>因为每一次提交都要输入一次github的用户名和邮箱地址，所以可以先配置一下用户名和邮箱地址</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &#39;用户名&#39;</span><br><span class="line">git config --global user.email 邮箱地址</span><br></pre></td></tr></table></figure><p><code>参数-m</code>在命令行中提供提交注释，如果没有此参数，Git就会自动打开一个编辑器以填写提交信息<br><code>参数-a</code>可以跳过<code>git add</code>提交至暂存区</p></li><li><p><code>git reset HEAD filename</code><br><code>filename</code>是指已提交到暂存区的内容<br>用于取消已缓存的内容<br>执行<code>git reset HEAD</code>以取消之前的<code>git add</code>，并且不包含下一个提交完成后的暂存区快照</p></li><li><p><code>git rm</code><br>从工作区删除某个文件，需要从已跟踪文件的清单中移除，然后再去提交<br><code>git rm filename</code><br>如果该文件修改过并且已经提交到暂存区而还要删除的话，必须使用强制删除<code>参数-f</code><br><code>git rm -f filename</code><br>把文件从暂存区删除，或者说是从跟踪清单中删除，使用<code>--cached</code>参数<br><code>git rm --cached filename</code><br>使用<code>-r</code>参数用以递归删除，删除该目录下的所有文件和子目录<br><code>git rm -r</code>文件目录</p></li><li><p><code>git mv</code><br>用于移动或重命名一个文件夹，目录或软链接<br><code>git mv filename newfilename</code></p></li><li><p><code>git push</code><br>用于将本地工作区的最新消息推送到远端仓库</p></li><li><p><code>git pull</code><br>用于从远端仓库拉取最新的版本到本地工作区，并且自动与工作区内部的项目与数据自动合并(merge)</p></li><li><p><code>git fetch</code><br>用于是从远端仓库拉取最新版本到本地工作区，并且不会自动合并</p></li><li><p><code>git merge</code><br>用于从指定的分支合并到当前的分支，从而合并两个分支<br><code>git pull</code>相当于<code>git fetch + git merge</code></p></li></ol><hr><p><strong>Git查看提交日志</strong><br>12. <code>git log</code></p><ul><li><code>参数--oneline</code>查看简明版本</li><li><code>参数--graph</code>查看分支，合并等操作的日志，并显示拓扑图</li><li><code>参数--reverse</code>逆向输入所有日志</li><li><code>参数--author=用户名</code>查看指定用户的提交日志</li><li><code>参数--since，--before，--after，--until</code>查看指定日期<br>日志命令参考<a href="https://git-scm.com/docs/git-log" target="_blank" rel="noopener">跳转</a><br><code>https://git-scm.com/docs/git-log</code></li></ul><ol start="13"><li>git 标签<br><code>git tag -a 标签名</code><br>用于给当前快照打上标签</li></ol><hr><p><strong>使用Git连接远端的Github仓库</strong></p><p>添加一个新的远程仓库<br>14. <code>git remote add shortname url</code></p><p>查看当前的远程库<br>15. <code>git remote</code></p><p>拉取远程库<br>从远程仓库克隆新分支与数据<br>16. <code>git fetch alias</code><br>然后执行git merge 将远程分支到本地工作区所在的分支<br>17. <code>git merge alias/branch</code><br>从远端仓库提取更新数据并尝试合并到当前分支<br>一般执行完<code>git fetch</code>之后就会紧接着执行<code>git merge</code>，前者去对数据进行过滤，获取当前工作区没有的新数据，后者用于将新数据合并到本地工作区当前分支的项目</p><p>推送到远程仓库<br>18. <code>git push alias branch</code><br>将本地(branch)分支中的暂存区文件推到(alias)远端仓库上的(branch)分支<br>用于将本地暂存区的新数据推到某个远端仓库</p><p>删除远端仓库<br>19. <code>git remote rm [别名]</code></p><p><strong>生成ssh key</strong><br>20. * <code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code></p><ul><li>会在<code>/root/.ssh</code>目录生成密匙文件，打开<code>id_rsa.pub</code>，复制里面的key</li><li>然后进入Github并登入Github，点击头像内的<code>setting</code>选项卡内的<code>SSH and GPG keys</code>中的<code>SSH Keys</code>选项卡</li><li>将文件里的key拷贝到key中，title随意，然后<code>add ssh key</code></li><li>验证是否成功<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line">Hi Unit-serow! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>具体可以参考一下<a href="https://help.github.com/articles/generating-ssh-keys" target="_blank" rel="noopener">跳转</a><br><code>https://help.github.com/articles/generating-ssh-keys</code></li></ul><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Tue Feb 04 2020 14:17:01 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;分布式版本控制系统-Distributed-Version-Control-Git-第二章节&quot;&gt;&lt;a href=&quot;#分布式版本控制系统-Di
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="Git" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/Git/"/>
+    
+    
+      <category term="2.应用与拓展" scheme="https://unit-serow.github.io/tags/2-%E5%BA%94%E7%94%A8%E4%B8%8E%E6%8B%93%E5%B1%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分布式版本控制系统-Git-1</title>
+    <link href="https://unit-serow.github.io/2020/02/04/Git-2/"/>
+    <id>https://unit-serow.github.io/2020/02/04/Git-2/</id>
+    <published>2020-02-04T06:11:42.000Z</published>
+    <updated>2020-02-04T06:15:23.087Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Tue Feb 04 2020 14:17:01 GMT+0800 (中国标准时间) --><h3 id="分布式版本控制系统-Distributed-Version-Control-Git-第一章节"><a href="#分布式版本控制系统-Distributed-Version-Control-Git-第一章节" class="headerlink" title="分布式版本控制系统(Distributed Version Control) Git-第一章节"></a>分布式版本控制系统(Distributed Version Control) Git-第一章节</h3><p><strong>概述:</strong></p><ul><li>Git 是一个开源的分布式版本控制系统，用于帮助以群为单位的开发者们处理任何相同类型的项目(或称为同一项目)</li><li>Git 还可以指 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件</li><li>Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持</li><li>Git 的性质使他不仅用于版本控制，还可用于内容管理 CMS 与工作管理等</li></ul><p><strong>关于 Git 的分布式</strong></p><ul><li>Git把内容按元数据的方式去存储，分布式的版本控制就是每个人都可以创建一个独立的代码仓库用于管理，各种版本的操作都可以再本地完成，每个人修改的代码都可以经过推送合并到另外一个代码仓库中，所以Git这种分布式的版本控制系统更适合个人的开发</li><li>因为分散式版本控制系统本质的关系，使得此类系统更重视对分支(branch)的支持，它们通常有较好的分支及合并的能力</li><li>在分散式版本控制系统中，开发者可以进行推(push)的动作，其意义是将自身档案库中的变更送至其他的档案库，也可以进行拉(pull)的动作，其意义是获取其他档案库的变更</li><li>处于分布式版本控制系统中的每个个体之间的关系是完全独立且自由的，他们完全自由并且完全可以参照自己的意愿来对远端的代码仓库进行实时的操作</li><li>学习Git时最重要的是对其分支管理系统的了解，这是它的本质与执行的逻辑核心</li></ul><p><strong>使用Git进行工作的通常流程</strong></p><ul><li>从远端仓库克隆代码到本地并作为工作目录</li><li>对克隆的资源进行操作</li><li>如果有人已经对其修改了，可以在本地更新资源</li><li>在提交前查看修改内容并提交修改内容</li><li>在修改完成后，如果发现错误，可以撤回并再次修改并提交</li></ul><hr><p><strong>最基本的使用</strong></p><p><code>git init</code><br>使用git init 创建或初始化一个仓库，通常是使用git的第一个命令<br>在执行完成git init命令后，git仓库会生成一个.git目录，该目录包含了所有资源的元数据，而其它项目的目录保持不变</p><p><code>git clone</code><br>从指定以存在的Git远端仓库中克隆项目<br><code>git clone repo(Git 仓库名)</code><br>还可以指定克隆的目录<br><code>git clone repo directory(本地目录)</code></p><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Tue Feb 04 2020 14:17:01 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;分布式版本控制系统-Distributed-Version-Control-Git-第一章节&quot;&gt;&lt;a href=&quot;#分布式版本控制系统-Di
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="Git" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/Git/"/>
+    
+    
+      <category term="1.认识与概述" scheme="https://unit-serow.github.io/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo博客文件远端备份与恢复</title>
@@ -538,62 +594,6 @@
       <category term="1.认识与概述" scheme="https://unit-serow.github.io/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
     
       <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GNU M4</title>
-    <link href="https://unit-serow.github.io/2020/01/29/M4/"/>
-    <id>https://unit-serow.github.io/2020/01/29/M4/</id>
-    <published>2020-01-29T10:16:43.000Z</published>
-    <updated>2020-01-29T18:02:47.123Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --><h3 id="GNU-M4-第一部分"><a href="#GNU-M4-第一部分" class="headerlink" title="GNU M4 第一部分"></a>GNU M4 第一部分</h3><p><strong>GNU 宏处理器</strong></p><p><strong>概述:</strong><br>GNU M4是一种宏处理器<br>因为基于POSIX标准，所以兼容大部分SVR4<br>SVR4: UNIX操作系统的一种内核标准<br>其主要作用于GNU Autoconf project，通常是在安装autoconf时需要m4依赖才会安装它</p><p>获取途径:<br>git: <code>git clone http://git.savannah.gnu.org/r/m4.git</code><br>http: <code>http://ftp.gnu.org/gnu/m4</code><br>ftp: <code>ftp://ftp.gnu.org/gnu/m4</code><br>apt-get: <code>apt-get install m4-doc或m4*</code></p><hr><p><strong>学习途径</strong></p><p>官方文档:<br><code>https://www.gnu.org/software/m4/m4.html</code><br><a href="https://www.gnu.org/software/m4/m4.html" target="_blank" rel="noopener">跳转</a></p><p>M4 宏语言手册<br><code>http://mbreen.com/m4.html</code><br><a href="http://mbreen.com/m4.html" target="_blank" rel="noopener">跳转</a></p><p>GNU M4 社区<br><code>http://savannah.gnu.org/projects/m4/</code><br><a href="http://savanah.gnu.org/project/m4" target="_blank" rel="noopener">跳转</a></p><p>默认帮助文档<br><code>m4 --help与man m4</code></p><hr><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;GNU-M4-第一部分&quot;&gt;&lt;a href=&quot;#GNU-M4-第一部分&quot; class=&quot;headerlink&quot; title=&quot;GNU M4 第
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="Debian GNU/Linux" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/Debian-GNU-Linux/"/>
-    
-    
-      <category term="1.认识与概述" scheme="https://unit-serow.github.io/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
-    
-      <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于debian使用hexo框架-next主题搭建并配置博客</title>
-    <link href="https://unit-serow.github.io/2020/01/28/%E5%9F%BA%E4%BA%8Edebian%E4%BD%BF%E7%94%A8hexo%E6%A1%86%E6%9E%B6-next%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%B9%B6%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://unit-serow.github.io/2020/01/28/%E5%9F%BA%E4%BA%8Edebian%E4%BD%BF%E7%94%A8hexo%E6%A1%86%E6%9E%B6-next%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%B9%B6%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/</id>
-    <published>2020-01-28T15:18:46.000Z</published>
-    <updated>2020-01-29T13:31:37.557Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --><h3 id="对于debian的基本配置与hexo的安装"><a href="#对于debian的基本配置与hexo的安装" class="headerlink" title="对于debian的基本配置与hexo的安装"></a>对于debian的基本配置与hexo的安装</h3><p>apt源的设置与一些基本软件的配置和准备这里就不过多阐述了<br>先修改一下/etc/hosts内的所配置IP,保证机器能ping通github.com<br><code>vim /etc/hosts</code> 内添加 <code>192.30.253.113 github.com</code></p><p>接下来安装hexo所依赖的几个程序：npm，git，node.js<br><code>apt-get install npm*</code><br><code>apt-get install git*</code><br><code>apt-get install node.js*</code><br>安装完之后检查一下版本或者whereis一下看看所否健在<br>最后再安装hexo软件<br><code>npm install -g hexo-cli</code><br>安装完–version检查一下版本</p><hr><h3 id="hexo的基本操作"><a href="#hexo的基本操作" class="headerlink" title="hexo的基本操作"></a>hexo的基本操作</h3><p>hexo –help<br><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">官方中文文档与手册</a><br>hexo安装完毕后可以先进行一下测试<br>于任意目录下新建一个文件夹 <code>mkdir blog</code><br>进入文件夹后分别执行<code>hexo init,hexo g,hexo s</code><br>然后使用浏览器访问<u>localhost:4000</u>查看所否成功</p><hr><h3 id="hexo链接github库"><a href="#hexo链接github库" class="headerlink" title="hexo链接github库"></a>hexo链接github库</h3><p>利用npm安装hexo部署程序/插件<br><code>npm install --save hexo-deployer-git</code><br><code>vim /*/blog/_config.yml</code><br>修改最下方的#deployment配置</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;你所建立的仓库地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>执行<code>hexo d</code>开始远程部署，其中需要用户输入仓库所在帐号的帐号和密码</p><hr><h3 id="hexo修改主题"><a href="#hexo修改主题" class="headerlink" title="hexo修改主题"></a>hexo修改主题</h3><p>这里推荐两个个人感觉生态最好的两个hexo主题-next与yilia<br>进入blog目录下直接执行克隆命令<br><code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code><br>或<br><code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</code><br>此时的主题文件被存储于/blog/theme目录下<br><code>cd _condig.yml</code><br>修改#extensions中的theme，将原主题landscape修改为next或yilia</p><hr><h3 id="hexo安装搜索插件与RSS插件"><a href="#hexo安装搜索插件与RSS插件" class="headerlink" title="hexo安装搜索插件与RSS插件"></a>hexo安装搜索插件与RSS插件</h3><p>添加并配置RSS<br><code>npm install hexo-generator-feed --save</code><br>修改hexo配置文件为</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">        plugins:</span><br><span class="line">                hexo-generator-feed</span><br><span class="line">                #Feed Atom</span><br><span class="line">        feed:</span><br><span class="line">                type: atom</span><br><span class="line">                path: atom.xml</span><br><span class="line">                limit: 20</span><br></pre></td></tr></table></figure><p>对主题文件添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">feed:</span><br><span class="line">        type: rss2</span><br><span class="line">        path: rss2.xml</span><br><span class="line">        limit: 5</span><br><span class="line">        hub:</span><br><span class="line">                content: &#39;true&#39;</span><br></pre></td></tr></table></figure><p>添加并配置search-搜索<br><code>npm install hexo-generator-searchdb --save</code><br>修改hexo配置文件为</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 搜索</span><br><span class="line">  search:</span><br><span class="line">          path: search.xml</span><br><span class="line">          field: post</span><br><span class="line">          format: html</span><br><span class="line">          limit: 10000</span><br></pre></td></tr></table></figure><p>修改主题配置文件为<br>找到local search，然后把enable设置为true</p><p>其余类似于菜单，头像，链接与装饰的配置可以<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">参考官方文档</a></p><hr><h3 id="关于文章的书写格式与基本要求"><a href="#关于文章的书写格式与基本要求" class="headerlink" title="关于文章的书写格式与基本要求"></a>关于文章的书写格式与基本要求</h3><p>hexo文章书写的语法都来自于Markdown<br>Markdown所一种可以使用普通文本编辑器编写的标记语言<br>目的是通过简单的语法来让普通文本的内容具有一定的格式<br>详情参考: <a href="https://markdown-zh.readthedocs.io/en/latest" target="_blank" rel="noopener">Markdown中文文档</a></p><hr><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;对于debian的基本配置与hexo的安装&quot;&gt;&lt;a href=&quot;#对于debian的基本配置与hexo的安装&quot; class=&quot;headerl
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-      <category term="hexo" scheme="https://unit-serow.github.io/tags/hexo/"/>
     
   </entry>
   

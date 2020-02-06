@@ -4,7 +4,7 @@
 
 # Site
 title: UNIT
-subtitle: 道常无为而无不为
+subtitle: 不精之精，而至纯粹
 description: ''
 keywords:
 author: serow
@@ -160,3 +160,8 @@ baidusitemap:
 sitemap:
     path: sitemap.xml
 
+#流程图插件
+    flowchart:
+            # raphael: # optional, the source url of rapheal.js
+            # flowchart: # optional, the source url of flowchart.js
+            options: # options used for `drawSVG`

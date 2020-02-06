@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://unit-serow.github.io/2020/01/29/M4/</loc>
+    <lastmod>2020-02-06</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/03/Git-1/</loc>
+    <lastmod>2020-02-06</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/03/hexo%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD/</loc>
+    <lastmod>2020-02-06</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/06/Docker-3/</loc>
+    <lastmod>2020-02-06</lastmod>
+  </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/06/Docker-2/</loc>
     <lastmod>2020-02-06</lastmod>
   </url>  <url>
@@ -10,9 +22,6 @@
     <loc>https://unit-serow.github.io/2020/02/05/flowchart/</loc>
     <lastmod>2020-02-05</lastmod>
   </url>  <url>
-    <loc>https://unit-serow.github.io/2020/01/29/M4/</loc>
-    <lastmod>2020-02-04</lastmod>
-  </url>  <url>
     <loc>https://unit-serow.github.io/2020/01/29/Autotools/</loc>
     <lastmod>2020-02-04</lastmod>
   </url>  <url>
@@ -21,12 +30,6 @@
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/04/Git-2/</loc>
     <lastmod>2020-02-04</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/03/Git-1/</loc>
-    <lastmod>2020-02-03</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/03/hexo%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD/</loc>
-    <lastmod>2020-02-03</lastmod>
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/02/BFD/</loc>
     <lastmod>2020-02-02</lastmod>

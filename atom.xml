@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-06T13:20:57.282Z</updated>
+  <updated>2020-02-07T08:48:59.435Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker Compose-1</title>
+    <link href="https://unit-serow.github.io/2020/02/07/Docker-Compose-1/"/>
+    <id>https://unit-serow.github.io/2020/02/07/Docker-Compose-1/</id>
+    <published>2020-02-07T08:47:40.000Z</published>
+    <updated>2020-02-07T08:48:59.435Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Fri Feb 07 2020 16:49:04 GMT+0800 (中国标准时间) --><h3 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h3><p><strong>概述:</strong></p><ul><li>Compose是用于定义和运行多容器Docker应用程序的工具</li><li>通过Compose，可以使用YML文件来配置应用程序需要的所有服务</li><li>最后通过使用一个命令，就可以从 YML 文件配置中创建并启动所有服务</li><li><a href="https://yaml.org/" target="_blank" rel="noopener">YAML</a>官方文档</li></ul><hr><p><strong>安装 Compose</strong></p><ul><li><p>Github地址:<a href="https://github.com/docker/compose/releases" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://github.com/docker/compose/releases</code></p></blockquote></li><li><p>下载源码包(二进制文件)</p></li><li><p>Docker Compose当前的稳定版本：</p><blockquote><p><code>$ sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</code></p></blockquote></li><li><p>其中的1.25.4为版本号，可用于指定版本</p></li><li><p>提权至可执行文件</p><blockquote><p><code>$ sudo chmod +x /usr/local/bin/docker-compose</code></p></blockquote></li><li><p>设置环境变量的软链接</p><blockquote><p><code>$ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose</code></p></blockquote></li><li><p>查看版本，以测试是否安装成功</p><blockquote><p><code>$ docker-compose --version</code></p></blockquote></li><li><p>对于Alpine/Linux发行版，需要安装依赖包:<code>py-pip</code>，<code>python-dev</code>，<code>libffi-dev</code>，<code>openssl-dev</code>，<code>gcc</code>，<code>libc-dev</code>，以及<code>make</code></p></li></ul><hr><p><strong>使用</strong></p><ul><li>对Compose进行使用大概可分为三个步骤:<blockquote><p>使用Dockerfile定义应用程序的环境<br>使用<code>docker-compose.yml</code>文件定义构成应用程序的服务，使其可以在隔离环境中一起运行<br>最后，执行<code>docker-compose up</code>命令来启动并运行整个应用程序</p></blockquote></li></ul><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Fri Feb 07 2020 16:49:04 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;Docker-Compose&quot;&gt;&lt;a href=&quot;#Docker-Compose&quot; class=&quot;headerlink&quot; title=&quot;Do
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="虚拟化" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
+    
+    
+      <category term="Docker" scheme="https://unit-serow.github.io/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker Dockefile-1</title>
+    <link href="https://unit-serow.github.io/2020/02/07/Docker-Dockefile-1/"/>
+    <id>https://unit-serow.github.io/2020/02/07/Docker-Dockefile-1/</id>
+    <published>2020-02-07T08:44:44.000Z</published>
+    <updated>2020-02-07T08:46:40.721Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Fri Feb 07 2020 16:46:46 GMT+0800 (中国标准时间) --><h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><p><strong>概述:</strong></p><ul><li>Dockerfile是用于构建镜像的文本文件</li><li>文本内容包含构建镜像所需的指令和说明</li></ul><p><strong>关于上下文的概念:</strong></p><ul><li>上下文路径，是指Docker在构建镜像时如果需要使用到本机内的文件(比如复制)，<code>docker build</code>命令得知所指定的路径后，会将该路径下的所有内容打包</li><li>Docker的运行模式是C/S，主机为C，Docker引擎是S</li><li>实际的构建过程是在Docker引擎内完成的，所以此时无法调用到本机内的文件，此时就需要人为的把本机指定目录下的所有文件打包，并提供给Docker引擎进行调用</li><li>如果未说明最后一个参数(未指定上下文所在路径)，那么默认上下文路径就是Dockerfile所在的目录下</li><li>上下文路径下所有的文件都会打包给Docker引擎，如果无用文件过多的话会造成执行过程缓慢</li></ul><hr><p><strong>Dockerfile内的基本指令</strong></p><ol><li><strong>FROM</strong></li></ol><ul><li>定制的镜像都是基于FROM的镜像，在选择完要定义的基础镜像之后，后续的操作都是基于该基础镜像的</li><li>格式:<blockquote><p><code>FROM &lt;所选基础镜像名&gt;</code></p></blockquote></li></ul><hr><ol start="2"><li><strong>RUN</strong></li></ol><ul><li>用于执行后面跟着的命令行命令，有两种格式<blockquote><p>Shell格式: RUN [命令行命令]<br>Exec格式: RUN [“可执行文件”, “参数一”, “参数二”]</p></blockquote></li><li>Dockefile每次执行指令都会在docker上新建一层，多余的层会造成镜像膨胀</li><li>可以用&amp;&amp;符号来连接命令，从而不进行指令的线性执行，目的就是让所有的指令都集成到一层内<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RUN xxx \</span><br><span class="line">   &amp;&amp; xxx \</span><br><span class="line">   &amp;&amp; xxx</span><br></pre></td></tr></table></figure></li></ul><ol start="3"><li><strong>CMD</strong></li></ol><ul><li>类似于<code>RUN</code>指令，用于运行程序</li><li>二者的区别在于其运行的时间点不同:<blockquote><p><code>CMD</code>在<code>docker run</code>时运行<br><code>RUN</code>是在<code>docker build</code>时运行</p></blockquote></li><li>作用:<blockquote><p>为启动的容器指定默认要运行的程序，程序运行结束，容器也就结束<br><code>CMD</code>指令指定的程序可被<code>docker run</code>命令行参数中指定要运行的程序所覆盖</p></blockquote></li><li>格式:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CMD &lt;shell 命令&gt; </span><br><span class="line">CMD [&quot;&lt;可执行文件或命令&gt;&quot;,&quot;&lt;param1&gt;&quot;,&quot;&lt;param2&gt;&quot;,...] </span><br><span class="line">CMD [&quot;&lt;param1&gt;&quot;,&quot;&lt;param2&gt;&quot;,...]</span><br></pre></td></tr></table></figure><blockquote><p>第一种格式实际上在运行的过程中也会自动转换成第二种格式运行，并且默认可执行文件是<code>.sh</code>，所以可以直接使用第二种格式<br><code>最后一种写法是为</code>ENTRYPOINT<code>指令指定的程序提供默认参数</code></p></blockquote></li></ul><ol start="4"><li><strong>ENTRYPOINT</strong></li></ol><ul><li><p>类似于<code>CMD</code>指令，但其不会被<code>docker run</code>的命令行参数指定的指令所覆盖，而且这些命令行参数会被当作参数送给<code>ENTRYPOINT</code>指令指定的程序</p></li><li><p>但如果运行<code>docker run</code>时使用了<code>--entrypoint</code>选项，此选项的参数可当作要运行的程序覆盖<code>ENTRYPOINT</code>指令指定的程序</p></li><li><p>特点就是在执行<code>docker run</code>的时候可以指定<code>ENTRYPOINT</code>运行所需的参数</p></li><li><p>但如果 Dockerfile 中如果存在多个 ENTRYPOINT 指令，仅最后一个生效</p></li><li><p>格式:</p><blockquote><p><code>ENTRYPOINT [&quot;&lt;executeable&gt;&quot;,&quot;&lt;param1&gt;&quot;,&quot;&lt;param2&gt;&quot;,...]</code></p></blockquote></li><li><p>还可以搭配<code>CMD</code>命令使用:一般是变参才会使用<code>CMD</code>，这里的<code>CMD</code>等于是在给<code>ENTRYPOINT</code>传参</p></li><li><p>这里假设已有了某镜像</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM 某镜像</span><br><span class="line"></span><br><span class="line">ENTRYPOINT [&quot;&lt;某镜像&gt;&quot;, &quot;-c&quot;] #定参</span><br><span class="line">CMD [&quot;&lt;&#x2F;执行脚本所在文件目录&gt;&quot;] #变参</span><br></pre></td></tr></table></figure></li><li><p>不传参运行</p><blockquote><p><code>$ docker run &lt;某镜像&gt;</code></p></blockquote></li><li><p>此时容器内会默认(等于)运行以下命令，启动主进程</p><blockquote><p><code>&lt;某镜像&gt; -c &lt;/执行脚本所在文件目录&gt;</code></p></blockquote></li><li><p>传参运行</p><blockquote><p><code>$ docker run &lt;某镜像&gt; -c &lt;/执行脚本所在文件目录&gt;</code></p></blockquote></li><li><p>容器内会默认(等于)运行以下命令，启动主进程<code>(/执行脚本所在文件目录:假设容器内已有此文件)</code></p><blockquote><p><code>&lt;某镜像&gt; -c &lt;/执行脚本所在文件目录&gt;</code></p></blockquote></li><li><p>简述</p><blockquote><p>指定了参数以后可以选择以传参或不传参的模式启动<br>不用传参就是直接启动所键入命令，用传参就是使用已指定的参数</p></blockquote></li></ul><hr><ol start="5"><li><strong>COPY</strong></li></ol><ul><li>用于复制的指令，可以从上下文目录复制文件或者目录到容器内的指定路径</li><li>使用格式:<blockquote><p><code>COPY [--chown=&lt;user&gt;:&lt;group&gt;] &lt;源路径1&gt;... &lt;目标路径&gt;</code><br><code>COPY [--chown=&lt;user&gt;:&lt;group&gt;] [&quot;&lt;源路径1&gt;&quot;,... &quot;&lt;目标路径&gt;&quot;]</code></p></blockquote></li><li>参数说明:<blockquote><p><code>[--chown=&lt;user&gt;:&lt;group&gt;]</code>为可选参数，可以让用户改变复制到容器内文件的拥有者和属组<br><code>&lt;源路径&gt;</code>用于表示源文件或者源目录，这里可以是通配符表达式，其通配符规则要满足Go的<code>filepath.Match</code>规则<br><code>&lt;目标路径&gt;</code>用于在容器内的指定路径，该路径不用事先建好，路径不存在的话，会自动创建</p></blockquote></li></ul><ol start="6"><li><strong>ADD</strong></li></ol><ul><li>ADD和COPY的使用格式一致</li><li>同样需求下，官方推荐使用COPY</li><li>ADD的优缺点:<blockquote><p>ADD的优点:在执行<code>&lt;源文件&gt;</code>为<code>tar</code>压缩文件的话，压缩格式为<code>gzip</code>，<code>bzip2</code>以及<code>xz</code>的情况下，会自动复制并解压到<code>&lt;目标路径&gt;</code><br>ADD的缺点:在不解压的前提下，无法复制<code>tar</code>压缩文件，会令镜像构建缓存失效，从而可能会令镜像构建变得比较缓慢</p></blockquote></li><li>具体是否使用，可以根据所处情况是否需要自动解压来决定</li></ul><hr><ol start="7"><li><strong>ENV</strong></li></ol><ul><li><p>用于设置与定义环境变量，定义之后可以直接使用环境变量</p></li><li><p>使用格式:</p><blockquote><p><code>ENV &lt;key&gt; &lt;value&gt;</code><br><code>ENV &lt;key1&gt;=&lt;value1&gt; &lt;key2&gt;=&lt;value2&gt;...</code></p></blockquote></li><li><p>以下示例设置<code>NODE_VERSION = 7.2.0</code>，在后续的指令中可以直接通过<code>$NODE_VERSION</code>进行引用</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ENV NODE_VERSION 7.2.0</span><br><span class="line"></span><br><span class="line">RUN curl -SLO &quot;https:&#x2F;&#x2F;nodejs.org&#x2F;dist&#x2F;v$NODE_VERSION&#x2F;node-v$NODE_VERSION-linux-x64.tar.xz&quot; \</span><br><span class="line">  &amp;&amp; curl -SLO &quot;https:&#x2F;&#x2F;nodejs.org&#x2F;dist&#x2F;v$NODE_VERSION&#x2F;SHASUMS256.txt.asc&quot;</span><br></pre></td></tr></table></figure></li></ul><ol start="8"><li><strong>ARG</strong></li></ol><ul><li>构建参数，与<code>ENV</code>作用一致，不过作用域不一样，<code>ARG</code>设置的环境变量仅对<code>Dockerfile</code>内有效，也就是说只有<code>docker build</code>的过程中有效，构建好的镜像内不存在此环境变量</li><li>构建命令<code>docker build</code>中可以用<code>--build-arg &lt;参数名&gt;=&lt;值&gt;</code>来覆盖</li><li>使用格式：<blockquote><p><code>ARG &lt;参数名&gt;[=&lt;默认值&gt;]</code></p></blockquote></li></ul><hr><ol start="9"><li><strong>VOLUME</strong></li></ol><ul><li>定义匿名数据卷</li><li>在启动容器时忘记挂载数据卷，会自动挂载到匿名卷</li><li>可以避免重要的数据因容器重启而丢失</li><li>还可以避免容器不断变大</li><li>使用格式:<blockquote><p><code>VOLUME [&quot;&lt;路径1&gt;&quot;, &quot;&lt;路径2&gt;&quot;...]</code><br><code>VOLUME &lt;路径&gt;</code></p></blockquote></li><li>在启动容器<code>docker run</code>的时候，可以使用参数<code>-v</code>修改挂载点</li></ul><hr><ol start="10"><li><strong>EXPOSE</strong></li></ol><ul><li>用于声明端口</li><li>帮助镜像使用者理解这个镜像服务的守护端口，以方便配置映射</li><li>在运行时使用随机端口映射时，也就是<code>docker run -P</code>时，会自动随机映射<code>EXPOSE</code>的端口</li><li>使用格式:<blockquote><p><code>EXPOSE &lt;端口1&gt; [&lt;端口2&gt;...]</code></p></blockquote></li></ul><hr><ol start="11"><li><strong>WORKDIR</strong></li></ol><ul><li>用于指定工作目录</li><li>用<code>WORKDIR</code>指定的工作目录，会在构建镜像的每一层中都存在(<code>WORKDIR</code>指定的工作目录，必须是提前创建好的)</li><li>在使用<code>docker build</code>构建镜像过程中的，每一个<code>RUN</code>命令都是新建的一层，只有通过<code>WORKDIR</code>创建的目录才会一直存在</li><li>使用格式:<blockquote><p><code>WORKDIR &lt;工作目录路径&gt;</code></p></blockquote></li></ul><ol start="12"><li><strong>USER</strong></li></ol><ul><li>用于指定执行后续命令的用户和用户组，用于切换后续命令执行的用户(用户和用户组必须提前已经存在)</li><li>使用格式:<blockquote><p><code>USER &lt;用户名&gt;[:&lt;用户组&gt;]</code></p></blockquote></li></ul><hr><ol start="13"><li><strong>HEALTHCHECK</strong></li></ol><ul><li>用于指定某个程序或者指令来监控Docker容器服务的运行状态</li><li>使用格式:<blockquote><p><code>HEALTHCHECK [选项] CMD &lt;命令&gt;</code>:设置检查容器健康状况的命令<br><code>HEALTHCHECK NONE</code>:如果基础镜像有健康检查指令，使用这行可以屏蔽掉其健康检查指令<br><code>HEALTHCHECK [选项] CMD &lt;命令&gt;</code> : 这个<code>CMD</code>后面跟随的命令使用，可以参考<code>CMD</code>的用法</p></blockquote></li></ul><hr><ol start="14"><li><strong>ONBUILD</strong></li></ol><ul><li>用于延迟构建命令的执行</li><li>简述:<blockquote><p>在<code>Dockerfile</code>里用<code>ONBUILD</code>指定的命令，在本次构建镜像的过程中不会执行(假设镜像为test-build)<br>当有新的<code>Dockerfile</code>使用了之前构建的镜像<code>FROM test-build</code>，这是执行新镜像的<code>Dockerfile</code>构建时候，<code>会执行 test-build</code>的<code>Dockerfile</code>里的<code>ONBUILD</code>指定的命令</p></blockquote></li><li>使用格式:<blockquote><p><code>ONBUILD &lt;其它指令&gt;</code></p></blockquote></li></ul><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Fri Feb 07 2020 16:46:46 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;Dockerfile&quot;&gt;&lt;a href=&quot;#Dockerfile&quot; class=&quot;headerlink&quot; title=&quot;Dockerfile
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="虚拟化" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
+    
+    
+      <category term="Docker" scheme="https://unit-serow.github.io/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker-4</title>
@@ -514,66 +570,6 @@
       
       
         &lt;!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;GNU-libtool-第一章节&quot;&gt;&lt;a href=&quot;#GNU-libtool-第一章节&quot; class=&quot;headerlink&quot; title
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="GNU" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
-    
-    
-      <category term="1.认识与概述" scheme="https://unit-serow.github.io/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
-    
-      <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GNU Binutils</title>
-    <link href="https://unit-serow.github.io/2020/02/01/Binutils/"/>
-    <id>https://unit-serow.github.io/2020/02/01/Binutils/</id>
-    <published>2020-02-01T13:52:49.000Z</published>
-    <updated>2020-02-01T14:13:23.508Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --><h3 id="GNU-Binutils-第一部分"><a href="#GNU-Binutils-第一部分" class="headerlink" title="GNU Binutils 第一部分"></a>GNU Binutils 第一部分</h3><p><strong>GNU 二进制工具包</strong></p><p><strong>工具包内包含程序</strong><br>主要包含ld与as，分别是GNU链接器-GAS与GNU汇编器-GLD</p><p><strong>其他程序</strong></p><ul><li>ar-用于建立，修改，提取归档文件(archive)<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>/用于对归档/静态库做创建，修改和提取的操作</li><li>addr2line-将目标文件的虚拟地址转换为文件的行号或符号</li><li>c++filt-解码C++的符号</li><li>dlltool-用于构建与使用DLL文件，也就是创建windows动态库</li><li>gold-正在测试的功能，一个新型且效率更高的ELF的链接器</li><li>ELF是一种用于可执行文件，目标文件，共享库和核心转储的标准文件格式，可执行与可连接格式，ELF所产生的数据结构与工具不做阐述</li><li>gprof-用于显示性能的分析信息/性能分析工具</li><li>nlmconv-将目标代码转换为NetWare Loadable Module/NLM文件格式</li><li>nm-列出并显示目标文件中的符号</li><li>objcopy-复制并编译目标文件，其过程中可以修改</li><li>objdump-显示目标文件中的相关信息，可用于反汇编</li><li>ranlib-生成静态库索引</li><li>readelf-用于显示任何ELF格式文件的内容</li><li>size-列出对象总体或归档文件的节数/大小</li><li>strings-列出目标二进制文件中的可打印/可显示字符串</li><li>strip-从目标文件中移除符号</li><li>windmc-兼容windows消息的编译器，用于产生windows的消息资源</li><li>windres-windows资源文件的编译器</li></ul><hr><p><strong>杂项及存在意义</strong></p><ul><li>大部分的复杂代码都存于Binary File Descriptor library和libopcodes库内</li><li>所以它是一整套编程语言工具程序,用于处理许多格式的目标文件</li><li>这些程序大多数使用BFD-二进制文件描述库</li><li>主要的目的还是为GNU项目用于解决不同格式的目标文件的可移植性问题的主要机制</li></ul><hr><p><strong>参考:</strong></p><p>获取：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;binutils</span><br><span class="line">http:&#x2F;&#x2F;ftpmirror.gnu.org&#x2F;binutils</span><br><span class="line">apt-get install binutils*</span><br><span class="line">克隆：git clone git:&#x2F;&#x2F;sourceware.org&#x2F;git&#x2F;binutils-gdb.git</span><br></pre></td></tr></table></figure><p>官网<a href="https://www.gnu.org/software/binutils/binutils.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/binutils/binutils.html</code></p><p>文档<a href="https://sourceware.org/binutils/docs-2.33.1/" target="_blank" rel="noopener">跳转</a><br><code>https://sourceware.org/binutils/docs-2.33.1/</code></p><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none;padding-left:0"><li id="fn:1"><span style="display:inline-block;vertical-align:top;padding-right:10px">1.</span><span style="display:inline-block;vertical-align:top">archive是一个包含多个被包含文件的单一库文件,它可以保证从中检索到原始的被包含文件-mumber,而member用于保存archive的各种基本属性，当member被提取后，archive的属性将被还原到初始状态</span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;GNU-Binutils-第一部分&quot;&gt;&lt;a href=&quot;#GNU-Binutils-第一部分&quot; class=&quot;headerlink&quot; tit
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="GNU" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
-    
-    
-      <category term="1.认识与概述" scheme="https://unit-serow.github.io/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
-    
-      <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GNU Make</title>
-    <link href="https://unit-serow.github.io/2020/02/01/Make/"/>
-    <id>https://unit-serow.github.io/2020/02/01/Make/</id>
-    <published>2020-02-01T13:40:08.000Z</published>
-    <updated>2020-02-01T13:49:41.013Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --><h3 id="GNU-Make-第一部分"><a href="#GNU-Make-第一部分" class="headerlink" title="GNU Make 第一部分"></a>GNU Make 第一部分</h3><p><strong>GNU 自动化建构</strong></p><p><strong>概述:</strong></p><ul><li>在软件开发的过程中，make通常作为一个工具程序(unility software),经由makefile，从而实现自动化构建软件</li><li>在经由makefile时make工具会根据情况转换文件形式至target，转换的同时还会检查文件的依赖关系，检查依赖关系的方式本部分不做阐述</li><li>所以在编写软件时，应该先编写一个makefile，之后再让make去进行构建和安装</li></ul><p>或称为</p><ul><li><p>用于编译源代码，从而生成结果代码，然后将结果代码链接起来，最后生成可执行文件</p></li><li><p>其中名为makefile的文件用来确定某一target文件的以来关系，然后把生成target相关的命令转给机器的shell去执行</p></li><li><p>IDE通常包含了make，make多用于UNIX下的软件开发</p></li><li><p>本质如同UNIX底层的其他基本程序，批量执行生成目标的命令，同时检查文件的依赖关系</p></li></ul><hr><p>参考<br>官方网站<a href="https://www.gnu.org/software/make/make.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/make/make.html</code></p><p>获取<br><code>http: http://ftp.gnu.org/gnu/make/</code><br><code>ftp: ftp://ftp.gnu.org/gnu/make/</code></p><p>make手册<a href="https://www.gnu.org/software/make/manual/" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/make/manual/</code></p><p>makefile手册<a href="https://www.gnu.org/prep/standards/html_node/Makefile-Conventions.html#Makefile-Conventions" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/prep/standards/html_node/Makefile-Conventions.html#Makefile-Conventions</code></p><p>make源码所在目录</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;share&#x2F;doc&#x2F;make&#x2F;</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;doc&#x2F;make&#x2F;</span><br></pre></td></tr></table></figure><p>make帮助指令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">make --help</span><br><span class="line">info make</span><br><span class="line">man make</span><br></pre></td></tr></table></figure><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;GNU-Make-第一部分&quot;&gt;&lt;a href=&quot;#GNU-Make-第一部分&quot; class=&quot;headerlink&quot; title=&quot;GNU 
       
     
     </summary>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-08T10:24:47.570Z</updated>
+  <updated>2020-02-08T19:12:50.026Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker-1.1</title>
+    <link href="https://unit-serow.github.io/2020/02/09/Docker-1-1/"/>
+    <id>https://unit-serow.github.io/2020/02/09/Docker-1-1/</id>
+    <published>2020-02-08T19:11:01.000Z</published>
+    <updated>2020-02-08T19:12:50.026Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Sun Feb 09 2020 03:12:54 GMT+0800 (中国标准时间) --><h3 id="基本指令"><a href="#基本指令" class="headerlink" title="基本指令"></a>基本指令</h3><ul><li><p>查看已有镜像</p><blockquote><p><code>docker images</code></p></blockquote></li><li><p>参数:仓库源/标签/ID/创建时间/空间</p><blockquote><p><code>debian tag [镜像ID]</code> # 添加标签</p></blockquote></li><li><p>查看仓库内所有镜像文件</p><blockquote><p><code>docker search debian</code></p></blockquote></li><li><p>拉取仓库内默认版本的debian镜像<code>(debian:latest)</code></p><blockquote><p><code>docker pull debian</code></p></blockquote></li><li><p>查看所有已创建容器</p><blockquote><p><code>docker ps -a</code></p></blockquote></li><li><p>用容器启动所选镜像</p><blockquote><p><code>docker run -it --name [自定义命名] debian /bin/bash</code></p></blockquote></li></ul><hr><ul><li>启动，停止，重启所选容器<blockquote><p><code>docker start/stop/restart [容器ID]</code><br>参数:<code>·-i交互式操作</code>，<code>-t终端</code>，<code>-d后台运行</code></p></blockquote></li></ul><hr><ul><li>删除操作<blockquote><p><code>docker rmi debian</code>删除镜像<br><code>docker rm -f</code>删除容器<br><code>docker container prune</code>删除所有停止的容器</p></blockquote></li><li>容器必须停止才能进行删除</li></ul><hr><ul><li>进入后台后使用<code>docker attach</code>或<code>docker exec [容器ID]</code>进入该容器</li><li>前者暂时性，后者永久性</li><li>重新进入容器时还必须加入原来设置的启动参数</li><li>比如<code>/bin/bash和-it</code></li></ul><hr><ul><li><p>设置[service]端口映射与绑定IP</p><blockquote><p><code>docker run -p [可选的IP绑定]:[映射端口]:[原端口]/(udp/tcp) [镜像名] [启动脚本]</code><br>参数:<code>-P</code>是随机映射，<code>-p</code>是指定映射</p></blockquote></li><li><p>查看端口绑定情况</p><blockquote><p><code>docker port [服务名]</code></p></blockquote></li></ul><hr><h3 id="容器网络"><a href="#容器网络" class="headerlink" title="容器网络"></a>容器网络</h3><ul><li><p>父子关系这里都称为上下层级关系，与阶级关系不同</p></li><li><p>上级容器可以看到下级容器的关系</p></li><li><p>建立容器网络</p><blockquote><p><code>docker network create -d bridge/overlay(网络类型) [网络命名]</code>overlay<code>应用于</code>swarm`</p></blockquote></li><li><p>后台运行一个命名为<code>test1</code>的容器并把它并入<code>test-net</code>内，并开启交互式终端系统</p><blockquote><p><code>docker run -itd --name test1 --network test-net debian /bin/bash</code></p></blockquote></li><li><p>任何加入此网络的容器都会达成互联的状态</p></li></ul><hr><ul><li><p>设定所有容器域名和DNS</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vim &#x2F;etc&#x2F;docker&#x2F;daemon.json</span><br><span class="line">&#123;&quot;dns&quot; : [&quot;111.111.111.111&quot;,&quot;1.1.1.1&quot;]&#125;</span><br></pre></td></tr></table></figure></li><li><p>查看是否生效</p><blockquote><p><code>docker run -it rm debian cat etc/resolv.conf</code></p></blockquote></li><li><p>指定容器设置域名和DNS服务器</p><blockquote><p><code>docker run -it --rm _hostname=HOSTNAME --dns=IP_ADDRESS --dns-search=DOMAIN(搜索域) debian</code></p></blockquote></li><li><p>没有指定<code>--dns</code>和<code>--dns-search</code>，Docker会默认用宿主主机上的<code>/etc/resolv.conf</code>来配置容器的DNS</p></li></ul><hr><ul><li><p>登陆<code>docker hub</code></p><blockquote><p><code>docker login</code></p></blockquote></li><li><p>退出<code>docker hub</code></p><blockquote><p><code>docker logout</code></p></blockquote></li><li><p>上传镜像</p><blockquote><p><code>docker tag 本地镜像名 username/远端镜像名</code></p></blockquote></li></ul><hr><ul><li><p>随笔</p><blockquote><p><code>Docker Engine</code> 引擎<br><code>REST API</code> 通用接口<br><code>Docker daemon</code> 守护进程</p></blockquote></li><li><p>自用简易指令集</p></li></ul><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Sun Feb 09 2020 03:12:54 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;基本指令&quot;&gt;&lt;a href=&quot;#基本指令&quot; class=&quot;headerlink&quot; title=&quot;基本指令&quot;&gt;&lt;/a&gt;基本指令&lt;/h3&gt;&lt;ul
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="Docker" scheme="https://unit-serow.github.io/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker-Machine</title>
@@ -524,36 +550,6 @@
       
       
         &lt;!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;GNU-Common-Lisp&quot;&gt;&lt;a href=&quot;#GNU-Common-Lisp&quot; class=&quot;headerlink&quot; title=&quot;
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="GNU" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
-    
-    
-      <category term="1.认识与概述" scheme="https://unit-serow.github.io/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
-    
-      <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GNU CLISP</title>
-    <link href="https://unit-serow.github.io/2020/02/02/CLISP/"/>
-    <id>https://unit-serow.github.io/2020/02/02/CLISP/</id>
-    <published>2020-02-02T07:07:25.000Z</published>
-    <updated>2020-02-02T07:11:52.367Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --><h3 id="GNU-ANSI-Common-Lisp"><a href="#GNU-ANSI-Common-Lisp" class="headerlink" title="GNU ANSI Common Lisp"></a>GNU ANSI Common Lisp</h3><p><strong>概述:</strong></p><p>摘要:</p><blockquote><p>用于实现 ANSI Common Lisp <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>中所描述的语言标准，并且拥有许多拓展<br>CLISP于大多数GNU与Unix系统上运行，还包括windows NT,ME等等，只需要4MB的RAM<br>common lisp是一种面向对象的通用高级编程语言<br>common lisp算是lisp语言的一种方言吧</p></blockquote><p>参考文献:<br>ANSI Common Lisp 中文翻译版<a href="https://acl.readthedocs.io/en/latest/" target="_blank" rel="noopener">跳转</a><br><code>https://acl.readthedocs.io/en/latest/</code></p><p>电子书版本<a href="https://web.archive.org/web/20020805060924/http://www.lisp.org/HyperSpec/FrontMatter/index.html" target="_blank" rel="noopener">跳转</a><br><code>https://web.archive.org/web/20020805060924/http://www.lisp.org/HyperSpec/FrontMatter/index.html</code></p><p>官方网站<a href="https://clisp.sourceforge.io/summary.html" target="_blank" rel="noopener">跳转</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;clisp.sourceforge.io&#x2F;summary.html</span><br><span class="line">https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;clisp&#x2F;</span><br><span class="line">https:&#x2F;&#x2F;clisp.sourceforge.io&#x2F;</span><br></pre></td></tr></table></figure><p>参考手册<a href="https://clisp.sourceforge.io/impnotes/clisp.html" target="_blank" rel="noopener">跳转</a><br><code>https://clisp.sourceforge.io/impnotes/clisp.html</code></p><p>获取:<br><a href="http/SF">跳转</a>/<a href="http://ftp.gnu.org/pub/gnu/clisp/" target="_blank" rel="noopener">跳转</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http&#x2F;SF</span><br><span class="line">http:&#x2F;&#x2F;ftp.gnu.org&#x2F;pub&#x2F;gnu&#x2F;clisp&#x2F;</span><br></pre></td></tr></table></figure><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none;padding-left:0"><li id="fn:1"><span style="display:inline-block;vertical-align:top;padding-right:10px">1.</span><span style="display:inline-block;vertical-align:top">基于ANSI标准的common lisp语言的实现(编译器、调试器和解释器) ---</span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;GNU-ANSI-Common-Lisp&quot;&gt;&lt;a href=&quot;#GNU-ANSI-Common-Lisp&quot; class=&quot;headerlin
       
     
     </summary>

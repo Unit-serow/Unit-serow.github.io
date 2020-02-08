@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-08T09:49:31.760Z</updated>
+  <updated>2020-02-08T10:24:47.570Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker-Machine</title>
+    <link href="https://unit-serow.github.io/2020/02/08/Docker-Machine/"/>
+    <id>https://unit-serow.github.io/2020/02/08/Docker-Machine/</id>
+    <published>2020-02-08T10:23:23.000Z</published>
+    <updated>2020-02-08T10:24:47.570Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Sat Feb 08 2020 18:24:53 GMT+0800 (中国标准时间) --><h3 id="Docker-Machine"><a href="#Docker-Machine" class="headerlink" title="Docker Machine"></a>Docker Machine</h3><p><strong>概述:</strong></p><ul><li>可以实现在虚拟主机上安装Docker</li><li>并且可以使用<code>docker-machine</code>命令来管理主机</li><li><code>Docker Machine</code>管理的虚拟主机可以是机上的，也可以是云供应商的</li><li>使用<code>docker-machine</code>命令，可以用于启动，检查，停止和重新启动托管主机，也可以升级Docker客户端和守护程序</li><li>以及配置Docker客户端与本地主机进行通信</li><li>用于实现使用本地主机便可以操控远端的镜像容器集群</li></ul><p><strong>逻辑简述:</strong><br>[Client docker-machine[Client docker CLI[REST APT]]]-docker-machine create-&gt;[REST API[Server docker daemon]]</p><hr><p><strong>基于Linux安装Docker Machine</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ base&#x3D;https:&#x2F;&#x2F;github.com&#x2F;docker&#x2F;machine&#x2F;releases&#x2F;download&#x2F;v0.16.0 &amp;&amp;</span><br><span class="line">  curl -L $base&#x2F;docker-machine-$(uname -s)-$(uname -m) &gt;&#x2F;tmp&#x2F;docker-machine &amp;&amp;</span><br><span class="line">  sudo mv &#x2F;tmp&#x2F;docker-machine &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-machine &amp;&amp;</span><br><span class="line">  chmod +x &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-machine</span><br></pre></td></tr></table></figure><ul><li>查看版本以验证是否安装成功<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker-machine version</span><br><span class="line">docker-machine version 0.16.0, build 9371605</span><br></pre></td></tr></table></figure></li></ul><hr><p><strong>对于machine version的使用</strong></p><ol><li><p>列出可用的机器</p><blockquote><p><code>$ docker-machine ls</code></p></blockquote></li><li><p>创建机器</p></li></ol><ul><li>创建一个名为serow的机器<blockquote><p><code>$ docker-machine create --driver virtualbox serow</code></p></blockquote></li><li>参数<code>--driver</code>用于指定用来创建机器的驱动类型，这里是<code>virtualbox</code></li></ul><ol start="3"><li><p>查看机器的 ip</p><blockquote><p><code>$ docker-machine ip serow</code></p></blockquote></li><li><p>停止机器</p><blockquote><p><code>$ docker-machine stop serow</code></p></blockquote></li><li><p>启动机器*</p><blockquote><p><code>$ docker-machine start serow</code></p></blockquote></li><li><p>进入机器*</p><blockquote><p><code>$ docker-machine ssh serow</code></p></blockquote></li></ol><hr><p><strong>docker-machine 命令参数明细</strong></p><table><thead><tr><th align="left">命令</th><th align="left">作用</th></tr></thead><tbody><tr><td align="left">docker-machine active</td><td align="left">用于查看当前激活状态的Docker主机</td></tr><tr><td align="left">config</td><td align="left">查看当前激活状态Docker主机的连接信息</td></tr><tr><td align="left">creat</td><td align="left">创建Docker主机</td></tr><tr><td align="left">env</td><td align="left">显示连接到某个主机需要的环境变量</td></tr><tr><td align="left">inspect</td><td align="left">以<code>json</code>格式输出指定Docker的详细信息</td></tr><tr><td align="left">ip</td><td align="left">获取指定 Docker 主机的地址</td></tr><tr><td align="left">kill</td><td align="left">直接杀死指定的 Docker主机</td></tr><tr><td align="left">ls</td><td align="left">列出所有的管理主机</td></tr><tr><td align="left">provision</td><td align="left">重新配置指定主机</td></tr><tr><td align="left">regenerate-certs</td><td align="left">为某个主机重新生成TLS信息</td></tr><tr><td align="left">restart</td><td align="left">重启指定的主机</td></tr><tr><td align="left">rm</td><td align="left">删除某台Docker主机，对应的虚拟机也会被删除</td></tr><tr><td align="left">ssh</td><td align="left">通过SSH连接到主机上，执行命令</td></tr><tr><td align="left">scp</td><td align="left">在Docker主机之间以及Docker主机和本地主机之间通过<code>scp</code>远程复制数据</td></tr><tr><td align="left">mount</td><td align="left">使用SSHFS从计算机装载或卸载目录</td></tr><tr><td align="left">start</td><td align="left">启动一个指定的Docker主机，如果对象是个虚拟机，该虚拟机将被启动</td></tr><tr><td align="left">status</td><td align="left">获取指定Docker主机的状态(包括:<code>Running</code>,<code>Paused</code>,<code>Saved</code>,<code>Stopped</code>,<code>Stopping</code>,<code>Starting</code>,<code>Error</code>)等</td></tr><tr><td align="left">stop</td><td align="left">停止一个指定的Docker主机</td></tr><tr><td align="left">upgrade</td><td align="left">将一个指定主机的Docker版本更新为最新</td></tr><tr><td align="left">url</td><td align="left">获取指定Docker主机的监听URL</td></tr><tr><td align="left">version</td><td align="left">显示 Docker Machine 的版本或者主机Docker版本</td></tr><tr><td align="left">help</td><td align="left">显示帮助信息</td></tr></tbody></table><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Sat Feb 08 2020 18:24:53 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;Docker-Machine&quot;&gt;&lt;a href=&quot;#Docker-Machine&quot; class=&quot;headerlink&quot; title=&quot;Do
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="虚拟化" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
+    
+    
+      <category term="Docker" scheme="https://unit-serow.github.io/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>YAML-1</title>
@@ -526,36 +554,6 @@
       
       
         &lt;!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;GNU-ANSI-Common-Lisp&quot;&gt;&lt;a href=&quot;#GNU-ANSI-Common-Lisp&quot; class=&quot;headerlin
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="GNU" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
-    
-    
-      <category term="1.认识与概述" scheme="https://unit-serow.github.io/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
-    
-      <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GNU Gettext</title>
-    <link href="https://unit-serow.github.io/2020/02/02/Gettext/"/>
-    <id>https://unit-serow.github.io/2020/02/02/Gettext/</id>
-    <published>2020-02-02T05:59:34.000Z</published>
-    <updated>2020-02-02T06:11:48.627Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --><h3 id="GNU-Gettext-第一章节"><a href="#GNU-Gettext-第一章节" class="headerlink" title="GNU Gettext 第一章节"></a>GNU Gettext 第一章节</h3><p><strong>GNU 国际化(i18n)库</strong></p><p><strong>概述:</strong></p><ul><li>国际化与本地化函数库</li><li>GNU gettext是GNU translation project中最重要的一步</li><li>GNU通用性翻译计划</li><li>这个项目的达成将会让GNU拥有更大的经济与用户结构，从而拥有更多的资本</li></ul><p><strong>引用自官方文档:</strong></p><blockquote><p>在以前，通常GNU内部或大量其它的自由软件中的程序源代码都是拿英文编写或记录的，并且在与用户交互的界面所使用的也是英语<br>当世界上所有的开发人员之间使用一种通用的语言去交流会让开发的过程变得极为方便<br>但是，在全世界范围内的大多数人对于英文的理解能力和学习深度远不如母语，所以它们更愿意使用母语进行日常工作<br>并且大多数人只是希望让屏幕上其它晦涩难懂的语言少一点，而自己的母语多一点<br>所以就有了GNU Gettext<br>该软件包为程序员，翻译人员与用户提供了一套完善的工具和文档集<br>更准确的说，gnu gettext所使用的程序是一组工具，提供了一个框架来帮助其他GNU软件包生成多语言的消息</p></blockquote><p><strong>这个工具包括了以下的一组程序:</strong></p><ul><li>一套如何编写程序，从而让消息目录支持的规则</li><li>一套如何为目录本身和文件命名的规则</li><li>一个运行时库，用于支持检索翻译后的消息</li><li>一些独立程序，以各种方式处理可翻译的字符串或已翻译字符串的集合</li></ul><p>GNU Emacs拥有实现这套程序的插件或拓展，感兴趣的可以去查询有关GNU Emacs的消息</p><hr><p>逻辑简述:<br>以下内容参考自:<a href="https://www.gnu.org/software/gettext/manual/html_node/Program-Index.html#Program-Index" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/gettext/manual/html_node/Program-Index.html#Program-Index</code></p><ul><li>xgettext程序从源代码生成.pot文件，作为源代码中序翻译内容的模板</li><li>而翻译者需要工作的对象是.po文件，它是有msginit程序从.pot模板文件生成的</li><li>翻译者用maginit初始化中文翻译文件时可以执行<code>msginit --locale=cn --input=name.pot</code></li><li>然后编辑所生成的.po文件</li><li>最后.po文件需要使用msgfmt编译为.mo文件以用作发布</li><li>使其运行需要使用UNIX操作系统中的用户需要修改环境变量中的<code>LC_MESSAGES</code>或<code>LANG</code>，程序将自动从相应的.mo文件中读取语言信息</li></ul><p>使用方法:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在使用gettext()方法的时候通常以标记别名_的形式使用</span><br><span class="line">如printf(gettext(&quot;name is %s. \n&quot;), first_name);</span><br><span class="line">可以写作printf(_(&quot;name is %s.\n&quot;), first_name);</span><br></pre></td></tr></table></figure><hr><p>参考资料:<br>官方网站<a href="https://www.gnu.org/software/gettext/" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/gettext/</code><br>获取<a href="https://ftp.gnu.org/pub/gnu/gettext/gettext-0.20.1.tar.gz" target="_blank" rel="noopener">跳转</a><br><code>https://ftp.gnu.org/pub/gnu/gettext/gettext-0.20.1.tar.gz</code><br>社区<a href="https://savannah.gnu.org/projects/gettext/" target="_blank" rel="noopener">跳转</a><br><code>https://savannah.gnu.org/projects/gettext/</code><br>文档<a href="https://www.gnu.org/software/gettext/manual/gettext.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/gettext/manual/gettext.html</code></p><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;GNU-Gettext-第一章节&quot;&gt;&lt;a href=&quot;#GNU-Gettext-第一章节&quot; class=&quot;headerlink&quot; title
       
     
     </summary>

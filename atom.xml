@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-07T08:48:59.435Z</updated>
+  <updated>2020-02-08T06:47:13.336Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker Compose-2</title>
+    <link href="https://unit-serow.github.io/2020/02/08/Docker-Compose-2/"/>
+    <id>https://unit-serow.github.io/2020/02/08/Docker-Compose-2/</id>
+    <published>2020-02-08T06:42:09.000Z</published>
+    <updated>2020-02-08T06:47:13.336Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Sat Feb 08 2020 14:47:18 GMT+0800 (中国标准时间) --><h3 id="Compose内的YML指令参考"><a href="#Compose内的YML指令参考" class="headerlink" title="Compose内的YML指令参考"></a>Compose内的YML指令参考</h3><ul><li>为了通过使用compose，来让docker自动化配置程序与服务，必须编写YML文件(脚本)</li></ul><ol><li><strong>version</strong></li></ol><ul><li>指定本yml依从于compose哪个版本制定的</li></ul><ol start="2"><li><strong>build</strong></li></ol><ul><li>指定为构建镜像上下文路径</li><li>例如nginx服务，指定为从上下文路径./dir/Dockerfile 所构建的镜像</li><li>参数明细:</li></ul><table><thead><tr><th align="left">参数</th><th align="left">解释</th></tr></thead><tbody><tr><td align="left">context</td><td align="left">上下文路径</td></tr><tr><td align="left">dockerfile</td><td align="left">指定构建镜像的Dockerfile文件命</td></tr><tr><td align="left">args</td><td align="left">添加构建参数，这是只能在构建过程中访问的环境变量</td></tr><tr><td align="left">labels</td><td align="left">设置构建镜像的标签</td></tr><tr><td align="left">target</td><td align="left">多层构建，可以指定构建哪一层</td></tr></tbody></table><hr><ol start="3"><li><strong>cap_add，cap_drop</strong><br>添加或删除容器拥有的宿主机的内核功能<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cap_add:</span><br><span class="line">  - ALL # 开启全部权限</span><br><span class="line"></span><br><span class="line">cap_drop:</span><br><span class="line">  - SYS_PTRACE # 关闭 ptrace权限</span><br></pre></td></tr></table></figure></li></ol><ol start="4"><li><strong>cgroup_parent</strong></li></ol><ul><li>为容器指定父<code>cgroup</code>组，意味着将继承该组的资源限制<blockquote><p><code>cgroup_parent: m-executor-abcd</code></p></blockquote></li></ul><ol start="5"><li><strong>command</strong></li></ol><ul><li>覆盖容器启动的默认命令<blockquote><p><code>cmmand: [&quot;bundle&quot;, &quot;exec&quot;, &quot;thin&quot;, &quot;-p&quot;, &quot;3000&quot;]</code></p></blockquote></li></ul><ol start="6"><li><strong>container_name</strong></li></ol><ul><li>指定自定义容器名称，而不是生成的默认名称<blockquote><p><code>container_name: my-web-container</code></p></blockquote></li></ul><hr><ol start="7"><li><strong>depends_on</strong></li></ol><ul><li>设置依赖关系</li></ul><blockquote><p><code>docker-compose up</code>:以依赖性顺序启动服务，在以下示例中，先启动<code>db</code>和<code>redis</code>，才会启动<code>web</code><br><code>docker-compose up SERVICE</code>:自动包含<code>SERVICE</code>的依赖项，在以下示例中，<code>docker-compose up web</code>还将创建并启动<code>db</code>和<code>redis</code><br><code>docker-compose stop</code>:按依赖关系顺序停止服务，在以下示例中，<code>web</code>在<code>db</code>和<code>redis</code>之前停止</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">services:</span><br><span class="line">  web:</span><br><span class="line">    build: .</span><br><span class="line">    depends_on:</span><br><span class="line">      - db</span><br><span class="line">      - redis</span><br><span class="line">  redis:</span><br><span class="line">    image: redis</span><br><span class="line">  db:</span><br><span class="line">    image: postgres</span><br></pre></td></tr></table></figure><ul><li>此时的<code>web</code>服务不会等待<code>redis</code>和<code>db</code>完全启动之后才启动</li></ul><hr><ol start="8"><li><strong>deploy</strong></li></ol><ul><li>指定与服务的部署和运行有关的配置</li><li>只在 swarm 模式下才会有用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">version: &quot;xxx&quot;  # 服务版本</span><br><span class="line">services:  # 服务配置</span><br><span class="line">  redis:  # redis服务</span><br><span class="line">    image: redis:alpine  # 指定容器运行的镜像</span><br><span class="line">    deploy:  # 开始定义与该镜像有关的配置</span><br><span class="line">      mode：replicated  # 定义需要使用此参数配置具体运行的节点数量</span><br><span class="line">      replicas: 6  </span><br><span class="line">      endpoint_mode: dnsrr  # 访问集群服务的方式，这里是dns轮询(DNSRR)</span><br><span class="line">      labels:  # 给服务设上标签</span><br><span class="line">        description: &quot;This redis service label&quot;</span><br><span class="line">      resources: #配置服务器资源使用的限制，配置 redis 集群运行需要的 cpu 的百分比 和 内存的占用，从而避免占用资源过高出现异常</span><br><span class="line">        limits:</span><br><span class="line">          cpus: &#39;0.50&#39;</span><br><span class="line">          memory: 50M</span><br><span class="line">        reservations:</span><br><span class="line">          cpus: &#39;0.25&#39;</span><br><span class="line">          memory: 20M</span><br><span class="line">      restart_policy:  # 配置如何在退出容器时重新启动容器</span><br><span class="line">        condition: on-failure</span><br><span class="line">        delay: 5s</span><br><span class="line">        max_attempts: 3</span><br><span class="line">        window: 120s</span><br></pre></td></tr></table></figure></li></ul><p><strong>可选参数一览与对上述参数解释:</strong></p><ul><li><code>endpoint_mode</code>:访问集群服务的方式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">endpoint_mode: vip</span><br><span class="line"># Docker 集群服务一个对外的虚拟ip，所有的请求都会通过这个虚拟ip到达集群服务内部的机器</span><br><span class="line">endpoint_mode: dnsrr</span><br><span class="line"># DNS 轮询(DNSRR)，所有的请求会自动轮询获取到集群ip列表中的一个ip地址</span><br></pre></td></tr></table></figure></li><li><code>labels</code>:在服务上设置标签，可以用容器上的<code>labels</code>(跟<code>deploy</code>同级的配置)覆盖<code>deploy</code>下的<code>labels</code></li><li><code>mode</code>:指定服务提供的模式<blockquote><p><code>replicated</code>:复制服务，复制指定服务到集群的机器上<br><code>global</code>:全局服务，服务将部署至集群的每个节点</p></blockquote></li></ul><p><strong><code>replicated</code>与<code>global</code>的区别</strong></p><ul><li>逻辑简述:</li><li>所有的节点副本都处于本地主机的集群网络内</li><li>当选择<code>replicated</code>时，服务的副本只会被复制到所选节点的机器上</li><li>而选择<code>global</code>时，服务的副本会被复制到节点的每一个机器上，包括控制节点(manager node)</li><li>工作节点(worker node)，控制节点(manager node)</li></ul><hr><ol start="9"><li><strong><code>replicas: mode</code></strong></li></ol><ul><li>当此选项后的参数为<code>replicated</code>时，需要使用此参数配置具体运行的节点数量</li></ul><ol start="10"><li><strong><code>resources:</code></strong></li></ol><ul><li>用于配置服务器资源使用的限制，例如上例子，配置<code>redis</code>集群运行需要的<code>cpu</code>的百分比和内存的占用，避免占用资源过高出现异常</li></ul><hr><ol start="11"><li><strong><code>restart_policy:</code></strong></li></ol><ul><li>用于配置如何在退出容器时重新启动容器</li><li>参数明细<blockquote><p><code>condition</code>:可选<code>none</code>，<code>on-failure</code>或者<code>any</code>(默认值:<code>any</code>)<br><code>delay</code>:设置多久之后重启(默认值:0)<br><code>max_attempts</code>:尝试重新启动容器的次数，超出次数，则不再尝试(默认值:一直重试)<br><code>window</code>:设置容器重启超时时间(默认值:0)</p></blockquote></li></ul><hr><ol start="12"><li><strong><code>rollback_config</code></strong></li></ol><ul><li>用于配置在更新失败的情况下应如何回滚服务</li><li>参数明细:<blockquote><p><code>parallelism</code>:一次要回滚的容器数，如果设置为0，则所有容器将同时回滚<br><code>delay</code>:每个容器组回滚之间等待的时间(默认为0s)<br><code>failure_action</code>:如果回滚失败的处理方法(下一条所描述的内容)，其中一个<code>continue</code>或者<code>pause</code>(默认<code>pause</code>)<br><code>monitor</code>:每个容器更新后，持续观察是否失败了的时间(<code>ns|us|ms|s|m|h</code>)(默认为0s)<br><code>max_failure_ratio</code>:在回滚期间可以容忍的故障率(默认为0)<br><code>order</code>:回滚期间的操作顺序，其中一个<code>stop-first</code>(串行回滚)，或者<code>start-first</code>(并行回滚)(默认<code>stop-first</code>)</p></blockquote></li></ul><hr><ol start="13"><li><strong><code>update_config</code></strong></li></ol><ul><li><p>用于配置应如何更新服务，对于配置滚动更新很有用</p></li><li><p>参数明细:</p><blockquote><p><code>parallelism</code>:一次更新的容器数<br><code>delay</code>:在更新一组容器之间等待的时间<br><code>failure_action</code>:如果更新失败的解决办法依旧是下一条所描述的内容，其中一个<code>continue</code>，<code>rollback</code>或者<code>pause</code>(默认:<code>pause</code>)<br><code>monitor</code>:每个容器更新后，持续观察是否失败了的时间(<code>ns|us|ms|s|m|h</code>)(默认为0s)<br><code>max_failure_ratio</code>:在更新过程中可以容忍的故障率<br><code>order</code>:回滚期间的操作顺序，其中一个<code>stop-first</code>(串行回滚)，或者<code>start-first</code>(并行回滚)(默认stop-first)</p></blockquote></li><li><p>仅支持V3.4及更高版本的服务</p></li></ul><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Sat Feb 08 2020 14:47:18 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;Compose内的YML指令参考&quot;&gt;&lt;a href=&quot;#Compose内的YML指令参考&quot; class=&quot;headerlink&quot; title
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="Docker" scheme="https://unit-serow.github.io/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker Compose-1</title>
@@ -540,36 +566,6 @@
       
       
         &lt;!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;GNU-C-Library-第一章节&quot;&gt;&lt;a href=&quot;#GNU-C-Library-第一章节&quot; class=&quot;headerlink&quot; t
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="GNU" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
-    
-    
-      <category term="1.认识与概述" scheme="https://unit-serow.github.io/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
-    
-      <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GNU Libtool</title>
-    <link href="https://unit-serow.github.io/2020/02/01/Libtool/"/>
-    <id>https://unit-serow.github.io/2020/02/01/Libtool/</id>
-    <published>2020-02-01T14:58:21.000Z</published>
-    <updated>2020-02-01T17:05:09.878Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --><h3 id="GNU-libtool-第一章节"><a href="#GNU-libtool-第一章节" class="headerlink" title="GNU libtool 第一章节"></a>GNU libtool 第一章节</h3><p><strong>GNU 构建系统</strong></p><p><strong>概述与解释:</strong></p><ul><li>GNU Libtool是一种属于<a href="https://unit-serow.github.io/2020/01/29/Autotools/">GNU构建系统</a>的GNU程序设计工具</li><li>GNU Libtool是一个用于支持通用库的脚本程序</li><li>用于解决在不同的操作系统中使用共享库进行代码移植的复杂性，在不同的系统中建立动态链接库，以隐藏不同系统之间的差异性</li><li>从而给开发人员提供一致的接口</li><li>但还是需要底层系统对所创建链接库的支持，所以libtool不能在不支持动态连接库的系统中创建动态链接库</li></ul><hr><p><strong>存在目的:</strong></p><ul><li>用于产生/建立便携式的库，它既可以建立动态链接库，也可以建立动态链接库，还可以包含两者</li><li>GNU libtool的目的是使每一个主机类型的完整功能都可以通过一个泛用接口来产生</li><li>GNU libtool的目标是使接口一致</li></ul><hr><p><strong>使用方法</strong><br>本章节不对应用进行过多阐述<br>libtool通常与GNU建构系统中的autoconf和automake这两个工具一起使用<br>需要参照系统手册（构建通用库所需要执行的命令）以及修改相应makefile的makefile.in或makefile.in文件<br>相关内容可查询<a href="https://www.gnu.org/software/libtool/manual/libtool.html" target="_blank" rel="noopener">libtool文档</a></p><hr><p>参考资料</p><p>GNU Libtool手册<a href="https://www.gnu.org/software/libtool/manual/libtool.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/libtool/manual/libtool.html</code></p><p>使用GNU Libtoo创建库<a href="https://www.ibm.com/developerworks/cn/aix/library/1007_wuxh_libtool/index.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.ibm.com/developerworks/cn/aix/library/1007_wuxh_libtool/index.html</code></p><p>官方网站<a href="https://www.gnu.org/software/libtool/news.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/libtool/news.html</code></p><p>autobook<a href="http://www.sourceware.org/autobook/" target="_blank" rel="noopener">跳转</a><br><code>http://www.sourceware.org/autobook/</code></p><p>获取:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http: http:&#x2F;&#x2F;ftpmirror.gnu.org&#x2F;libtool&#x2F;</span><br><span class="line">ftp: ftp:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;libtool&#x2F; </span><br><span class="line">克隆: git clone git:&#x2F;&#x2F;git.savannah.gnu.org&#x2F;libtool.git</span><br></pre></td></tr></table></figure><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;GNU-libtool-第一章节&quot;&gt;&lt;a href=&quot;#GNU-libtool-第一章节&quot; class=&quot;headerlink&quot; title
       
     
     </summary>

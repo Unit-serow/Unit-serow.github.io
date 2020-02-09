@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://unit-serow.github.io/2020/02/06/Docker-3/</loc>
+    
+    <lastmod>2020-02-09T07:06:08.786Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://unit-serow.github.io/2020/02/09/Docker-Machine-1-1/</loc>
     
     <lastmod>2020-02-09T06:42:33.273Z</lastmod>
@@ -89,13 +96,6 @@
     <loc>https://unit-serow.github.io/2020/02/03/Git-1/</loc>
     
     <lastmod>2020-02-06T10:58:31.195Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://unit-serow.github.io/2020/02/06/Docker-3/</loc>
-    
-    <lastmod>2020-02-06T10:54:24.799Z</lastmod>
     
   </url>
   

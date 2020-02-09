@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-08T19:12:50.026Z</updated>
+  <updated>2020-02-09T05:51:59.816Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker Swarm-集群</title>
+    <link href="https://unit-serow.github.io/2020/02/09/Docker-Swarm-1/"/>
+    <id>https://unit-serow.github.io/2020/02/09/Docker-Swarm-1/</id>
+    <published>2020-02-09T05:47:40.000Z</published>
+    <updated>2020-02-09T05:51:59.816Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Sun Feb 09 2020 13:52:04 GMT+0800 (中国标准时间) --><h3 id="Swarm-集群管理"><a href="#Swarm-集群管理" class="headerlink" title="Swarm 集群管理"></a>Swarm 集群管理</h3><p><strong>概述:</strong></p><ul><li><p><code>Docker Swarm</code>是Docker的集群管理工具</p></li><li><p>它将<code>Docker主机池</code>转变为单个虚拟Docker主机</p></li><li><p><code>Docker Swarm</code>提供了标准的<code>Docker API</code></p></li><li><p>目的是使所有任何已经与Docker守护程序通信的工具都可以使用Swarm轻松地扩展到多个主机</p></li><li><p>支持的工具包括但不限于以下各项：</p></li><li><p>Dokku</p></li><li><p>Docker Compose</p></li><li><p>Docker Machine</p></li><li><p>Jenkins</p></li></ul><p><strong>原理概述:</strong></p><ul><li><code>swarm集群</code>由管理节点(manager)和工作节点(work node)构成</li><li><code>swarm mananger</code>:负责整个集群的管理工作包括集群配置,服务管理等所有跟集群有关的工作</li><li><code>work node</code>:即为<code>available node</code>,主要负责运行相应的服务来执行任务(task)</li><li>逻辑简述</li><li>管理节点(swarm manager)内存储着若干个服务(service)的副本(replicas)文件</li><li>工作节点(available/worker node)内存储这服务的标识与服务的镜像文件(container)</li><li>管理节点将所有的服务副本都分配到工作节点内，并管理与控制工作节点内的任务执行<blockquote><p>[swarm manager[service replicas]]-&gt;[available node[task[container(service:latest)]]]<br>swarm manager-&gt;available node-1/available node-2/available node-3/available node-N</p></blockquote></li></ul><hr><p><strong>应用</strong></p><ul><li><p>以<code>Docker Machine</code>与<code>virtualbox</code>进行实践，需要先确保主机已安装<code>virtualbox</code></p></li><li><p>创建docker机器:</p><blockquote><p><code>$ docker-machine create -d virtualbox swarm-manager</code></p></blockquote></li></ul><hr><ul><li><p>创建管理节点(manager node)</p></li><li><p>初始化<code>swarm</code>集群，进行初始化的这台机器，就是集群的管理节点</p><blockquote><p><code>$ docker-machine ssh swarm-manager</code><br><code>$ docker swarm init --advertise-addr 192.168.99.101</code><br><code>--advertise-addr</code>后的IP为创建机器时分配的ip</p></blockquote></li><li><p>当为机器分配IP之后，命令行会输出向集群内添加工作节点的指令(连接令牌)</p><blockquote><p><code>To add a worker to this swarm，runthe following command</code><br><code>docker swarm join --token [...]</code></p></blockquote></li></ul><hr><ul><li>创建工作节点(worker node)</li><li>复制上面输出的指令(会被自动截断)<blockquote><p><code>$ docker swarm join --token [...]</code><br>输出<code>The node joined a swarm as a worker</code></p></blockquote></li></ul><hr><ul><li>查看集群信息<blockquote><p><code>docker info</code><br>输出内容中<code>Swarm active</code>内的<code>managers</code>与<code>node</code>即为节点信息</p></blockquote></li></ul><hr><ul><li><p>部署服务器到集群中</p></li><li><p>跟集群管理有关的任何操作，都是在管理节点上操作的</p></li><li><p>随机指派任一工作节点，并于工作节点上创建任意的一个服务</p><blockquote><p><code>docker@swarm-manager:~$ docker service create --replicas 1 --name [service name] alpine ping docker.com</code></p></blockquote></li><li><p>查看服务部署情况:</p><blockquote><p><code>docker@swarm-manager:~$ docker service ps [service name]</code></p></blockquote></li><li><p>查看<code>service</code>部署的具体信息:</p><blockquote><p><code>docker@swarm-manager:~$ docker service inspect --pretty [service name]</code></p></blockquote></li></ul><hr><ul><li><p>扩展集群服务</p></li><li><p>将service服务扩展到若干个节点</p><blockquote><p><code>docker@swarm-manager:~$ docker service scale [service name]=[节点数]</code></p></blockquote></li><li><p>查看服务部署情况:</p><blockquote><p><code>docker@swarm-manager:~$ docker service ps [service name]</code></p></blockquote></li></ul><hr><ul><li>删除服务<blockquote><p><code>docker@swarm-manager:~$ docker service rm [service name]</code></p></blockquote></li><li>查看服务部署情况:<blockquote><p><code>docker@swarm-manager:~$ docker service ps [service name]</code></p></blockquote></li></ul><hr><ul><li>滚动升级服务</li><li>将redis旧版本通过滚动升级至更高版本</li><li>创建一个3.0.6版本的redis<blockquote><p><code>docker@swarm-manager:~$ docker service create --replicas 1 --name redis --update-delay 10s redis:3.0.6</code></p></blockquote></li><li>滚动升级redis<blockquote><p><code>docker@swarm-manager:~$ docker service update --image redis:3.0.7 redis</code></p></blockquote></li><li>查看redis服务部署情况:<blockquote><p><code>docker@swarm-manager:~$ docker service ps redis</code></p></blockquote></li></ul><hr><ul><li><p>停止某个节点接收新的任务</p></li><li><p>查看所有的节点：</p><blockquote><p><code>docker@swarm-manager:~$ docker node ls</code></p></blockquote></li><li><p>默认所有的节点都是<code>Active</code>, 可以接收新的任务分配</p></li><li><p>停止节点<code>swarm-worker1</code>:</p><blockquote><p><code>docker node update --availability drain swarm-worker1</code></p></blockquote></li><li><p>此时<code>swarm-worker1</code>状态变为<code>Drain</code></p></li><li><p>不会影响到集群的服务，只是<code>swarm-worker1</code>节点不再接收新的任务</p></li><li><p>会使集群的负载能力有所下降</p></li><li><p>重新激活节点指令:</p><blockquote><p><code>docker@swarm-manager:~$ docker node update --availability active swarm-worker1</code></p></blockquote></li></ul><hr><p><strong>参考资料</strong></p><ul><li><p>虚拟机驱动<a href="https://docs.docker.com/machine/drivers/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://docs.docker.com/machine/drivers/</code></p></blockquote></li><li><p>官方文档<a href="https://docs.docker.com/machine/reference/create/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://docs.docker.com/machine/reference/create/</code></p></blockquote></li></ul><hr><p><strong>其他资源</strong></p><ul><li><p>Docker官方主页<a href="https://www.docker.com" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://www.docker.com</code></p></blockquote></li><li><p>Docker官方博客<a href="https://blog.docker.com/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://blog.docker.com/</code></p></blockquote></li><li><p>Docker官方文档<a href="https://docs.docker.com/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://docs.docker.com/</code></p></blockquote></li><li><p>Docker Store<a href="https://store.docker.com" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://store.docker.com</code></p></blockquote></li><li><p>Docker Cloud<a href="https://cloud.docker.com" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://cloud.docker.com</code></p></blockquote></li><li><p>Docker Hub<a href="https://hub.docker.com" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://hub.docker.com</code></p></blockquote></li><li><p>Docker的源代码仓库<a href="https://github.com/moby/moby" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://github.com/moby/moby</code></p></blockquote></li><li><p>Docker发布版本历史<a href="https://docs.docker.com/release-notes/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://docs.docker.com/release-notes/</code></p></blockquote></li><li><p>Docker常见问题<a href="https://docs.docker.com/engine/faq/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://docs.docker.com/engine/faq/</code></p></blockquote></li><li><p>Docker远端应用 API<a href="https://docs.docker.com/develop/sdk/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://docs.docker.com/develop/sdk/</code></p></blockquote></li></ul><hr><p><strong>Docker国内镜像源</strong></p><ul><li><p>阿里云<a href="https://help.aliyun.com/document_detail/60750.html" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://help.aliyun.com/document_detail/60750.html</code></p></blockquote></li><li><p>网易云加速器</p><blockquote><p><code>http://hub-mirror.c.163.com</code></p></blockquote></li><li><p>中国官方加速器</p><blockquote><p><code>https://registry.docker-cn.com</code></p></blockquote></li><li><p>ustc的镜像</p><blockquote><p><code>https://docker.mirrors.ustc.edu.cn</code></p></blockquote></li><li><p>daocloud</p><blockquote><p><code>https://www.daocloud.io/mirror#accelerator-doc</code>(注册后使用)</p></blockquote></li></ul><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Sun Feb 09 2020 13:52:04 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;Swarm-集群管理&quot;&gt;&lt;a href=&quot;#Swarm-集群管理&quot; class=&quot;headerlink&quot; title=&quot;Swarm 集群管理
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="虚拟化" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
+    
+    
+      <category term="Docker" scheme="https://unit-serow.github.io/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker-1.1</title>
@@ -520,36 +548,6 @@
       
       
         &lt;!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;GNU-Data-Display-Debugger&quot;&gt;&lt;a href=&quot;#GNU-Data-Display-Debugger&quot; class=
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="GNU" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
-    
-    
-      <category term="1.认识与概述" scheme="https://unit-serow.github.io/tags/1-%E8%AE%A4%E8%AF%86%E4%B8%8E%E6%A6%82%E8%BF%B0/"/>
-    
-      <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GNU Common Lisp</title>
-    <link href="https://unit-serow.github.io/2020/02/02/GCL/"/>
-    <id>https://unit-serow.github.io/2020/02/02/GCL/</id>
-    <published>2020-02-02T07:40:09.000Z</published>
-    <updated>2020-02-02T07:41:39.475Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --><h3 id="GNU-Common-Lisp"><a href="#GNU-Common-Lisp" class="headerlink" title="GNU Common Lisp"></a>GNU Common Lisp</h3><p><strong>GNU Common Lisp编译器 GCL</strong></p><p><strong>概述:</strong></p><ul><li>不要与GNU CLISP和Common Lisp的概念混淆</li><li>GNU Common Lisp（GCL）是GNU计划中ANSI Common Lisp的编译器</li><li>它是Kyoto Common Lisp的演化版</li><li>它的执行过程通常是先生成C代码然后调用C的编译器来生成本机的目标代码</li><li>GCL是包括数学工具maxima，AXIOM,HOL88和ACL2在内的几个大型项目的首选实现</li><li>GCL可以在Linux或FreeBSD，microsoft windows等11种不同体系架构的系统下运行</li></ul><hr><p><strong>参考资料:</strong></p><p>FSF的GCL社区<a href="https://directory.fsf.org/wiki/Gcl" target="_blank" rel="noopener">跳转</a><br><code>https://directory.fsf.org/wiki/Gcl</code></p><p>官网社区<a href="https://www.gnu.org/software/gcl/gcl.html" target="_blank" rel="noopener">跳转</a><br><code>https://www.gnu.org/software/gcl/gcl.html</code></p><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Sun Feb 02 2020 21:54:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;GNU-Common-Lisp&quot;&gt;&lt;a href=&quot;#GNU-Common-Lisp&quot; class=&quot;headerlink&quot; title=&quot;
       
     
     </summary>

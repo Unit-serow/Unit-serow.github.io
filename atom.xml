@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-10T19:14:39.274Z</updated>
+  <updated>2020-02-11T16:08:44.381Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>加密与解密</title>
+    <link href="https://unit-serow.github.io/2020/02/12/%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86-1/"/>
+    <id>https://unit-serow.github.io/2020/02/12/%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86-1/</id>
+    <published>2020-02-11T16:06:32.000Z</published>
+    <updated>2020-02-11T16:08:44.381Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Wed Feb 12 2020 00:08:48 GMT+0800 (中国标准时间) --><h1 id="加密-解密-类型与算法概述"><a href="#加密-解密-类型与算法概述" class="headerlink" title="加密/解密-类型与算法概述"></a>加密/解密-类型与算法概述</h1><ul><li>整理范围为现代密码学中的密码学算法</li><li>主要注重于对各种加密算法的浅层了解，与基本使用</li><li>对于算法本质的刨析这里先不做阐述</li><li>对于加密也先不做阐述</li></ul><h2 id="对称密钥密码学"><a href="#对称密钥密码学" class="headerlink" title="对称密钥密码学"></a>对称密钥密码学</h2><p><strong>概述:</strong></p><ul><li>[Symmetric-key algorithm]</li><li>别称:对称加密，对称密钥加密，对称密钥算法</li><li>别称:私钥加密，共享密钥加密</li></ul><p><strong>定义:</strong></p><ul><li>加密和解密时使用相同的密钥</li><li>或者使用两个可以简单地进行互相推算的密钥</li><li>多用于维持多个成员之中的秘密通信</li></ul><p><strong>常用的对称加密算法:</strong></p><ul><li>DES(数据加密标准)</li><li>3DES</li><li>AES(高端加密标准)</li><li>Blowfish</li><li>IDEA</li><li>RC5(分组加密算法)</li><li>RC6</li></ul><hr><h3 id="分组加密"><a href="#分组加密" class="headerlink" title="分组加密"></a>分组加密</h3><p><strong>概述:</strong></p><ul><li>[Block cipher]</li><li>别称:分组密码，分块加密，块密码</li><li>属于一种对称加密算法</li><li>DES是现代分组加密设计的基础思想</li><li>IBM在20世纪70年代基于<code>Horst Feistel</code>工作完成的<code>Lucifer</code>被客观认为是第一个现代分组密码</li><li>分组密码取用明文的一个区块和密钥，输出相同大小的密文区块</li><li>DES和AES是美国联邦政府核定的分组密码标准(AES将取代DES)</li></ul><p><strong>定义:</strong></p><ul><li>先将明文分成多个等长的模块(blocak)，然后使用确定的算法和对称密钥对每组分别进行加密与解密</li></ul><hr><h3 id="流加密"><a href="#流加密" class="headerlink" title="流加密"></a>流加密</h3><p><strong>概述:</strong></p><ul><li>[Stream cipher]</li><li>别称:数据流加密，流密码</li><li>属于一种对称加密算法</li><li>该算法解决了对称加密完善保密性(perfect secrecy)的实际操作困难</li><li>RC4是流加密的实现</li><li>相对于区块加密，制造一段任意长的密钥原料，与明文依比特或字符结合，类似一次一密密码本(one-time pad)，输出的流根据加密时的内部状态而定</li><li>输出的流根据加密时的内部状态而定</li></ul><p><strong>定义:</strong></p><ul><li>先加密和解密双方使用相同伪随机加密数据流(pseudo-random stream)作为密钥</li><li>然后让明文数据每次与密钥数据流顺次对应加密，从而得到密文数据流</li><li>实践中数据通常是一个位(bit)并用异或(xor)操作加密</li></ul><hr><h2 id="非对称密钥密码学"><a href="#非对称密钥密码学" class="headerlink" title="非对称密钥密码学"></a>非对称密钥密码学</h2><p><strong>概述:</strong></p><ul><li>别称:公开密钥密码学 [Public-key cryptography]</li><li>别称:非对密钥码密码学 [Asymmetric cryptography]</li><li>别称:公开密钥加密算法，公钥密码学，非对称式密码学</li></ul><p><strong>定义:</strong></p><ul><li>拥有两个密钥，一个公开密钥，一个私有密钥，前者加密，后者解密</li><li>使用其中任一密钥用于加密，另一个则用于解密</li><li>经过密钥加密的密文只能通过对应的另一个密钥进行解密才能得到原文</li><li>曾用于加密的密钥也不能对其加密过的数据进行解密</li><li>因此加密和解密需要两个不同且互相对应的密钥，所以被称为非对称加密</li><li>不同于加密和解密都使用同一个密钥的对称加密</li><li>虽然这两个密钥于数学上相关，但依旧不同通过其中一个密钥来计算出另外一个密钥</li><li>因此其中一个可以公开，称为公钥，可以任意发布</li><li>不公开的密钥为私钥</li></ul><p><strong>简述:</strong></p><ol><li>加密过程d(c(x))=x</li><li>主机A撰写未加密明文x</li><li>主机B通过[密码学安全伪随机数生成器]生成一对密钥，其中一个公钥为c，另一个作为私钥d</li><li>而主机B要做的就是向主机A发送公钥c，即便任何主机于中间窃听到c也没关系</li><li>主机A用公钥c对明文x进行加密，得到密文c(x)</li><li>此时主机A向主机B发送密文c(x)</li><li>主机B在收到密文c(x)后，使用私钥d对密文c(x)进行解密d(c(x))，得到明文x</li><li>此时如果主机A没有私钥d时，它将无法透过主机A的公钥c和密文c(x)重新获得原文x</li></ol><hr><h2 id="密码散列函数"><a href="#密码散列函数" class="headerlink" title="密码散列函数"></a>密码散列函数</h2><p><strong>概述:</strong></p><ul><li>[Cryptographic hash function]</li><li>别称:加密散列函数，散列算法，哈希函数(hash)，消息摘要函数，杂凑函数</li><li>是散列函数(hash function)的一种</li><li>是一种单向函数(单向散列算法)</li><li>不一定使用到密钥，但和许多重要的密码算法相关</li><li>常用于数字签名/公钥数字签名(digital signature)</li><li>应用于<code>MD5</code>,<code>SHA-1</code>,<code>SHA-2</code>,<code>SHA-3/Keccak</code></li><li>数字签名标准内的数字签名算法</li><li>它将输入数据(通常是一整份文件)输出成较短的固定长度散列值，这个过程是单向的，逆向操作难以完成，而且碰撞(两个不同的输入产生相同的散列值)发生的几率非常小</li><li>消息认证码或押码(Message authentication codes, MACs)很类似密码散列函数，除了接收方额外使用秘密密钥来认证散列值</li></ul><h3 id="SHA类密码散列函数"><a href="#SHA类密码散列函数" class="headerlink" title="SHA类密码散列函数**"></a>SHA类密码散列函数**</h3><p><strong>概述:</strong></p><ul><li>[Secure Hash Algorithm]，缩写为SHA，常用于特指一整个密码散列函数系列</li><li>别称:安全散列算法，安全哈希算法</li><li>由FIPS<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>认证的安全散列算法</li><li>由美国国家安全局(NSA)所设计</li><li>由美国国家标准与技术研究院(NIST)发布</li><li>是一种密码散列函数</li><li>用于计算出一个数字消息所对应到的，长度固定的字符串(又称信息摘要)的算法</li></ul><p><strong>系列成员:</strong></p><ul><li>SHA系列的五个算法:<blockquote><p><code>SHA-1,SHA-224,SHA-256,SHA-384,SHA-521</code></p></blockquote></li><li><code>SHA-256</code>到<code>SHA-512</code>有时被并称为<code>SHA-2</code></li><li><code>SHA-1</code>在许多安全协议中广为使用</li><li>包括<code>TLS</code>,<code>SSL</code>,<code>PGP</code>,<code>SSH</code>,<code>S/MIME</code>,<code>IPsec</code></li><li>最初的算法于1993年发布<code>SHA-0</code></li><li>也可称为[安全杂凑标准(secure hash standard)，<code>FIPS PUB 180</code></li><li>NSA于1995年发布<code>SHA-0</code>修订版本<code>FIPS PUB 180-1</code>(SHA-1)</li><li>最新的标准是FIPS PUB 180-3于2008年更新</li><li>规定了SHA-1，SHA-224，SHA-256，SHA-384，和SHA-512这几种单向散列算法</li><li><code>SHA-1</code>，<code>SHA-224</code>和<code>SHA-256</code>适用于长度不超过<code>2^64</code>二进制位的消息</li><li><code>SHA-384</code>和<code>SHA-512</code>适用于长度不超过<code>2^128</code>二进制位的消息</li></ul><p><strong>简述:</strong></p><ul><li>思想是接收一段明文，然后以一种不可逆的方式将它转换成一段(通常更小)的密文</li><li>或称为</li><li>取一串预映射或信息(输入码)，并将它们转化为长度较短，位数固定的输出序列</li><li>即散列值 也可以称为信息摘要或信息认证码 的过程</li></ul><p><strong>散列算法概述:</strong></p><ul><li>散列是信息的提炼，通常其长度要比原信息小的多，且为一个固定长度</li><li>加密性强的散列一定是不可逆的，所以说通过散列的结构将无法退出任何部分的原始信息</li><li>任何输出信息的变化，哪怕仅一位，都将导致散列结果的明显变化，即为雪崩效应</li><li>散列还应该是防冲突的，即找不出具有相同散列结果的两条信息，具有这些特性的散列结果就可以用于验证信息是否被修改</li><li>单向散列函数一般用于产生信息摘要，密匙加密等，常见的有MD系列(由RSA数据安全公司开发的一种单向散列算法)，SHA系列</li><li>散列算法可实现数字签名的实现</li></ul><p><strong>数字签名概述:</strong></p><ul><li>数字签名的原理是将要传送的明文通过一种函数运算(hash)转换成报文摘要(不同的明文对应不同的摘要)</li><li>报文摘要加密后与明文一种传送给接受方</li><li>接受方将接受的明文产生新的报文摘要与发送方发来的报文摘要解密比较</li><li>比较结果一致表示明文未被改动，反之则明文已被篡改</li></ul><hr><h3 id="消息认证码"><a href="#消息认证码" class="headerlink" title="消息认证码"></a>消息认证码</h3><p><strong>概述:</strong></p><ul><li>[Message authentication code，MAC]</li><li>别称:消息鉴别码、文件消息认证码、讯息鉴别码、信息认证码</li></ul><p><strong>简述:</strong></p><ul><li>是经过特定算法后产生的一小段信息，用于检查某段消息的完整性，以及作身份验证</li><li>用来检查在消息传递过程中，其内容是否被更改过，不管更改的原因是来自意外或是蓄意攻击</li><li>同时可以作为消息来源的身份验证，确认消息的来源</li><li>消息认证码的算法中，通常会使用带密钥的散列函数(HMAC)，或者块密码的带认证工作模式(如CBC-MAC)</li><li>信息鉴别码不能提供对信息的保密，若要同时实现保密认证，同时需要对信息进行加密</li></ul><p><strong>密钥散列消息认证码</strong></p><ul><li>Keyed-hash message authentication code</li><li>又称散列消息认证码(Hash-based message authentication code，HMAC)</li><li>是一种通过特别计算方式之后产生的消息认证码(MAC)，使用密码散列函数，同时结合一个加密密钥</li><li>它可以用来保证数据的完整性，同时可以用来作某个消息的身份验证</li></ul><hr><h3 id="密码学安全伪随机数生成器"><a href="#密码学安全伪随机数生成器" class="headerlink" title="密码学安全伪随机数生成器"></a>密码学安全伪随机数生成器</h3><p><strong>概述:</strong></p><ul><li>Cryptographically secure pseudo-random number generator</li><li>通称CSPRNG</li><li>亦作密码学伪随机数生成器</li><li>是一种能够通过运算得出密码学安全伪随机数的伪随机数生成器</li><li>相较于统计学伪随机数生成器和更弱的伪随机数生成器，CSPRNG所生成的密码学安全伪随机数具有额外的伪随机属性</li><li>CSPRNG常被作为密码学原件，用以搭建更复杂的密码学应用</li><li>如，可变长CSPRNG和XOR函数搭配即构成流密码的编解码方法</li></ul><hr><ul><li>几个重要的概念，公钥，私钥，加密，解密，对称，非对称，散列算法(hash)</li><li>所有的复杂的现代密码学算法都是基于对称加密或非对称加密算法与散列算法加密所建立的</li></ul><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none;padding-left:0"><li id="fn:1"><span style="display:inline-block;vertical-align:top;padding-right:10px">1.</span><span style="display:inline-block;vertical-align:top">联邦信息处理标准(Federal Information Processing Standards)</span><a href="#fnref:1" rev="footnote"> ↩</a></li></ol></div></div><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Wed Feb 12 2020 00:08:48 GMT+0800 (中国标准时间) --&gt;&lt;h1 id=&quot;加密-解密-类型与算法概述&quot;&gt;&lt;a href=&quot;#加密-解密-类型与算法概述&quot; class=&quot;headerlink&quot; title=&quot;加密/解
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="密码" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E5%AF%86%E7%A0%81/"/>
+    
+    
+      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>随笔 2020-2-2.11</title>
@@ -516,34 +544,6 @@
     
     
       <category term="hexo" scheme="https://unit-serow.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>版本控制系统 Git-分支</title>
-    <link href="https://unit-serow.github.io/2020/02/03/Git-1/"/>
-    <id>https://unit-serow.github.io/2020/02/03/Git-1/</id>
-    <published>2020-02-03T10:51:45.000Z</published>
-    <updated>2020-02-06T10:58:31.195Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Thu Feb 06 2020 18:58:36 GMT+0800 (中国标准时间) --><h2 id="Git-版本控制系统"><a href="#Git-版本控制系统" class="headerlink" title="Git 版本控制系统"></a>Git 版本控制系统</h2><h3 id="远端分支的上传与本地分支的处理的执行逻辑与原理"><a href="#远端分支的上传与本地分支的处理的执行逻辑与原理" class="headerlink" title="远端分支的上传与本地分支的处理的执行逻辑与原理"></a>远端分支的上传与本地分支的处理的执行逻辑与原理</h3><p><strong>远端分支</strong></p><ul><li>在本地进行任何连接Git远端服务器或远端服务器分支的操作时，远端服务器内会创建一个默认分支，之后在本地会生成一个对应该默认分支的分支</li><li>下文描述说明:服务器的分支被称为<code>origin/master</code>，而本地的分支被称为<code>master</code></li></ul><p><strong>执行原理:</strong></p><ul><li>在本地执行<code>git clone</code>命令克隆远端数据之后，git的clone会自动将所连接远端服务器命名为origin(执行该命令就是克隆URL所指定服务器内的所有数据)</li><li>同时在远端origin服务器内创建了指向它默认主分支(master)的指针，并在远端的服务器内为分支命名为<code>origin/master</code>(默认仓库名与此仓库内的默认分支名)</li><li>然后远端的git服务器也会给本地主机添加本地的master指针，该指针与远端服务器origin的master分支指向同的目标</li><li>从而从本地就可以操作远程服务器origin的分支了(origin的任何分支-这里指master分支)，进而实现数据推送</li></ul><p><strong>逻辑关系的链接表示:</strong></p><blockquote><p>-表示线性执行的逻辑关系<br>本地主机-远程仓库-远程仓库内的若干个分支(分支也可以拥有分支)<br>默认远程仓库被命名为origin，而其下默认分支被默认命名为master<br>一般情况下，远程仓库内拥有最少一个默认分支，并将其默认定义为主分支，对主分支的定义可以进行改动</p></blockquote><hr><p><strong>本地分支</strong></p><p><strong>工作区，暂存区与版本库的概念与其中的关系介绍:</strong></p><ul><li>工作区就是本地主机的文件文件目录</li><li>暂存区(stage或index)，一般存放在隐藏目录.git下的<code>index</code>文件中,暂存区也可以被叫做索引(index)</li><li>版本库 工作区内的隐藏目录<code>.git</code>就被称之为版本库，其中包含了暂存区文件，对象库，游标(HEAD)文件与本地分支等等</li><li>正常情况下的操作都是由工作区发出命令然后传于版本库内进行各级执行</li></ul><p><strong>逻辑关系表示:</strong></p><blockquote><p>工作区-[版本库-(暂存区-本地分支/对象库)]-远端服务器<br>这里的-用于表示包含，链接与单向执行逻辑</p></blockquote><p><strong>逻辑关系:</strong></p><ul><li>当工作区内修改或新增文件之后执行git add 命令之后，暂存区的目录会被更新</li><li>同时工作区修改或新增文件的内容也被写入对象库中的一个新的对象库中，而该对象的ID也被记录在暂存区的文件索引中</li><li>当执行提交操作<code>git commit</code>时，暂存区的目录树会写到版本库中的对象库中</li><li>之后默认分支master或设置的本地分支经由游标(HEAD)的指向会对所选分支作出相应的更新</li><li>默认分支master或设置的本地分支指向的目录树就是提交至远端时暂存区的目录树</li><li>进而推送暂存区的目录树(也就是本地存储于所选分支内暂存区的所有数据)至远端</li></ul><p><strong>命令原理与版本库内目录简要介绍:</strong></p><ul><li><p>执行<code>git reset HEAD(游标名)</code>命令时，更新暂存区操作，暂存区的目录会被重写，而被master分支的游标所指向的目录树所交换，工作区不受影响</p></li><li><p>执行<code>git rm --cached filename</code>命令时 ，从暂存区删除文件，而工作区不做出改变</p></li><li><p>执行<code>git checkout .</code>命令时重新指定本地分支，用暂存区全部或指定的文件替换工作区的文件，会清除工作区中未添加到暂存区的改动</p></li><li><p>执行<code>git checkout HEAD .</code>或<code>git checkout HEAD filename</code>命令时，会用游标(HEAD)指向的master分支中的全部或者部分文件替换暂存区和以及工作区中的文件，不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动</p></li><li><p>执行<code>git fetch origin</code>命令用于同步数据，原理就是从中抓取本地没有的数据并且更新本地数据，同时游标(HEAD)也会更新</p></li><li><p>对象库位于<code>.git/objects</code>目录下，里面包含了创建的各种对象及内容</p></li><li><p>暂存库位于<code>.git/index</code>目录下</p></li><li><p>游标位于<code>.git/HEAD</code>目录下</p></li></ul><p>本文所描述的游标，也可以称之为指针，用指针去理解会更简单</p><h2 id="论题由Git的连接机制而引出，因为是完全性的主观理解，执行与结构的逻辑关系可能别有出入，仅供参考"><a href="#论题由Git的连接机制而引出，因为是完全性的主观理解，执行与结构的逻辑关系可能别有出入，仅供参考" class="headerlink" title="论题由Git的连接机制而引出，因为是完全性的主观理解，执行与结构的逻辑关系可能别有出入，仅供参考"></a>论题由Git的连接机制而引出，因为是完全性的主观理解，执行与结构的逻辑关系可能别有出入，仅供参考</h2><p>参考文案:</p><p>Git官网:<a href="https://git-scm.com/" target="_blank" rel="noopener">跳转</a><br><code>https://git-scm.com/</code></p><p>CN-Git 分支简介:<a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B" target="_blank" rel="noopener">跳转</a><br><code>https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B</code></p><p>CN-Git 分支使用:<a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6" target="_blank" rel="noopener">跳转</a><br><code>https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6</code></p><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Thu Feb 06 2020 18:58:36 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;Git-版本控制系统&quot;&gt;&lt;a href=&quot;#Git-版本控制系统&quot; class=&quot;headerlink&quot; title=&quot;Git 版本控制系统
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="Git" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/Git/"/>
-    
-    
-      <category term="Git" scheme="https://unit-serow.github.io/tags/Git/"/>
     
   </entry>
   

@@ -2,7 +2,7 @@
 title: 版本控制系统 Git-分支
 date: 2020-02-03 18:51:45
 tags: Git
-categories: [软件,版本控制系统]
+categories: [软件,Git]
 ---
 
 ## Git 版本控制系统

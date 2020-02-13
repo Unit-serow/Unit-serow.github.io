@@ -2,7 +2,7 @@
 title: hexo博客文件远端备份与恢复
 date: 2020-02-03 20:47:37
 tags: [hexo]
-categories: [软件]
+categories: [软件,Git]
 ---
 
 ### hexo博客文件远端备份与恢复
@@ -34,7 +34,7 @@ categories: [软件]
 ```
 git add .
 git commit -m "Backname"
-git push orgin hexo
+git push origin hexo
 hexo g与hexo d
 ```
 ---

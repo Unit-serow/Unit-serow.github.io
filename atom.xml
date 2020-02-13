@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-13T05:40:49.801Z</updated>
+  <updated>2020-02-13T07:50:37.095Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>随笔-2020-2-2-13</title>
+    <link href="https://unit-serow.github.io/2020/02/13/%E9%9A%8F%E7%AC%94-2020-2-2-13/"/>
+    <id>https://unit-serow.github.io/2020/02/13/%E9%9A%8F%E7%AC%94-2020-2-2-13/</id>
+    <published>2020-02-13T07:49:27.000Z</published>
+    <updated>2020-02-13T07:50:37.095Z</updated>
+    
+    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">输入密码</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="9645aba3c405a1754e58aac90349010fdab76d61cc44cea81430b6f32f4413f8">0267ec72f19b8c198697a4f72870a3a8fdb13c82d8fe26fd02d6f4aa3e69bed80c46c992cbc5b9fca21a4cd65108893d0d4d15e9d74720de0053f56abed3d754dbdb007e6595d76aa97f7f2f563ab275a246f4cf4949a558ac8c089c97fd97badbd85c679678a0a6f3e82b75c9f88d1d26021f5d9ba15ecbadc99229c5481a6c71b3193f0a64503ea1445c9fbac346b8f86cc3839172c3a0212223815ee4b128c8d4703e285db0eeb20a47181eabdd4e0f05da1bbf7bbd688a0e4aeee5fe5f70cda970e835a6e8156684e1a21d11cad66040c456d42b6ddd59bd3158e4d4c4c719911bfe1f2f6b4a038882738f4a8961ee738eba8413c432caa23d808e12961d5e5bbe90aaf7f37328299e476592409659a1e67504d2a4975cb2d0abe00bef6ba36b6cb626aa5b7291f9ca2983ab31aec6d85707621d43e42ca02bb7caf4d7d1ee56ba6455d9e367e0f851c0a0d4c71d559d32d08cf82967a465c38ba37d59c413e8a3ff74dc4eba81e0b81ad08a309f2580f948d54b4a5b8dc91a764fd8a15f684c610d14d06efbef4cbeb9aeafb9d0927d1267976c351d90a8fff76a9417559070764f3ba3fcd37fa900f0734e96da59401c5f92857f207b04bef12c99d5ee8d65e91ebb6b9d77e7f1cad6f1f0d297fccae000135c2f48af2ff43b68b7ffc04146b8772537567c20c6bd02f0a6e892edf2df59a9dbc62cace048e9644959964432d0486851a95c1450b46322d8ac75e8fd8657f5e8f27564f8932f30a1a49c25908972324b890bde792b7d3b740151f45179e236bb17907f6b9fcf8f64523c5564b7f60c4e19a508d1bfad66e4315c053d30a76f9bfd4b2c39b58a4ac0ad509dd8afacee0738f9358ad8d99ed3033a8e1321d5e39cb40adbb5fa4cc94814654ac3eb37634e55ff0b297fff04a0cbbb536b3b20bef87fb087fae2c47bc351b4abe875abcfd4f4d7b38c1af44d6091694fb44e9f54e746cd062edd99b66e13e8473722be88c554dd620e7ebf644fe64bddfa35c2170629c8aab9029c37e7f78d49a33616851a48250ab0c107b492ecc1ba2f4a79b8dd5beecb845f8d788157f292f2daf802350c26690fcc5fb967cde3</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    
+    <summary type="html">
+    
+      简易加密文案
+    
+    </summary>
+    
+    
+    
+      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>web crawler-1</title>
@@ -505,34 +526,6 @@
       
       
         &lt;!-- build time:Sun Feb 09 2020 15:06:12 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;Docker容器的基本命令与基本应用&quot;&gt;&lt;a href=&quot;#Docker容器的基本命令与基本应用&quot; class=&quot;headerlink&quot; t
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="虚拟化" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
-    
-    
-      <category term="Docker" scheme="https://unit-serow.github.io/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker-2</title>
-    <link href="https://unit-serow.github.io/2020/02/06/Docker-2/"/>
-    <id>https://unit-serow.github.io/2020/02/06/Docker-2/</id>
-    <published>2020-02-06T08:40:10.000Z</published>
-    <updated>2020-02-06T08:55:30.856Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Thu Feb 06 2020 16:55:35 GMT+0800 (中国标准时间) --><h3 id="Docker-Engine-Community-install"><a href="#Docker-Engine-Community-install" class="headerlink" title="Docker Engine-Community install"></a>Docker Engine-Community install</h3><p><strong>Debian Docker 安装</strong></p><ul><li>Docker Engine-Community 支持版本:<br><code>Buster 10与Stretch 9 (stable) / Raspbian Stretch</code></li><li>Docker Engine-Community 支持架构:<br><code>x86_64(或amd64)armhf，和 arm64</code></li></ul><blockquote><p>选定主机的首次安装需要设置Docker仓库，用以从仓库安装和更新Docker，而Raspbian系统必须使用shell脚本安装</p></blockquote><p><strong>设置仓库</strong></p><p>安装apt依赖包，以通过HTTPS来获取仓库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install \</span><br><span class="line">   apt-transport-https \</span><br><span class="line">   ca-certificates \</span><br><span class="line">   curl \</span><br><span class="line">   gnupg2 \</span><br><span class="line">   software-properties-common</span><br></pre></td></tr></table></figure><p><strong>添加Docker的官方GPG密钥</strong><br><code>$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -</code></p><blockquote><p>通过搜索指纹的最后八个字符，验证目前主机是否拥有带指纹的密匙<br>密匙:<code>9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88</code><br>执行:<code>$ sudo apt-key fingerprint 0EBFCD88</code></p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pub   4096R&#x2F;0EBFCD88 2017-02-22</span><br><span class="line">      Key fingerprint &#x3D; 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88</span><br><span class="line">uid                  Docker Release (CE deb) &lt;docker@docker.com&gt;</span><br><span class="line">sub   4096R&#x2F;F273FCD8 2017-02-22</span><br></pre></td></tr></table></figure><p><strong>设置稳定版仓库</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo add-apt-repository \</span><br><span class="line">   &quot;deb [arch&#x3D;amd64] https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;debian \</span><br><span class="line">   $(lsb_release -cs) \</span><br><span class="line">   stable&quot;</span><br></pre></td></tr></table></figure><ul><li><code>lsb_release -cs</code>子命令用于返回Debian发行版的名称</li><li>Docker对未经测试和不受支持的Debian发行版不提供任何保证</li></ul><hr><p><strong>安装 Docker Engine-Community</strong></p><ul><li><p>更新apt包索引<br><code>$ sudo apt-get update</code></p></li><li><p>安装最新版本的 Docker Engine-Community和containerd<br><code>$ sudo apt-get install docker-ce docker-ce-cli containerd.io</code></p></li><li><p>安装指定版本的 Docker Engine-Community</p></li><li><p>列出仓库中的可用版本<br><code>apt-cache madison docker-ce</code></p></li><li><p>使用<code>docker-ce |</code>后所输出的字符串安装指定版本，然后执行:<br><code>$ sudo apt-get install docker-ce=&lt;VERSION_STRING&gt; docker-ce-cli=&lt;VERSION_STRING&gt; containerd.io</code></p></li></ul><p><strong>卸载主机上Docker的旧版本</strong></p><ul><li>Docker的旧版本被称为<code>docker</code>，<code>docker.io</code>或<code>docker-engine</code><br><code>$ sudo apt-get remove docker docker-engine docker.io containerd runc</code></li></ul><p><strong>帮助指令</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker command --help</span><br><span class="line">man docker</span><br></pre></td></tr></table></figure><hr><p><strong>docker 镜像配置</strong></p><ul><li><p>Docker官方提供的中国镜像库:<code>https://registry.docker-cn.com</code></p></li><li><p>以添加Docker官方镜像库地址<code>https://registry.docker-cn.com</code>为例</p></li><li><p>upstart系统<br><code>$ emacs /etc/default/docker</code></p></li><li><p>修改其中<code>DOCKER_OPTS</code>的配置<br><code>DOCKER_OPTS=&quot;--registry-mirror=https://registry.docker-cn.com&quot;</code></p></li><li><p>重启服务<br><code>$ sudo service docker restart</code></p></li><li><p>systemd系统<br><code>emacs /etc/docker/daemon.json</code></p></li><li><p>如果没有就创建，在文件内添加:<br><code>{&quot;registry-mirrors&quot;:[&quot;https://registry.docker-cn.com&quot;]}</code></p></li><li><p>重启服务<br><code>$ sudo systemctl daemon-reload</code><br><code>$ sudo systemctl restart docker</code></p></li><li><p>检查配置是否生效<br><code>$ docker info</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Registry Mirrors:</span><br><span class="line">   https:&#x2F;&#x2F;registry.docker-cn.com&#x2F;</span><br></pre></td></tr></table></figure></li></ul><hr><p><strong>参考资料:</strong></p><p>官方手册:<a href="https://docs.docker.com/" target="_blank" rel="noopener">跳转</a><br><code>https://docs.docker.com/</code></p><p>官方安装手册:<a href="https://docs.docker.com/install/linux/docker-ce/debian/" target="_blank" rel="noopener">跳转</a><br><code>https://docs.docker.com/install/linux/docker-ce/debian/</code></p><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Thu Feb 06 2020 16:55:35 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;Docker-Engine-Community-install&quot;&gt;&lt;a href=&quot;#Docker-Engine-Community-ins
       
     
     </summary>

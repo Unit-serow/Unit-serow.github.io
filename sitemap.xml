@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://unit-serow.github.io/2020/02/15/MySQL-5/</loc>
+    
+    <lastmod>2020-02-14T18:21:56.080Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://unit-serow.github.io/2020/02/14/MySQL-1/</loc>
+    
+    <lastmod>2020-02-14T18:20:18.075Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://unit-serow.github.io/2020/02/15/MySQL-4/</loc>
     
     <lastmod>2020-02-14T17:51:47.270Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>https://unit-serow.github.io/2020/02/14/RDBMS-MySQL/</loc>
     
     <lastmod>2020-02-14T13:46:11.950Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://unit-serow.github.io/2020/02/14/MySQL-1/</loc>
-    
-    <lastmod>2020-02-14T13:13:16.999Z</lastmod>
     
   </url>
   

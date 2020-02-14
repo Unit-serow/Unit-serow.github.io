@@ -1,7 +1,7 @@
 ---
-title: RDBMS MySQL-1
+title: MySQL-1
 date: 2020-02-14 04:01:01
-tags: RDBMS
+tags: [RDBMS,随笔]
 categories: [软件,数据库]
 ---
 

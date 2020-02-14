@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-14T12:40:55.164Z</updated>
+  <updated>2020-02-14T13:46:11.950Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RDBMS-MySQL</title>
+    <link href="https://unit-serow.github.io/2020/02/14/RDBMS-MySQL/"/>
+    <id>https://unit-serow.github.io/2020/02/14/RDBMS-MySQL/</id>
+    <published>2020-02-14T13:44:16.000Z</published>
+    <updated>2020-02-14T13:46:11.950Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Fri Feb 14 2020 21:46:16 GMT+0800 (中国标准时间) --><h3 id="RDBMS-MySQL"><a href="#RDBMS-MySQL" class="headerlink" title="RDBMS-MySQL"></a>RDBMS-MySQL</h3><p><strong>RDBMS-MySQL相关概念简述</strong></p><ul><li>数据库: 数据库是一些关联表的集合</li><li>数据表: 表是数据的矩阵，在一个数据库中的表看起来像一个简单的电子表格</li><li>列: 一列(数据元素) 包含了相同类型的数据, 例如邮政编码的数据</li><li>行: 一行（=元组，或记录）是一组相关的数据，例如一条用户订阅的数据</li><li>冗余: 存储两倍数据，冗余降低了性能，但提高了数据的安全性</li><li>主键: 主键是唯一的。一个数据表中只能包含一个主键。你可以使用主键来查询数据</li><li>外键: 外键用于关联两个表</li><li>复合键: 复合键（组合键）将多个列作为一个索引键，一般用于复合索引</li><li>索引: 使用索引可快速访问数据库表中的特定信息。索引是对数据库表中一列或多列的值进行排序的一种结构。类似于书籍的目录</li><li>参照完整性: 参照的完整性要求关系中不允许引用不存在的实体。与实体完整性是关系模型必须满足的完整性约束条件，目的是保证数据的一致性</li><li>表头(header): 每一列的名称</li><li>列(col): 具有相同数据类型的数据的集合</li><li>行(row): 每一行用来描述某条记录的具体信息</li><li>值(value): 行的具体信息, 每个值必须与该列的数据类型相同</li><li>键(key): 键的值在当前列中具有唯一性</li><li>所谓的”关系型”可以理解为”表格”的概念, 一个关系型数据库由一个或数个表格组成</li></ul><hr><p><strong>MySQL</strong></p><ul><li>MySQL 为关系型数据库(Relational Database Management System)</li><li>MySQL -server- MySQL 服务器程序</li><li>MySQL-client - MySQL 客户端程序，用于连接并操作Mysql服务器</li><li>MySQL-devel - 库和包含文件，如果你想要编译其它MySQL客户端</li><li>MySQL-shared - 该软件包包含某些语言和应用程序需要动态装载的共享库(libmysqlclient.so)，使用MySQL</li><li>MySQL-bench - MySQL数据库服务器的基准和性能测试工具</li></ul><hr><p><strong>RDBMS-MySQL的三种连接方式</strong></p><ul><li>二进制连接 mysql -u username -p password</li><li>Shell连接 使用MySQLadmin工具</li><li>PHP连接不做阐述</li></ul><hr><p><strong>其他概念</strong></p><ul><li>数据类型</li><li>运算符</li><li>正则表达式</li><li>索引</li><li>元数据</li><li>序列</li><li>函数</li><li>MySQLadmin指令</li><li>PHP连接</li><li>SQL注入</li></ul><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Fri Feb 14 2020 21:46:16 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;RDBMS-MySQL&quot;&gt;&lt;a href=&quot;#RDBMS-MySQL&quot; class=&quot;headerlink&quot; title=&quot;RDBMS-My
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="数据库" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="RDBMS" scheme="https://unit-serow.github.io/tags/RDBMS/"/>
+    
+  </entry>
   
   <entry>
     <title>MySQL-3</title>
@@ -512,34 +540,6 @@
     
     
       <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-      <category term="Docker" scheme="https://unit-serow.github.io/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker Compose-1</title>
-    <link href="https://unit-serow.github.io/2020/02/07/Docker-Compose-1/"/>
-    <id>https://unit-serow.github.io/2020/02/07/Docker-Compose-1/</id>
-    <published>2020-02-07T08:47:40.000Z</published>
-    <updated>2020-02-07T08:48:59.435Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Fri Feb 07 2020 16:49:04 GMT+0800 (中国标准时间) --><h3 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h3><p><strong>概述:</strong></p><ul><li>Compose是用于定义和运行多容器Docker应用程序的工具</li><li>通过Compose，可以使用YML文件来配置应用程序需要的所有服务</li><li>最后通过使用一个命令，就可以从 YML 文件配置中创建并启动所有服务</li><li><a href="https://yaml.org/" target="_blank" rel="noopener">YAML</a>官方文档</li></ul><hr><p><strong>安装 Compose</strong></p><ul><li><p>Github地址:<a href="https://github.com/docker/compose/releases" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://github.com/docker/compose/releases</code></p></blockquote></li><li><p>下载源码包(二进制文件)</p></li><li><p>Docker Compose当前的稳定版本：</p><blockquote><p><code>$ sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</code></p></blockquote></li><li><p>其中的1.25.4为版本号，可用于指定版本</p></li><li><p>提权至可执行文件</p><blockquote><p><code>$ sudo chmod +x /usr/local/bin/docker-compose</code></p></blockquote></li><li><p>设置环境变量的软链接</p><blockquote><p><code>$ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose</code></p></blockquote></li><li><p>查看版本，以测试是否安装成功</p><blockquote><p><code>$ docker-compose --version</code></p></blockquote></li><li><p>对于Alpine/Linux发行版，需要安装依赖包:<code>py-pip</code>，<code>python-dev</code>，<code>libffi-dev</code>，<code>openssl-dev</code>，<code>gcc</code>，<code>libc-dev</code>，以及<code>make</code></p></li></ul><hr><p><strong>使用</strong></p><ul><li>对Compose进行使用大概可分为三个步骤:<blockquote><p>使用Dockerfile定义应用程序的环境<br>使用<code>docker-compose.yml</code>文件定义构成应用程序的服务，使其可以在隔离环境中一起运行<br>最后，执行<code>docker-compose up</code>命令来启动并运行整个应用程序</p></blockquote></li></ul><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Fri Feb 07 2020 16:49:04 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;Docker-Compose&quot;&gt;&lt;a href=&quot;#Docker-Compose&quot; class=&quot;headerlink&quot; title=&quot;Do
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="虚拟化" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
     
     
       <category term="Docker" scheme="https://unit-serow.github.io/tags/Docker/"/>

@@ -8,6 +8,13 @@ categories: [软件,数据库]
 ### MySQL-2
 
 **创建并选取数据库**
+
+```
+SHOW DATABASES;
+CREATE DATABASE TEST1;
+USE TEST1;
+```
+
 ```
 MariaDB [(none)]> CREATE DATABASE TEST1;
 Query OK, 1 row affected (0.000 sec)

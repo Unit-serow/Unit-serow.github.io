@@ -47,7 +47,51 @@ CREATE DATABASE TEST1;
 USE TEST1;
 ```
 
+```
+MariaDB [(none)]> CREATE DATABASE TEST1;
+Query OK, 1 row affected (0.000 sec)
+
+MariaDB [(none)]> USE TEST1;
+Database changed
+```
+
 **分别创建TABLES1,TABLES2,TABLES3**
+
+```
+CREATE TABLE TABLES1(
+ID INT NOT NULL AUTO_INCREMENT,
+A VARCHAR(100) NOT NULL,
+B VARCHAR(100) NOT NULL,
+C VARCHAR(100) NOT NULL,
+D VARCHAR(100) NOT NULL,
+TIME DATE,
+PRIMARY KEY ( ID )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+
+```
+CREATE TABLE TABLES2(
+ID INT NOT NULL AUTO_INCREMENT,
+A VARCHAR(100) NOT NULL,
+B VARCHAR(100) NOT NULL,
+C VARCHAR(100) NOT NULL,
+D VARCHAR(100) NOT NULL,
+TIME DATE,
+PRIMARY KEY ( ID )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+
+```
+CREATE TABLE TABLES3(
+ID INT NOT NULL AUTO_INCREMENT,
+A VARCHAR(100) NOT NULL,
+B VARCHAR(100) NOT NULL,
+C VARCHAR(100) NOT NULL,
+D VARCHAR(100) NOT NULL,
+TIME DATE,
+PRIMARY KEY ( ID )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
 
 ```
 MariaDB [TEST1]> CREATE TABLE TABLES1(
@@ -88,6 +132,8 @@ MariaDB [TEST1]> CREATE TABLE TABLES3(
 Query OK, 0 rows affected (0.005 sec)
 ```
 
+`SHOW TABLES;`
+
 ```
 MariaDB [TEST1]> SHOW TABLES;
 +-----------------+
@@ -107,6 +153,21 @@ MariaDB [TEST1]> SHOW TABLES;
 BEGIN;
 SET AUTOCOMMIT=0;
 SAVEPOINT A;
+```
+
+* 4
+```
+INSERT INTO TABLES1
+(A,B,C,D,TIME)
+VALUES
+("1","2","3","4",NOW());
+```
+* 1
+```
+INSERT INTO TABLES1
+(A,B,C,D,TIME)
+VALUES
+("2","3","4","5",'2020-02-13');
 ```
 
 ```
@@ -134,6 +195,11 @@ MariaDB [TEST1]> INSERT INTO TABLES1
     -> VALUES
     -> ("2","3","4","5",'2020-02-13');
 Query OK, 1 row affected (0.000 sec)
+```
+
+```
+RELEASE SAVEPOINT A;
+SELECT * FROM TABLES1;
 ```
 
 ```
@@ -167,6 +233,28 @@ SAVEPOINT A;
 ```
 
 ```
+* 1
+INSERT INTO TABLES2
+(A,B,C,D,TIME)
+VALUES
+("1","2","3","4",NOW());
+```
+* 3
+```
+INSERT INTO TABLES2
+(A,B,C,D,TIME)
+VALUES
+("2","3","4","5",NOW());
+```
+* 1
+```
+INSERT INTO TABLES2
+(A,B,C,D,TIME)
+VALUES
+("2","3","4","5",'2020-02-13');
+```
+
+```
 MariaDB [TEST1]> INSERT INTO TABLES2
     -> (A,B,C,D,TIME)
     -> VALUES
@@ -188,7 +276,6 @@ Query OK, 1 row affected, 1 warning (0.001 sec)
 
 MariaDB [TEST1]> INSERT INTO TABLES2 (A,B,C,D,TIME) VALUES ("2","3","4","5",NOW());
 Query OK, 1 row affected, 1 warning (0.001 sec)
-
 ```
 
 ```
@@ -198,6 +285,8 @@ MariaDB [TEST1]> INSERT INTO TABLES2
     -> ("2","3","4","5",'2020-02-13');
 Query OK, 1 row affected (0.001 sec)
 ```
+
+`SELECT * FROM TABLES2;`
 
 ```
 MariaDB [TEST1]> SELECT * FROM TABLES2;
@@ -211,7 +300,6 @@ MariaDB [TEST1]> SELECT * FROM TABLES2;
 |  5 | 2 | 3 | 4 | 5 | 2020-02-13 |
 +----+---+---+---+---+------------+
 5 rows in set (0.000 sec)
-
 ```
 
 ```
@@ -225,6 +313,35 @@ COMMIT WORK;
 STRAT TRANSACTION/BEGIN; 
 SET AUTOCOMMIT=0;
 SAVEPOINT A;
+```
+
+* 1
+```
+INSERT INTO TABLES3
+(A,B,C,D,TIME)
+VALUES
+("1","2","3","4",NOW());
+```
+* 1
+```
+INSERT INTO TABLES3
+(A,B,C,D,TIME)
+VALUES
+("2","3","4","5",NOW());
+```
+* 2
+```
+INSERT INTO TABLES3
+(A,B,C,D,TIME)
+VALUES
+("6","7","8","9",NOW());
+```
+* 1
+```
+INSERT INTO TABLES3
+(A,B,C,D,TIME)
+VALUES
+("6","7","8","9",'2020-02-13');
 ```
 
 ```
@@ -264,6 +381,8 @@ MariaDB [TEST1]> INSERT INTO TABLES3
 Query OK, 1 row affected (0.001 sec)
 ```
 
+`SELECT * FROM TABLES3;`
+
 ```
 MariaDB [TEST1]> SELECT * FROM TABLES3;
 +----+---+---+---+---+------------+
@@ -286,6 +405,19 @@ COMMIT WORK;
 ---
 
 **从三个表中选择所有列A匹配1的数据，返回所有列A中映射于列1的数据，并让列A靠左**
+
+```
+SELECT A,B FROM TABLES1
+WHERE A='1'
+UNION ALL
+SELECT A,B FROM TABLES2
+WHERE A='1'
+UNION ALL
+SELECT A,B FROM TABLES3
+WHERE A='1'
+ORDER BY A;
+```
+
 ```
 MariaDB [TEST1]> SELECT A,B FROM TABLES1
     -> WHERE A='1'
@@ -320,6 +452,9 @@ MariaDB [TEST1]> SELECT * FROM TABLES2 WHERE A=2 AND B=3 AND TIME LIKE '%3';
 ---
 
 **将表A内数据利用COUNT()函数按数值类型进行数据分组并求其平均值,并按降序排列(默认升序)**
+
+> `SELECT A, COUNT(*) FROM TABLES2 GROUP BY A DESC;`
+
 ```
 MariaDB [TEST1]> SELECT A, COUNT(*) FROM TABLES2 GROUP BY A DESC;
 +---+----------+
@@ -333,19 +468,22 @@ MariaDB [TEST1]> SELECT A, COUNT(*) FROM TABLES2 GROUP BY A DESC;
 
 ---
 
-**`TABLES1&TABLES2-left&right`**
+**TABLES1&TABLES2-left&right**
 **将TABLES1的A,B列与TABLES2的B,C列进行以下三种连接:**
 **将标识为a的A,B列于标识为b的C列进行等值连接**
+
 ```
 SELECT a.A, a.B, b.C FROM TABLES1 a INNER JOIN TABLES2 b ON a.B = b.B; 
 SELECT a.A, a.B, b.C FROM TABLES1 a, TABLES2 b WHERE a.B = b.B;
 ```
+
 * 左连接:
 > `SELECT a.A, a.B, b.C FROM TABLES1 a LEFT JOIN TABLES2 b ON a.B = b.B;`
 * 右连接:
 > `SELECT a.A, a.B, b.C FROM TABLES1 a RIGHT JOIN TABLES2 b ON a.B = b.B;`
 
 **如下所示:**
+
 ```
 MariaDB [TEST1]> SELECT a.A, a.B, b.C FROM TABLES1 a INNER JOIN TABLES2 b ON a.B = b.B; 
 +---+---+---+
@@ -396,4 +534,5 @@ MariaDB [TEST1]> SELECT a.A, a.B, b.C FROM TABLES1 a RIGHT JOIN TABLES2 b ON a.B
 +------+------+---+
 8 rows in set (0.000 sec)
 ```
+
 ---

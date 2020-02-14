@@ -344,6 +344,7 @@ SELECT a.A, a.B, b.C FROM TABLES1 a, TABLES2 b WHERE a.B = b.B;
 > `SELECT a.A, a.B, b.C FROM TABLES1 a LEFT JOIN TABLES2 b ON a.B = b.B;`
 * 右连接:
 > `SELECT a.A, a.B, b.C FROM TABLES1 a RIGHT JOIN TABLES2 b ON a.B = b.B;`
+
 **如下所示:**
 ```
 MariaDB [TEST1]> SELECT a.A, a.B, b.C FROM TABLES1 a INNER JOIN TABLES2 b ON a.B = b.B; 

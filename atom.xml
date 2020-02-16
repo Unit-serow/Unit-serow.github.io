@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-16T07:10:57.492Z</updated>
+  <updated>2020-02-16T07:59:16.842Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis-1</title>
+    <link href="https://unit-serow.github.io/2020/02/16/Redis-1/"/>
+    <id>https://unit-serow.github.io/2020/02/16/Redis-1/</id>
+    <published>2020-02-16T07:55:15.000Z</published>
+    <updated>2020-02-16T07:59:16.842Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Sun Feb 16 2020 15:59:22 GMT+0800 (中国标准时间) --><h3 id="REmote-DIctionary-Server-Redis"><a href="#REmote-DIctionary-Server-Redis" class="headerlink" title="REmote DIctionary Server(Redis)"></a>REmote DIctionary Server(Redis)</h3><p><strong>概述:</strong></p><ul><li>是一种Key-Value数据库</li><li>还可称为key-value存储系统，即数据结构服务器</li><li>由ANSI C语言编写</li><li>是基于BSD协议的<code>Free software</code></li><li>支持多种语言的API</li><li>支持网络</li><li>可基于内存亦可持久化的日志型</li></ul><hr><ul><li>Redis具有极为先进的数据管理方式与处理算法</li><li>Redis与其它<code>key-value</code>缓存产品相比的特有性质:<blockquote><p>Redis支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用<br>Redis不仅仅支持简单的<code>key-value</code>类型的数据，同时还提供<code>list</code>,<code>set</code>,<code>zset</code>,<code>hash</code>等数据结构的存储<br>Redis支持数据的备份，即<code>master-slave</code>模式的数据备份<br>Redis有着更为复杂的数据结构并且提供对他们的原子性操作，这是一个不同于其他数据库的进化路径<br>Redis的数据类型都是基于基本数据结构的同时对程序员透明，无需进行额外的抽象<br>Redis运行在内存中但是可以持久化到磁盘，所以在对不同数据集进行高速读写时需要权衡内存，因为数据量不能大于硬件内存<br>在内存数据库方面的另一个优点是，相比在磁盘上相同的复杂的数据结构，在内存中操作起来非常简单，这样Redis可以做很多内部复杂性很强的事情<br>同时，在磁盘格式方面他们是紧凑的以追加的方式产生的，因为他们并不需要进行随机访问</p></blockquote></li></ul><hr><ul><li>Redis特点<blockquote><p>性能特点: Redis能读的速度是<code>110000次/s</code>，写的速度是<code>81000次/s</code><br>数据类型特点: Redis支持二进制案例的<code>Strings</code>,<code>Lists</code>,<code>Hashes</code>,<code>Sets</code>及<code>Ordered Sets</code>数据类型操作</p></blockquote></li><li>原子性质:<blockquote><p>Redis的所有操作都是原子性的(只有成功且完全执行与失败且完全不执行)，单个操作是原子性的<br>多个操作也支持事务，即原子性，通过<code>MULTI</code>和<code>EXEC</code>指令对其进行封装</p></blockquote></li></ul><hr><ul><li><p>原子性操作:</p><blockquote><p>将任何一套完整数据处理操作定义为一个事务<br>该事务要么完全执行，要么完全不执行，不会出现执行到一半因为错误而中止<br>以此绝对的保证了数据的完整性<br>如果把事务比作一个程序，它要么完整的被执行,要么完全不执行</p></blockquote></li><li><p>key value 存储</p><blockquote><p>键值存储，即为key=&gt;value<br>键=&gt;值(key=&gt;value)对，键唯一，对应一个值，值的形式随意<br>以此绝对的保证了数据结构的完备性</p></blockquote></li></ul><hr><p><strong>相关基本概念(基本数据结构概念)</strong></p><ul><li>String: 字符串</li><li>Hash: 散列</li><li>List: 列表</li><li>Set: 集合</li><li>Sorted Set: 有序集合</li></ul><hr><p><strong>参考资料:</strong></p><ul><li><p>文档<a href="https://redis.io/documentation" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://redis.io/documentation</code></p></blockquote></li><li><p>官网<a href="https://redis.io/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://redis.io/</code></p></blockquote></li><li><p>获取<a href="https://redis.io/download" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://redis.io/download</code></p></blockquote></li><li><p>配置说明<a href="https://redis.io/topics/config" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://redis.io/topics/config</code></p></blockquote></li><li><p>apt-get自动化获取</p><blockquote><p><code>apt-get install redis-server</code></p></blockquote></li></ul><hr><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Sun Feb 16 2020 15:59:22 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;REmote-DIctionary-Server-Redis&quot;&gt;&lt;a href=&quot;#REmote-DIctionary-Server-Red
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="数据库" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="Key-value" scheme="https://unit-serow.github.io/tags/Key-value/"/>
+    
+  </entry>
   
   <entry>
     <title>PostgreSQL-4</title>
@@ -545,32 +575,6 @@
     
     
       <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker-随笔</title>
-    <link href="https://unit-serow.github.io/2020/02/09/Docker-%E9%9A%8F%E7%AC%94/"/>
-    <id>https://unit-serow.github.io/2020/02/09/Docker-%E9%9A%8F%E7%AC%94/</id>
-    <published>2020-02-09T09:05:25.000Z</published>
-    <updated>2020-02-09T09:08:01.494Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Sun Feb 09 2020 17:08:05 GMT+0800 (中国标准时间) --><h3 id="Docker-随笔"><a href="#Docker-随笔" class="headerlink" title="Docker 随笔"></a>Docker 随笔</h3><ul><li><p>Docker 由Go语言编写</p></li><li><p>Docker 主要分支(三大项目)</p></li></ul><ol><li><p>Docker Engine-Community</p><blockquote><p>docker社区</p></blockquote></li><li><p>Docker Compose</p><blockquote><p>docker自动化操作-YAML/Go</p></blockquote></li><li><p>Docker Machine</p><blockquote><p>docker集群化管理</p></blockquote></li></ol><hr><ul><li>基本概念</li><li>dockerfile</li><li>容器集群网络</li><li>docker虚拟机</li><li>swarm集群</li></ul><hr><ul><li>绝对基本流程<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br><span class="line">docker search</span><br><span class="line">docker pull</span><br><span class="line">docker run</span><br><span class="line">search ps -a</span><br><span class="line">docker rmi</span><br><span class="line">docker rm -f </span><br><span class="line">docker start&#x2F;restart&#x2F;stop</span><br></pre></td></tr></table></figure></li><li>能直接拉就直接拉，不到极端情况下最好别总想着整一些类似于dockerfile的花活</li></ul><hr><ul><li><p>docker hub<a href="https://hub.docker.com" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://hub.docker.com</code></p></blockquote></li><li><p>文档<a href="https://docs.docker.com/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://docs.docker.com/</code></p></blockquote></li></ul><hr><h3 id="容器服务安装并启动实例"><a href="#容器服务安装并启动实例" class="headerlink" title="容器服务安装并启动实例"></a>容器服务安装并启动实例</h3><p><strong>容器-操作系统</strong></p><ul><li>Ubantu/Debian/CentOS</li><li>先<code>docker search</code>看一下镜像</li><li>直接<code>pull</code>过来然后<code>exec</code>就行</li><li>默认是最新版本<code>Ubantu/Debian/CentOS:latest</code></li><li>Docker Hub内点击<code>Sort by</code>选项卡查看其他版本</li><li>这里暂时不阐述通过Dockerfile构建的方法</li></ul><ol><li><p>Ubuntu 镜像库地址<a href="https://hub.docker.com/_/ubuntu?tab=tags&page=1" target="_blank" rel="noopener">跳转</a><br><code>https://hub.docker.com/_/ubuntu?tab=tags&amp;page=1</code></p></li><li><p>CentOS 镜像库地址<a href="https://hub.docker.com/_/centos?tab=tags&page=1" target="_blank" rel="noopener">跳转</a><br><code>https://hub.docker.com/_/centos?tab=tags&amp;page=1</code></p></li><li><p>Debian 镜像库地址<a href="https://hub.docker.com/_/debian?tab=tags&page=1" target="_blank" rel="noopener">跳转</a><br><code>https://hub.docker.com/_/debian?tab=tags&amp;page=1</code></p></li></ol><hr><p><strong>容器-web服务</strong></p><ul><li>Nginx/Apache/Node.js/Tomcat</li></ul><ol><li>Nginx</li></ol><ul><li><p>说明:Nginx是一个高性能的HTTP和反向代理web服务器，同时也提供了<code>IMAP/POP3/SMTP</code>服务</p></li><li><p>镜像库地址<a href="https://hub.docker.com/_/nginx?tab=tags" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://hub.docker.com/_/nginx?tab=tags</code></p></blockquote></li><li><p>运行容器:</p><blockquote><p>$ docker run –name nginx-test -p 8080:80 -d nginx</p></blockquote></li><li><p>参数说明:</p><blockquote><p><code>--name nginx-test</code>:容器名称<br><code>-p 8080:80</code>:端口进行映射，将本地8080端口映射到容器内部的80端口<br><code>-d nginx</code>:设置容器在在后台一直运行</p></blockquote></li></ul><hr><ol start="2"><li>Apache-httpd</li></ol><ul><li><p>镜像库地址<a href="https://hub.docker.com/_/httpd?tab=tags" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://hub.docker.com/_/httpd?tab=tags</code></p></blockquote></li><li><p>运行容器:</p><blockquote><p><code>$ docker run -p 80:80 -v $PWD/www/:/usr/local/apache2/htdocs/ -v $PWD/conf/httpd.conf:/usr/local/apache2/conf/httpd.conf -v $PWD/logs/:/usr/local/apache2/logs/ -d httpd</code></p></blockquote></li><li><p>参数说明:</p><blockquote><p><code>-p 80:80</code>:将容器的 80 端口映射到主机的 80 端口<br><code>-v $PWD/www/:/usr/local/apache2/htdocs/</code>:将主机中当前目录下的<code>www</code>目录挂载到容器的<code>/usr/local/apache2/htdocs/</code><br><code>-v $PWD/conf/httpd.conf:/usr/local/apache2/conf/httpd.conf</code>:将主机中当前目录下的<code>conf/httpd.conf</code>文件挂载到容器的<code>/usr/local/apache2/conf/httpd.conf</code><br><code>-v $PWD/logs/:/usr/local/apache2/logs/</code>:将主机中当前目录下的<code>logs</code>目录挂载到容器的<code>/usr/local/apache2/logs/</code></p></blockquote></li></ul><hr><ol start="3"><li>Node.js</li></ol><ul><li>镜像库地址<a href="https://hub.docker.com/_/node?tab=tags" target="_blank" rel="noopener">跳转</a><blockquote><p><code>https://hub.docker.com/_/node?tab=tags</code></p></blockquote></li><li>运行容器:<blockquote><p><code>docker run -itd --name node-test node</code></p></blockquote></li><li>进入容器内部查看其服务版本</li></ul><hr><ol start="4"><li>Tomcat</li></ol><ul><li>镜像库地址<a href="https://hub.docker.com/_/tomcat?tab=tags" target="_blank" rel="noopener">跳转</a><blockquote><p><code>https://hub.docker.com/_/tomcat?tab=tags</code></p></blockquote></li><li>运行容器:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --name tomcat -p 8080:8080 -v $PWD&#x2F;test:&#x2F;usr&#x2F;local&#x2F;tomcat&#x2F;webapps&#x2F;test -d tomcat</span><br><span class="line">acb33fcb4beb8d7f1ebace6f50f5fc204b1dbe9d524881267aa715c61cf75320</span><br></pre></td></tr></table></figure></li><li>参数说明:<blockquote><p><code>-p 8080:8080</code>:将容器的8080端口映射到主机的8080端口<br><code>-v $PWD/test:/usr/local/tomcat/webapps/test</code>:将主机中当前目录下的<code>test</code>挂载到容器的<code>/test</code></p></blockquote></li></ul><hr><p><strong>容器-数据库</strong></p><ul><li><p>MySQL/MongoDB/Redis</p></li><li><p>MySQL</p></li><li><p>镜像库地址<a href="https://hub.docker.com/_/mysql?tab=tags" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://hub.docker.com/_/mysql?tab=tags</code></p></blockquote></li><li><p>运行容器:</p><blockquote><p><code>$ docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql</code></p></blockquote></li><li><p>参数说明:</p><blockquote><p><code>-p 3306:3306</code>:映射容器服务的3306端口到宿主机的3306端口，外部主机可以直接通过宿主机<code>ip:3306</code>访问到MySQL的服务<br><code>MYSQL_ROOT_PASSWORD=123456</code>:设置MySQL服务root用户的密码</p></blockquote></li></ul><hr><ul><li>MongoDB</li><li>简介:<code>MongoDB</code>是一个免费的开源跨平台面向文档的<code>NoSQL</code>数据库程序</li><li>镜像库地址:<a href="https://hub.docker.com/_/mongo?tab=tags&page=1" target="_blank" rel="noopener">跳转</a><blockquote><p><code>https://hub.docker.com/_/mongo?tab=tags&amp;page=1</code></p></blockquote></li><li>运行容器:<blockquote><p><code>$ docker run -itd --name mongo -p 27017:27017 mongo --auth</code></p></blockquote></li><li>参数说明:<blockquote><p><code>-p 27017:27017</code>:映射容器服务的27017端口到宿主机的27017端口，使外部可以直接通过宿主机<code>ip:27017</code>访问到<code>mongo</code>的服务<br><code>--auth</code>:需要密码才能访问容器服务</p></blockquote></li><li>接着使用以下命令添加用户和设置密码，并且尝试连接<blockquote><p><code>$ docker exec -it mongo mongo admin</code></p></blockquote></li><li>创建一个名为<code>admin</code>，密码为123456的用户<blockquote><p><code>db.createUser({ user:&#39;admin&#39;,pwd:&#39;123456&#39;,roles:[ { role:&#39;userAdminAnyDatabase&#39;, db: &#39;admin&#39;}]});</code></p></blockquote></li><li>尝试使用上面创建的用户信息进行连接<blockquote><p><code>db.auth(&#39;admin&#39;, &#39;123456&#39;)</code></p></blockquote></li></ul><hr><ul><li>Redis</li><li>简介:是一个开源的使用<code>ANSI C</code>语言编写、支持网络、可基于内存亦可持久化的日志型,<code>Key-Value</code>的<code>NoSQL</code>数据库，并提供多种语言的<code>API</code></li><li>镜像库地址:<a href="https://hub.docker.com/_/redis?tab=tags" target="_blank" rel="noopener">跳转</a><blockquote><p><code>https://hub.docker.com/_/redis?tab=tags</code></p></blockquote></li><li>运行容器:<blockquote><p><code>$ docker run -itd --name redis-test -p 6379:6379 redis</code></p></blockquote></li><li>通过<code>redis-cli</code>连接测试使用<code>redis</code>服务<blockquote><p><code>$ docker exec -it redis-test /bin/bash</code></p></blockquote></li></ul><hr><ul><li><p>PHP<a href="https://hub.docker.com/_/php?tab=tags" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://hub.docker.com/_/php?tab=tags</code></p></blockquote></li><li><p>Python<a href="https://hub.docker.com/_/python?tab=tags" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://hub.docker.com/_/python?tab=tags</code></p></blockquote></li><li><p>redis.conf<a href="https://github.com/antirez/redis/blob/unstable/redis.conf" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://github.com/antirez/redis/blob/unstable/redis.conf</code></p></blockquote></li></ul><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Sun Feb 09 2020 17:08:05 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;Docker-随笔&quot;&gt;&lt;a href=&quot;#Docker-随笔&quot; class=&quot;headerlink&quot; title=&quot;Docker 随笔&quot;&gt;&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-      <category term="Docker" scheme="https://unit-serow.github.io/tags/Docker/"/>
     
   </entry>
   

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-15T20:07:26.216Z</updated>
+  <updated>2020-02-16T07:10:57.492Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PostgreSQL-4</title>
+    <link href="https://unit-serow.github.io/2020/02/16/PostgreSQL-4/"/>
+    <id>https://unit-serow.github.io/2020/02/16/PostgreSQL-4/</id>
+    <published>2020-02-16T07:07:38.000Z</published>
+    <updated>2020-02-16T07:10:57.492Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Sun Feb 16 2020 15:11:02 GMT+0800 (中国标准时间) --><h3 id="PostSQL-4"><a href="#PostSQL-4" class="headerlink" title="PostSQL-4"></a>PostSQL-4</h3><p><strong>PostgreSQL命令语句便捷参考(总览)</strong></p><ul><li><p>中文手册详细资料<a href="http://www.postgres.cn/docs/9.6/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>http://www.postgres.cn/docs/9.6/</code></p></blockquote></li><li><p>输出帮助内容</p><blockquote><p><code>postgres-# \help &lt;command_name&gt;</code></p></blockquote></li></ul><hr><p><strong>CREATE</strong></p><ul><li><p>定义一个新的聚集函数</p><blockquote><p><code>CREATE AGGREGATE</code></p></blockquote></li><li><p>定义一个用户定义的转换</p><blockquote><p><code>CREATE CAST</code></p></blockquote></li><li><p>定义一个新的约束触发器</p><blockquote><p><code>CREATE CONSTRAINT TRIGGER</code></p></blockquote></li><li><p>定义一个新的的编码转换</p><blockquote><p><code>CREATE CONVERSION</code></p></blockquote></li><li><p>创建新数据库</p><blockquote><p><code>CREATE DATABASE</code></p></blockquote></li><li><p>定义一个新域</p><blockquote><p><code>CREATE DOMAIN</code></p></blockquote></li><li><p>定义一个新函数</p><blockquote><p><code>CREATE FUNCTION</code></p></blockquote></li><li><p>定义一个新的用户组</p><blockquote><p><code>CREATE GROUP</code></p></blockquote></li><li><p>定义一个新索引</p><blockquote><p><code>CREATE INDEX</code></p></blockquote></li><li><p>定义一种新的过程语言</p><blockquote><p><code>CREATE LANGUAGE</code></p></blockquote></li><li><p>定义一个新的操作符</p><blockquote><p><code>CREATE OPERATOR</code></p></blockquote></li><li><p>定义一个新的操作符表</p><blockquote><p><code>CREATE OPERATOR CLASS</code></p></blockquote></li><li><p>定义一个新的数据库角色</p><blockquote><p><code>CREATE ROLE</code></p></blockquote></li><li><p>定义一个新重写规则</p><blockquote><p><code>CREATE RULE</code></p></blockquote></li><li><p>定义一个新模式</p><blockquote><p><code>CREATE SCHEMA</code></p></blockquote></li><li><p>定义一个新的外部服务器</p><blockquote><p><code>CREATE SERVER</code></p></blockquote></li><li><p>定义一个新序列发生器</p><blockquote><p><code>CREATE SEQUENCE</code></p></blockquote></li><li><p>定义一个新表</p><blockquote><p><code>CREATE TABLE</code></p></blockquote></li><li><p>从一条查询的结果中定义一个新表</p><blockquote><p><code>CREATE TABLE AS</code></p></blockquote></li><li><p>定义一个新的表空间</p><blockquote><p><code>CREATE TABLESPACE</code></p></blockquote></li><li><p>定义一个新的触发器</p><blockquote><p><code>CREATE TRIGGER</code></p></blockquote></li><li><p>定义一个新的数据类型</p><blockquote><p><code>CREATE TYPE</code></p></blockquote></li><li><p>创建一个新的数据库用户帐户</p><blockquote><p><code>CREATE USER</code></p></blockquote></li><li><p>定义一个视图</p><blockquote><p><code>CREATE VIEW</code></p></blockquote></li></ul><hr><p><strong>ALTER</strong></p><ul><li><p>修改一个聚集函数的定义</p><blockquote><p><code>ALTER AGGREGATE</code></p></blockquote></li><li><p>修改一个排序规则定义</p><blockquote><p><code>ALTER COLLATION</code></p></blockquote></li><li><p>修改一个编码转换的定义</p><blockquote><p><code>ALTER CONVERSION</code></p></blockquote></li><li><p>修改一个数据库</p><blockquote><p><code>ALTER DATABASE</code></p></blockquote></li><li><p>定义默认的访问权限</p><blockquote><p><code>ALTER DEFAULT PRIVILEGES</code></p></blockquote></li><li><p>修改一个域的定义</p><blockquote><p><code>ALTER DOMAIN</code></p></blockquote></li><li><p>修改一个函数的定义</p><blockquote><p><code>ALTER FUNCTION</code></p></blockquote></li><li><p>修改一个用户组</p><blockquote><p><code>ALTER GROUP</code></p></blockquote></li><li><p>修改一个索引的定义</p><blockquote><p><code>ALTER INDEX</code></p></blockquote></li><li><p>改变一个操作符的定义</p><blockquote><p><code>ALTER OPERATOR</code></p></blockquote></li><li><p>修改一个模式的定义</p><blockquote><p><code>ALTER SCHEMA</code></p></blockquote></li><li><p>修改一个序列生成器的定义</p><blockquote><p><code>ALTER SEQUENCE</code></p></blockquote></li><li><p>修改表的定义</p><blockquote><p><code>ALTER TABLE</code></p></blockquote></li><li><p>修改一个表空间的定义</p><blockquote><p><code>ALTER TABLESPACE</code></p></blockquote></li><li><p>修改改变一个触发器的定义</p><blockquote><p><code>ALTER TRIGGER</code></p></blockquote></li><li><p>修改一个类型的定义</p><blockquote><p><code>ALTER TYPE</code></p></blockquote></li><li><p>修改数据库用户帐号</p><blockquote><p><code>ALTER USER</code></p></blockquote></li><li><p>更新一个表中的行</p><blockquote><p><code>UPDATE</code></p></blockquote></li></ul><hr><p><strong>删除</strong></p><ul><li><p>删除一个准备好的查询</p><blockquote><p><code>DEALLOCATE</code></p></blockquote></li><li><p>删除一个表中的行</p><blockquote><p><code>DELETE</code></p></blockquote></li><li><p>删除一个用户定义的聚集函数</p><blockquote><p><code>DROP AGGREGATE</code></p></blockquote></li><li><p>删除一个用户定义的类型转换</p><blockquote><p><code>DROP CAST</code></p></blockquote></li><li><p>删除一个用户定义的编码转换</p><blockquote><p><code>DROP CONVERSION</code></p></blockquote></li><li><p>删除一个数据库</p><blockquote><p><code>DROP DATABASE</code></p></blockquote></li><li><p>删除一个用户定义的域</p><blockquote><p><code>DROP DOMAIN</code></p></blockquote></li><li><p>删除一个函数</p><blockquote><p><code>DROP FUNCTION</code></p></blockquote></li><li><p>删除一个用户组</p><blockquote><p><code>DROP GROUP</code></p></blockquote></li><li><p>删除一个索引</p><blockquote><p><code>DROP INDEX</code></p></blockquote></li><li><p>删除一个过程语言</p><blockquote><p><code>DROP LANGUAGE</code></p></blockquote></li><li><p>删除一个操作符</p><blockquote><p><code>DROP OPERATOR</code></p></blockquote></li><li><p>删除一个操作符表</p><blockquote><p><code>DROP OPERATOR CLASS</code></p></blockquote></li><li><p>删除一个数据库角色</p><blockquote><p><code>DROP ROLE</code></p></blockquote></li><li><p>删除一个重写规则</p><blockquote><p><code>DROP RULE</code></p></blockquote></li><li><p>删除一个模式</p><blockquote><p><code>DROP SCHEMA</code></p></blockquote></li><li><p>删除一个序列</p><blockquote><p><code>DROP SEQUENCE</code></p></blockquote></li><li><p>删除一个表</p><blockquote><p><code>DROP TABLE</code></p></blockquote></li><li><p>删除一个表空间</p><blockquote><p><code>DROP TABLESPACE</code></p></blockquote></li><li><p>删除一个触发器定义</p><blockquote><p><code>DROP TRIGGER</code></p></blockquote></li><li><p>删除一个用户定义数据类型</p><blockquote><p><code>DROP TYPE</code></p></blockquote></li><li><p>删除一个数据库用户帐号</p><blockquote><p><code>DROP USER</code></p></blockquote></li><li><p>删除一个视图</p><blockquote><p><code>DROP VIEW</code></p></blockquote></li><li><p>清空一个或一组表</p><blockquote><p><code>TRUNCATE</code></p></blockquote></li></ul><hr><p><code>SELECT</code></p><blockquote><p>从表或视图中取出若干行</p></blockquote><p><code>SELECT INTO</code></p><blockquote><p>从一个查询的结果中定义一个新表</p></blockquote><hr><p><code>SET</code></p><blockquote><p>修改运行时参数</p></blockquote><p><code>SET CONSTRAINTS</code></p><blockquote><p>设置当前事务的约束检查模式</p></blockquote><p><code>SET SESSION AUTHORIZATION</code></p><blockquote><p>为当前会话设置会话用户标识符和当前用户标识符</p></blockquote><p><code>SET TRANSACTION</code></p><blockquote><p>开始一个事务块</p></blockquote><hr><p><strong>其它</strong></p><ul><li><p>收集与数据库有关的统计</p><blockquote><p><code>ANALYZE</code></p></blockquote></li><li><p>用于退出当前事务</p><blockquote><p><code>ABORT</code></p></blockquote></li><li><p>开始一个事务块</p><blockquote><p><code>BEGIN</code></p></blockquote></li><li><p>开始一个事务块</p><blockquote><p><code>START TRANSACTION</code></p></blockquote></li><li><p>提交当前事务</p><blockquote><p><code>COMMIT</code></p></blockquote></li><li><p>提交当前的事务</p><blockquote><p><code>END</code></p></blockquote></li><li><p>在当前事务里定义一个新的保存点</p><blockquote><p><code>SAVEPOINT</code></p></blockquote></li><li><p>回滚到一个保存点</p><blockquote><p><code>ROLLBACK TO SAVEPOINT</code></p></blockquote></li><li><p>退出当前事务</p><blockquote><p><code>ROLLBACK</code></p></blockquote></li><li><p>强制一个事务日志检查点</p><blockquote><p><code>CHECKPOINT</code></p></blockquote></li><li><p>定义一个游标</p><blockquote><p><code>DECLARE</code></p></blockquote></li><li><p>定位一个游标</p><blockquote><p><code>MOVE</code></p></blockquote></li><li><p>用游标从查询中抓取行</p><blockquote><p><code>FETCH</code></p></blockquote></li><li><p>关闭游标</p><blockquote><p><code>CLOSE</code></p></blockquote></li><li><p>重建索引</p><blockquote><p><code>REINDEX</code></p></blockquote></li><li><p>根据一个索引对某个表盘簇化排序</p><blockquote><p><code>CLUSTER</code></p></blockquote></li><li><p>定义或者改变一个对象的注释</p><blockquote><p><code>COMMENT</code></p></blockquote></li><li><p>删除一个前面定义的保存点</p><blockquote><p><code>RELEASE SAVEPOINT</code></p></blockquote></li><li><p>在表和文件之间拷贝数据</p><blockquote><p><code>COPY</code></p></blockquote></li><li><p>创建一个准备好的查询</p><blockquote><p><code>PREPARE</code></p></blockquote></li><li><p>执行一个准备好的查询</p><blockquote><p><code>EXECUTE</code></p></blockquote></li><li><p>显示一个语句的执行规划</p><blockquote><p><code>EXPLAIN</code></p></blockquote></li><li><p>生成一个通知</p><blockquote><p><code>NOTIFY</code></p></blockquote></li><li><p>定义访问权限</p><blockquote><p><code>GRANT</code></p></blockquote></li><li><p>删除访问权限</p><blockquote><p><code>REVOKE</code></p></blockquote></li><li><p>在表中创建新行，即插入数据</p><blockquote><p><code>INSERT</code></p></blockquote></li><li><p>监听一个通知</p><blockquote><p><code>LISTEN</code></p></blockquote></li><li><p>停止监听通知信息</p><blockquote><p><code>UNLISTEN</code></p></blockquote></li><li><p>加载或重载一个共享库文件</p><blockquote><p><code>LOAD</code></p></blockquote></li><li><p>锁定一个表</p><blockquote><p><code>LOCK</code></p></blockquote></li><li><p>把一个运行时参数值恢复为默认值</p><blockquote><p><code>RESET</code></p></blockquote></li><li><p>显示运行时参数的值</p><blockquote><p><code>SHOW</code></p></blockquote></li><li><p>垃圾收集以及可选地分析一个数据库</p><blockquote><p><code>VACUUM</code></p></blockquote></li><li><p>计算一个或一组行</p><blockquote><p><code>VALUES</code></p></blockquote></li></ul><hr><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Sun Feb 16 2020 15:11:02 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;PostSQL-4&quot;&gt;&lt;a href=&quot;#PostSQL-4&quot; class=&quot;headerlink&quot; title=&quot;PostSQL-4&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="数据库" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="ORDBMS" scheme="https://unit-serow.github.io/tags/ORDBMS/"/>
+    
+  </entry>
   
   <entry>
     <title>PostgreSQL-3</title>
@@ -532,32 +562,6 @@
       
       
         &lt;!-- build time:Sun Feb 09 2020 17:08:05 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;Docker-随笔&quot;&gt;&lt;a href=&quot;#Docker-随笔&quot; class=&quot;headerlink&quot; title=&quot;Docker 随笔&quot;&gt;&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-      <category term="Docker" scheme="https://unit-serow.github.io/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker Machine/Swarm-1.1</title>
-    <link href="https://unit-serow.github.io/2020/02/09/Docker-Machine-1-1/"/>
-    <id>https://unit-serow.github.io/2020/02/09/Docker-Machine-1-1/</id>
-    <published>2020-02-09T06:38:25.000Z</published>
-    <updated>2020-02-09T06:42:33.273Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Sun Feb 09 2020 14:42:38 GMT+0800 (中国标准时间) --><h3 id="docker-machine-基本命令"><a href="#docker-machine-基本命令" class="headerlink" title="docker machine-基本命令"></a>docker machine-基本命令</h3><ul><li><p>虚拟机与容器的区别:虚拟机内可以定义容器</p></li><li><p>列出已有虚拟机</p><blockquote><p><code>docker-machine ls</code></p></blockquote></li><li><p>创建虚拟机</p><blockquote><p><code>docker-machine create --driver [virtualbox] [test]</code><br>参数–driver用于指定虚拟机驱动类型,这里是virtualbox</p></blockquote></li><li><p>虚拟机驱动一览<a href="https://docs.docker.com/machine/drivers/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://docs.docker.com/machine/drivers/</code></p></blockquote></li><li><p>查看虚拟器的ip</p><blockquote><p><code>docker-machine ip [test]</code></p></blockquote></li></ul><hr><ul><li><p>管理命令</p><blockquote><p><code>docker-machine start/restart/stop test</code></p></blockquote></li><li><p>帮助与检阅命令</p><blockquote><p><code>version/help/info</code></p></blockquote></li><li><p>官方文档<a href="https://docs.docker.com/machine/reference/create/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://docs.docker.com/machine/reference/create/</code></p></blockquote></li></ul><hr><p><strong>指令摘要</strong></p><table><thead><tr><th align="left">命令</th><th align="left">作用</th></tr></thead><tbody><tr><td align="left">kill</td><td align="left">杀死指定主机</td></tr><tr><td align="left">rm</td><td align="left">删除指定主机</td></tr><tr><td align="left">ssh</td><td align="left">连接主机</td></tr><tr><td align="left">upgrade</td><td align="left">更新</td></tr><tr><td align="left">url</td><td align="left">获取监听url</td></tr><tr><td align="left">scp</td><td align="left">复制</td></tr><tr><td align="left">regenerate-certs</td><td align="left">刷新TLS</td></tr></tbody></table><hr><ul><li><p>工作节点(worker node)</p></li><li><p>管理节点(manager node)</p></li><li><p>在VMware里安装虚拟机的虚拟机驱动时需要</p></li><li><p>点开虚拟机设置里的处理器选项卡</p></li><li><p>勾选虚拟化引擎选项卡</p></li></ul><hr><h3 id="Docker-Swarm集群-基本命令"><a href="#Docker-Swarm集群-基本命令" class="headerlink" title="Docker Swarm集群-基本命令"></a>Docker Swarm集群-基本命令</h3><ul><li><p>创建管理节点(manager node)</p><blockquote><p><code>docker-machine create -d virtualbox swarm-manager</code></p></blockquote></li><li><p>连入机器后执行</p><blockquote><p><code>docker swarm init --advertise-addr [创建机器时分配的 ip]</code></p></blockquote></li><li><p>然后拷贝输出指令</p></li><li><p>创建工作节点(worker node)</p></li><li><p>进入工作节点运行拷贝的指令将其设置为工作节点</p></li></ul><hr><ul><li><p>随机部署服务到集群中</p></li><li><p><code>alpine</code>是操作系统</p><blockquote><p><code>docker service create --replicas 1 --name 服务名 alpine ping docker.com</code></p></blockquote></li><li><p>查看部署情况</p><blockquote><p><code>docker service ps [服务名]</code></p></blockquote></li><li><p>查看具体信息</p><blockquote><p><code>docker service inspect --pretty [服务名]</code></p></blockquote></li><li><p>扩展服务到多节点(两个)</p><blockquote><p><code>docker service scale [服务名=2]</code></p></blockquote></li><li><p>删除服务</p><blockquote><p><code>docker service rm [服务名]</code></p></blockquote></li><li><p>查看所有节点</p><blockquote><p><code>docker node ls</code></p></blockquote></li><li><p>关闭服务节点</p><blockquote><p><code>docker node update --availability drain swarm-worker1</code></p></blockquote></li><li><p>开启服务节点</p><blockquote><p><code>docker node update --availability active swarm-worker1</code></p></blockquote></li><li><p><code>Active/Drain</code>分别代表开启与关闭</p></li></ul><hr><p><strong>滚动升级</strong></p><ul><li><p>前提是已存在指定服务</p></li><li><p>创建服务</p><blockquote><p><code>docker service create --replicas 1 --name redis --update-delay 10s redis:3.0.6</code></p></blockquote></li><li><p>滚动更新</p><blockquote><p><code>docker service update --image [服务名:版本号] [指定已有的服务镜像]</code></p></blockquote></li></ul><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Sun Feb 09 2020 14:42:38 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;docker-machine-基本命令&quot;&gt;&lt;a href=&quot;#docker-machine-基本命令&quot; class=&quot;headerlink&quot;
       
     
     </summary>

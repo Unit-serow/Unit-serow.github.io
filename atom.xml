@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-16T12:15:31.186Z</updated>
+  <updated>2020-02-16T13:01:54.072Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis-3</title>
+    <link href="https://unit-serow.github.io/2020/02/16/Redis-3/"/>
+    <id>https://unit-serow.github.io/2020/02/16/Redis-3/</id>
+    <published>2020-02-16T13:01:07.000Z</published>
+    <updated>2020-02-16T13:01:54.072Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Sun Feb 16 2020 21:01:59 GMT+0800 (中国标准时间) --><h3 id="Redis-简易参考"><a href="#Redis-简易参考" class="headerlink" title="Redis-简易参考"></a>Redis-简易参考</h3><p><strong>便捷参考</strong></p><ul><li>基本语法:<blockquote><p><code>redis 127.0.0.1:6379&gt; COMMAND KEY_NAME VALUE</code></p></blockquote></li><li>参数说明:<blockquote><p><code>COMMAND为命令(映射于数据类型)</code><br><code>KEY_NAME为键</code><br><code>VALUE 为值</code></p></blockquote></li></ul><hr><p><strong>相关命令简述(不进行详细说明)</strong></p><ul><li>String/Hash/List/Set/Sorted set不进行说明</li><li>Redis 在 2.8.9 版本添加了 HyperLogLog 结构</li><li>Redis HyperLogLog 是用来做基数统计的算法</li></ul><table><thead><tr><th align="left">相关说明</th><th align="left">相关参数</th></tr></thead><tbody><tr><td align="left">HyperLogLog用于实现基数统计算法</td><td align="left">PFADD\PFCOUNT\PFMERGE</td></tr><tr><td align="left">订阅</td><td align="left">SUBSCRIBE\PUBLISH</td></tr><tr><td align="left">事务</td><td align="left">MULTI\EXEC\DISCARD</td></tr><tr><td align="left">脚本</td><td align="left">EVAL</td></tr><tr><td align="left">连接</td><td align="left">PING\QUIT\SELECT index</td></tr><tr><td align="left">服务</td><td align="left">INFO</td></tr><tr><td align="left">备份</td><td align="left">Bgsave\SAVE</td></tr><tr><td align="left">恢复</td><td align="left">SAVE</td></tr><tr><td align="left">安全</td><td align="left">CONFIG\AUTH</td></tr><tr><td align="left">性能测试</td><td align="left">redis-benchmark [option] [option value]</td></tr><tr><td align="left">连接客户端</td><td align="left">redis-server –maxclients [最大连接数]</td></tr></tbody></table><hr><p><strong>相关概念</strong></p><ul><li>订阅</li><li>事务</li><li>脚本</li><li>连接</li><li>服务器</li><li>数据备份</li><li>数据恢复</li><li>安全</li><li>管道技术</li><li>分区</li><li>测试(性能)</li><li>Log</li></ul><hr><ul><li><p>参考资料:<a href="https://redis.io/commands" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://redis.io/commands</code></p></blockquote></li><li><p>在线测试<a href="http://try.redis.io/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>http://try.redis.io/</code></p></blockquote></li></ul><hr><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Sun Feb 16 2020 21:01:59 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;Redis-简易参考&quot;&gt;&lt;a href=&quot;#Redis-简易参考&quot; class=&quot;headerlink&quot; title=&quot;Redis-简易参考
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="数据库" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="Key-value" scheme="https://unit-serow.github.io/tags/Key-value/"/>
+    
+  </entry>
   
   <entry>
     <title>随笔-2020-02-16</title>
@@ -536,34 +566,6 @@
       
       
         &lt;!-- build time:Wed Feb 12 2020 16:17:04 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;结构化查询语言-SQL-1&quot;&gt;&lt;a href=&quot;#结构化查询语言-SQL-1&quot; class=&quot;headerlink&quot; title=&quot;结构化查
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="数据库" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DBMS-1</title>
-    <link href="https://unit-serow.github.io/2020/02/12/DBMS-1/"/>
-    <id>https://unit-serow.github.io/2020/02/12/DBMS-1/</id>
-    <published>2020-02-12T06:27:10.000Z</published>
-    <updated>2020-02-12T06:31:39.270Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Wed Feb 12 2020 14:31:43 GMT+0800 (中国标准时间) --><h3 id="DBMS-1"><a href="#DBMS-1" class="headerlink" title="DBMS-1"></a>DBMS-1</h3><p><strong>概述:</strong></p><ul><li>本篇注重对知识体系的规划与系别的整理</li><li>别称:数据库管理系统(Database Management System)</li><li>简称:DBMS</li><li>一个数据库由多个表空间(Tablespace)构成</li><li>用于将数据以一定方式存储到同一个数据库内，能同时予以多个用户共享</li><li>让应用程序的数据集合彼此独立，并且具有尽可能小的冗余度</li><li>数据库管理系统指的是为管理数据库而设计的电脑软件(程序)系统</li><li>大多数具有存储，截取，安全保证，备份等基础功能</li><li>几乎所有的数据库管理系统都配备了一个开放式数据库连接（ODBC）驱动程序，令各个数据库之间得以互相集成</li><li>不涉及结构化查询语言/数据查询语言(SQL)相关内容</li></ul><hr><ul><li>数据库的类别一览</li></ul><table><thead><tr><th align="left">类别</th><th align="left">相关(与其相结合)</th></tr></thead><tbody><tr><td align="left">分布式数据库</td><td align="left">分布处理技术</td></tr><tr><td align="left">并行数据库</td><td align="left">并行处理技术</td></tr><tr><td align="left">演绎数据库</td><td align="left">人工智能</td></tr><tr><td align="left">多媒体数据库</td><td align="left">多媒体技术</td></tr><tr><td align="left">特定领域数据库</td><td align="left">统计/空间/工程/地理数据库等等</td></tr><tr><td align="left">关系型数据库</td><td align="left">MySQL,Oracle,postgreSQL等</td></tr><tr><td align="left">非关系型数据库</td><td align="left">NoSQL/Redis,MongoDB等</td></tr></tbody></table><hr><ul><li>关系型数据库简介<blockquote><p>MySQL<br>MariaDB (MySQL的代替品)<br>Percona Server (MySQL的代替品)<br>PostgreSQL<br>Microsoft Access<br>Microsoft SQL Server<br>Google Fusion Tables<br>FileMaker<br>Oracle数据库<br>Sybase<br>dBASE<br>Clipper<br>FoxPro<br>foshub</p></blockquote></li></ul><hr><ul><li>非关系型数据库(NoSQL)简介</li><li>NoSQL是对不同于传统的关系数据库的数据库管理系统的统称<blockquote><p>BigTable (Google)<br>Cassandra<br>MongoDB<br>CouchDB<br>Redis</p></blockquote></li></ul><hr><ul><li>键值数据库简介<blockquote><p>Apache Cassandra(为Facebook所使用)高度可扩展<br>Dynamo<br>LevelDB(Google)</p></blockquote></li></ul><hr><p><strong>数据库关系模型简述(数据结构):</strong></p><ol><li>对象模型</li></ol><ul><li>层次-层次模型<blockquote><p><code>Hierarchical database model</code><br>轻量级数据访问协议<br>用树形结构描述实体及其之间关系的数据模型</p></blockquote></li></ul><ol start="2"><li><p>网状-网状模型</p><blockquote><p><code>Network model</code><br>用于大型数据储存<br>由美国的<code>查尔斯·巴赫曼(Charles William Bachman)</code>发明</p></blockquote></li><li><p>平面-平面模型</p></li></ol><ul><li><code>Flat-file database</code></li><li>表格模型，一般在形式上是一个二维数组</li><li>如表格模型数据Excel</li><li>不同于平面文件系统<code>Flat file system</code></li></ul><ol start="4"><li><p>关系-关系模型</p><blockquote><p><code>Relational model</code><br>基于谓词逻辑和集合论的一种数据模型</p></blockquote></li><li><p>ER模型-增强实体关系模型</p><blockquote><p><code>Entity-relationship model</code><br>概念数据模型的高层描述所使用的数据模型或模式图</p></blockquote></li><li><p>图-图数据库</p><blockquote><p><code>graph database,GDB</code><br>使用图结构进行语义查询的数据库，它使用节点、边和属性来表示和存储数据<br>该系统的关键概念是图，它直接将存储中的数据项，与数据节点和节点间表示关系的边的集合相关联</p></blockquote></li><li><p>面向对象-面向对象模型</p><blockquote><p>面向对象数据库<br>对象数据库的数据库管理系统被称为<code>ODBMS</code>或<code>OODBMS</code><br>以对象形式表示信息的数据库</p></blockquote></li><li><p>实体-属性-值</p><blockquote><p><code>Entity–attribute–value model,EAV</code><br>EAV也称为对象属性值模型，垂直数据库模型和开放式架构<br>是一种数据模型，以节省空间的方式对实体进行编码，其中可以用来描述实体的属性(属性，参数)的数量可能很大，但是实际适用于给定的实体是相对适度的<br>这样的实体对应于稀疏矩阵的数学概念</p></blockquote></li><li><p>空间/纬度建模</p><blockquote><p><code>Dimensional modeling,DM</code></p></blockquote></li><li><p>半结构化模型</p></li></ol><hr><p><strong>其他模型:</strong></p><ol start="11"><li><p>关联-数据关联模型</p><blockquote><p><code>Associative model of data</code><br>数据的关联模型是一个数据模型的数据库系统</p></blockquote></li><li><p>多维-联机分析处理</p><blockquote><p><code>Online analytical processing,OLAP</code><br>是计算机技术中快速解决多维分析问题(MDA)的一种方法</p></blockquote></li><li><p>数组-矩阵数据库管理系统</p><blockquote><p><code>Array DBMS</code><br><code>Array database management systems</code>(array DBMSs)<br>矩阵数据库管理系统(Array DBMS)专门为矩阵(也称为栅格数据)提供数据库服务</p></blockquote></li><li><p>语义数据模型</p><blockquote><p><code>Semantic data model,SDM</code><br>基于高级语义的数据库描述和数据库的结构形式化(数据库模型)</p></blockquote></li><li><p>星模式</p><blockquote><p><code>Star schema</code><br>在计算中，星形模式是数据集市模式的最简单样式，并且是最广泛用于开发数据仓库和维度数据集市的方法</p></blockquote></li><li><p>XML数据库</p><blockquote><p><code>XML database</code><br>数据持久性软件系统，该系统允许数据被指定，有时存储在XML格式</p></blockquote></li></ol><p><strong>关于实现方法这里不做阐述</strong></p><hr><p><strong>架构:</strong></p><ul><li>数据库的架构可以大致区分为三个概括层次:内层,概念层和外层<blockquote><p>内层:最接近实际存储体，亦即有关数据的实际存储方式<br>外层:最接近用户，即有关个别用户观看数据的方式<br>概念层:介于两者之间的间接层</p></blockquote></li></ul><hr><p><strong>数据库事务</strong></p><ul><li>事务(transaction)包含一组数据库操作的逻辑工作单元，在事务中包含的数据库操作是不可分割的整体</li><li>这些操作要么一起做，要么一起回滚(Roll Back)到执行前的状态</li><li>事务的ACID特性：<blockquote><p>基元性 (atomicity)<br>一致性 (consistency)<br>隔离性 (isolation)<br>持续性 (durability)</p></blockquote></li><li>事务的并发性是指多个事务的并行操作轮流交叉运行，事务的并发可能会访问和存储不正确的数据，破坏交易的隔离性和数据库的一致性</li></ul><hr><ul><li>网状模型-网状数据模型的数据结构</li><li>满足下面两个条件的基本层次联系的集合为网状模型</li></ul><ol><li>允许一个以上的结点无双亲</li><li>一个结点可以有多于一个的双亲</li></ol><hr><p><strong>其他:</strong></p><ul><li><p>数据库管理系统是指管理数据库的程序</p></li><li><p>相关概念简述:</p><blockquote><p>数据库存储结构(Database storage structures)<br>数据模型(data model)<br>数据库模型(database model)<br>关系模型(Relational model)<br>数据结构(data structure)<br>数据类型</p></blockquote></li></ul><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Wed Feb 12 2020 14:31:43 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;DBMS-1&quot;&gt;&lt;a href=&quot;#DBMS-1&quot; class=&quot;headerlink&quot; title=&quot;DBMS-1&quot;&gt;&lt;/a&gt;DBMS-1
       
     
     </summary>

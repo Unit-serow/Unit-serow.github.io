@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Redis-3</title>
+    <url>/2020/02/16/Redis-3/</url>
+    <content><![CDATA[<!-- build time:Sun Feb 16 2020 21:01:59 GMT+0800 (中国标准时间) --><h3 id="Redis-简易参考"><a href="#Redis-简易参考" class="headerlink" title="Redis-简易参考"></a>Redis-简易参考</h3><p><strong>便捷参考</strong></p><ul><li>基本语法:<blockquote><p><code>redis 127.0.0.1:6379&gt; COMMAND KEY_NAME VALUE</code></p></blockquote></li><li>参数说明:<blockquote><p><code>COMMAND为命令(映射于数据类型)</code><br><code>KEY_NAME为键</code><br><code>VALUE 为值</code></p></blockquote></li></ul><hr><p><strong>相关命令简述(不进行详细说明)</strong></p><ul><li>String/Hash/List/Set/Sorted set不进行说明</li><li>Redis 在 2.8.9 版本添加了 HyperLogLog 结构</li><li>Redis HyperLogLog 是用来做基数统计的算法</li></ul><table><thead><tr><th align="left">相关说明</th><th align="left">相关参数</th></tr></thead><tbody><tr><td align="left">HyperLogLog用于实现基数统计算法</td><td align="left">PFADD\PFCOUNT\PFMERGE</td></tr><tr><td align="left">订阅</td><td align="left">SUBSCRIBE\PUBLISH</td></tr><tr><td align="left">事务</td><td align="left">MULTI\EXEC\DISCARD</td></tr><tr><td align="left">脚本</td><td align="left">EVAL</td></tr><tr><td align="left">连接</td><td align="left">PING\QUIT\SELECT index</td></tr><tr><td align="left">服务</td><td align="left">INFO</td></tr><tr><td align="left">备份</td><td align="left">Bgsave\SAVE</td></tr><tr><td align="left">恢复</td><td align="left">SAVE</td></tr><tr><td align="left">安全</td><td align="left">CONFIG\AUTH</td></tr><tr><td align="left">性能测试</td><td align="left">redis-benchmark [option] [option value]</td></tr><tr><td align="left">连接客户端</td><td align="left">redis-server –maxclients [最大连接数]</td></tr></tbody></table><hr><p><strong>相关概念</strong></p><ul><li>订阅</li><li>事务</li><li>脚本</li><li>连接</li><li>服务器</li><li>数据备份</li><li>数据恢复</li><li>安全</li><li>管道技术</li><li>分区</li><li>测试(性能)</li><li>Log</li></ul><hr><ul><li><p>参考资料:<a href="https://redis.io/commands" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://redis.io/commands</code></p></blockquote></li><li><p>在线测试<a href="http://try.redis.io/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>http://try.redis.io/</code></p></blockquote></li></ul><hr><!-- rebuild by neat -->]]></content>
+      <categories>
+        <category>软件</category>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>Key-value</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>随笔-2020-02-16</title>
     <url>/2020/02/16/%E9%9A%8F%E7%AC%94-2020-02-16/</url>
     <content><![CDATA[<!-- build time:Sun Feb 16 2020 20:15:36 GMT+0800 (中国标准时间) --><ul><li>顺天应人</li><li>中庸之道</li><li>本能与理智</li><li>环境</li><li>累积</li></ul><hr><ul><li><p>强者不会孤独，而弱者注定孤独</p></li><li><p>一切都将源于弱小与自身能力的不足</p></li><li><p>其所处的环境和其所拥有的时间能决定一切</p></li><li><p>所有人都摆脱不了环境所带来的任何影响</p></li><li><p>天才在猴子里它也只是猴子</p></li><li><p>弱者在强者里他依旧是强者</p></li><li><p>一切都早已注定，环境注定了一切</p></li></ul><blockquote><p>完全随机性概率</p></blockquote><!-- rebuild by neat -->]]></content>

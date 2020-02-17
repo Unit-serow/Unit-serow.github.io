@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL-2
 date: 2020-02-15 22:18:52
-tags: [ODBMS,随笔]
+tags: [ORDBMS,随笔]
 categories: [软件,数据库]
 ---
 

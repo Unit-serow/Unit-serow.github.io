@@ -13,19 +13,25 @@ categories: 软件
 * X是变量名，Y是操作模块名，Z是具体显示的文字内容，注意冒号后的空格，有空格的时候才能被识别
 
 **基本语法:**
-由于渲染的问题，这里用<.>代替了<`>
+
+* 由于渲染的问题，这里用`<.>`代替
+
 ```
 ···flow
 tag=>type: content:>url
 ...
+```
+
+```
 ...
 tag1(...)->tag2(...)->tag3(...)
 ···
 ```
-括号内语句用逗号分隔
+
+* 括号内语句用逗号分隔
 
 **定义元素语法:**
-* tag=>type: content:>url
+* `tag=>type: content:>url`
 * tag：标签，用于连接元素时使用
 * type：该标签的类型，共有6种类型如下
 * content：流程语句中放置的内容 
@@ -34,14 +40,14 @@ tag1(...)->tag2(...)->tag3(...)
 
 **连接元素语法:**
 * 使用->符号，->表示下一步要执行的操作：
-* st->in->op->cond
+* `st->in->op->cond`
 * 表示的是先从st转到in，然后再到op，最后到cond
 * 可以连续写，也可以分开写
 
 **判断分支语法:**
-* condition 是判断，可以取yes和no两种结果，对于不同结果可以有不同走向
-* cond(yes)->out 表示condition成立时转向out执行
-* cond(no)->op 表示condition不成立时转向op执行
+* condition是判断，可以取yes和no两种结果，对于不同结果可以有不同走向
+* `cond(yes)->out`表示condition成立时转向out执行
+* `cond(no)->op`表示condition不成立时转向op执行
 
 **操作模块说明:**
 操作模块一共有以下六种:

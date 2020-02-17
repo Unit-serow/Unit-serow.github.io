@@ -1,7 +1,7 @@
 ---
 title: Redis-2
 date: 2020-02-16 18:14:47
-tags: [Key-value,随笔]
+tags: [随笔,NoSQL]
 categories: [软件,数据库]
 ---
 

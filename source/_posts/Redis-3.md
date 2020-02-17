@@ -1,7 +1,7 @@
 ---
 title: Redis-3
 date: 2020-02-16 21:01:07
-tags: [随笔,Key-value]
+tags: [随笔,NoSQL]
 categories: [软件,数据库]
 ---
 

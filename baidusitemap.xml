@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://unit-serow.github.io/2020/02/16/%E9%9A%8F%E7%AC%94-2020-02-16/</loc>
+    <lastmod>2020-02-17</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/05/flowchart/</loc>
+    <lastmod>2020-02-17</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/16/Redis-3/</loc>
+    <lastmod>2020-02-17</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/16/Redis-2/</loc>
+    <lastmod>2020-02-17</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/16/Redis-1/</loc>
+    <lastmod>2020-02-17</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/15/PostgreSQL-2/</loc>
+    <lastmod>2020-02-17</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/18/Debian-1/</loc>
+    <lastmod>2020-02-17</lastmod>
+  </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/17/MongoDB-4/</loc>
     <lastmod>2020-02-17</lastmod>
   </url>  <url>
@@ -13,28 +34,13 @@
     <loc>https://unit-serow.github.io/2020/02/17/MongoDB-1/</loc>
     <lastmod>2020-02-17</lastmod>
   </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/16/Redis-3/</loc>
-    <lastmod>2020-02-16</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/16/%E9%9A%8F%E7%AC%94-2020-02-16/</loc>
-    <lastmod>2020-02-16</lastmod>
-  </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/16/%E9%9A%8F%E7%AC%94-2020-2-2-16/</loc>
-    <lastmod>2020-02-16</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/16/Redis-2/</loc>
-    <lastmod>2020-02-16</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/16/Redis-1/</loc>
     <lastmod>2020-02-16</lastmod>
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/16/PostgreSQL-4/</loc>
     <lastmod>2020-02-16</lastmod>
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/16/PostgreSQL-3/</loc>
-    <lastmod>2020-02-15</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/15/PostgreSQL-2/</loc>
     <lastmod>2020-02-15</lastmod>
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/15/PostgreSQL-1/</loc>
@@ -138,9 +144,6 @@
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/06/Docker-1/</loc>
     <lastmod>2020-02-06</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/05/flowchart/</loc>
-    <lastmod>2020-02-05</lastmod>
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/01/29/Autotools/</loc>
     <lastmod>2020-02-04</lastmod>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-17T13:55:27.644Z</updated>
+  <updated>2020-02-17T15:55:34.558Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MongoDB-4</title>
+    <link href="https://unit-serow.github.io/2020/02/17/MongoDB-4/"/>
+    <id>https://unit-serow.github.io/2020/02/17/MongoDB-4/</id>
+    <published>2020-02-17T15:52:29.000Z</published>
+    <updated>2020-02-17T15:55:34.558Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Mon Feb 17 2020 23:55:39 GMT+0800 (中国标准时间) --><h3 id="MongoDB-4"><a href="#MongoDB-4" class="headerlink" title="MongoDB-4"></a>MongoDB-4</h3><ul><li>剩余概念补充-1</li></ul><p><strong>概念简述:</strong></p><ol><li>管道</li><li>复制原理(创建副本集)</li><li>分片技术(集群)</li></ol><hr><ol><li><strong>管道(聚合)</strong></li></ol><ul><li>管道在Unix和Linux中一般用于将当前命令的输出结果作为下一个命令的参数</li><li>MongoDB的聚合管道将MongoDB文档在一个管道处理完毕后将结果传递给下一个管道处理</li><li>管道操作是可以重复的</li><li>表达式：处理输入文档并输出</li><li>表达式是无状态的，只能用于计算当前聚合管道的文档，不能处理其它的文档</li></ul><p><strong>常用聚合框架(模式)一览:</strong></p><table><thead><tr><th align="left">框架</th><th align="left">作用</th></tr></thead><tbody><tr><td align="left">$project</td><td align="left">修改输入文档的结构。可以用来重命名、增加或删除域，也可以用于创建计算结果以及嵌套文档</td></tr><tr><td align="left">$match</td><td align="left">用于过滤数据，只输出符合条件的文档，$match使用MongoDB的标准查询操作</td></tr><tr><td align="left">$limit</td><td align="left">用来限制MongoDB聚合管道返回的文档数</td></tr><tr><td align="left">$skip</td><td align="left">在聚合管道中跳过指定数量的文档，并返回余下的文档</td></tr><tr><td align="left">$unwind</td><td align="left">将文档中的某一个数组类型字段拆分成多条，每条包含数组中的一个值</td></tr><tr><td align="left">$group</td><td align="left">将集合中的文档分组，可用于统计结果</td></tr><tr><td align="left">$sort</td><td align="left">将输入文档排序后输出</td></tr><tr><td align="left">$geoNear</td><td align="left">输出接近某一地理位置的有序文档</td></tr></tbody></table><hr><ol start="2"><li>MongoDB复制原理(创建副本集)</li></ol><ul><li><p>MongoDB复制是将数据同步在多个服务器的过程</p></li><li><p>复制提供了数据的冗余备份，并在多个服务器上存储数据副本，提高了数据的可用性， 并可以保证数据的安全性</p></li><li><p>复制还允许从硬件故障和服务中断中恢复数据</p></li><li><p>复制作用:</p><blockquote><p>保障数据的安全性<br>数据高可用性<code>(24*7)</code><br>灾难恢复<br>无需停机维护(如备份，重建索引，压缩)<br>分布式读取数据</p></blockquote></li></ul><p><strong>MongoDB复制原理</strong></p><ul><li><p>mongodb的复制至少需要两个节点</p><blockquote><p>其中一个是主节点，负责处理客户端请求，其余的都是从节点，负责复制主节点上的数据</p></blockquote></li><li><p>mongodb各个节点常见的搭配方式为：一主一从、一主多从</p></li><li><p>主节点记录在其上的所有操作oplog，从节点定期轮询主节点获取这些操作</p><blockquote><p>然后对本地的数据副本执行这些操作，从而保证从节点的数据与主节点一致</p></blockquote></li><li><p>复制的逻辑结构简述:</p></li><li><p>客户端从主节点读取数据，在客户端写入数据到主节点时， 主节点与从节点进行数据交互保障数据的一致性</p><blockquote><p><code>Client Application-Write/Reads-&gt;Primary-Replication/Replication-&gt;Secondary/Secondary</code></p></blockquote></li></ul><hr><p><strong>MongoDB副本集设置</strong></p><ol><li>利用同一个MongoDB来做MongoDB主从模型</li><li>通过指定<code>--replSet</code>选项来启动mongoDB，<code>--replSet</code>基本语法格式如下:<blockquote><p><code>mongod --port &quot;PORT&quot; --dbpath &quot;YOUR_DB_DATA_PATH&quot; --replSet &quot;REPLICA_SET_INSTANCE_NAME&quot;</code></p></blockquote></li></ol><p><strong>参数说明:</strong></p><ol><li><code>REPLICA_SET_INSTANCE_NAME</code>为所选实例命名</li><li>指定MongoDB实例所处端口(端口号)</li><li>此时会启动并连接MongoDB服务</li><li>在Mongo客户端可以使用命令<code>rs.initiate()</code>来启动一个新的副本集</li><li>可以使用<code>rs.conf()</code>来查看副本集的配置</li><li>查看副本集状态执行<code>rs.status()</code>命令</li></ol><p><strong>副本集特征:</strong></p><ul><li><p>N 个节点的集群</p></li><li><p>任何节点可作为主节点</p></li><li><p>所有写入操作都在主节点上</p></li><li><p>自动故障转移</p></li><li><p>自动恢复</p></li><li><p>rs.add()方法用于添加副本集的成员</p></li><li><p>rs.add() 命令基本语法格式:</p><blockquote><p><code>rs.add(HOST_NAME:PORT)</code></p></blockquote></li></ul><ul><li><p>MongoDB中只能通过主节点将Mongo服务添加到副本集中</p><blockquote><p>判断当前运行的Mongo服务是否为主节点可以使用命令<code>db.isMaster()</code></p></blockquote></li><li><p>MongoDB的副本集与常见的主从有所不同</p><blockquote><p>主从在主机宕机后所有服务将停止<br>而副本集在主机宕机后<br>副本会接管主节点成为主节点<br>不会出现宕机现象</p></blockquote></li></ul><hr><ol start="3"><li><strong>分片技术(集群)</strong></li></ol><ul><li>在Mongodb里面存在另一种集群，就是分片技术,可以满足MongoDB数据量大量增长的需求</li><li>当MongoDB存储海量的数据时，一台机器可能不足以存储数据，也可能不足以提供可接受的读写吞吐量<blockquote><p>此时就可以通过在多台机器上分割数据，使得数据库系统能存储和处理更多的数据</p></blockquote></li></ul><p><strong>分片技术的作用:</strong></p><ul><li>复制所有的写入操作到主节点</li><li>延迟的敏感数据会在主节点查询</li><li>有效解决单个副本集限制在12个节点的问题</li><li>能解决当请求量巨大时会出现内存不足</li><li>能够解决本地磁盘不足</li><li>可以避免价格昂贵的垂直扩展</li></ul><p><strong>逻辑简述:</strong></p><blockquote><p><code>(APP Server[Router(mongos)])|(APP Server[Router(mongos)])&lt;-2 or more Routes-&gt;&lt;-&gt;(3*Config Server)&lt;-&gt;&lt;-2 or more Shards-&gt;(Shard(replica set))|(Shard(replica set))</code></p></blockquote><ul><li><p>组件描述:</p><blockquote><p>Shard:用于存储实际的数据块，实际生产环境中一个shard server角色可由几台机器组个一个replica set承担，防止主机单点故障<br>Config Server:mongod实例，存储了整个 ClusterMetadata，其中包括 chunk信息<br>Query Routers:前端路由，客户端由此接入，且让整个集群看上去像单一数据库，前端应用可以透明使用</p></blockquote></li><li><p>实例不进行阐述</p></li></ul><hr><p><strong>其它概念:</strong></p><ol><li>数据备份与恢复</li><li>监控部署</li><li>其他语言接口</li><li>关系</li><li>数据库引用</li><li>MongoDB覆盖索引查询</li><li>Map Reduce</li><li>固定集合(Capped Collections)</li></ol><hr><ol><li>查询分析</li><li>高级索引</li><li>索引限制</li><li>原子操作</li><li>全文检索</li><li>ObjectId</li><li>自动增长</li></ol><hr><ul><li>正则表达式</li><li>操作符</li><li>运算符</li><li>管理工具:<blockquote><p>Rockmongo<br>GridFS</p></blockquote></li></ul><hr><ul><li>有待补充…</li></ul><hr><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Mon Feb 17 2020 23:55:39 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;MongoDB-4&quot;&gt;&lt;a href=&quot;#MongoDB-4&quot; class=&quot;headerlink&quot; title=&quot;MongoDB-4&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="数据库" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="NoSQL" scheme="https://unit-serow.github.io/tags/NoSQL/"/>
+    
+  </entry>
   
   <entry>
     <title>MongoDB-3</title>
@@ -562,27 +592,6 @@
       <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="RDBMS" scheme="https://unit-serow.github.io/tags/RDBMS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>随笔-2020-2-2-13</title>
-    <link href="https://unit-serow.github.io/2020/02/13/%E9%9A%8F%E7%AC%94-2020-2-2-13/"/>
-    <id>https://unit-serow.github.io/2020/02/13/%E9%9A%8F%E7%AC%94-2020-2-2-13/</id>
-    <published>2020-02-13T07:49:27.000Z</published>
-    <updated>2020-02-13T07:50:37.095Z</updated>
-    
-    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">输入密码</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="9645aba3c405a1754e58aac90349010fdab76d61cc44cea81430b6f32f4413f8">0267ec72f19b8c198697a4f72870a3a8fdb13c82d8fe26fd02d6f4aa3e69bed80c46c992cbc5b9fca21a4cd65108893d0d4d15e9d74720de0053f56abed3d754dbdb007e6595d76aa97f7f2f563ab275a246f4cf4949a558ac8c089c97fd97badbd85c679678a0a6f3e82b75c9f88d1d26021f5d9ba15ecbadc99229c5481a6c71b3193f0a64503ea1445c9fbac346b8f86cc3839172c3a0212223815ee4b128c8d4703e285db0eeb20a47181eabdd4e0f05da1bbf7bbd688a0e4aeee5fe5f70cda970e835a6e8156684e1a21d11cad66040c456d42b6ddd59bd3158e4d4c4c719911bfe1f2f6b4a038882738f4a8961ee738eba8413c432caa23d808e12961d5e5bbe90aaf7f37328299e476592409659a1e67504d2a4975cb2d0abe00bef6ba36b6cb626aa5b7291f9ca2983ab31aec6d85707621d43e42ca02bb7caf4d7d1ee56ba6455d9e367e0f851c0a0d4c71d559d32d08cf82967a465c38ba37d59c413e8a3ff74dc4eba81e0b81ad08a309f2580f948d54b4a5b8dc91a764fd8a15f684c610d14d06efbef4cbeb9aeafb9d0927d1267976c351d90a8fff76a9417559070764f3ba3fcd37fa900f0734e96da59401c5f92857f207b04bef12c99d5ee8d65e91ebb6b9d77e7f1cad6f1f0d297fccae000135c2f48af2ff43b68b7ffc04146b8772537567c20c6bd02f0a6e892edf2df59a9dbc62cace048e9644959964432d0486851a95c1450b46322d8ac75e8fd8657f5e8f27564f8932f30a1a49c25908972324b890bde792b7d3b740151f45179e236bb17907f6b9fcf8f64523c5564b7f60c4e19a508d1bfad66e4315c053d30a76f9bfd4b2c39b58a4ac0ad509dd8afacee0738f9358ad8d99ed3033a8e1321d5e39cb40adbb5fa4cc94814654ac3eb37634e55ff0b297fff04a0cbbb536b3b20bef87fb087fae2c47bc351b4abe875abcfd4f4d7b38c1af44d6091694fb44e9f54e746cd062edd99b66e13e8473722be88c554dd620e7ebf644fe64bddfa35c2170629c8aab9029c37e7f78d49a33616851a48250ab0c107b492ecc1ba2f4a79b8dd5beecb845f8d788157f292f2daf802350c26690fcc5fb967cde3</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-    
-    <summary type="html">
-    
-      简易加密文案
-    
-    </summary>
-    
-    
-    
-      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   

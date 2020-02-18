@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://unit-serow.github.io/about/index.html</loc>
+    
+    <lastmod>2020-02-18T11:01:02.831Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://unit-serow.github.io/2020/02/18/MBR-1/</loc>
     
-    <lastmod>2020-02-18T10:23:26.912Z</lastmod>
+    <lastmod>2020-02-18T10:27:30.009Z</lastmod>
     
   </url>
   
@@ -201,13 +208,6 @@
     <loc>https://unit-serow.github.io/2020/02/12/DBMS-1/</loc>
     
     <lastmod>2020-02-12T06:31:39.270Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://unit-serow.github.io/about/index.html</loc>
-    
-    <lastmod>2020-02-11T18:49:29.808Z</lastmod>
     
   </url>
   

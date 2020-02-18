@@ -2,7 +2,7 @@
 title: MBR-1
 date: 2020-02-18 18:16:09
 tags: [随笔]
-categories: [硬件,数据恢复]
+categories: [软件,磁盘结构]
 ---
 
 ## 硬盘结构-主引导扇区-1/MBR-1

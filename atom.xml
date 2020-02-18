@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-18T18:11:58.702Z</updated>
+  <updated>2020-02-18T19:02:49.879Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RDBMS-KEY-1</title>
+    <link href="https://unit-serow.github.io/2020/02/19/RDBMS-KEY-1/"/>
+    <id>https://unit-serow.github.io/2020/02/19/RDBMS-KEY-1/</id>
+    <published>2020-02-18T18:56:53.000Z</published>
+    <updated>2020-02-18T19:02:49.879Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Wed Feb 19 2020 03:02:54 GMT+0800 (中国标准时间) --><h3 id="RDBMS-KEY-1-关系键"><a href="#RDBMS-KEY-1-关系键" class="headerlink" title="RDBMS-KEY-1(关系键)"></a>RDBMS-KEY-1(关系键)</h3><ul><li>关系键是关系数据库(关系模型)的重要组成部分</li><li>关系键是一个表中的一个或几个属性，用来标识该表的每一行或与另一个表产生联系</li></ul><hr><p><strong>可大致分为六类</strong></p><ul><li>主键</li><li>超键</li><li>候选键</li><li>外键</li><li>代理键</li><li>自然键</li><li>公共键</li></ul><hr><ol><li>主键</li></ol><ul><li>主键，又称主码/主关键字(primary key或unique key)</li><li>数据库表中对储存数据对象予以唯一和完整标识的数据列或属性的组合</li><li>一个数据表只能有一个主键，且主键的取值不能缺失，即不能为空值(Null)</li><li>作表的行的唯一标识的候选关键字</li><li>一个表只能有一个主键</li><li>主键可以由一个字段，也可以由多个字段组成，分别称为单字段主键或多字段主键<blockquote><p>并且它可以唯一确定表中的一行数据，或者可以唯一确定一个实体</p></blockquote></li></ul><p><strong>primary key和unique key的区别</strong></p><ol><li>作为primary key的域<code>／</code>域组不能为Null，而unique key可以</li><li>一个表只能有一个primary key，但可有多个unique key</li><li>更大的区别在逻辑设计<blockquote><p>primary key一般在逻辑设计中用作记录标识，这也是设置primary key的本意<br>而unique key只是为了保证域／域组的唯一性</p></blockquote></li></ol><p><strong>作用:</strong></p><ol><li>保证实体的完整性</li><li>加快数据库的操作速度</li><li>在表中添加新记录时，ACCESS会自动检查新记录的主键值，不允许该值与其他记录的主键值重复</li><li>ACCESS自动按主键值的顺序显示表中的记录，如果没有定义主键，则按输入记录的顺序显示表中的记录</li></ol><hr><ol start="2"><li>超键</li></ol><ul><li>超键，又称超码(superkey)</li><li>是在数据库关系模式设计中能够唯一标示多元组(即”行”)的属性集</li><li>包含所有属性的集叫做明显(平凡)超键</li></ul><hr><ol start="3"><li>候选键</li></ol><ul><li><p>候选键，又称候选码(candidate key)</p></li><li><p>是某个关系变量的一组属性所组成的集合</p></li><li><p>它需要同时满足下列两个条件：</p><blockquote><ol><li>这个属性集合始终能够确保在关系中能唯一标识元组</li><li>在这个属性集合中找不出真子集能够满足条件(1)</li></ol></blockquote></li><li><p>满足第一个条件的属性集合称为超键</p><blockquote><p>因此也可以把候选键定义为”最小超键”，也就是不含有多余属性的超键</p></blockquote></li><li><p>候选键的重要性是它们能够在关系中唯一标识出不同的元组，因此超键也是在设计数据库模式时需要指定的最重要的约束之一</p></li><li><p>由于在关系模型中，每个关系都是一个集合(没有重复的元素)，所以每个关系都至少有一个候选键(因为所有属性组合必然是个超键)</p></li><li><p>但是在某些关系型数据库中表也能代表多重集，所以在每个关系中都显式地定义至少一个候选键是一条很重要的设计原则</p><blockquote><p>数据库管理系统通常都需要将每个关系中的某个候选键定义为主键<br>亦即这个候选键是区分不同元组时首选的识别方式<br>例如外键通常就是引用主键而非其他候选键</p></blockquote></li></ul><hr><ol start="4"><li>外键</li></ol><ul><li><p>外键，又称外部键/外来键(foreign key)</p></li><li><p>在关系数据库中，每个数据表都是由关系来连系彼此的关系</p><blockquote><p>父数据表(Parent Entity)的主键(primary key)会放在另一个数据表，当做属性以创建彼此的关系<br>而这个属性就是外键</p></blockquote></li><li><p>比如，学生跟老师之间是教学的关系，学生数据表会有个属性叫指导老师(FK)，而这个值就是对应到老师数据表的老师代号(PK)，学生的指导老师就是外键</p></li><li><p>如果公共键在一个关系中是主关键字，那么这个公共键被称为另一个关系的外键</p><blockquote><p>由此可见，外键表示了两个关系之间的相关联系<br>以另一个关系的外键作主键的表被称为主表，具有此外键的表被称为主表的从表<br>外键又称作外关键字</p></blockquote></li></ul><p><strong>作用:</strong></p><ul><li>保持数据一致性，完整性，主要目的是控制存储在外键表中的数据</li><li>使两张表形成关联，外键只能引用外表中的列的值或使用空值</li></ul><hr><ol start="5"><li>代理键</li></ol><ul><li><p>代理键(surrogate key)</p></li><li><p>是在当数据表中的候选键都不适合当主键时，例如数据太长，或是意义层面太多，就会请一个无意义的但唯一的字段来代为作主键</p></li><li><p>代理键是(引用描述):</p></li><li><p>1.<code>Surrogate (1) – Hall, Owlett and Codd (1976)</code></p><blockquote><p>一个代理键值确定了外部世界的一个实体，代理键值是数据库生成的，从来不显示给用户或应用程序看</p></blockquote></li><li><ol start="2"><li><code>Surrogate (2) – Wieringa and De Jonge (1991)</code><blockquote><p>一个代理键值确定了数据库中的一个对象，代理键值是数据库生成的，用户或应用程序看不到它</p></blockquote></li></ol></li><li><p>在实践中，代理键值通常是个自动递增的数字</p></li><li><p>例如:</p></li><li><p>PostgreSQL用serial</p></li><li><p>Oracle用SEQUENCE</p></li><li><p>在MySQL用标记有<code>AUTO_INCREMENT</code>的字段</p></li></ul><hr><ol start="6"><li>自然键</li></ol><ul><li>自然键(natural key)</li><li>与代理键相反，是在自然(真实)生活中唯一确定一个事物的标识</li><li>身份证号(理论上，假设没有因技术原因造成的重复)就是一个自然键，用于准确且绝对的确定一个人</li></ul><hr><ol start="7"><li>公共键</li></ol><ul><li>公共键，又可称为公共关键字(Common Key)</li><li>在关系数据库中，关系之间的联系是通过相容或相同的属性或属性组来表示的<blockquote><p>如果两个关系中具有相容或相同的属性或属性组，那么这个属性或属性组被称为这两个关系的公共键</p></blockquote></li></ul><hr><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Wed Feb 19 2020 03:02:54 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;RDBMS-KEY-1-关系键&quot;&gt;&lt;a href=&quot;#RDBMS-KEY-1-关系键&quot; class=&quot;headerlink&quot; title=&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="数据库" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+      <category term="RDBMS" scheme="https://unit-serow.github.io/tags/RDBMS/"/>
+    
+  </entry>
   
   <entry>
     <title>LBA/CHS/RAID-1</title>
@@ -558,36 +588,6 @@
       <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="ORDBMS" scheme="https://unit-serow.github.io/tags/ORDBMS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL-5</title>
-    <link href="https://unit-serow.github.io/2020/02/15/MySQL-5/"/>
-    <id>https://unit-serow.github.io/2020/02/15/MySQL-5/</id>
-    <published>2020-02-14T18:19:25.000Z</published>
-    <updated>2020-02-14T18:21:56.080Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Sat Feb 15 2020 02:22:00 GMT+0800 (中国标准时间) --><h3 id="MySQL-5"><a href="#MySQL-5" class="headerlink" title="MySQL-5"></a>MySQL-5</h3><ul><li>MySQL补充内容</li><li>MySQL可执行目录/usr/bin/mysql</li><li>MySQL配置文件目录/etc/my.cnf</li></ul><hr><p><strong>添加用户</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use mysql;</span><br><span class="line">Database changed</span><br><span class="line"></span><br><span class="line">mysql&gt; INSERT INTO user </span><br><span class="line">          (host, user, password, </span><br><span class="line">           select_priv, insert_priv, update_priv) </span><br><span class="line">           VALUES (&#39;localhost&#39;, &#39;guest&#39;, </span><br><span class="line">           PASSWORD(&#39;guest123&#39;), &#39;Y&#39;, &#39;Y&#39;, &#39;Y&#39;);</span><br><span class="line">Query OK, 1 row affected (0.20 sec)</span><br></pre></td></tr></table></figure><hr><p><strong>泛用指令</strong></p><ul><li><p>设置权限</p><blockquote><p><code>chown mysql:mysql -R /var/lib/mysql</code></p></blockquote></li><li><p>初始化</p><blockquote><p><code>mysqld --initialize</code></p></blockquote></li><li><p>查看所有数据库</p><blockquote><p><code>SHOW DATABASES;</code></p></blockquote></li><li><p>查看当前数据库内所有表</p><blockquote><p><code>SHOW TABLES;</code></p></blockquote></li><li><p>显示数据表的属性，属性类型，主键信息 ，是否为NULL，默认值等其他信息</p><blockquote><p><code>SHOW COLUMNS FROM 数据表;</code></p></blockquote></li><li><p>显示数据表的详细索引信息，包括<code>PRIMARY KEY</code>(主键)</p><blockquote><p><code>SHOW INDEX FROM 数据表;</code></p></blockquote></li><li><p>输出Mysql数据库管理系统的性能及统计信息</p><blockquote><p><code>SHOW TABLE STATUS LIKE [FROM db_name] [LIKE &#39;pattern&#39;] \G;</code></p></blockquote></li></ul><hr><p><strong>RDBMS-MySQL参考资料</strong></p><ul><li><p>mysql官网<a href="https://www.mysql.com/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://www.mysql.com/</code></p></blockquote></li><li><p>mysql下载地址<a href="https://dev.mysql.com/downloads/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://dev.mysql.com/downloads/</code></p></blockquote></li><li><p>文档(EN)<a href="https://dev.mysql.com/doc/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://dev.mysql.com/doc/</code></p></blockquote></li></ul><hr><ul><li><p>MariaDB官网<a href="https://mariadb.org" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://mariadb.org</code></p></blockquote></li><li><p>MariaDB下载地址<a href="https://mariadb.org/download/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://mariadb.org/download/</code></p></blockquote></li><li><p>文档(CN)<a href="https://mariadb.com/kb/zh-cn/mariadb/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://mariadb.com/kb/zh-cn/mariadb/</code></p></blockquote></li></ul><hr><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Sat Feb 15 2020 02:22:00 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;MySQL-5&quot;&gt;&lt;a href=&quot;#MySQL-5&quot; class=&quot;headerlink&quot; title=&quot;MySQL-5&quot;&gt;&lt;/a&gt;MyS
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="数据库" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="RDBMS" scheme="https://unit-serow.github.io/tags/RDBMS/"/>
     
   </entry>
   

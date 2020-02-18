@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-18T16:55:39.603Z</updated>
+  <updated>2020-02-18T18:11:58.702Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LBA/CHS/RAID-1</title>
+    <link href="https://unit-serow.github.io/2020/02/19/LBA-CHS-1/"/>
+    <id>https://unit-serow.github.io/2020/02/19/LBA-CHS-1/</id>
+    <published>2020-02-18T18:09:34.000Z</published>
+    <updated>2020-02-18T18:11:58.702Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Wed Feb 19 2020 02:12:04 GMT+0800 (中国标准时间) --><h2 id="LBA-CHS-RAID-1"><a href="#LBA-CHS-RAID-1" class="headerlink" title="LBA/CHS/RAID-1"></a>LBA/CHS/RAID-1</h2><ul><li>LBA(寻址模式)-1</li><li>CHS(寻址模式)-1</li><li>RAID(磁盘阵列)-1</li></ul><h3 id="LBA-寻址模式"><a href="#LBA-寻址模式" class="headerlink" title="LBA-寻址模式"></a>LBA-寻址模式</h3><p><strong>简述:</strong></p><ul><li>LBA寻址模式</li><li>逻辑区块地址(Logical Block Address, LBA)</li><li>是描述电脑存储设备上数据所在区块的通用机制，一般用在像硬盘这样的辅助记忆设备</li><li>LBA可以意指某个数据区块的地址或是某个地址所指向的数据区块<blockquote><p>现今电脑上所谓一个逻辑区块通常是512或1024位组<br>ISO-9660格式的标准CD则以2048位组为一个逻辑区块大小</p></blockquote></li></ul><hr><p><strong>LBA定址机制:</strong></p><ul><li>LBA是非常单纯的一种定址模式:从0开始编号来定位区块，第一区块LBA=0，第二区块LBA=1，依此类推</li><li>这种定址模式取代了原先操作系统必须面对存储设备硬件构造的方式<blockquote><p>最具代表性的首推CHS(cylinders-heads-sectors，磁柱-磁头-扇区)定址模式<br>区块必须以硬盘上某个磁柱、磁头、扇区的硬件位置所合成的地址来指定<br>CHS模式对硬盘以外的设备来说没什么作用(例如磁带或是网络存储设备)，所以通常也不会用在这些地方<br>过去MFM(Modified Frequency Modulation, 改良调频式)和RLL(Run Length Limited)存储设备都曾使用CHS模式<br>ATA-1设备更将延伸CHS(Extended Cylinders-Heads-Sectors, ECHS)也派上了用场</p></blockquote></li><li>SCSI采用LBA抽象定址</li></ul><hr><p><strong>LBA所对应的/与逻辑器件虚拟化</strong></p><blockquote><p>当逻辑器件是经由虚拟化或是集合所构成的<br>像是RAID(磁盘阵列)和SANs(Storage Area Network)这种复杂的情况<br>就得把应用程序根据其观点中的磁盘来指定的LBA转换成每个实体存储设备上的LBA</p></blockquote><ul><li><p>在复杂的分布式存储结构下，从发出要求的应用程序到实体甚至是远程设备之间，会有太多这样的LBA转换</p></li><li><p>CHS与LBA之间可以相互转换</p></li></ul><hr><p><strong>转换公式:</strong></p><ul><li><p>CHS地址转LBA公式</p><blockquote><p><code>#lba=(#c*H+#h)*S+#s-1</code></p></blockquote></li><li><p>说明:</p><blockquote><p><code>#c</code>,<code>#h</code>,<code>#s</code>分别是磁柱、磁头、扇区的编号<br><code>#lba</code>是逻辑区块编号<br>H=heads per cylinder，每个磁柱的磁头数<br>S=sectors per track，每磁道的扇区数</p></blockquote></li></ul><hr><ul><li><p>LBA地址转CHS公式:</p><blockquote><p>#c=#lba/(S*H)<br>#h=(#lba/S)%H<br>#s=(#lba%S)+1</p></blockquote></li><li><p>说明:</p><blockquote><p><code>/</code>是整数除法<br><code>%</code>是取整数除法中的余数<br>需要注意的一点是当今的磁盘使用ZBR(Zone Bit Recording, 等密度记录)方式，实际的每轨扇区数得根据它是哪一轨<br>不过磁盘还是会提供这个参数来符合公式，内部再自动调整</p></blockquote></li></ul><hr><ul><li><p>其它公式:</p><blockquote><p><code>#lba/S=q 余 r</code><br><code>#s=1+r</code><br><code>q/H=#c 余 #h</code></p></blockquote></li><li><p>例如:</p><blockquote><p><code>CHS总数=[600, 10, 84]</code>，求<code>#lba=1234</code>所对应的CHS编号:<br><code>1234/84=14 余 58</code><br><code>#s=1+58=59</code><br><code>14/10=1 余 4</code><br><code>#c=1</code><br><code>#h=4</code><br><code>#chs=(1, 4, 59)</code><br>验算:<code>(1*10+4)*84+59-1=14*84+58=1234</code></p></blockquote></li></ul><hr><h3 id="CHS寻址模式"><a href="#CHS寻址模式" class="headerlink" title="CHS寻址模式"></a>CHS寻址模式</h3><p><strong>概述:</strong></p><ul><li>CHS寻址模式</li><li>柱面-磁头-扇区(Cylinder-head-sector，简称为CHS)</li><li>CHS寻址模式将硬盘划分为磁头(Heads)，柱面(Cylinder)，扇区(Sector)</li><li>是早期对硬盘驱动器的每一个物理数据块进行编址的一种方法<blockquote><p>就软盘驱动器而言，可对同一磁盘介质进行低级格式化而得到不同的容量</p></blockquote></li></ul><hr><ul><li>磁头(Heads):每张磁片的正反两面各有一个磁头，一个磁头对应一张磁片的一个面<blockquote><p>因此，用第几磁头就可以表示数据在哪个磁面</p></blockquote></li><li>柱面(Cylinder):所有磁片中半径相同的同心磁道构成”柱面”，意思是这一系列的磁道垂直叠在一起，就形成一个柱面的形状<blockquote><p>简单地理解:柱面数=磁道数<br>扇区(Sector)：将磁道划分为若干个小的区段，就是扇区<br>虽然很小，但实际是一个扇子的形状，故称为扇区，每个扇区的容量为512字节</p></blockquote></li></ul><hr><ul><li>知道了磁头数、柱面数、扇区数，就可以很容易地确定数据保存在硬盘的哪个位置</li><li>确定硬盘的容量计算公式:<blockquote><p>硬盘容量=磁头数×柱面数×扇区数×512字节</p></blockquote></li></ul><hr><ul><li>LARGE寻址模式把柱面数除以整数倍、磁头数乘以整数倍而得到的逻辑磁头/柱面/扇区参数进行寻址</li><li>所以表示的已不是硬盘中的物理位置，而是逻辑位置</li></ul><hr><ul><li>LBA寻址模式是直接以扇区为单位进行寻址的，不再用磁头/柱面/扇区三种单位来进行寻址<blockquote><p>但为了保持与CHS模式的兼容，通过逻辑变换算法，可以转换为磁头/柱面/扇区三种参数来表示<br>但表示的也和LARGE寻址模式一样，并不是硬盘中的物理位置，而是逻辑位置</p></blockquote></li></ul><hr><h3 id="RAID-磁盘阵列"><a href="#RAID-磁盘阵列" class="headerlink" title="RAID-磁盘阵列"></a>RAID-磁盘阵列</h3><ul><li>独立硬盘冗余阵列(RAID, Redundant Array of Independent Disks)</li><li>旧称廉价磁盘冗余阵列(Redundant Array of Inexpensive Disks)</li><li>利用虚拟化存储技术把多个硬盘组合起来，成为一个或多个硬盘阵列组，目的为提升性能或数据冗余，或是两者同时提升</li></ul><hr><ul><li><p>根据实现模式，分为软件和硬件两种：</p><blockquote><p>软件磁盘阵列(Software RAID)<br>硬件磁盘阵列(Hardware RAID)</p></blockquote></li><li><p>目前水平有限，文章只对RAID进行简单概述</p></li></ul><hr><h3 id="其它概念"><a href="#其它概念" class="headerlink" title="其它概念:"></a>其它概念:</h3><ul><li>FDISK(分区)</li><li>BOOT</li><li>ACPI</li><li>UEFI</li><li>BIOS</li><li>CHS</li><li>LBA</li><li>SMBIOS</li><li>Aptio</li><li>硬盘固件/固件</li></ul><hr><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Wed Feb 19 2020 02:12:04 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;LBA-CHS-RAID-1&quot;&gt;&lt;a href=&quot;#LBA-CHS-RAID-1&quot; class=&quot;headerlink&quot; title=&quot;LB
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="磁盘" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E7%A3%81%E7%9B%98/"/>
+    
+    
+      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>EFI/UEFI-1</title>
@@ -547,36 +575,6 @@
       
       
         &lt;!-- build time:Sat Feb 15 2020 02:22:00 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;MySQL-5&quot;&gt;&lt;a href=&quot;#MySQL-5&quot; class=&quot;headerlink&quot; title=&quot;MySQL-5&quot;&gt;&lt;/a&gt;MyS
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="数据库" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="RDBMS" scheme="https://unit-serow.github.io/tags/RDBMS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL-4</title>
-    <link href="https://unit-serow.github.io/2020/02/15/MySQL-4/"/>
-    <id>https://unit-serow.github.io/2020/02/15/MySQL-4/</id>
-    <published>2020-02-14T17:49:54.000Z</published>
-    <updated>2020-02-14T17:51:47.270Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Sat Feb 15 2020 01:51:52 GMT+0800 (中国标准时间) --><h3 id="MySQL数据导出与导入"><a href="#MySQL数据导出与导入" class="headerlink" title="MySQL数据导出与导入"></a>MySQL数据导出与导入</h3><p><strong>导出</strong></p><ul><li><p>所导出目标文件必须为有可读写权限</p></li><li><p>使用<code>SELECT ... INTO OUTFILE</code>语句</p></li><li><p>基本语法:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT * FROM table_name</span><br><span class="line">    -&gt; INTO OUTFILE &#39;目标路径&#39;;</span><br></pre></td></tr></table></figure></li><li><p>使用mysqldump导出原始数据</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mysqldump -u root -p --no-create-info \</span><br><span class="line">            --tab&#x3D;&#x2F;目标文件路径 database_name table_name</span><br><span class="line">password:</span><br></pre></td></tr></table></figure></li><li><p>导出SQL格式的文件</p></li><li><p>不添加<code>table_name</code>导出整个数据库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mysqldump -u root -p database_name table_name &gt; 目标文件路径</span><br><span class="line">password:</span><br></pre></td></tr></table></figure></li><li><p>导出所有数据库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mysqldump -u root -p --all-databases &gt; 目标文件路径</span><br><span class="line">password:</span><br></pre></td></tr></table></figure></li></ul><hr><p><strong>导入</strong></p><ul><li><p>mysql 命令导入</p><blockquote><p><code>mysql -u username -p passwrod &lt; 要导入的数据库数据文件路径(xxx.sql)</code></p></blockquote></li><li><p>source 命令导入</p></li><li><p>登录到数库终端执行以下命令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; USE DATABASE_NAME;</span><br><span class="line">mysql&gt; SET NAMES utf8;</span><br><span class="line">mysql&gt; SOURCE &#x2F;目标文件路径(.sql)</span><br></pre></td></tr></table></figure></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysqlimport导入</span><br><span class="line">$ mysqlimport -u root -p --local tables_name &#x2F;被导入文件路径</span><br><span class="line">password *****</span><br></pre></td></tr></table></figure><hr><p><strong>PHP语法简介</strong></p><ul><li>PHP Mysqli</li><li>mysqli()函数</li></ul><p><strong>格式</strong></p><blockquote><p><code>mysqli_function(value,value,...);</code></p></blockquote><ul><li>以上格式中function部分描述了mysqli()函数的功能，例如:<blockquote><p><code>mysqli_connect($connect);</code><br><code>mysqli_query($connect,&quot;SQL 语句&quot;);</code><br><code>mysqli_fetch_array()</code><br><code>mysqli_close()</code></p></blockquote></li></ul><hr><p><strong>mysqladmin用法简述</strong></p><ul><li><p>管理性操作语法</p><blockquote><p><code>mysqladmin [OPTIONS] command [command-option] command ...</code></p></blockquote></li><li><p>帮助指令</p><blockquote><p><code>mysqladmin --help</code></p></blockquote></li><li><p>连接</p><blockquote><p><code>mysqladmin -u[username] -p[password] status</code></p></blockquote></li></ul><hr><p><strong>简要参数:</strong></p><table><thead><tr><th align="left">参数</th><th align="left">作用</th></tr></thead><tbody><tr><td align="left">create databasename</td><td align="left">创建一个新数据库</td></tr><tr><td align="left">drop databasename</td><td align="left">删除一个数据库及其所有表</td></tr><tr><td align="left">shutdown</td><td align="left">关掉服务器</td></tr><tr><td align="left">kill id,id,…</td><td align="left">杀死mysql线程</td></tr><tr><td align="left">flush-logs</td><td align="left">清理掉所有日志</td></tr><tr><td align="left">flush-tables</td><td align="left">清理掉所有表</td></tr><tr><td align="left">ping</td><td align="left">检查mysqld是否存在</td></tr></tbody></table><hr><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Sat Feb 15 2020 01:51:52 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;MySQL数据导出与导入&quot;&gt;&lt;a href=&quot;#MySQL数据导出与导入&quot; class=&quot;headerlink&quot; title=&quot;MySQL数
       
     
     </summary>

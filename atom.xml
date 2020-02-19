@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-19T13:47:07.904Z</updated>
+  <updated>2020-02-19T15:57:07.153Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>随笔-2020-02-19</title>
+    <link href="https://unit-serow.github.io/2020/02/19/%E9%9A%8F%E7%AC%94-2020-02-19/"/>
+    <id>https://unit-serow.github.io/2020/02/19/%E9%9A%8F%E7%AC%94-2020-02-19/</id>
+    <published>2020-02-19T15:55:23.000Z</published>
+    <updated>2020-02-19T15:57:07.153Z</updated>
+    
+    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">输入密码</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="50eb0b4534a2af17bf32261aa2d43f559dfbf958dc3cc9185d40f06b5221ca02">0267ec72f19b8c198697a4f72870a3a86d660c20e53a165d6ca0a8067c522584c1b79a557b55fea063a167118307e1072843e98f46ed106456f660dabeeaa5cb3f994edbc0fc45858cfeea62ef21720c3b6ef3393f9a4026dbac0f081ccc6d1873bd0f5d6568bfb1a0bb9a06215a7e7662b0ce7068bbbbd43c17e2caa61fe9e4e8af0106a4dce196f4854d3d67b3dc2cfaae4c438750da2e894c7eef43cca53cc284f9e2f47b2024249348f6c1985553d47b43a76236a75f1805ef03841a877504b60370d8fa372c250af50a9b023d32e73e535ce9461a236b9f990154273075758e9ada41ec63850a4b6c7691a39b1c090e02d446b66cbda87522027460410845af02664a6f1fe09ace0fc2c3b5cbbcd1cda48c34708651b0dc8ea7b1ca96ad20c0bae98e47069cfd059335e49b060a1a3c67b7e44e0257d66398a90acae5e4969e6e3ecf92c1375bc9e9b31213698ac87fa2d26efdcbb3a5c088d975adc9130172d04214a8679b1c8160a7ff0e668ca7e05476771af0e256710c0923dc61ebcf3fc5ce1e6840561985816106bff53b016648a5ba6f0ec8e40c35de53dbfd112014e919a25dc58a2c80f4b2ba6e8bf94dcca84ba00773c3c070d0e95f9fc327d961bbcbb07a3ff1af627b407212b1cc016ae59faa081160f3401f1ef5cef358d9354e76785b6f140bfdffb0703954ab21315848a3ff222f2b49214adaff3658df280cc3bce0f8cad2c573b93063401bfba102499f03aa214a6aabd89f852423d123af7393d6143e22b39dcd7180ccbe6bbd9b87ed9c24a051a9a1a60090880ec071a57dd3ce2ccc530d48801adb70811556cb2e2d75e8ae157258bc7bd2e58289d17a12148658b9ff1b0821e2ed418aefd4758fa56d198b12ddef09eb15c7f5390a2f760bf452b162d621cb41cb7ab0d78d539b19affdf26467b3ed4a221861b466b013ba0716c68ef3597b6f1c8de578fbcc3f4faf95f30faa41845239a57ddb5a64b324722912f58c333331e13d3e1c868ed9f048b96208a98ed5414ed5f068e78f094c727467ea144879c94930b752605fd0ccabdcb67f34d4bd611c39a9962d61816b3da0628b173c32ceb530f8082dd4428e5ed9e20c2dbd14cbfd67cfc5426fbe2bbf31f3b2a76babb3d026dedb5794774959797d7a680a092326c3106e830c6f718a8ef47ac50da55bd83aa1e160a1cbcb29905887e07f5ba47855735745d1c68c1e72f5b1eea4dbcc3e3fbd78385756673299f0a177615859332fceb3175efef18b2d8c1b4be771195d1c24860df56fb35304daf35d1e5224e91712e37edc9c116332e7610ade9eb2bb6e2011b346f34f8b9d58827bfd8c1cd634023e9ecbae537864946dc067a8ebd65215e07019367ac272717481771ecf9e21e7f576fad6ae3c6927f7d9ef4369d808a64d85a0f203a109d87ba6ba047f4033243fa73f64c8ecf75ff8a84881fb527e2f22e7ed0df26deaa125c284b9fe55eb41cdb84a446d322f0aad8046ebf5df01708435daa71114c27f1049991f956132fc81fbab5b229935842137a3c264da074bcbd4d1f33a6d6ee7844e72f3807853918edfde8c1993aad25e81e896a81899cc242c0d1dbe666be91cbe17317c4bca140f60588fe35e94c884b9d9842e3e5a6939d3abb73f2d51887165c4a9df29cad02d072b81df7462ba33dc65169b19c288d121993548250246f96330ff14358f72e14a1eea7fd340c7af650063ee0b5d04c13e86464c06a13ae7e4589958f0e94296740d8066568708f1b3be77d4631398f1b4ee53de6f815d359aebf8eca6682505c07ca3c525ba2dd68ec62d2a0e7123ef6fdd8192e917a10382f56631e8cc85b2db401070ef0887e042432d8b0c6135a4bd1a7f4f589060037ef88b60c3fc0f637105686905826f9ab55fca3570b177c805df2c000b405c7166415637c3a88330f5868a4798f070696f8f1cebdb1c825a8c153de42fe7a28267abdc2264294faf31f192a38ef008ab6cee7cec99c5a8d4ab72fcdaa1647572c371a5d2dabf1b3dce4588dc528a7d6603a209a5febf712f55b43299ccc701b0ef1a501973d14a4f8f164ddf8606dcd1688368a18a0a92574ce7a8e639eb32d2066de0853afccc82009137c695b6397a4bb5afab3ccabfee92c875d4b347aead5b098d0ad34381f9992f0c845532c92e9880e88d728b520dd7a8cb572328374257049000aefe97aaade7f551a9e7bedd42edec895e8cbb5c78f7275ae9023af8073426051e1fa5534d17880dc0045b476cf5dc73792f6f67cc1a5e047a6fd4f23e95bc20d6cd2831a8cfb3d32e26a0d34cb97658b71862b1ca20074dcce0c0fa50cd8bd5d167806c35ebaba4809f591de1a410b2e9877412a11c3cf6f5cc255fc59ed7eadea53090f3e1b15a416dd8e72f1fb8f2793900c251afeb03c8af7e9b41854d99ac81f52061bc480f7e2891199eae85e0febc1312ac6814e63efb04947939413e675e8879b48c2291a9e2012125d6a6f48b16ca5ba81d5e7ef25b779c2333832c01b7d21d1bf3f05c78e19691f1f2e8ea45a02dc602f989f1d2d2004429388c6a9254f439a319f15d97efc161b9866e53e0078d9165017ed522c602d0d555698ee1eb8397cbbdd4d358f711b6f720830bf7d641b5dee151eca9718235ab5cd44da2327daa93811c4942ebb4cd6f22aac6f16f5393e3598a9180ec4a2d012abd9bb1efda7016777d23318da2da1334541586397447c9079763aa728caf5c4f68c4830cb363916a95c1117bcd2da4f730b7b6dc2e5824fc8395d79f78446ef0262aad3cf149d63f173aa88af189d71ef6b76f5a91</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    
+    <summary type="html">
+    
+      简易加密文案
+    
+    </summary>
+    
+    
+    
+      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>SQL-3</title>
@@ -489,16 +510,13 @@
     <link href="https://unit-serow.github.io/2020/02/16/%E9%9A%8F%E7%AC%94-2020-02-16/"/>
     <id>https://unit-serow.github.io/2020/02/16/%E9%9A%8F%E7%AC%94-2020-02-16/</id>
     <published>2020-02-16T12:13:31.000Z</published>
-    <updated>2020-02-17T19:06:47.222Z</updated>
+    <updated>2020-02-19T15:57:30.751Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Tue Feb 18 2020 03:06:54 GMT+0800 (中国标准时间) --><ul><li>顺天应人</li><li>中庸之道</li><li>本能与理智</li><li>环境</li><li>累积</li></ul><hr><ul><li><p>强者不会孤独，而弱者注定孤独</p></li><li><p>一切都将源于弱小与自身能力的不足</p></li><li><p>其所处的环境和其所拥有的时间能决定一切</p></li><li><p>所有人都摆脱不了环境所带来的任何影响</p></li><li><p>天才在猴子里它也只是猴子</p></li><li><p>弱者在强者里他依旧是强者</p></li><li><p>一切都早已注定，环境注定了一切</p></li></ul><blockquote><p>完全随机性概率</p></blockquote><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">输入密码</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="0e28228825c6ae7beada31271c91aa0547066f2f221e2fb78673ee570e8d0528">0267ec72f19b8c198697a4f72870a3a86d660c20e53a165d6ca0a8067c522584c1b79a557b55fea063a167118307e1072843e98f46ed106456f660dabeeaa5cbbd48b242e7f43c26145260adedd42ee5b625f33d68a5a576fc7471badcec9e4cd879c788815470b3674045f535a9553c11a213bb4dac5210fc3e8d5e65521d9f7bc424d56759203034daa77ceaa80a6f462c2ca99440ec06f2e3d68e004d85d08733ba53fd73a5fc3b95d9dbdd46a22ead60e4b48edd139a61df1253bf867956de2594c7564f9e7ed2c725023713956dad2b7b8a63621682901a85ffec25518d257bb538939f47e3214c2fd605590b6f941cf3406ed649636fa79506a2df55f7537888ab3993180d36108f3b0867baaccca669c40dcb55d47abb48dc39f67af55b7803c3af0210d0c33b8b4e26f0340ea5949a722ae924a4daf5a0dfe5d327e6b9a724e35a2649412b792b45df4c7ea09bbedd3c780457c1cd28edbb306751afc109295333d1a298c26fe5d11abbefaa8e36c3e90bd6c619b716749d070313f2417ce63d7252ace649ae620cad65b13640f9bfc7011a1c93c81b6643be60a3fe635ca0131ea5146e70da9210fe895008b6b79ea3c7d5c81ecc89a1585d5b791604dc11d94d42832fa4a5a6ca82f1a836e24e6579311202ea8b45d9354a121a7bdfb0efa2974c7929b5275cd846e150dc38e051657420fc2d77b36a7a5ff8ba7e10e4a9b9fcf00b7258205b7d07f83cccb8a1a3d0cf7efadcc7828db567ec77c58bb6ea5342671e0d637fa47a7069294b8ba2bb1a1fa3b230a544b2c14a8dbec8fd074413ad8acbc2d06b9541704499b6dc3a2783d4489de590f8ebd4660ba22913599f430b58e51a521900fe123641ee8a8cb096f22460bfeef0d064587de1d39826427f5707aacde70769b6cb169bcc4773f5b05d131aeabb861b790f95959125c38255cef3735294725cba0b364af6f7b041d7e6feec6316957dab40bf04e8</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;!-- build time:Tue Feb 18 2020 03:06:54 GMT+0800 (中国标准时间) --&gt;&lt;ul&gt;&lt;li&gt;顺天应人&lt;/li&gt;&lt;li&gt;中庸之道&lt;/li&gt;&lt;li&gt;本能与理智&lt;/li&gt;&lt;li&gt;环境&lt;/li&gt;&lt;li&gt;累积&lt;/li&gt;&lt;/ul&gt;&lt;hr&gt;&lt;ul
-      
+      简易加密文案
     
     </summary>
     
@@ -543,36 +561,6 @@
       
       
         &lt;!-- build time:Tue Feb 18 2020 03:00:03 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;Redis-2&quot;&gt;&lt;a href=&quot;#Redis-2&quot; class=&quot;headerlink&quot; title=&quot;Redis-2&quot;&gt;&lt;/a&gt;Red
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="数据库" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="NoSQL" scheme="https://unit-serow.github.io/tags/NoSQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis-1</title>
-    <link href="https://unit-serow.github.io/2020/02/16/Redis-1/"/>
-    <id>https://unit-serow.github.io/2020/02/16/Redis-1/</id>
-    <published>2020-02-16T07:55:15.000Z</published>
-    <updated>2020-02-17T18:59:13.720Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Tue Feb 18 2020 03:00:03 GMT+0800 (中国标准时间) --><h3 id="REmote-DIctionary-Server-Redis"><a href="#REmote-DIctionary-Server-Redis" class="headerlink" title="REmote DIctionary Server(Redis)"></a>REmote DIctionary Server(Redis)</h3><p><strong>概述:</strong></p><ul><li>是一种Key-Value数据库</li><li>还可称为key-value存储系统，即数据结构服务器</li><li>由ANSI C语言编写</li><li>是基于BSD协议的<code>Free software</code></li><li>支持多种语言的API</li><li>支持网络</li><li>可基于内存亦可持久化的日志型</li></ul><hr><ul><li>Redis具有极为先进的数据管理方式与处理算法</li><li>Redis与其它<code>key-value</code>缓存产品相比的特有性质:<blockquote><p>Redis支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用<br>Redis不仅仅支持简单的<code>key-value</code>类型的数据，同时还提供<code>list</code>,<code>set</code>,<code>zset</code>,<code>hash</code>等数据结构的存储<br>Redis支持数据的备份，即<code>master-slave</code>模式的数据备份<br>Redis有着更为复杂的数据结构并且提供对他们的原子性操作，这是一个不同于其他数据库的进化路径<br>Redis的数据类型都是基于基本数据结构的同时对程序员透明，无需进行额外的抽象<br>Redis运行在内存中但是可以持久化到磁盘，所以在对不同数据集进行高速读写时需要权衡内存，因为数据量不能大于硬件内存<br>在内存数据库方面的另一个优点是，相比在磁盘上相同的复杂的数据结构，在内存中操作起来非常简单，这样Redis可以做很多内部复杂性很强的事情<br>同时，在磁盘格式方面他们是紧凑的以追加的方式产生的，因为他们并不需要进行随机访问</p></blockquote></li></ul><hr><ul><li>Redis特点<blockquote><p>性能特点: Redis能读的速度是<code>110000次/s</code>，写的速度是<code>81000次/s</code><br>数据类型特点: Redis支持二进制案例的<code>Strings</code>,<code>Lists</code>,<code>Hashes</code>,<code>Sets</code>及<code>Ordered Sets</code>数据类型操作</p></blockquote></li><li>原子性质:<blockquote><p>Redis的所有操作都是原子性的(只有成功且完全执行与失败且完全不执行)，单个操作是原子性的<br>多个操作也支持事务，即原子性，通过<code>MULTI</code>和<code>EXEC</code>指令对其进行封装</p></blockquote></li></ul><hr><ul><li><p>原子性操作:</p><blockquote><p>将任何一套完整数据处理操作定义为一个事务<br>该事务要么完全执行，要么完全不执行，不会出现执行到一半因为错误而中止<br>以此绝对的保证了数据的完整性<br>如果把事务比作一个程序，它要么完整的被执行,要么完全不执行</p></blockquote></li><li><p>key value 存储</p><blockquote><p>键值存储，即为key=&gt;value<br>键=&gt;值(key=&gt;value)对，键唯一，对应一个值，值的形式随意<br>以此绝对的保证了数据结构的完备性</p></blockquote></li></ul><hr><p><strong>相关基本概念(基本数据结构概念)</strong></p><ul><li>String: 字符串</li><li>Hash: 散列</li><li>List: 列表</li><li>Set: 集合</li><li>Sorted Set: 有序集合</li></ul><hr><p><strong>参考资料:</strong></p><ul><li><p>文档<a href="https://redis.io/documentation" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://redis.io/documentation</code></p></blockquote></li><li><p>官网<a href="https://redis.io/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://redis.io/</code></p></blockquote></li><li><p>获取<a href="https://redis.io/download" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://redis.io/download</code></p></blockquote></li><li><p>配置说明<a href="https://redis.io/topics/config" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://redis.io/topics/config</code></p></blockquote></li><li><p>apt-get自动化获取</p><blockquote><p><code>apt-get install redis-server</code></p></blockquote></li></ul><hr><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Tue Feb 18 2020 03:00:03 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;REmote-DIctionary-Server-Redis&quot;&gt;&lt;a href=&quot;#REmote-DIctionary-Server-Red
       
     
     </summary>

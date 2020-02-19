@@ -1,0 +1,219 @@
+---
+title: SQLite-2
+date: 2020-02-19 19:41:03
+tags: [RDBMS,随笔]
+categories: [软件,数据库]
+---
+
+### SQLite-2
+
+---
+
+### 数据模型
+
+```
+ID, A, B, C, D, TIME
+1, 1, 2, 3, 4, 2020-02-19/1999/NOW()
+2, 1, 2, 3, 4, 2020-02-19/1999/NOW()
+3, 1, 2, 3, 4, 2020-02-19/1999/NOW()
+4, 6, 7, 8, 9, 2020-02-19/1999/NOW()
+5, 1, 2, 3, 4, 2020-02-19/1999/NOW()
+6, 6, 7, 8, 9, 2020-02-19/1999/NOW()
+7, 6, 7, 8, 9, 2020-02-19/1999/NOW()
+8, 1, 2, 3, 4, 2020-02-18/2000
+9, 1, 2, 3, 4, 2020-02-18/2000
+```
+
+---
+
+**表TABLES1**
+
+```
+CREATE TABLE TABLES1(
+ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+A TEXT NOT NULL,
+B INT NOT NULL,
+C CHAR(3),
+D REAL, 
+TIME DATE);
+```
+
+`CREATE TABLE TABLES1(ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,A TEXT NOT NULL,B INT NOT NULL,C CHAR(3),D REAL, TIME DATE);`
+
+---
+
+**列ID-TIME**
+
+```
+INSERT INTO TABLES1 VALUES (1, 1, 2, 3, 4, 2020-2-19);
+INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (1, 2, 3, 4, 2020-2-19);
+INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (1, 2, 3, 4, 2020-2-19);
+INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (1, 2, 3, 4, 2020-2-19);
+INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (6, 7, 8, 9, 2020-2-19);
+INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (1, 2, 3, 4, 2020-2-19);
+INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (6, 7, 8, 9, 2020-2-19);
+INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (6, 7, 8, 9, 2020-2-19);
+INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (1, 2, 3, 4, 2020-2-18);
+INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (1, 2, 3, 4, 2020-2-18);
+```
+
+```
+root@debian:/home/sqlite/file# sqlite3 TEST1
+SQLite version 3.31.1 2020-01-27 19:55:54
+Enter ".help" for usage hints.
+sqlite> .databases
+main: /home/sqlite/file/TEST1
+sqlite> CREATE TABLE TABLES1(ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,A TEXT NOT NULL,B INT NOT NULL,C CHAR(3),D REAL, TIME DATE);
+sqlite> INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (1, 2, 3, 4, 2020-2-19);
+sqlite> INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (1, 2, 3, 4, 2020-2-19);
+sqlite> INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (1, 2, 3, 4, 2020-2-19);
+sqlite> INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (6, 7, 8, 9, 2020-2-19);
+sqlite> INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (1, 2, 3, 4, 2020-2-19);
+sqlite> INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (6, 7, 8, 9, 2020-2-19);
+sqlite> INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (6, 7, 8, 9, 2020-2-19);
+sqlite> INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (1, 2, 3, 4, 2020-2-18);
+sqlite> INSERT INTO TABLES1 (A,B,C,D,TIME) VALUES (1, 2, 3, 4, 2020-2-18);
+```
+
+`SELECT * FROM TABLES1;`
+
+```
+sqlite> SELECT * FROM TABLES1;
+1|1|2|3|4.0|1999
+2|1|2|3|4.0|1999
+3|1|2|3|4.0|1999
+4|6|7|8|9.0|1999
+5|1|2|3|4.0|1999
+6|6|7|8|9.0|1999
+7|6|7|8|9.0|1999
+8|1|2|3|4.0|2000
+9|1|2|3|4.0|2000
+```
+
+---
+
+### 查询语句
+
+* 基于ID进行降序查询并输出表TABLES1内A等于1且TIME等于2000/2020-02-18的数据(行)
+> `SELECT * FROM TABLES1 WHERE A = 1 AND TIME = 2000 ORDER BY ID DESC;`
+
+```
+sqlite> SELECT * FROM TABLES1 WHERE A = 1 AND TIME = 2000 ORDER BY ID DESC;
+9|1|2|3|4.0|2000
+8|1|2|3|4.0|2000
+```
+
+---
+
+* 查询并输出表TABLES1内TIME列以0结尾的数据
+> `SELECT * FROM TABLES1 WHERE TIME LIKE '%0';`
+
+```
+sqlite> SELECT * FROM TABLES1 WHERE TIME LIKE '%0'; 
+8|1|2|3|4.0|2000
+9|1|2|3|4.0|2000
+```
+
+---
+
+* 查询并输出表TABLES1内TIME列中以2开头的数据
+> `SELECT * FROM TABLES1 WHERE TIME GLOB '2*';`
+
+```
+sqlite> SELECT * FROM TABLES1 WHERE TIME GLOB '2*';
+8|1|2|3|4.0|2000
+9|1|2|3|4.0|2000
+```
+
+---
+
+* 查询基于ID按降序输出表TABLES1内A等于6或TIME等于2000的数据并且只输出三条
+`SELECT * FROM TABLES1 WHERE A = 6 OR TIME = 2000 ORDER BY ID DESC LIMIT 3;`
+
+```
+sqlite> SELECT * FROM TABLES1 WHERE A = 6 OR TIME = 2000 ORDER BY ID DESC LIMIT 3;
+9|1|2|3|4.0|2000
+8|1|2|3|4.0|2000
+7|6|7|8|9.0|1999
+```
+
+---
+
+* 在TABLES1内基于A列对B列进行数值分组并按降序输出
+> `SELECT A , SUM(B) FROM TABLES1 GROUP BY A ORDER BY A DESC;`
+
+```
+sqlite> SELECT A , SUM(B) FROM TABLES1 GROUP BY A ORDER BY A DESC;
+6|21
+1|12
+```
+
+---
+
+* 对表TABLES1内的A列中所有记录大于2的数据进行分组
+> `SELECT * FROM TABLES1 GROUP BY A HAVING count(A) > 2;`
+
+```
+sqlite> SELECT * FROM TABLES1 GROUP BY A HAVING count(A) > 2;
+1|1|2|3|4.0|1999
+4|6|7|8|9.0|1999
+```
+
+---
+
+* 查询并输出消除TABLES1内列A的重复记录
+> `SELECT DISTINCT A FROM TABLES1 WHERE TIME = 1999;`
+
+```
+sqlite> SELECT DISTINCT A FROM TABLES1 WHERE TIME = 1999;
+1
+6
+```
+
+---
+
+### 相关概念:
+
+* NULL
+* WHERE
+* AND/OR
+* LIKE(`%`&`_`)
+* GLOB(`*`&`?`)
+> SQLite特有性质
+> 通配符遵循UNIX语法
+> 搜索表达式
+> 模式表达式
+> 大小写敏感
+* OR(or)
+* 通配符
+* 正则表达式
+* PRAGMA
+* Vacuum
+* 触发器
+* 别名
+* SQLite 注入
+* 常用函数
+* 视图(VIEW)
+* ALTER
+---
+* 约束(NOT NULL/DEFAULT/UNIQUE/PRIMARY Key/CHECK)
+* 交叉连接/内连接/外连接(CROSS/INNER/OUTER JOIN)
+* 子查询(嵌套查询/`SELECT ... WHERE ... (SELECT ... WHERE ... (SELECT ... WHERE ...(...)))...`)
+---
+* 索引查询(Indexed By)
+> 必须将索引命名才能从以前的表中查找值
+---
+* Explain(解释)
+> 在 SQLite 语句之前
+> 可以使用"EXPLAIN"关键字或"EXPLAIN QUERY PLAN"短语，用于描述表的细节
+> 如果省略了EXPLAIN关键字或短语，任何的修改都会引起SQLite语句的查询行为
+> 并返回有关SQLite语句如何操作的信息
+---
+* 合并(UNION)
+> 不会返回任何重复的行
+> 为了使用 UNION，每个 SELECT 被选择的列数必须是相同的
+> 相同数目的列表达式，相同的数据类型，并确保它们有相同的顺序
+> 但不必具有相同的长度
+
+---
+

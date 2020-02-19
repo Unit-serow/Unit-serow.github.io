@@ -42,15 +42,15 @@
     <link href="https://unit-serow.github.io/2020/02/19/SQL-3/"/>
     <id>https://unit-serow.github.io/2020/02/19/SQL-3/</id>
     <published>2020-02-19T13:45:01.000Z</published>
-    <updated>2020-02-19T13:47:07.904Z</updated>
+    <updated>2020-02-19T18:18:48.806Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Wed Feb 19 2020 21:47:12 GMT+0800 (中国标准时间) --><h3 id="SQL-1-SQL2-补充内容"><a href="#SQL-1-SQL2-补充内容" class="headerlink" title="SQL-1/SQL2 补充内容"></a>SQL-1/SQL2 补充内容</h3><p><strong>增/删/改/查(SQL涉及概念补充):</strong></p><ul><li><p>增/改</p><blockquote><p>序列(AUTO INCREMENT)<br>插入(INSERT INTO)<br>更新(UPDATE)<br>创建(CREATE)<br>修改与创建(ALTER)</p></blockquote></li><li><p>查</p><blockquote><p>唯一值(DISTINCT)<br>条件(逻辑)语句(WHERE/LIKE/AND&amp;OR/IN/BETWEEN)<br>排序(ORDER BY)<br>限制返回数量(TOP,LIMIT,ROWNUM)</p></blockquote></li><li><p>删</p><blockquote><p>DELETE<br>DROP</p></blockquote></li></ul><hr><p><strong>通用概念总览:</strong></p><ul><li>通配符</li><li>通用数据类型</li><li>DB 数据类型</li><li>别名(AS)</li><li>视图(VIEW)</li><li>日期(DATES)</li><li>索引(INDEX)</li><li>合并(UNION)</li><li>NULL(NULL值，NULL函数，NULL约束)</li><li>复制(SELECT INTO/INSERT INTO SELECT)</li><li>连接(JOIN/(INNER,LEFT,RIGHT,OUTER,FULL))</li><li>约束(Constraints(NOT NULL/UNIQUE/PRIMARY KEY/FOREIGN KEY/CHECK/DEFAULT))</li><li>函数(聚合函数/其它函数)</li></ul><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<!-- build time:Thu Feb 20 2020 02:19:57 GMT+0800 (中国标准时间) --><h3 id="SQL-1-SQL2-补充内容"><a href="#SQL-1-SQL2-补充内容" class="headerlink" title="SQL-1/SQL2 补充内容"></a>SQL-1/SQL2 补充内容</h3><p><strong>增/删/改/查(SQL涉及概念补充):</strong></p><ul><li><p>增/改</p><blockquote><p>序列(AUTO INCREMENT)<br>插入(INSERT INTO)<br>更新(UPDATE)<br>创建(CREATE)<br>修改与创建(ALTER)</p></blockquote></li><li><p>查</p><blockquote><p>唯一值(DISTINCT)<br>条件(逻辑)语句(WHERE/LIKE/AND&amp;OR/IN/BETWEEN)<br>排序(ORDER BY)<br>限制返回数量(TOP,LIMIT,ROWNUM)</p></blockquote></li><li><p>删</p><blockquote><p>DELETE<br>DROP</p></blockquote></li></ul><hr><p><strong>通用概念总览:</strong></p><ul><li>通配符</li><li>通用数据类型</li><li>DB 数据类型</li><li>别名(AS)</li><li>视图(VIEW)</li><li>日期(DATES)</li><li>索引(INDEX)</li><li>合并(UNION)</li><li>NULL(NULL值，NULL函数，NULL约束)</li><li>复制(SELECT INTO/INSERT INTO SELECT)</li><li>连接(JOIN/(INNER,LEFT,RIGHT,OUTER,FULL))</li><li>约束(Constraints(NOT NULL/UNIQUE/PRIMARY KEY/FOREIGN KEY/CHECK/DEFAULT))</li><li>函数(聚合函数/其它函数)</li></ul><hr><p><strong>JDBC</strong></p><ul><li>JDBC API允许用户访问任何形式的表格数据，尤其是存储在关系数据库中的数据</li><li>执行流程:</li></ul><ol><li>连接数据源，如：数据库</li><li>为数据库传递查询和更新指令</li><li>处理数据库响应并返回的结果</li></ol><hr><p><strong>ODBC</strong></p><ul><li>开放数据库互连(Open DataBase Connectivity)</li><li>是微软公司开放服务结构(WOSA，Windows Open Services Architecture)中有关数据库的一个组成部分</li><li>它建立了一组规范，并提供了一组对数据库访问的标准API(应用程序编程接口)</li><li>这些API利用SQL来完成其大部分任务</li><li>ODBC本身也提供了对SQL语言的支持，用户可以直接将SQL语句送给ODBC</li></ul><hr><p><strong>PowerBuilder/PB</strong></p><ul><li>是美国Sybase公司研制的一种新型，快速开发工具，结构为C/S(客户机/服务器结构)</li><li>是基于Windows3.x、Windows95和WindowsNT的一个集成化开发工具</li><li>它包含一个直观的图形界面和可扩展的面向对象的编程语言PowerScript，提供与当前流行的大型数据库的接口，并通过ODBC与单机数据库相连</li></ul><hr><p><strong>PL/SQL</strong></p><ul><li>ORACLE客户端连接器</li></ul><p><strong>CYNOSDB</strong></p><ul><li>云数据库(Cynosdb)</li></ul><hr><!-- rebuild by neat -->]]></content>
     
     <summary type="html">
     
       
       
-        &lt;!-- build time:Wed Feb 19 2020 21:47:12 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;SQL-1-SQL2-补充内容&quot;&gt;&lt;a href=&quot;#SQL-1-SQL2-补充内容&quot; class=&quot;headerlink&quot; title=&quot;
+        &lt;!-- build time:Thu Feb 20 2020 02:19:57 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;SQL-1-SQL2-补充内容&quot;&gt;&lt;a href=&quot;#SQL-1-SQL2-补充内容&quot; class=&quot;headerlink&quot; title=&quot;
       
     
     </summary>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-20T17:07:17.624Z</updated>
+  <updated>2020-02-20T23:06:42.632Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GNU Emacs-1</title>
+    <link href="https://unit-serow.github.io/2020/02/21/Emacs-1/"/>
+    <id>https://unit-serow.github.io/2020/02/21/Emacs-1/</id>
+    <published>2020-02-20T23:04:29.000Z</published>
+    <updated>2020-02-20T23:06:42.632Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Fri Feb 21 2020 07:06:50 GMT+0800 (中国标准时间) --><h3 id="Emacs-1"><a href="#Emacs-1" class="headerlink" title="Emacs-1"></a>Emacs-1</h3><h3 id="Emacs快捷键快速参考-参考资料整理"><a href="#Emacs快捷键快速参考-参考资料整理" class="headerlink" title="Emacs快捷键快速参考(参考资料整理)"></a>Emacs快捷键快速参考(参考资料整理)</h3><p><strong>基本快捷键(常用且泛用):</strong></p><ul><li>C/M/De说明:<blockquote><p>C(Control/Ctrl)<br>M(Meta/Alt|Esc)<br>De(Backspace)</p></blockquote></li></ul><table><thead><tr><th align="left">指令</th><th align="left">作用</th><th align="left">摘要</th></tr></thead><tbody><tr><td align="left">C-x C-s</td><td align="left">保存文件</td><td align="left">保存</td></tr><tr><td align="left">C-x C-w</td><td align="left">使用其他文件名另存为文件</td><td align="left">另存为</td></tr><tr><td align="left">C-x C-f</td><td align="left">“find”文件, 即在缓冲区打开/新建一个文件</td><td align="left">新建</td></tr><tr><td align="left">C-z</td><td align="left">挂起emacs</td><td align="left">挂起</td></tr><tr><td align="left">C-x C-c</td><td align="left">关闭emacs</td><td align="left">关闭</td></tr><tr><td align="left">C-x i</td><td align="left">在当前光标处插入文件</td><td align="left">插入</td></tr><tr><td align="left">C-x C-v</td><td align="left">关闭当前缓冲区文件并打开新文件</td><td align="left">关闭缓冲区</td></tr><tr><td align="left">C-x b</td><td align="left">新建/切换缓冲区</td><td align="left">新建缓冲区</td></tr><tr><td align="left">C-x C-b</td><td align="left">显示缓冲区列表</td><td align="left">缓冲区信息</td></tr><tr><td align="left">C-x k</td><td align="left">关闭当前缓冲区</td><td align="left">关闭缓冲区</td></tr><tr><td align="left">M-n</td><td align="left">重复执行后一个命令n次</td><td align="left">宏</td></tr><tr><td align="left">C-d</td><td align="left">删除(delete)后一个字符</td><td align="left">删除字符</td></tr><tr><td align="left">M-d</td><td align="left">删除后一个单词</td><td align="left">删除字符串</td></tr><tr><td align="left">C-k</td><td align="left">移除(kill)一行</td><td align="left">删除行</td></tr><tr><td align="left">C-g</td><td align="left">停止当前运行/输入的命令</td><td align="left">停止</td></tr><tr><td align="left">C-x u</td><td align="left">撤销前一个命令</td><td align="left">撤销</td></tr><tr><td align="left">C-s</td><td align="left">向后搜索</td><td align="left">搜索</td></tr><tr><td align="left">C-r</td><td align="left">向前搜索</td><td align="left">搜索</td></tr><tr><td align="left">M-x shell</td><td align="left">打开shell模式</td><td align="left">shell</td></tr></tbody></table><hr><p><strong>帮助指令:</strong></p><table><thead><tr><th align="left">指令</th><th align="left">作用</th></tr></thead><tbody><tr><td align="left">C-h c</td><td align="left">显示快捷键绑定的命令</td></tr><tr><td align="left">C-h k</td><td align="left">显示快捷键绑定的命令和它的作用</td></tr><tr><td align="left">C-h l</td><td align="left">显示最后100个键入的内容</td></tr><tr><td align="left">C-h w</td><td align="left">显示命令被绑定到哪些快捷键上</td></tr><tr><td align="left">C-h f</td><td align="left">显示函数的功能</td></tr><tr><td align="left">C-h v</td><td align="left">显示变量的含义和值</td></tr><tr><td align="left">C-h b</td><td align="left">显示当前缓冲区所有可用的快捷键</td></tr><tr><td align="left">C-h t</td><td align="left">打开emacs教程</td></tr><tr><td align="left">C-h i</td><td align="left">打开info阅读器</td></tr><tr><td align="left">C-h C-f</td><td align="left">显示emacs FAQ</td></tr><tr><td align="left">C-h p</td><td align="left">显示本机Elisp包的信息</td></tr></tbody></table><hr><h3 id="其它"><a href="#其它" class="headerlink" title="其它:"></a>其它:</h3><p><strong>指令集类型一共可以分为七种类型(具体可参考参考资料):</strong></p><ol><li>基本快捷键(Basic)</li><li>光标移动基本快捷键(Basic Movement)</li><li>编辑(Editint)</li><li>重要快捷键(Important)</li><li>在线帮助(Online-Help)</li><li>搜索/替换(Seach/Replace)</li><li>使用正则表达式(Regular expression)搜索/替换</li><li>窗口命令(Window Commands)</li><li>书签命令(Bookmark commands)</li><li>Text</li><li>Telnet</li><li>DIRectory EDitor (dired)</li><li>Shell</li><li>宏命令(Macro-commands)</li><li>编程(Programming)</li><li>GDB(调试器)</li><li>版本控制(Version Control)</li></ol><hr><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料:"></a>参考资料:</h3><ul><li><p>官方网站<a href="https://www.gnu.org/software/emacs/emacs.html" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://www.gnu.org/software/emacs/emacs.html</code></p></blockquote></li><li><p>官方手册<a href="https://www.gnu.org/software/emacs/manual/html_mono/emacs.html" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://www.gnu.org/software/emacs/manual/html_mono/emacs.html</code></p></blockquote></li><li><p>Emacs Lisp<a href="https://www.gnu.org/software/emacs/manual/html_mono/elisp.html" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://www.gnu.org/software/emacs/manual/html_mono/elisp.html</code></p></blockquote></li><li><p>获取地址:<a href="https://www.gnu.org/software/emacs/download.html#gnu-linux" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://www.gnu.org/software/emacs/download.html#gnu-linux</code></p></blockquote></li><li><p>国内社区<a href="https://emacs-china.org/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://emacs-china.org/</code></p></blockquote></li><li><p>apt-get获取</p><blockquote><p><code>apt-get -y install emacs</code><br>插件和拓展的配置与安装本章节不会多做赘述</p></blockquote></li><li><p>spacemacs仓库/获取地址<a href="https://github.com/syl20bnr/spacemacs" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://github.com/syl20bnr/spacemacs</code></p></blockquote></li><li><p>spacemacs获取方式</p><blockquote><p><code>git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d</code></p></blockquote></li></ul><hr><p><strong>其它指令参考网站:</strong></p><ul><li><p>CN-2015-Emacs常用基本快捷键<a href="https://gist.github.com/shijinkui/2048195" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://gist.github.com/shijinkui/2048195</code></p></blockquote></li><li><p>CN-2008-Emacs快捷键列表<a href="https://aifreedom.com/technology/112" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://aifreedom.com/technology/112</code><br>这个相当详细</p></blockquote></li><li><p>CN-2019-Emacs常用快捷键一览<a href="https://qiutedyuan.github.io/blog/2019/06/12/Emacs%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%80%E8%A7%88/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://qiutedyuan.github.io/blog/2019/06/12/Emacs%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%80%E8%A7%88/</code></p></blockquote></li></ul><hr><p><a href="https://www.baidu.com/" target="_blank" rel="noopener">https://www.baidu.com/</a></p><p><a href="https://www.google.com/" target="_blank" rel="noopener">https://www.google.com/</a></p><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Fri Feb 21 2020 07:06:50 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;Emacs-1&quot;&gt;&lt;a href=&quot;#Emacs-1&quot; class=&quot;headerlink&quot; title=&quot;Emacs-1&quot;&gt;&lt;/a&gt;Ema
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="GNU" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
+    
+    
+      <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>
+    
+      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>随笔-2020-02-21</title>
@@ -551,27 +581,6 @@
       <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
       <category term="NoSQL" scheme="https://unit-serow.github.io/tags/NoSQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>随笔-2020-02-16</title>
-    <link href="https://unit-serow.github.io/2020/02/16/%E9%9A%8F%E7%AC%94-2020-02-16/"/>
-    <id>https://unit-serow.github.io/2020/02/16/%E9%9A%8F%E7%AC%94-2020-02-16/</id>
-    <published>2020-02-16T12:13:31.000Z</published>
-    <updated>2020-02-19T15:57:30.751Z</updated>
-    
-    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">输入密码</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="0e28228825c6ae7beada31271c91aa0547066f2f221e2fb78673ee570e8d0528">0267ec72f19b8c198697a4f72870a3a86d660c20e53a165d6ca0a8067c522584c1b79a557b55fea063a167118307e1072843e98f46ed106456f660dabeeaa5cbbd48b242e7f43c26145260adedd42ee5b625f33d68a5a576fc7471badcec9e4cd879c788815470b3674045f535a9553c11a213bb4dac5210fc3e8d5e65521d9f7bc424d56759203034daa77ceaa80a6f462c2ca99440ec06f2e3d68e004d85d08733ba53fd73a5fc3b95d9dbdd46a22ead60e4b48edd139a61df1253bf867956de2594c7564f9e7ed2c725023713956dad2b7b8a63621682901a85ffec25518d257bb538939f47e3214c2fd605590b6f941cf3406ed649636fa79506a2df55f7537888ab3993180d36108f3b0867baaccca669c40dcb55d47abb48dc39f67af55b7803c3af0210d0c33b8b4e26f0340ea5949a722ae924a4daf5a0dfe5d327e6b9a724e35a2649412b792b45df4c7ea09bbedd3c780457c1cd28edbb306751afc109295333d1a298c26fe5d11abbefaa8e36c3e90bd6c619b716749d070313f2417ce63d7252ace649ae620cad65b13640f9bfc7011a1c93c81b6643be60a3fe635ca0131ea5146e70da9210fe895008b6b79ea3c7d5c81ecc89a1585d5b791604dc11d94d42832fa4a5a6ca82f1a836e24e6579311202ea8b45d9354a121a7bdfb0efa2974c7929b5275cd846e150dc38e051657420fc2d77b36a7a5ff8ba7e10e4a9b9fcf00b7258205b7d07f83cccb8a1a3d0cf7efadcc7828db567ec77c58bb6ea5342671e0d637fa47a7069294b8ba2bb1a1fa3b230a544b2c14a8dbec8fd074413ad8acbc2d06b9541704499b6dc3a2783d4489de590f8ebd4660ba22913599f430b58e51a521900fe123641ee8a8cb096f22460bfeef0d064587de1d39826427f5707aacde70769b6cb169bcc4773f5b05d131aeabb861b790f95959125c38255cef3735294725cba0b364af6f7b041d7e6feec6316957dab40bf04e8</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-    
-    <summary type="html">
-    
-      简易加密文案
-    
-    </summary>
-    
-    
-    
-      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   

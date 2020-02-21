@@ -129,3 +129,76 @@ categories: [软件,GNU]
 
 [https://www.google.com/](https://www.google.com/)
 
+---
+
+## 补充内容
+
+* 2020-02-21
+> 20.46
+
+---
+
+### Spacemacs
+
+**spacemacs参考资料**
+
+* 其它功能拓展与插件
+
+* 代码补全
+> 自动补全 (company mode)
+* 语法高亮
+> 语法高亮 (Org-mode)
+* 其它工具
+> major mode
+> minor mode 
+* 编程/编译环境
+
+---
+
+**参考文献:**
+
+* 中文社区[跳转](https://emacs-china.org/c/spacemacs)
+> `https://emacs-china.org/c/spacemacs`
+
+* EN-文档[跳转](https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org)
+> `https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org`
+
+* 代码仓库[跳转](https://github.com/syl20bnr/spacemacs)
+```
+https://github.com/syl20bnr/spacemacs
+https://github.com/syl20bnr/spacemacs.git
+```
+
+---
+
+* EN-Wiki[跳转](https://en.wikipedia.org/wiki/Spacemacs)
+> `https://en.wikipedia.org/wiki/Spacemacs`
+
+* 技术博客子龙山人
+> `https://zilongshanren.com/`
+
+* CSND某博客[跳转](https://blog.csdn.net/csfreebird/article/details/52744771)
+> `https://blog.csdn.net/csfreebird/article/details/52744771`
+
+---
+
+### 相关工具整理:
+
+* zsh
+> Z shell(Zsh)是一款可用作交互式登录的shell及脚本编写的命令解释器
+> Zsh对Bourne shell做出了大量改进，同时加入了Bash、ksh及tcsh的某些功能
+> 实现工具: `oh-my-zsh`
+
+* 参考网站:[跳转](https://www.jianshu.com/p/d194d29e488c)
+> `https://www.jianshu.com/p/d194d29e488c`
+
+* Python管理工具
+> pyenv
+> pyenv virtualenv
+
+* 其它工具
+> nvm
+> npm
+
+---
+

@@ -78,3 +78,39 @@ categories: [软件,数据库]
 * 云数据库(Cynosdb)
 
 ---
+
+### Oracle-PL/SQL
+
+* 客户端与连接工具
+
+**解释:**
+
+* Oracle Database Software Express Edition 精简版
+* Oracle Database Software Enterprise Edition 企业版
+
+---
+
+**参考资料:**
+
+**客户端(Client):**
+
+* 安装指南[跳转](https://docs.oracle.com/en/database/oracle/oracle-database/18/xeinl/lot.html)
+> `https://docs.oracle.com/en/database/oracle/oracle-database/18/xeinl/lot.html`
+
+* 文档/手册[跳转](https://docs.oracle.com/en/database/oracle/oracle-database/18/index.html)
+> https://docs.oracle.com/en/database/oracle/oracle-database/
+> `https://docs.oracle.com/en/database/oracle/oracle-database/18/index.html`
+
+* EN-文献资料[跳转](https://docs.oracle.com/en/)
+> `https://docs.oracle.com/en/`
+
+* 获取地址[跳转](https://www.oracle.com/database/technologies/oracle-database-software-downloads.html#19c)
+> `https://www.oracle.com/database/technologies/oracle-database-software-downloads.html#19c`
+
+* 官方网站[跳转](https://www.oracle.com/index.html)
+> `https://www.oracle.com/index.html`
+
+* CN-文档[跳转](https://www.oracle.com/technetwork/cn/indexes/documentation/index.html)
+> `https://www.oracle.com/technetwork/cn/indexes/documentation/index.html`
+
+---

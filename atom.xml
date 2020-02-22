@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-02-22T08:09:54.697Z</updated>
+  <updated>2020-02-22T10:34:55.988Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FLS-4</title>
+    <link href="https://unit-serow.github.io/2020/02/22/FLS-4/"/>
+    <id>https://unit-serow.github.io/2020/02/22/FLS-4/</id>
+    <published>2020-02-22T10:33:46.000Z</published>
+    <updated>2020-02-22T10:34:55.988Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Sat Feb 22 2020 18:35:01 GMT+0800 (中国标准时间) --><h2 id="LFS-4"><a href="#LFS-4" class="headerlink" title="LFS-4"></a>LFS-4</h2><h3 id="制作步骤"><a href="#制作步骤" class="headerlink" title="制作步骤"></a>制作步骤</h3><hr><p><strong>制作步骤设计:</strong></p><p><strong>分为三个阶段:</strong></p><ul><li>一阶段:1.创建目标系统目录，2.创建临时系统目录，3. 建立预工具链</li><li>二阶段: 4.建立临时系统，5. 建立目标工具链</li><li>三阶段: 6.建立目标系统，7.收尾工作</li></ul><hr><ol><li>创建目标系统目录</li></ol><ul><li>先建立一个空白的分区用于存放目标系统，并保证在制作完成后可以从这个分区启动已经制作完的系统</li><li>将这个分区格式化为主系统能够识别的文件系统，比如<code>EXT3</code>，并将该分区挂载到主系统中的某个目录，比如<code>/opt/mylinux</code>，这个目录将作为目标系统的制作目录</li><li>另外，还需要人为的将制作中所需要的软件包放在某个目录内，该目录需要在已经制作完成的系统的运行环境中能够访问到</li><li>可以存放在目标系统制作的目录中，如建立一个<code>/opt/mylinux/source</code>目录并存放于其中</li></ul><hr><ol start="2"><li>创建临时系统目录</li></ol><ul><li>本步骤是为了在主系统制作临时系统(详情可见阶段一与阶段二)和使用临时系统来制作目标系统(详情可见阶段三)能够用同样的目录来访问临时系统的目录和文件</li><li>阶段二和阶段三分别在不同根目录的运行环境中，但都使用到了临时系统，如果想让临时系统以最小的改动就可以使其中的命令既可以在主系统所在的运行环境中正常工作，也可以在目的相同所在的运行环境中工作正常</li><li>最好的解决方式就是让两个环境中调用临时系统的目录路径是完全一样的</li></ul><p><strong>执行步骤:</strong></p><ul><li><p>在目标系统所在目录中创建一个存放临时系统的目录，如<code>/opt/mylinux/tools</code></p></li><li><p>然后利用软链接文件的方式在主系统的根目录建立一个指向<code>/opt/mylinux/tools</code>的链接文件</p></li><li><p>该链接文件的文件名必须是<code>/tools</code></p></li><li><p>不去先建立<code>/tools</code>，然后再在<code>/opt/mylinux</code>目录下建立一个指向<code>/tools</code>的同名软链接的原因</p></li><li><p>原因就是目标系统目录是主系统的根目录下的某个目录，主系统根目录的运行环境都可以正常访问目标系统中目录</p></li><li><p>而目标系统在进入以所在目录为根目录的运行环境后就无法访问主系统的其它目录中的内容了</p></li><li><p>所以将真正的内容存放在目录系统的目录中将能够保证各个制作阶段均能访问临时系统中的内容，并且保证访问路径一致</p></li><li><p>采用链接方式在不同阶段的方式关系(链接我呢见在不同环境中的访问关系)</p></li></ul><p><strong>逻辑简述:</strong></p><p><strong>一阶段&amp;二阶段-&gt;三阶段</strong></p><blockquote><p><code>一阶段&amp;二阶段:[主系统(/tools)]&lt;-&gt;[目标系统所在目录(/opt/mylinux/tools)]</code><br><code>三阶段:{运行主系统环境[主系统(/tools)]}-可以访问-&gt;{运行目标系统环境[目标系统(/tools)]}</code><br>同时<br><code>三阶段:{运行目标系统环境[目标系统(/tools)]}-无法访问-&gt;{运行主系统环境[主系统(/tools)]}</code></p></blockquote><ul><li>箭头代表链接关系，箭头指向的是实际目录，另一方则为链接文件</li><li>在一阶段与二阶段中<code>/tools</code>和<code>/opt/mylinux/tools</code>无论谁是链接文件都不影响互相访问</li><li>而在第三阶段，只有<code>/tools</code>是链接文件时才能互相访问，<code>/opt/mylinux/tools</code>(在目标系统环境中变为<code>/tools</code>)是链接文件时无法访问<code>/tools</code>中的内容</li><li>同时还可以使用目录映射的方式使两个阶段都能够正常访问临时系统，即有两种方法:一种是软连接的方式，另一种是目录映射的方式</li><li>本篇文章仅介绍软链接的方式</li></ul><hr><ol start="3"><li>建立预工具链</li></ol><ul><li>预工具链的作用是生成临时工具链，临时工具链是独立于主系统中的工具链，根据工具链的制作原则需要有一个外部依赖的工具链作为过渡，该工具链就是预工具链</li></ul><p><strong>预工具链到临时工具链的制作过程与步骤</strong></p><ol><li>先完成预工具链的编译工具部分，此时预工具链是一个内部依赖的工具链，依赖主系统中的Glibc</li><li>然后使用编译工具完成临时系统中的Glibc，该Glibc存放在临时系统目录中，作为临时工具链和临时系统所依赖的Glibc</li><li>对预工具链进行调整，变为外部依赖的工具链，即可开始编译临时工具链中的编译工具，以此完成临时工具链</li><li>预工具链是临时工具链的过渡工具链，可以将其存放在临时系统的目录中，临时工具链的安装会覆盖掉预工具链，也可以存放在其它目录下，但需要在用完后手工删除掉</li></ol><p><strong>到此第一阶段的制作已经完成，即将开始第二阶段的制作过程</strong></p><hr><ol start="4"><li>建立临时系统</li></ol><ul><li><p>现在已经完成了临时工具链，但仅仅有一个工具链还不能顺利的编译各种软件包，需要有各种各样的辅助命令来共同完成</p></li><li><p>当前还处于主系统运行环境中，主系统所附带的各种辅助命令目前都可以用于编译</p></li><li><p>为了切换到目标系统运行环境后还能继续使用这些辅助命令，就必须将这些辅助命令存放在目标系统运行环境所能访问到的目录中</p></li><li><p>建立临时系统的原因就是为了承前启后，前即为主系统，后则为目标系统</p></li><li><p>临时系统是目标系统建立前用于支撑目标系统运行环境的基本框架，目标系统需要人为的进行从头建立</p></li><li><p>即为一开始什么都没有，此时临时系统承担了运行环境的运作，包括提供用户的交互功能，编译软件包以及常用命令</p></li><li><p>因此临时系统中必须加入工具链，辅助命令，常用命令和支撑运行环境的程序(如Bash)</p></li></ul><p><strong>逻辑简述(不同阶段切换过程中各个系统的内容)</strong></p><p><strong>一阶段开始-&gt;二阶段开始-&gt;三阶段开始-&gt;三阶段结束</strong></p><blockquote><p>一阶段:<code>{一阶段开始，主系统运行环境内(/&amp;/tools)[主系统(完整)/临时系统(无内容)]}-此时的目标系统内无内容</code><br>二阶段:<code>{二阶段开始，主系统运行环境内(/&amp;/tools)[主系统(完整)/临时系统(部分)]}-此时的目标系统内无内容</code><br>三阶段:<code>{三阶段开始，目标系统运行环境内(/&amp;/tools)[临时系统(完整)/目标系统(无内容)]}-{/[主系统(完整)]}</code><br>三阶段:<code>{三阶段结束，目标系统运行环境内(/&amp;/tools)[临时系统(完整)/目标系统(完整)]}-{/[主系统(完整)]}</code></p></blockquote><ul><li><p>第三阶段开始时，目标系统的根目录(<code>/</code>)没有任何内容，只能靠临时系统提供各种编译和运行的功能</p></li><li><p>第三阶段完成后，目标系统已经完整，就可以不需要临时系统而直接运行了</p></li><li><p>可以了解到临时洗头膏必须拥有相对完整的运行能力，并且要独立于主系统，无论临时工具链还是临时系统中其它辅助命令都必须依赖临时系统中的函数库</p></li><li><p>临时系统必须全部由临时工具链来链接生成</p></li><li><p>此时临时系统的制作内容就非常明确了，如Bash，常用命令(Coreuils等)和工具链环境(Awk，Sed等)</p></li></ul><hr><ol start="5"><li>建立目标工具链</li></ol><ul><li><p>制作完成了临时系统后就要进入第三阶段的制作过程，即为将运行环境正式切换到目标系统运行环境</p></li><li><p>需要明确的是:目标系统最终是需要通过人为方式去将内容进行保留，临时系统在完成目标系统后就会被删除掉</p></li><li><p>目标系统同样需要一个内部链接的工具链，这是为了实现今后目标系统脱离主系统后能成为一个独立的系统且能够继续编译安装软件包</p></li><li><p>目标的临时工具链也是内部依赖的工具链，根据制作原则可以知道从内部依赖的工具链生成另外一个内部依赖的工具链需要有一个外部依赖的工具链作为过渡</p></li><li><p>此时已经不再编译临时系统上的程序文件了，可以通过调整工具链的方法将临时工具链内部依赖变为内部依赖，过渡用的外部依赖工具链就用调整临时工具链的方法来实现，临时工具链由此开始作为过渡工具链</p></li><li><p>根据工具链的制作原则，调整之前需要先建立好目标系统中的Glibc，这个Glibc同样根据工具链制作原则存放在目标系统的目录中</p></li><li><p>然后调整临时工具链，再编译目标系统中的，形成内部依赖的工具链</p></li><li><p>目标工具链的形成意味着临时工具链的使命已经完成，虽然现在临时工具链经过了调整，但后续的制作过程中不会再使用到它了</p></li><li><p>此时不用在意它的存在，也不需要这时去删除它，在最后完成目标系统后再将它连同临时系统一并删除</p></li></ul><hr><ol start="6"><li>建立目标系统</li></ol><ul><li>临时工具链虽然已经不再需要了，但目前目标系统除了目标工具链还一无所有</li><li>还需要用到临时系统中的各种各种目录以及其它常用命令，交互环境程序也还在使用临时系统中的命令</li><li>如同制作临时系统的时候需要的命令安装到临时系统中一样，可以人为的将临时系统中出现的所有的软件包都重新用目标工具链再次编译并安装到目标系统目录中</li><li>最终将完全替代掉临时系统中的所有软件包和命令</li><li>目标系统和临时系统的要求是不一样的，临时系统只需要为制作目标系统编译环境和简单的运行环境的支撑能力即可</li><li>但目标系统除了要具备临时系统所具有的功能之外还需要有更高的要求</li><li>比如网络的支持，程序进程的管理，系统启动等，因此还需要安装许多Linux系统中常见的软件包</li><li>至于关于常见软件包，这里不过过多枚举</li></ul><hr><ol start="7"><li>收尾工作</li></ol><ul><li><p>完成了目标系统后，就可以展开收尾工作了</p></li><li><p>包括删除临时系统，临时系统所有文件都存放在了<code>/tools</code>目录中，只需要删除<code>/tools</code>就可以了</p></li><li><p>还有一些公共的配置文件需要进行设置，如主机名，网络地址等，这些内容将在后续章节内进行介绍，这里先不再赘述</p></li><li><p>对于编译出来的命令程序还有一个需要注意的地方，很多软件包编译生成的程序文件带有许多调试信息，会占据相当大的磁盘空间</p></li><li><p>有的程序文件所附带的调试信息可以使其增加数倍的大小，主体代码只有几百KB的程序可能会超过1MB，去掉这些调试信息显得非常重要</p></li><li><p>调试信息的删除可以使用strip命令来完成，具体参数不进行过多阐述，需要注意的一点就是某一些程序或软件的调试信息中会与其静态函数库发生关联，如果去掉则可能导致静态函数库无法使用</p></li></ul><hr><ol start="8"><li>启动目标系统</li></ol><ul><li>让这个目标系统正常的启动起来</li><li>如果以LiveCD的方式进行制作，同时所使用的本地计算机内没有任何影片盘的启动器时，可以使用GRUB的启动程序</li><li>关于GRUB的使用这里不做过多阐述</li></ul><hr><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- build time:Sat Feb 22 2020 18:35:01 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;LFS-4&quot;&gt;&lt;a href=&quot;#LFS-4&quot; class=&quot;headerlink&quot; title=&quot;LFS-4&quot;&gt;&lt;/a&gt;LFS-4&lt;/h2
+      
+    
+    </summary>
+    
+    
+      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+      <category term="GNU" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
+    
+    
+      <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>
+    
+      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>FLS-3</title>
@@ -541,36 +571,6 @@
     
       <category term="磁盘" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E7%A3%81%E7%9B%98/"/>
     
-    
-      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Debian GNU/Linux-1</title>
-    <link href="https://unit-serow.github.io/2020/02/18/Debian-1/"/>
-    <id>https://unit-serow.github.io/2020/02/18/Debian-1/</id>
-    <published>2020-02-17T18:49:28.000Z</published>
-    <updated>2020-02-20T16:02:19.613Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Fri Feb 21 2020 00:02:26 GMT+0800 (中国标准时间) --><h3 id="Debian-GNU-Linux-1"><a href="#Debian-GNU-Linux-1" class="headerlink" title="Debian GNU/Linux-1"></a>Debian GNU/Linux-1</h3><ul><li>通用软件包管理与操作的解决方案</li><li>一:<code>apt-get</code>一条龙的全自动化解决</li><li>二:<code>wget/curl</code>获取-&gt;<code>dpkg/autoconf</code>安装-&gt;设置环境变量-&gt;设置别名</li><li><code>apt-get/dpkg/wget/curl</code>都可用户依赖解决</li></ul><hr><ul><li>目录:</li></ul><ol><li>apt-get</li><li>curl</li><li>wget</li><li>dpkg</li><li>autoconf-configure/make</li><li>env/export</li><li>set/declare</li><li>alias</li></ol><hr><h3 id="Debian内软件获取与卸载方法简述"><a href="#Debian内软件获取与卸载方法简述" class="headerlink" title="Debian内软件获取与卸载方法简述"></a>Debian内软件获取与卸载方法简述</h3><p><strong>APT-GET包管理器参数简述</strong></p><ul><li><p>从镜像源仓库拉取软件包并于本地自动配置</p><blockquote><p><code>$apt-get install package_name</code></p></blockquote></li><li><p>联网解决或清理依赖关系</p><blockquote><p><code>$apt-get install -f</code></p></blockquote></li><li><p>刷新本地镜像源仓库索引</p><blockquote><p><code>$apt-get updata</code></p></blockquote></li><li><p>更新本地镜像源仓库与所有可更新软件包</p><blockquote><p><code>$apt-get upgrade</code></p></blockquote></li><li><p>查看软件包依赖</p><blockquote><p><code>$apt-get show</code><br><code>$apt-cache show depends package_name</code></p></blockquote></li><li><p>查看仓库内软件包列表</p><blockquote><p><code>$apt-get search</code><br><code>$apt-cache search package_name</code></p></blockquote></li><li><p>卸载软件包及其配置文件</p><blockquote><p><code>$apt purge/apt remove</code><br><code>$apt-get -purge remove package_name</code></p></blockquote></li><li><p>删除软件包备份</p><blockquote><p><code>$apt-get clean</code></p></blockquote></li><li><p>镜像源目录:</p><blockquote><p><code>/etc/apt/sources.list</code></p></blockquote></li><li><p>还有很多用于包管理与镜像管理的软件与程序</p><blockquote><p>conda,npm等等…</p></blockquote></li><li><p>CentOS体系</p><blockquote><p>yum/rpm</p></blockquote></li></ul><hr><h3 id="URL拉取工具"><a href="#URL拉取工具" class="headerlink" title="URL拉取工具"></a>URL拉取工具</h3><ul><li>拉取所选网页内所有资源，多用于直接从远端仓库拉源码至本地</li></ul><p><strong>CURL</strong></p><blockquote><p><code>$curl [URL(选项)] [参数(options)]</code></p></blockquote><p><strong>WGET</strong></p><blockquote><p><code>$wget [URL(选项)] [参数(options)]</code></p></blockquote><ul><li>参数简述:<blockquote><p><code>-r</code>下载整个网站<br><code>-c</code>断点续传<br><code>-i</code>批量下载<br><code>--help/man</code></p></blockquote></li></ul><hr><h3 id="Dpkg"><a href="#Dpkg" class="headerlink" title="Dpkg"></a>Dpkg</h3><ul><li><p>用于管理Debian包的工具</p></li><li><p>安装已有包</p><blockquote><p><code>$dpkg -i package_name.deb</code></p></blockquote></li><li><p>安装目录下的所有包</p><blockquote><p><code>$dpkg -R /文件目录</code></p></blockquote></li><li><p>查看软件包安装位置</p><blockquote><p><code>$dpkg -L 软件包</code></p></blockquote></li><li><p>卸载一个包及其配置信息</p><blockquote><p><code>$dpkg -P package_name</code></p></blockquote></li></ul><blockquote><p><code>--help/man</code></p></blockquote><hr><h3 id="源码包安装与管理"><a href="#源码包安装与管理" class="headerlink" title="源码包安装与管理"></a>源码包安装与管理</h3><p><strong>autotools</strong></p><ul><li><p>保证下载来的源码包已经有makefile和由autoconf生存的configure脚本</p></li><li><p>根据makefile运行configure脚本并选择安装路径</p><blockquote><p><code>$./configure --prefix=/安装目录</code></p></blockquote></li><li><p>用make进行源码编译</p><blockquote><p><code>$make</code></p></blockquote></li><li><p>使用make安装</p><blockquote><p><code>$make install</code></p></blockquote></li><li><p>还有很多参数<code>--help</code>或<code>man</code></p></li><li><p>在source内执行make uninstall卸载软件包</p></li><li><p>正常情况下source内的makefile都能写uninstall</p></li><li><p>没有makefile的话看makefile的安装项，挨个删除</p></li><li><p>如果连source被删了的话，那没法了</p></li></ul><hr><h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><ul><li><p>tar -zxvf xxx.tar</p></li><li><p>zip xxx.zip</p></li><li><p>gzip xxx.gzip</p></li><li><p>解压没什么好说的</p></li></ul><hr><h3 id="环境变量与自定义变量"><a href="#环境变量与自定义变量" class="headerlink" title="环境变量与自定义变量"></a>环境变量与自定义变量</h3><p><strong>配置环境变量与自定义变量(PATH变量/Shell变量)</strong></p><ul><li>系统变量/用户变量</li></ul><p><strong>PATH变量</strong></p><ul><li><p>查看PATH变量列表(内容)</p><blockquote><p><code>$echo $PATH</code></p></blockquote></li><li><p>PATH变量的默认优先于用户的可执行程序</p></li><li><p>用export工具向PATH内添加内容</p><blockquote><p><code>export PATH=$PATH:/可执行文件所在目录/</code></p></blockquote></li><li><p>此时添加的是永久变量</p></li><li><p>export命令基本格式</p><blockquote><p><code>export [-fnp][变量名称]=[变量设置值]</code></p></blockquote></li><li><p>可执行文件目录说明:</p><blockquote><p>可执行文件多存于<code>/usr/local/bin</code>与<code>/usr/bin</code>内<br><code>/usr/local/bin</code>优先于<code>/usr/bin</code><br><code>/usr/bin</code>目录用于存放系统预装的可执行程序文件<br><code>/usr/local/bin</code>目录用于存放用户的可执行的文件，系统升级会覆盖此目录</p></blockquote></li></ul><hr><ul><li><p>用set工具添加环境变量与自定义变量</p></li><li><p>set用于添加session(会话)级别环境变量</p></li><li><p>语句形式</p><blockquote><p><code>set PATH=/usr/local/xxx/bin</code></p></blockquote></li><li><p>或用declare定义新变量:</p><blockquote><p><code>declare 变量名=&#39;变量值&#39;</code></p></blockquote></li></ul><hr><p><strong>env/export/set/declare简述</strong></p><ul><li><p>env 和 export 显示环境变量</p><blockquote><p>env 显示系统级别的环境变量，不显示自定义<br>export 功能与env相同，只不过会根据变量名进行排序</p></blockquote></li><li><p>set 和 declare 显示环境变量和自定义变量</p><blockquote><p>set 显示用户级别的环境变量，显示自定义<br>declare 显示所有级别的变量</p></blockquote></li><li><p>export用于管理env，set用于管理declare</p></li><li><p>set 用来显示本地变量</p></li><li><p>env 用来显示环境变量</p></li><li><p>export 用来显示和设置环境变量</p></li><li><p>set 显示当前shell的变量，包括当前用户的变量</p></li><li><p>env 显示当前用户的变量</p></li><li><p>export 显示当前导出成用户变量的shell变量</p></li></ul><hr><ul><li>清除用户级别环境变量<blockquote><p><code>unset 变量名</code></p></blockquote></li></ul><p><strong>变量所在目录</strong></p><ul><li><p>普通用户</p><blockquote><p><code>~/home/.bashrc</code></p></blockquote></li><li><p>root用户</p><blockquote><p><code>~/.bashrc</code><br><code>~/etc/profile</code></p></blockquote></li><li><p>权限足够时可以直接对其进行修改与管理</p></li><li><p>其他概念</p></li><li><p><code>~/.bashrc</code></p></li><li><p><code>~/.bash_profile</code></p></li><li><p><code>~/etc/profile</code></p></li><li><p><code>~/etc/environment</code></p></li></ul><p><strong>usr全称:Unix System Resource</strong></p><hr><h3 id="别名"><a href="#别名" class="headerlink" title="别名"></a>别名</h3><ul><li><p>使用alias工具对指令设置别名</p></li><li><p>基本格式:</p><blockquote><p><code>$alias[别名]=[指令名称]</code></p></blockquote></li></ul><hr><p><strong>Debian各版本开发代号</strong></p><table><thead><tr><th align="left">代号</th><th align="left">解释</th></tr></thead><tbody><tr><td align="left">下一代Debian正式发行版的代号为bullseye</td><td align="left">发布时间尚未确定</td></tr><tr><td align="left">Debian 10(buster)</td><td align="left">当前的稳定版(stable)</td></tr><tr><td align="left">Debian 9(stretch)</td><td align="left">旧的稳定版(oldstable)</td></tr><tr><td align="left">Debian 8(jessie)</td><td align="left">更旧的稳定版(oldoldstable)</td></tr><tr><td align="left">Debian 7(wheezy)</td><td align="left">被淘汰的稳定版</td></tr><tr><td align="left">Debian 6.0(squeeze)</td><td align="left">被淘汰的稳定版</td></tr><tr><td align="left">Debian GNU/Linux 5.0(lenny)</td><td align="left">被淘汰的稳定版</td></tr><tr><td align="left">Debian GNU/Linux 4.0(etch)</td><td align="left">被淘汰的稳定版</td></tr><tr><td align="left">Debian GNU/Linux 3.1(sarge)</td><td align="left">被淘汰的稳定版</td></tr><tr><td align="left">Debian GNU/Linux 3.0(woody)</td><td align="left">被淘汰的稳定版</td></tr><tr><td align="left">Debian GNU/Linux 2.2(potato)</td><td align="left">被淘汰的稳定版</td></tr><tr><td align="left">Debian GNU/Linux 2.1(slink)</td><td align="left">被淘汰的稳定版</td></tr><tr><td align="left">Debian GNU/Linux 2.0(hamm)</td><td align="left">被淘汰的稳定版</td></tr></tbody></table><hr><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Fri Feb 21 2020 00:02:26 GMT+0800 (中国标准时间) --&gt;&lt;h3 id=&quot;Debian-GNU-Linux-1&quot;&gt;&lt;a href=&quot;#Debian-GNU-Linux-1&quot; class=&quot;headerlink&quot; t
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="GNU" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/GNU/"/>
-    
-    
-      <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>
     
       <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     

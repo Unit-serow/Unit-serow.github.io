@@ -248,4 +248,33 @@ categories: [软件,GNU]
 
 ---
 
+**debian中文乱码解决方法:**
+
+**安装locales**
+```
+apt-get -y update
+apt-get install -y locales
+dpkg-reconfigure locales
+```
+* 选择并设置字符编码
+> `en_US.UTF-8`
+> `zh_CN.UTF-8`
+* 最后选择默认默认`ZH_CN.UTF-8`
+* 在界面中可以勾选`en_US.UTF-8`和`zh_CN.UTF-8`
+* 然后选择`zh_CN.UTF-8`为默认的LOCALE，则系统为中文界面(这里也可以选`en_US.UTF-8`，使系统为英文界面)
+
+* 检查当前locale环境
+> `locale`
+* 如果是正确的则会输出`LANG =zh_CN.UTF-8`
+
+**如果还有问题:**
+
+* 安装字体
+> `apt-get install ttf-wqy-zenhei -y`
+
+* 安装输入法
+> `apt-get install ibus ibus-gtk ibus-pinyin -y`
+
+---
+
 

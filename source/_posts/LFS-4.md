@@ -1,5 +1,5 @@
 ---
-title: FLS-4
+title: LFS-4
 date: 2020-02-22 18:33:46
 tags: [随笔,GNU/Linux]
 categories: [软件,GNU]

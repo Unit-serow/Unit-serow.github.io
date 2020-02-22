@@ -1,11 +1,11 @@
 ---
-title: FLS-2
+title: LFS-2
 date: 2020-02-22 16:07:09
 tags: [随笔,GNU/Linux]
 categories: [软件,GNU]
 ---
 
-## Linux from Scratch/LSF-2
+## Linux from Scratch/LFS-2
 
 * 名词解释
 * 制作逻辑

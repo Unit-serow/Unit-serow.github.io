@@ -1,13 +1,13 @@
 ---
-title: FLS-3
+title: LFS-3
 date: 2020-02-22 16:08:52
 tags: [随笔,GNU/Linux]
 categories: [软件,GNU]
 ---
 
-## LSF-3
+## LFS-3
 
-* 内容接LSF-2
+* 内容接LFS-2
 
 ### 制作过程中的相关技术
 

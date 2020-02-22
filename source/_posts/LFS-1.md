@@ -78,4 +78,35 @@ categories: [软件,GNU]
 
 ---
 
+### 补充内容-1
+
+---
+
+* Building and Installing Software Packages for Linux[跳转](http://www.tldp.org/HOWTO/Software-Building-HOWTO.html)
+> 软件构建知识Software-Building-HOWTO
+> `http://www.tldp.org/HOWTO/Software-Building-HOWTO.html`
+
+* Linux用户手册1[跳转](http://www.linuxfromscratch.org/hints/downloads/files/essential_prereading.txt)
+> The Linux Users' Guide
+> The Essential Pre-Reading
+> `http://www.linuxfromscratch.org/hints/downloads/files/essential_prereading.txt`
+
+* Linux用户手册2[跳转](http://www.linuxhq.com/guides/LUG/guide.html)
+> `The Linux Users' Guide 
+> http://www.linuxhq.com/guides/LUG/guide.html`
+
+* Linuxsir[跳转](http://www.linuxsir.org/index.html)
+> `http://www.linuxsir.org/index.html`
+
+* LFS-内容参考资料
+* 作者:孙海勇(冲天飞豹)
+* 书籍名称:手把手教你如何建立自己的Linux系统第一版以及第二版
+> 2008/2010
+
+* 网络有很多的URL和仓库都已经失效或废除了
+* 以我目前拥有的水平与能力，似乎已经找不到更多的参考和资料了
+* 即便找到也毫无意义，因为都是搜索引擎已经爬取过的数据了......
+
+---
+
 

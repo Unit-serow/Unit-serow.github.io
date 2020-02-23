@@ -94,6 +94,10 @@ categories: [软件,GNU]
 * mount查看磁盘文件系统挂载情况
 > 参数`-h`返回容量单位
 
+* mount输出参数说明:
+> ro表示只读
+> rw为可读可写
+
 ---
 
 **查看磁盘文件系统挂载情况:**
@@ -101,9 +105,17 @@ categories: [软件,GNU]
 
 ---
 
-**修复文件系统:**
+**磁盘文件系统修复:**
+* fsck
+> fsck(file system consistency check)
+* 是Unix和类Unix系统上用于检查文件系统完整性的工具
 * 基本命令格式:
 > `fsck -y /dev/sda1(指定磁盘)`
+
+* fuser
+> `fuser -m /boot` 输出选项模块对应线程的pid
+> `fuser -mk /boot` kill掉所选进程的pid
+
 
 ---
 
@@ -136,7 +148,7 @@ categories: [软件,GNU]
 > `echo $PATH`
 
 * 配置软链接
-> `ln -sv [PATH所指定路径] [软件路径]`
+> `ln -sv [软件所在路径] [PATH所指定路径]`
 
 ---
 

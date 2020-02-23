@@ -1,5 +1,5 @@
 ---
-title: GNU Debian-2
+title: Debian GNU/Linux-2
 date: 2020-02-23 01:36:50
 tags: [随笔,GNU/Linux]
 categories: [软件,GNU]

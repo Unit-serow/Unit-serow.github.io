@@ -2,7 +2,7 @@
 title: EFI/UEFI-1
 date: 2020-02-19 00:54:10
 tags: [随笔]
-categories: [软件,固件]
+categories: [软件,Firmware]
 ---
 
 ### EFI/UEFI-1

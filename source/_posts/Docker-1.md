@@ -121,20 +121,132 @@ Docker 客户端通过命令行或者其他工具与Docker的守护进程通信
 
 **参考文献与获取方式**
 
-官网[跳转](https://www.docker.com/)
-`https://www.docker.com/`
+* 官网[跳转](https://www.docker.com/)
+> `https://www.docker.com/`
 
-文档[跳转](https://docs.docker.com/)
-`https://docs.docker.com/`
+* 文档[跳转](https://docs.docker.com/)
+> `https://docs.docker.com/`
 
-docker中国区镜像源
-`https://registry.docker-cn.com`
+* Docker中国区镜像源
+> `https://registry.docker-cn.com`
 
-获取[跳转](https://docs.docker.com/get-docker/)
-`https://docs.docker.com/get-docker/`
+* 获取[跳转](https://docs.docker.com/get-docker/)
+> `https://docs.docker.com/get-docker/`
 
-获取Docker Engine-Debian[跳转](https://hub.docker.com/editions/community/docker-ce-server-debian)
-`https://hub.docker.com/editions/community/docker-ce-server-debian`
+* 获取Docker Engine-Debian[跳转](https://hub.docker.com/editions/community/docker-ce-server-debian)
+> `https://hub.docker.com/editions/community/docker-ce-server-debian`
 
+---
+
+## Docker-debian安装(补充内容)
+
+### 安装 Docker Engine-Community
+
+**使用 Docker仓库进行安装**
+
+* 首次安装Docker Engine-Community的主机需要先设置Docker仓库
+* 以便之后可以从Docker官方的远端仓库安装和更新Docker
+* Raspbian 用户不能使用此方法
+* 对于Raspbian，尚不支持使用仓库进行安装且必须改为使用shell脚本方式
+
+**设置仓库步骤:**
+
+1. * 更新apt包索引:
+> `$ sudo apt-get update`
+---
+2. * 安装 apt 依赖包，用于通过HTTPS来获取仓库:
+```
+$ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg2 \
+    software-properties-common
+```
+---
+3. * 添加Docker的官方GPG密钥:
+> `$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -`
+---
+4. * 验证本地主机现在是否拥有带有指纹的密钥:
+```
+$ sudo apt-key fingerprint 0EBFCD88
+
+pub   4096R/0EBFCD88 2017-02-22
+      Key fingerprint = 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid                  Docker Release (CE deb) <docker@docker.com>
+sub   4096R/F273FCD8 2017-02-22
+```
+> 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88 通过搜索指纹的后8个字符
+---
+5. * 执行指令以设置稳定版仓库:
+```
+$ sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/debian \
+  $(lsb_release -cs) \
+  stable"
+```
+---
+
+**安装Docker Engine-Community**
+1. * 更新 apt 包索引:
+> `$ sudo apt-get update`
+---
+2. * 安装最新版本的Docker Engine-Community和containerd:
+> `$ sudo apt-get install docker-ce docker-ce-cli containerd.io`
+---
+3. * 安装特定版本:
+```
+$ apt-cache madison docker-ce
+  docker-ce | 5:18.09.1~3-0~debian-stretch | https://download.docker.com/linux/debian stretch/stable amd64 Packages
+  docker-ce | 5:18.09.0~3-0~debian-stretch | https://download.docker.com/linux/debian stretch/stable amd64 Packages
+  docker-ce | 18.06.1~ce~3-0~debian        | https://download.docker.com/linux/debian stretch/stable amd64 Packages
+  docker-ce | 18.06.0~ce~3-0~debian        | https://download.docker.com/linux/debian stretch/stable amd64 Packages
+```
+---
+* 使用第二列中的版本字符串安装特定版本，例如`5:18.09.1~3-0~debian-stretch`
+4. > $ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io
+
+---
+**卸载旧版本:**
+* Docker 的旧版本被称为docker，docker.io或docker-engine
+> `$ sudo apt-get remove docker docker-engine docker.io containerd runc`
+
+---
+
+### 安装Docker Compose
+
+* 源代码(二进制)包地址[跳转](https://github.com/docker/compose/releases)
+> `https://github.com/docker/compose/releases`
+
+* 获取方式(执行):
+> `$ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
+> 1.24.1为版本号，可修改以下载其它版本
+
+---
+
+### 安装Docker Machine
+
+* 获取方式(执行):
+```
+$ base=https://github.com/docker/machine/releases/download/v0.16.0 &&
+  curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&
+  sudo mv /tmp/docker-machine /usr/local/bin/docker-machine &&
+  chmod +x /usr/local/bin/docker-machine
+```
+
+* 版本检索
+```
+$ docker-machine version
+docker-machine version 0.16.0, build 9371605
+```
+
+---
+
+**Docker 支持以下的Debian版本:**
+> Buster 10
+> Stretch 9 (stable) / Raspbian Stretch
+> Docker Engine-Community 在 `x86_64` (或 `amd64` ) `armhf`，和 `arm64` 体系结构上受支持
+
+---
 
 

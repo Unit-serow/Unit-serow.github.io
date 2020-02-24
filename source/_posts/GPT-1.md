@@ -2,7 +2,7 @@
 title: GPT/GUID-1
 date: 2020-02-18 20:50:55
 tags: 随笔
-categories: [软件,磁盘]
+categories: [软件,Disk]
 ---
 
 ## 硬盘结构-主引导扇区-2/GPT-1

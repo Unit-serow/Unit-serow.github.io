@@ -2,7 +2,7 @@
 title: BIOS-1
 date: 2020-02-18 23:46:31
 tags: 随笔
-categories: [软件,固件]
+categories: [软件,Firmware]
 ---
 
 ### BIOS(Basic Input/Output System)

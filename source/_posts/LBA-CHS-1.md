@@ -2,7 +2,7 @@
 title: LBA/CHS/RAID-1
 date: 2020-02-19 02:09:34
 tags: 随笔
-categories: [软件,磁盘]
+categories: [软件,Disk]
 ---
 
 ## LBA/CHS/RAID-1

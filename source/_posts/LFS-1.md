@@ -37,9 +37,21 @@ categories: [软件,GNU]
 > `https://zh.wikipedia.org/wiki/Linux_From_Scratch`
 
 * 从LFS官网下载的速度属实不言而喻(无论是FTP还是HTTP)
+* 以下链接为永久有效
+* Version:`lfslivecd-x86-6.2-3`
 * LFS LiveCD 百度网盘地址[跳转](https://pan.baidu.com/s/1IROLau9-OxbN2f-BL3PJVA)
-> https://pan.baidu.com/s/1IROLau9-OxbN2f-BL3PJVA 
-> 提取码是y0ss
+> URL:`https://pan.baidu.com/s/1IROLau9-OxbN2f-BL3PJVA`
+> 提取码:y0ss
+
+* Version:`lfslivecd-x86-6.3-r2145`
+> 链接[跳转](https://pan.baidu.com/s/1ix83uytHKlvqaOUEa4Rq0w)
+> URL:`https://pan.baidu.com/s/1ix83uytHKlvqaOUEa4Rq0w`
+> 提取码:dlp4 
+
+* Version:`lfslivecd-x86_64-6.3-r2145`
+> 链接[跳转](https://pan.baidu.com/s/1R4T6j07yoR9JAO1U2EoClA)
+> URL:`https://pan.baidu.com/s/1R4T6j07yoR9JAO1U2EoClA`
+> 提取码:1atk
 
 * linux公社仓库[跳转](https://linux.linuxidc.com/)
 > `https://linux.linuxidc.com/`

@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://unit-serow.github.io/2020/02/06/Docker-1/</loc>
+    <lastmod>2020-02-24</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/18/MBR-1/</loc>
+    <lastmod>2020-02-24</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/18/GPT-1/</loc>
+    <lastmod>2020-02-24</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/19/LBA-CHS-1/</loc>
+    <lastmod>2020-02-24</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/18/BIOS-1/</loc>
+    <lastmod>2020-02-24</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/19/UEFI-1/</loc>
+    <lastmod>2020-02-24</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/12/%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86-1/</loc>
+    <lastmod>2020-02-24</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/24/GPG-1/</loc>
+    <lastmod>2020-02-24</lastmod>
+  </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/22/LFS-1/</loc>
     <lastmod>2020-02-24</lastmod>
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/24/LXC-1/</loc>
-    <lastmod>2020-02-24</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/18/MBR-1/</loc>
     <lastmod>2020-02-24</lastmod>
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/23/Debian-3/</loc>
@@ -61,19 +82,7 @@
     <loc>https://unit-serow.github.io/2020/02/19/SQLite-1/</loc>
     <lastmod>2020-02-19</lastmod>
   </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/18/GPT-1/</loc>
-    <lastmod>2020-02-18</lastmod>
-  </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/19/RDBMS-KEY-1/</loc>
-    <lastmod>2020-02-18</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/19/LBA-CHS-1/</loc>
-    <lastmod>2020-02-18</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/19/UEFI-1/</loc>
-    <lastmod>2020-02-18</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/18/BIOS-1/</loc>
     <lastmod>2020-02-18</lastmod>
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/05/flowchart/</loc>
@@ -157,9 +166,6 @@
     <loc>https://unit-serow.github.io/2020/02/12/%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0-1/</loc>
     <lastmod>2020-02-11</lastmod>
   </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/12/%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86-1/</loc>
-    <lastmod>2020-02-11</lastmod>
-  </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/11/%E9%9A%8F%E7%AC%94-2020-2-2-11/</loc>
     <lastmod>2020-02-10</lastmod>
   </url>  <url>
@@ -209,9 +215,6 @@
     <lastmod>2020-02-06</lastmod>
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/06/Docker-2/</loc>
-    <lastmod>2020-02-06</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/06/Docker-1/</loc>
     <lastmod>2020-02-06</lastmod>
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/01/29/Autotools/</loc>

@@ -199,3 +199,64 @@ categories: [软件,磁盘]
 * CN-FAT详解-1[跳转](https://web.archive.org/web/20090725091233/http://www.raid-recovery.org/Article/sjhfdoc/200404/1.html)
 > `https://web.archive.org/web/20090725091233/http://www.raid-recovery.org/Article/sjhfdoc/200404/1.html`
 
+---
+
+### 补充内容
+
+**引导扇区:**
+* 引导扇区是硬盘、软盘或类似的数据存储设备的一个扇区
+> 内含负责引导(booting)"存放在碟片(disk)的其他部分的程序(通常，但不必然是操作系统)"的机器代码
+
+* 引导扇区有两种:
+* Volume Boot Record
+> 是磁盘未被分割的第一个扇区，或已分割的分区的第一个扇区，包含了加载与唤起操作系统(放在这个分区之内或放在这个磁盘上)的码
+* Master Boot Record
+> 是磁盘已被分割的第一个扇区，它包含定位活动分区与唤起它的VBR的码
+
+* IBM PC兼容机上，BIOS不在意VBR与MBR的不同，甚至分区
+* 固件只是加载并运行磁盘的第一个扇区(sector)，在MBR里的码，才知道磁盘分割消息，且是负责加载引导活动分区的VBR[^1]的地方
+
+[^1]:可变码率VBR(Variable bitrate)VBR和该词相对应的词是固定码率CBR(constant bit rate)/(内容有关数据压缩算法)
+
+---
+
+### LVM(逻辑卷管理器)
+
+**概述:**
+* LVM(Logical Volume Manager)
+* 又译为逻辑卷宗管理器、逻辑扇区管理器、逻辑磁盘管理器
+* 是Linux核心所提供的逻辑卷管理(Logical volume management)功能
+* 它在硬盘的硬盘分区之上，又创建一个逻辑层，以方便系统管理硬盘分割系统
+* 最先由IBM开发，在AIX系统上实现
+
+**LVM基本术语:**
+* PV
+>物理卷，PV处于LVM系统最低层，它可以是整个硬盘，或者与磁盘分区具有相同功能的设备(如RAID)
+>但和基本的物理存储介质相比较，多了与LVM相关管理参数
+
+* VG
+> 卷组，创建在PV之上，由一个或多个PV组成，可以在VG上创建一个或多个"LVM分区"(逻辑卷)
+> 功能类似非LVM系统的物理硬盘
+
+* LV
+> 逻辑卷，从VG中分割出的一块空间，创建之后其大小可以伸缩，在LV上可以创建文件系统(如/var,/home)
+
+* PE
+> 物理区域，每一个PV被划分为基本单元(也被称为PE)，具有唯一编号的PE是可以被LVM寻址的最小存储单元
+> 默认为4MB
+
+---
+
+**相关概念:**
+
+* Linux file system(Linux文件系统)
+* Linux内核支持文件系统
+* Unix文件系统
+* 扩展文件属性
+* 逻辑卷轴管理
+* 引导扇区
+* 磁盘分区
+* 分区表
+
+---
+

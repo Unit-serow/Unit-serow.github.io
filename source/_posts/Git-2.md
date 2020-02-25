@@ -40,9 +40,23 @@ categories: [软件,Git]
 还可以指定克隆的目录
 `git clone repo directory(本地目录)`
 
+---
 
+**Github域名解析地址**
 
+> `$vim /etc/hosts`
+```
+192.30.253.113    github.com
+192.30.252.131 github.com
+185.31.16.185 github.global.ssl.fastly.net
+74.125.237.1 dl-ssl.google.com
+173.194.127.200 groups.google.com
+192.30.252.131 github.com
+185.31.16.185 github.global.ssl.fastly.net
+74.125.128.95 ajax.googleapis.com
+```
 
+---
 
 
 

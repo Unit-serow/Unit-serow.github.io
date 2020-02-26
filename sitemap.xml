@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://unit-serow.github.io/2020/01/29/Autotools/</loc>
+    
+    <lastmod>2020-02-26T14:45:09.914Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://unit-serow.github.io/2020/02/26/LFS-5/</loc>
     
-    <lastmod>2020-02-26T12:43:37.228Z</lastmod>
+    <lastmod>2020-02-26T14:44:24.114Z</lastmod>
     
   </url>
   
@@ -530,13 +537,6 @@
     <loc>https://unit-serow.github.io/2020/02/06/Docker-2/</loc>
     
     <lastmod>2020-02-06T08:55:30.856Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://unit-serow.github.io/2020/01/29/Autotools/</loc>
-    
-    <lastmod>2020-02-04T11:40:15.115Z</lastmod>
     
   </url>
   

@@ -69,6 +69,37 @@ categories: [软件,GNU]
 > v6.3 测试Automake-1.10工具源代码编译文件时出现三个错误，但无伤大雅
 > v6.3 Linux内核编译出现问题(kernel version:2.6.22.5)
 > v6.3 找不到GCC
+---
+* 目标机器内的Glibc标准函数库测试错误问题已解决
+* 目标机器内的GCC编译器问题已解决
+* 目标工具链内的GCC安装与应用测试成功
+* 编译Coreutils-6.9出现两处Error
+> 动态链接库测试中编译帮助文件`man目录`失效
+> `BEGIN failed--compilation aborted at ./help2man line 28`
+> 离开`*/man`目录
+> 已经无视，并且进行代码测试后也是这个问题
+* Procps-3.2.7(Top)
+> `collect2: ld returned 1 exit status`
+> make停止
+> 安装失败
+* Perl-5.8.8
+> 动态链接库测试中编译出现两条错误
+> 并不妨碍正常编译安装，并且编译安装成功
+* Readline-5.2
+> 动态链接库测试中编译出现一条错误
+> 并不妨碍正常编译安装，并且编译安装成功
+* Automake-1.10
+> 动态链接库测试中编译出现三条错误
+> 并不妨碍正常编译安装，并且编译安装成功
+* Psmisc-22.5
+> cannot find tinfo，ncurses or termcap libraries
+> 无法找到无法找到tinfo、ncurses或termcap库
+> 编译失败
+* Udev-113
+> make test测试与安装无错误
+* 到达第七章与第八章之间的退出chroot出现问题
+> 根据LFS官方手册配置，进入新的系统环境下GCC丢失
+> 未解决
 
 ---
 

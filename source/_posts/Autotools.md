@@ -127,3 +127,26 @@ apt-get: apt-get install autoconf*
 以上内容仅为主观理解，仅供参考
 
 ---
+
+### Autoconf-补充内容
+
+**./configure脚本常用参数解释:**
+
+|参数|用途|
+|:---|:---|
+|–help|用于显示帮助信息并退出|
+|-prefix=/home/carl|用于指定安装位置，如果安装位置不指定，默认路径为`/usr/local`下的`bin`,`lib`等文件夹|
+|–build|用于指定此时此刻正在使用的机器，查看本机使用的可以在configure目录下执行`./config.guess`|
+|–host|用于指定编译好的程序可以运行的机器|
+|–target|用于指定编译好的程序可以处理的其他平台[^1]|
+|CC|用于指定编译工具链的名字|
+|CFLAGS|用于指定头文件(`.h`文件)的路径，如: `CFLAGS=-I/usr/include -I/path/include`|
+|LDFLAGS|gcc等编译器会用到的一些优化参数，也可以在里面指定库文件的位置[^2]|
+|LIBS|用于告诉链接器要链接哪些库文件，如: `LIBS = -lpthread -liconv`|
+
+[^1]:比如此时build的机器是x86，想运行的host机器是arm，程序可以处理的程序target是mips
+[^2]:用法: `LDFLAGS=-L/usr/lib -L/path/to/your/lib`
+
+---
+
+

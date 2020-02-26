@@ -239,3 +239,100 @@ categories: [软件,GNU]
 
 ---
 
+### 已解决问题一览
+
+* 如果实在找不到GCC且有难以解决的问题，可以先利用已有的临时主机中的/tools目录来对目标主机进行错误与空白修补
+* 各参数作用这里不做过多赘述，可参考LFS官方手册
+
+---
+
+* 参考自LFS-v6.3版本第6.4-Entering the Chroot Environment至6.59-Stripping Again章节
+* 第七章末尾找不到GCC的问题已解决
+> 需要先完全配置才能去抛离上一级系统目录环境(此时需要脱离的是临时系统)
+> 在第六章开头理解出问题了
+> 在查询了FSL官方的英文文档之后
+> 发现退出chroot的代码只需要执行一遍
+> chroot及附带配置的作用是抛离前(是属于目标系统的)的配置
+> 使用Strip对文件(二进制压缩包)进行清理
+
+**可参考以下指令:**
+
+1. 退出chroot环境:
+> `$logout`
+
+2. 为Strip而进入chroot环境:
+```
+chroot $LFS /tools/bin/env -i \
+    HOME=/root TERM=$TERM PS1='\u:\w\$ ' \
+    PATH=/bin:/usr/bin:/sbin:/usr/sbin \
+    /tools/bin/bash --login
+```
+
+3. Strip:
+```
+/tools/bin/find /{,usr/}{bin,lib,sbin} -type f \
+  -exec /tools/bin/strip --strip-debug '{}' ';'
+```
+
+---
+
+* 摘选自LFS-v6.3/EN-CN(翻译)
+> A large number of files will be reported as having their file format not recognized.
+> These warnings can be safely ignored.
+> These warnings indicate that those files are scripts instead of binaries.
+* 翻译内容:
+> 大量文件将被报告为文件格式无法识别
+> 可以安全地忽略这些警告
+> 这些警告表明这些文件是脚本而不是二进制文件
+
+---
+
+**补充内容:**
+
+* 摘选自FSL官方文档:
+> From now on, when reentering the chroot environment after exiting, use the following modified chroot command:
+```
+chroot "$LFS" /usr/bin/env -i \
+    HOME=/root TERM="$TERM" PS1='\u:\w\$ ' \
+    PATH=/bin:/usr/bin:/sbin:/usr/sbin \
+    /bin/bash --login
+```
+> The reason for this is that the programs in /tools are no longer needed. Since they are no longer needed you can delete the /tools directory if so desired.
+
+* 翻译内容:
+> 从现在开始，退出后重新进入chroot环境时，请使用以下修改后的chroot命令：
+> 这样做的原因是/tools不再需要其中的程序
+> 因为不再需要它们，所以可以根据需要来决定是否去删除/tools目录
+
+---
+
+**补充内容:**
+
+* 6.4章节中描述的带有临时机器中的/tools文件夹的目标机器
+> It is time to enter the chroot environment to begin building and installing the final LFS system. As user root, run the following command to enter the realm that is, at the moment, populated with only the temporary tools:
+* 翻译内容:
+> 现在是时候进入chroot环境开始构建和安装最终的LFS系统了
+> 以user root身份，运行以下命令以输入当前仅由临时工具填充的领域:
+```
+chroot "$LFS" /tools/bin/env -i \
+    HOME=/root TERM="$TERM" PS1='\u:\w\$ ' \
+    PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin \
+    /tools/bin/bash --login +h
+```
+
+---
+
+**参考资料:**
+
+* 6.4 Entering the Chroot Environment[跳转](http://www.linuxfromscratch.org/lfs/view/6.3/chapter06/chroot.html)
+> `http://www.linuxfromscratch.org/lfs/view/6.3/chapter06/chroot.html`
+
+* 6.59. Stripping Again[跳转](http://www.linuxfromscratch.org/lfs/view/6.3/chapter06/strippingagain.html)
+> `http://www.linuxfromscratch.org/lfs/view/6.3/chapter06/strippingagain.html`
+
+* 6.60. Cleaning Up[跳转](http://www.linuxfromscratch.org/lfs/view/6.3/chapter06/revisedchroot.html)
+> `http://www.linuxfromscratch.org/lfs/view/6.3/chapter06/revisedchroot.html`
+
+---
+
+---

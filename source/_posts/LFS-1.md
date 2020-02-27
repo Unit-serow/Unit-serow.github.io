@@ -140,3 +140,46 @@ categories: [软件,GNU]
 
 ---
 
+### 相关内容URL整合目录补充内容
+
+* CN-Chroot[跳转](https://zh.wikipedia.org/wiki/Chroot)
+> `https://zh.wikipedia.org/wiki/Chroot`
+
+* CN-Linux内核功能[跳转](https://zh.wikipedia.org/wiki/Category:Linux%E5%86%85%E6%A0%B8%E5%8A%9F%E8%83%BD)
+> `https://zh.wikipedia.org/wiki/Category:Linux%E5%86%85%E6%A0%B8%E5%8A%9F%E8%83%BD`
+
+* CN-金步国的`Linux-4.4-x86_64`内核配置选项简介[跳转](http://www.jinbuguo.com/kernel/longterm-linux-kernel-options.html)
+> `http://www.jinbuguo.com/kernel/longterm-linux-kernel-options.html`
+
+* CN-Unix实用程序列表[跳转](https://zh.wikipedia.org/wiki/Unix%E5%AE%9E%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%88%97%E8%A1%A8)
+> `https://zh.wikipedia.org/wiki/Unix%E5%AE%9E%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%88%97%E8%A1%A8`
+
+* EN-Linux From Scratch(Version 9.1-systemd-rc1)[跳转](http://www.linuxfromscratch.org/lfs/downloads/9.1-systemd-rc1/LFS-BOOK-9.1-rc1-NOCHUNKS.html)
+> Published February 14th, 2020
+> `http://www.linuxfromscratch.org/lfs/downloads/9.1-systemd-rc1/LFS-BOOK-9.1-rc1-NOCHUNKS.html`
+
+---
+
+* EN-Index of /lfs/downloads/9.1-systemd-rc1[跳转](http://www.linuxfromscratch.org/lfs/downloads/9.1-systemd-rc1/)
+> `http://www.linuxfromscratch.org/lfs/downloads/9.1-systemd-rc1/`
+
+* EN-Download the Linux From Scratch Book[跳转](http://www.linuxfromscratch.org/lfs/download.html)
+> `http://www.linuxfromscratch.org/lfs/download.html`
+
+* CN-LFS(v9.0)[跳转](https://lctt.github.io/LFS-BOOK/lfs-systemd/LFS-SYSD-BOOK.pdf)
+> `https://lctt.github.io/LFS-BOOK/lfs-systemd/LFS-SYSD-BOOK.pdf`
+
+* EN-The Linux From Scratch Counter[跳转](http://www.linuxfromscratch.org/cgi-bin/lfscounter.php)
+> `http://www.linuxfromscratch.org/cgi-bin/lfscounter.php`
+
+* EN-Linux Sea[跳转](http://swift.siphos.be/linux_sea/)
+> `http://swift.siphos.be/linux_sea/`
+
+* EN-其它发行版[Gentoo](http://www.gentoo.org/)[Funtoo](https://www.funtoo.org/Welcome)
+> Gentoo: `http://www.gentoo.org/`
+> Funtoo: `https://www.funtoo.org/Welcome`
+
+---
+
+
+

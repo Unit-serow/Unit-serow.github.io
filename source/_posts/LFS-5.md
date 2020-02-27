@@ -1,7 +1,7 @@
 ---
 title: LFS-5
 date: 2020-02-26 04:21:50
-tags: [随笔.GNU/Linux]
+tags: [随笔,GNU/Linux]
 categories: [软件,GNU]
 ---
 
@@ -341,4 +341,5 @@ chroot "$LFS" /tools/bin/env -i \
 
 ---
 
----
+
+

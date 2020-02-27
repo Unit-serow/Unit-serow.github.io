@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://unit-serow.github.io/2020/02/27/Toolchain-GNU-toolchain/</loc>
+    <loc>https://unit-serow.github.io/2020/02/22/LFS-1/</loc>
     
-    <lastmod>2020-02-27T14:00:05.546Z</lastmod>
+    <lastmod>2020-02-27T17:07:45.530Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://unit-serow.github.io/2020/02/26/LFS-5/</loc>
     
-    <lastmod>2020-02-27T13:58:09.872Z</lastmod>
+    <lastmod>2020-02-27T17:06:48.242Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://unit-serow.github.io/2020/02/22/LFS-1/</loc>
+    <loc>https://unit-serow.github.io/2020/02/28/GNU-GRUB/</loc>
     
-    <lastmod>2020-02-27T13:57:35.779Z</lastmod>
+    <lastmod>2020-02-27T17:06:05.278Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://unit-serow.github.io/2020/02/27/Toolchain-GNU-toolchain/</loc>
+    
+    <lastmod>2020-02-27T14:00:05.546Z</lastmod>
     
   </url>
   

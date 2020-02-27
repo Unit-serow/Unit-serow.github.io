@@ -8,6 +8,7 @@ categories: [软件,GNU]
 ## 工具链基本概念简述-1
 
 * 此模块只做简单的概述与对于概念的浅层理解
+* 工具环境所需要的包这里不做过多赘述(与工具链无关)
 
 ---
 
@@ -199,4 +200,68 @@ categories: [软件,GNU]
 
 
 ---
+
+## 补充内容
+
+### 工具链技术实现
+
+* GNU 工具链
+
+### 工具链的使用方式
+
+* 工具链的目的是提供一个临时可用的编译工作环境，通过chroot来完成在工具环境中进行开发、编译、制作工作
+* 为了制作出干净、可移植的工具环境，建议创建一个专用于制作工具链的用户，这也是LFS推荐的
+
+* 在使用工具链之前，此时的本地环境身份应该是root
+* 首先挂载虚拟文件系统，然后进入到chroot环境中
+
+1. **挂载虚拟文件系统**
+
+* 可以将以下代码保存为相应的Shell脚本文件，添加执行权限即可使用
+* 使用顺序是先挂载虚拟文件系统、后进入chroot环境
+
+* 下方代码只适用于LFS的构建，可根据需求做适当的变量替换，原理和步骤是相同的
+```
+#!/bin/bash
+
+mount -o bind /dev $LFS/dev
+mount -t devpts devpts $LFS/dev/pts -o gid=5,mode=620
+mount -t proc proc $LFS/proc
+mount -t sysfs sysfs $LFS/sys
+
+if [ -h $LFS/dev/shm ]; then
+  link=$(readlink $LFS/dev/shm)
+  mkdir -p $LFS/$link
+  mount -t tmpfs shm $LFS/$link
+  unset link
+else
+  mount -t tmpfs shm $LFS/dev/shm
+fi
+```
+
+2. 进入到Chroot环境执行以下代码:
+
+```
+#!/bin/bash
+
+chroot "$LFS" /tools/bin/env -i \
+    HOME=/root                  \
+    TERM="$TERM"                \
+    PS1='\u:\w\$ '              \
+    PATH=/tools/bin:/tools/sbin:/bin:/usr/bin:/sbin:/usr/sbin \
+    /tools/bin/bash --login +h
+```
+
+---
+
+* Linux From Scratch (简体中文版/版本: 9.0)[跳转](https://lctt.github.io/LFS-BOOK/lfs-sysv/LFS-BOOK.pdf)
+> Chapter (5.x. 构建临时系统) 与 (5.2. 工具链技术说明)
+> `https://lctt.github.io/LFS-BOOK/lfs-sysv/LFS-BOOK.pdf`
+
+* 工具链技术分析与实现(GNU 工具链)[跳转](https://www.cnblogs.com/Leo_wl/p/3405580.html)
+> `https://www.cnblogs.com/Leo_wl/p/3405580.html`
+
+---
+
+
 

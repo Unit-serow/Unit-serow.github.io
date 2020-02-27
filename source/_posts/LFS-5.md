@@ -322,6 +322,12 @@ chroot "$LFS" /tools/bin/env -i \
 
 ---
 
+**重点内容-1**
+* 6.2.章节 准备虚拟内核文件系统
+* 6.22章节 挂载和激活/dev
+
+---
+
 **参考资料:**
 
 * 6.4 Entering the Chroot Environment[跳转](http://www.linuxfromscratch.org/lfs/view/6.3/chapter06/chroot.html)

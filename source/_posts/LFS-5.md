@@ -328,6 +328,19 @@ chroot "$LFS" /tools/bin/env -i \
 
 ---
 
+**解决思路:**
+
+* 把/tools的内容转到`/usr`内
+> 为什么`cc/gcc`工具会不生效
+> `GCC/Binutils/Glibc/Linux-2.6.22.5`已成功编译并安装入目标主机的`/usr`或`/usr/bin`文件目录内
+> 每次的重新开始都是对经验的不断累积
+* 孙海勇在LinuxSir上的LFS教程-26-27页与29页
+* `LFS 7.4 chapter 6.7: make: gcc: Command not found`[跳转](https://unix.stackexchange.com/questions/110184/lfs-7-4-chapter-6-7-make-gcc-command-not-found)
+> LFS 7.4-第6.7章:make: gcc: 找不到命令
+> `https://unix.stackexchange.com/questions/110184/lfs-7-4-chapter-6-7-make-gcc-command-not-found`
+
+---
+
 **参考资料:**
 
 * 6.4 Entering the Chroot Environment[跳转](http://www.linuxfromscratch.org/lfs/view/6.3/chapter06/chroot.html)

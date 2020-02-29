@@ -333,7 +333,36 @@ esac
 
 ---
 
+### 补充内容-1
+
+* 在LFS-v6.3版本中
+* 这里要注意第一遍编译的时候编译器参数需要指定:`CC="gcc -B/usr/bin/`
+> 用以强制gcc使用宿主系统中/usr/bin目录下的连接器
+
+* ld-GNU链接器
+
+* 在第一次工具链调整之后需要进行一次可用性测试
+* 在第二次编译安装完成GCC后需要进行一次可用性测试
+
+* 测试组件
+> Tcl-8.4.15
+> Expect-5.43.0
+> DejaGNU-1.4.4 
+
+---
+
+###  参考资料
+
 * 参考自LFS-v9.0第5.5章节
+
+* LFS-v9.0[跳转](https://lctt.github.io/LFS-BOOK/lfs-sysv/LFS-BOOK.pdf)
+> `https://lctt.github.io/LFS-BOOK/lfs-sysv/LFS-BOOK.pdf`
+
+* LFS-v6.2
+> 参考金步国的中文译本
+
+* LFS-v6.3
+> 参考孙海勇的中文译本
 
 ---
 

@@ -39,6 +39,9 @@ categories: [软件,GNU]
 > `$mkfs.ext4/ext3 /dev/sda2`
 > `$mkfs -v -t ext3 /dev/sda2`
 
+* 格式化为ext3文件系统
+> `mke2fs -jv /dev/<xxx>`
+
 **相关实例与指令具体说明:**
 * 前者为标准格式，后者为实例
 * 在原主机磁盘上创建新分区

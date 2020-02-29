@@ -268,5 +268,74 @@ $ rm -rf gcc-4.1.2
 
 ---
 
+### 补充内容
+
+**对于9.2.0版本的GCC的补充内容**
+
+* 需要GMP，MPFR和MPC 软件包
+* 在本地的主机发行版中可能并不包括这些软件包，它们将和GCC一起编译
+
+* 将每个解压软件包到 GCC 的目录下，并重命名解压后得到的目录，以便GCC编译过程中能自动使用这些软件
+* 执行以下命令:
+```
+$ tar -xf ../mpfr-4.0.2.tar.xz
+$ mv -v mpfr-4.0.2 mpfr 
+$ tar -xf ../gmp-6.1.2.tar.xz
+$ mv -v gmp-6.1.2 gmp
+$ tar -xf ../mpc-1.1.0.tar.gz
+$ mv -v mpc-1.1.0 mpc
+```
+
+* 下面的指令将会修改GCC默认的动态链接器的位置，安装到`/tools`目录中的
+* 并将`/usr/include`从GCC的include检索路径中移除
+* 执行以下命令:
+```
+$ for file in gcc/config/{linux,i386/linux{,64}}.h 
+do  
+cp -uv $file{,.orig}  
+sed -e 's@/lib\(64\)\?\(32\)\?/ld@/tools&@g' \
+-e 's@/usr@/tools@g' $file.orig > $file  
+echo ' 
+#undef STANDARD_STARTFILE_PREFIX_1 
+#undef STANDARD_STARTFILE_PREFIX_2 
+#define STANDARD_STARTFILE_PREFIX_1 "/tools/lib/" 
+#define STANDARD_STARTFILE_PREFIX_2 ""' >> $file  
+touch $file.orig 
+done
+```
+
+---
+
+**参数解析:**
+
+**执行逻辑说明:**
+1. 首先复制文件`gcc/config/linux. h`,`gcc/config/i386/linux.h`，和`gcc/config/i368/linux64.h`
+2. 然后给复制的文件加上`.orig`后缀
+3. 然后第一个sed表达式在每个`/lib/ld`,`/lib64/ld`或者`/lib32/ld`实例前面增加`/tools`
+> 第二个sed表达式替换`/usr`的硬编码实例
+4. 然后添加这改变默认`startfile前缀`到文件末尾的定义语句
+> 此时需要注意`/tools/lib/`后面的`/`是必须的
+5. 最后用`touch`更新复制文件的时间戳
+> 当与`cp -u`一起使用时，可以防止命令被无意中运行两次造成对原始文件意外的更改
+
+---
+
+* 在`x86_64`的主机上，为64位的库设置默认目录名至[lib]:
+* 执行以下命令:
+```
+$ case $(uname -m) in  
+x86_64)
+sed -e '/m64=/s/lib64/lib/' \        
+-i.orig gcc/config/i386/t-linux64 
+;; 
+esac
+```
+
+---
+
+* 参考自LFS-v9.0第5.5章节
+
+---
+
 
 

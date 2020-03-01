@@ -181,5 +181,63 @@ categories: [软件,GNU]
 
 ---
 
+### LFS补充内容
+
+* 相关书籍列表
+
+* 《Linux From Scratch》（LFS）
+---
+* 《Beyond Linux From Scratch》（BLFS）
+* 提供了在LFS的基础上，进一步完善Linux基本系统的指引
+* 在BLFS中，为系统增加网络、X桌面、声音、打印机和扫描仪支持
+> 标准LFS仅仅安装了足够让系统启动的基本软件，以及使新系统能够编译新软件包的开发工具
+> BLFS包括了更多的软件包，且都有相应指导
+> 从5.0版开始，BLFS开始与LFS的版本号保持同步
+---
+* 《Cross Linux from Scratch》（CLFS）
+* 用于描述交叉编译
+* 为需要进行交叉编译(即在一个平台上编译另一个平台的代码)的用户提供指导，正式版本为1.0，另有两个变种
+> 《CLFS Sysroot》 采用Sysroot的方法来进行编译，好处是软件包的编译次数可以减少，坏处是不能支持在编译后对软件进行测试，必须要启动到目标平台上才能测试
+> 《CLFS Embedded》 一般用于极小系统以及嵌入式系统
+> 为此，它使用uclibc而不是一般LFS使用的glibc
+> 该项目已停止维护，其官网已无法访问
+
+* 《Hardened Linux From Scratch》（HLFS）
+* 此书专注于Linux系统的安全
+> 这个子项目致力于打造在安全性上无懈可击的Linux系统
+---
+* 《Automated Linux From Scratch》（ALFS）
+* 标准的LFS只是一本书，用户需要根据书上的指引下载软件包并手动输入指令进行编译
+> ALFS子项目提供了把这一切自动化的脚本
+---
+* Hints
+> 收集一些解释性、增强性的文档，以协助用户
+---
+* LiveCD
+> 利用LFS的方法生成可以自行启动并安装了足够软件的CD
+> 可以用来在空机器上安装LFS，或者直接在其上运行应用
+> 已经停止维护
+---
+* Patches
+> 由于软件之间的依赖关系，在升级软件包之后可能会导致LFS的过程出现故障
+> Patch项目致力于研究最新版本的软件之间的互动，并提供一些补丁修复这些故障
+---
+* 《Community Driven BLFS》(CBLFS)
+> 该项目实际是一个Wiki网站
+> 依靠网友的自发贡献来提交各种软件包的安装方式
+
+---
+
+### 参考资料:
+
+* CN-中文维基[跳转](https://zh.wikipedia.org/wiki/Linux_From_Scratch)
+> `https://zh.wikipedia.org/wiki/Linux_From_Scratch`
+
+* LFS官方网站[跳转](http://www.linuxfromscratch.org/lfs/)
+> `http://www.linuxfromscratch.org/`
+> `http://www.linuxfromscratch.org/lfs/`
+
+---
+
 
 

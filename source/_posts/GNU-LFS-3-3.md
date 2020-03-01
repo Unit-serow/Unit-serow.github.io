@@ -113,6 +113,7 @@ categories: [软件,GNU]
 **进入chroot环境**
 
 * Chroot到目标系统的目录下，以便不受主系统的影响来制作目标系统 
+
 ```
 $ chroot "$LFS" /tools/bin/env -i \ 
 HOME=/root TERM="$TERM" PS1='\u:\w\$ ' \ 
@@ -143,7 +144,7 @@ PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin \
 
 **创建符合FHS标准的Unix文件系统**
 
-**创建系统目录结构(FHS标准目录树)**
+**创建系统目录结构(FHS标准目录树):**
 
 > `$ mkdir -pv /{bin,boot,etc/opt,home,lib,mnt,opt}`
 > `$ mkdir -pv /{media/{floppy,cdrom},sbin,srv,var}` 
@@ -153,11 +154,13 @@ PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin \
 > `$ mkdir -pv /usr/{,local/}share/{doc,info,locale,man}`
 > `$ mkdir -pv /usr/{,local/}share/{misc,terminfo,zoneinfo}` 
 > `$ mkdir -pv /usr/{,local/}share/man/man{1..8}` 
+
 ```
 $ for dir in /usr /usr/local; do
 ln -sv share/{man,doc,info} $dir
 done
-``` 
+```
+
 > `$ mkdir -pv /var/{lock,log,mail,run,spool}`
 > `$ mkdir -pv /var/{opt,cache,lib/{misc,locate},local}`
 
@@ -165,7 +168,7 @@ done
 
 **创建必需的文件与符号连接**
 
-* 一些程序使用固化的路径(hard-wired paths)指向一些目前还不存在的程序上
+* 一些程序使用固化的路径(`hard-wired paths`)指向一些目前还不存在的程序上
 * 为了兼容这些程序，可以创建一些符号链接
 * 然后在软件安装之后用实际文件进行替代
 
@@ -194,14 +197,19 @@ done
 
 * 为了让`root用户`可以登录而且`用户名root`可以被识别
 * 在这里需要创建相应的`/etc/passwd`和`/etc/group`文件
+
 ```
 $ cat > /etc/passwd << "EOF"
 root:x:0:0:root:/root:/bin/bash 
 EOF
 ```
+
 * 此时root的真正密码将在后面设置(`"x"`在这里只是一个占位符)
 
-* 令创建/etc/group文件(LFS-v6.2):
+---
+
+* 使用以下命令创建/etc/group文件(LFS-v6.2):
+
 ```
 $ cat > /etc/group << "EOF"
 root:x:0: 
@@ -229,12 +237,14 @@ EOF
 ---
 
 **创建`root`及`nobody用户`和必要的组(LFS-v6.3):**
+
 ```
 $ cat > /etc/passwd << "EOF" 
 root:x:0:0:root:/root:/bin/bash 
 nobody:x:99:99:Unprivileged User:/dev/null:/bin/false 
 EOF
-``` 
+```
+ 
 ```
 $ cat > /etc/group << "EOF" 
 root:x:0: 

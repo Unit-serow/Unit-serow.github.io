@@ -103,3 +103,59 @@ windows
 
 ---
 
+### 补充内容
+
+**硬盘的物理结构描述与图解:**
+
+* 磁盘的物理结构图例-1
+
+<img src="/images/disk-images/磁盘-1.png" width="20%" height="20%">
+
+* 磁道(Track)
+* 柱面(Cylinder)
+* 扇区(Sector)
+* 磁头(Heads)
+* 盘片(Platters)
+* 每个碟片都有两面，因此也会相对应每碟片有2个磁头
+
+---
+
+* 磁盘的物理结构图例-2
+
+<img src="/images/disk-images/磁盘-6.png" width="20%" height="20%">
+
+* A: 磁道
+* B: 扇面
+* C: 扇区
+* D: 簇(扇区组)
+* 在硬盘上定位某一数据记录位置—C扇区，使用了三维定位
+
+---
+
+* 其它磁盘物理结构有关图片
+
+<img src="/images/disk-images/磁盘-2.png" width="20%" height="20%">
+
+<img src="/images/disk-images/磁盘-3.png" width="20%" height="20%">
+
+<img src="/images/disk-images/磁盘-4.png" width="20%" height="20%">
+
+<img src="/images/disk-images/磁盘-5.png" width="20%" height="20%">
+
+---
+
+**图片来源:**
+
+* CN-简书[跳转](https://www.jianshu.com/p/42308db1fcde)
+> `https://www.jianshu.com/p/42308db1fcde`
+
+* CN Wiki-GPT[跳转](https://zh.wikipedia.org/wiki/GUID%E7%A3%81%E7%A2%9F%E5%88%86%E5%89%B2%E8%A1%A8)
+> `https://zh.wikipedia.org/wiki/GUID%E7%A3%81%E7%A2%9F%E5%88%86%E5%89%B2%E8%A1%A8`
+
+* CN Wiki-磁盘[跳转](https://zh.wikipedia.org/wiki/%E7%A1%AC%E7%9B%98)
+> `https://zh.wikipedia.org/wiki/%E7%A1%AC%E7%9B%98`
+
+---
+
+
+

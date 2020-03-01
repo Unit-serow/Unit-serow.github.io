@@ -1,0 +1,42 @@
+next\source\css\_schemes\Gemini\index.styl
+
+.post-block背景设置为rgba(255,255,255,0.5)
+0.5是透明度可以自己调整
+
+<img src="/images/磁盘-1.png" width="20%" height="20%">
+
+GPT说明
+此例中，每个逻辑块(LBA)为512字节，每个分区的记录为128字节
+负数的LBA地址表示从最后的块开始倒数，-1表示最后一个块
+
+图片来源
+
+简书
+https://www.jianshu.com/p/42308db1fcde
+
+GPT
+https://zh.wikipedia.org/wiki/GUID%E7%A3%81%E7%A2%9F%E5%88%86%E5%89%B2%E8%A1%A8
+
+磁盘
+https://zh.wikipedia.org/wiki/%E7%A1%AC%E7%9B%98
+
+磁盘-1说明
+磁道(Track)
+柱面(Cylinder)
+扇区(Sector)
+磁头(Heads)
+盘片(Platters)
+每个碟片都有两面，因此也会相对应每碟片有2个磁头
+
+磁盘-6说明
+A: 磁道
+B: 扇面
+C: 扇区
+D: 簇(扇区组)
+在硬盘上定位某一数据记录位置—C扇区，使用了三维定位
+
+
+
+
+
+

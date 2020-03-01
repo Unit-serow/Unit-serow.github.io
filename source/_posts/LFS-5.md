@@ -103,6 +103,28 @@ categories: [软件,GNU]
 
 ---
 
+**错误补充**
+
+* Coreutils-6.9动态库链接的测试编译有一处错误，原因关于man
+* perl-5.8.8的test测试出现未知错误两处(测试静态库)
+* automake-1.10
+> 动态库链接测试编译出现三处错误
+> [check-TESTS] ERROR 1
+> [check-am] Error 2
+> [check-recursive] Error 3
+> 但能顺利结束并编译安装
+* Findutils-4.2.31 
+> 编译测试出现三次错误
+> check-DEJAGNU Error 1
+> check-am Error 2
+> [check-recursive] Error 3
+* IPRoute2-2.6.20-070313
+> 编译错误
+> [arpd] Error1
+> [all] Error 2
+
+---
+
 ### 参考资料
 
 * 开源中国[跳转](https://www.oschina.net/)
@@ -137,105 +159,105 @@ categories: [软件,GNU]
 
 ### 重要工具与程序简述(小部分/最新版本):
 
-* Glibc (2.30) - 16,189 KB:
+* `Glibc (2.30) - 16,189 KB:`
 > 主页: `http://www.gnu.org/software/libc/`
 > 下载: `http://ftp.gnu.org/gnu/glibc/glibc-2.30.tar.xz`
 > MD5 校验和: `2b1dbdf27b28620752956c061d62f60c`
 
-* GCC (9.2.0) - 68,953 KB:
+* `GCC (9.2.0) - 68,953 KB:`
 > 主页: `https://gcc.gnu.org/`
 > 下载: `http://ftp.gnu.org/gnu/gcc/gcc-9.2.0/gcc-9.2.0.tar.xz`
 > MD5 校验和: `3818ad8600447f05349098232c2ddc78`
 
-* Linux (5.2.8) - 104,555 KB:
+* `Linux (5.2.8) - 104,555 KB:`
 > 主页: `https://www.kernel.org/`
 > 下载: `https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.2.8.tar.xz`
 > MD5 校验和: `602dd0ecb8646e539fefb2beb6eb6fe0`
 
-* Binutils (2.32) - 20,288 KB:
+* `Binutils (2.32) - 20,288 KB:`
 > 主页: `http://www.gnu.org/software/binutils/`
 > 下载: `http://ftp.gnu.org/gnu/binutils/binutils-2.32.tar.xz`
 > MD5 校验和: `0d174cdaf85721c5723bf52355be41e6`
 
-* GRUB (2.04) - 6,245 KB:
+* `GRUB (2.04) - 6,245 KB:`
 > 主页: `http://www.gnu.org/software/grub/`
 > 下载: `https://ftp.gnu.org/gnu/grub/grub-2.04.tar.xz`
 > MD5 校验和: `5aaca6713b47ca2456d8324a58755ac7`
 
-* LFS-Bootscripts (20190524) - 32 KB:
+* `LFS-Bootscripts (20190524) - 32 KB:`
 > 下载: `http://www.linuxfromscratch.org/lfs/downloads/9.0/lfs-bootscripts-20190524.tar.xz`
 > MD5 校验和: `c91b11e366649c9cec60c2552820fed5`
 
 ---
 
-* Autoconf (2.69) - 1,186 KB:
-> 主页： http://www.gnu.org/software/autoconf/
-> 下载： http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.xz
-> MD5 校验和： 50f97f4159805e374639a73e2636f22e
+* `Autoconf (2.69) - 1,186 KB:`
+> 主页：` http://www.gnu.org/software/autoconf/`
+> 下载：`http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.xz`
+> MD5 校验和：`50f97f4159805e374639a73e2636f22e`
 
-* Automake (1.16.1) - 1,499 KB:
-> 主页： http://www.gnu.org/software/automake/
-> 下载： http://ftp.gnu.org/gnu/automake/automake-1.16.1.tar.xz
-> MD5 校验和： 53f38e7591fa57c3d2cee682be668e5b
+* `Automake (1.16.1) - 1,499 KB:`
+> 主页：`http://www.gnu.org/software/automake/`
+> 下载：` http://ftp.gnu.org/gnu/automake/automake-1.16.1.tar.xz`
+> MD5 校验和：`53f38e7591fa57c3d2cee682be668e5b`
 
-* Bash (5.0) - 9,898 KB:
-> 主页： http://www.gnu.org/software/bash/
-> 下载： http://ftp.gnu.org/gnu/bash/bash-5.0.tar.gz
-> MD5 校验和： 2b44b47b905be16f45709648f671820b
+* `Bash (5.0) - 9,898 KB:`
+> 主页：`http://www.gnu.org/software/bash/`
+> 下载：` http://ftp.gnu.org/gnu/bash/bash-5.0.tar.gz`
+> MD5 校验和：`2b44b47b905be16f45709648f671820b`
 
-* File (5.37) - 867 KB:
-> 主页： https://www.darwinsys.com/file/
-> 下载： ftp://ftp.astron.com/pub/file/file-5.37.tar.gz
-> MD5 校验和： 80c29aca745466c6c24d11f059329075
+* `File (5.37) - 867 KB:`
+> 主页：`https://www.darwinsys.com/file/`
+> 下载: `ftp://ftp.astron.com/pub/file/file-5.37.tar.gz`
+> MD5 校验和： `80c29aca745466c6c24d11f059329075`
 
-* Libtool (2.4.6) - 951 KB:
-> 主页： http://www.gnu.org/software/libtool/
-> 下载： http://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz
-> MD5 校验和： 1bfb9b923f2c1339b4d2ce1807064aa5
+* `Libtool (2.4.6) - 951 KB:`
+> 主页：`http://www.gnu.org/software/libtool/`
+> 下载：`http://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz`
+> MD5 校验和：`1bfb9b923f2c1339b4d2ce1807064aa5`
 
-* M4 (1.4.18) - 1,180 KB:
-> 主页： http://www.gnu.org/software/m4/
-> 下载： http://ftp.gnu.org/gnu/m4/m4-1.4.18.tar.xz
-> MD5 校验和： 730bb15d96fffe47e148d1e09235af82
+* `M4 (1.4.18) - 1,180 KB:`
+> 主页：`http://www.gnu.org/software/m4/`
+> 下载：`http://ftp.gnu.org/gnu/m4/m4-1.4.18.tar.xz`
+> MD5 校验和：`730bb15d96fffe47e148d1e09235af82`
 
-* Make (4.2.1) - 1,932 KB:
-> 主页： http://www.gnu.org/software/make/
-> 下载： http://ftp.gnu.org/gnu/make/make-4.2.1.tar.gz
-> MD5 校验和： 7d0dcb6c474b258aab4d54098f2cf5a7
+* `Make (4.2.1) - 1,932 KB:`
+> 主页：`http://www.gnu.org/software/make/`
+> 下载：`http://ftp.gnu.org/gnu/make/make-4.2.1.tar.gz`
+> MD5 校验和：`7d0dcb6c474b258aab4d54098f2cf5a7`
 
-* OpenSSL (1.1.1c) - 8,657 KB:
->主页： https://www.openssl.org/
-> 下载： https://www.openssl.org/source/openssl-1.1.1c.tar.gz
-> MD5 校验和： 15e21da6efe8aa0e0768ffd8cd37a5f6
+* `OpenSSL (1.1.1c) - 8,657 KB:`
+>主页：`https://www.openssl.org/`
+> 下载：`https://www.openssl.org/source/openssl-1.1.1c.tar.gz`
+> MD5 校验和：`15e21da6efe8aa0e0768ffd8cd37a5f6`
 
 ---
 
-* Gawk (5.0.1) - 3,063 KB:
-> 主页： http://www.gnu.org/software/gawk/
-> 下载： http://ftp.gnu.org/gnu/gawk/gawk-5.0.1.tar.xz
-> MD5 校验和： f9db3f6715207c6f13719713abc9c707
+* `Gawk (5.0.1) - 3,063 KB:`
+> 主页：`http://www.gnu.org/software/gawk/`
+> 下载：`http://ftp.gnu.org/gnu/gawk/gawk-5.0.1.tar.xz`
+> MD5 校验和：`f9db3f6715207c6f13719713abc9c707`
 
-* Util-linux (2.34) - 4,859 KB:
-> 主页： http://freecode.com/projects/util-linux
-> 下载： https://www.kernel.org/pub/linux/utils/util-linux/v2.34/util-linux-2.34.tar.xz
-> MD5 校验和： a78cbeaed9c39094b96a48ba8f891d50
+* `Util-linux (2.34) - 4,859 KB:`
+> 主页：`http://freecode.com/projects/util-linux`
+> 下载：`https://www.kernel.org/pub/linux/utils/util-linux/v2.34/util-linux-2.34.tar.xz`
+> MD5 校验和：`a78cbeaed9c39094b96a48ba8f891d50`
 
-* Zlib (1.2.11) - 457 KB:
->主页： https://www.zlib.net/
->下载： https://zlib.net/zlib-1.2.11.tar.xz
-> MD5 校验和： 85adef240c5f370b308da8c938951a68
+* `Zlib (1.2.11) - 457 KB:`
+>主页：`https://www.zlib.net/`
+>下载：`https://zlib.net/zlib-1.2.11.tar.xz`
+> MD5 校验和：`85adef240c5f370b308da8c938951a68`
 
 ---
 
 **补丁:**
 
-* Coreutils 国际化修复补丁 - 168 KB:
-> 下载： http://www.linuxfromscratch.org/patches/lfs/9.0/coreutils-8.31-i18n-1.patch
-> MD5 校验和： a9404fb575dfd5514f3c8f4120f9ca7d
+* `Coreutils 国际化修复补丁 - 168 KB:`
+> 下载：`http://www.linuxfromscratch.org/patches/lfs/9.0/coreutils-8.31-i18n-1.patch`
+> MD5 校验和：`a9404fb575dfd5514f3c8f4120f9ca7d`
 
-* Glibc FHS 补丁 - 2.8 KB:
-> 下载： http://www.linuxfromscratch.org/patches/lfs/9.0/glibc-2.30-fhs-1.patch
-> MD5 校验和： 9a5997c3452909b1769918c759eff8a2
+* `Glibc FHS 补丁 - 2.8 KB:`
+> 下载：`http://www.linuxfromscratch.org/patches/lfs/9.0/glibc-2.30-fhs-1.patch`
+> MD5 校验和：`9a5997c3452909b1769918c759eff8a2`
 
 ---
 

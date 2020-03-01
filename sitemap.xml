@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://unit-serow.github.io/2020/02/28/Disk/</loc>
+    
+    <lastmod>2020-03-01T01:18:35.035Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://unit-serow.github.io/2020/03/01/test-1/</loc>
+    
+    <lastmod>2020-03-01T01:11:46.228Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://unit-serow.github.io/2020/03/01/LFS-9/</loc>
     
     <lastmod>2020-02-29T20:45:36.448Z</lastmod>
@@ -89,13 +103,6 @@
     <loc>https://unit-serow.github.io/2020/02/26/LFS-5/</loc>
     
     <lastmod>2020-02-28T03:11:00.406Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://unit-serow.github.io/2020/02/28/Disk/</loc>
-    
-    <lastmod>2020-02-28T03:09:31.104Z</lastmod>
     
   </url>
   

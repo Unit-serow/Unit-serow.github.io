@@ -153,6 +153,9 @@ categories: [软件,GNU]
 > minor mode 
 * 编程/编译环境
 
+* 在已经可以确定安装完成emacs之后，从Github仓库拉取spacemacs拓展
+> `git clone --recursive https://github.com/syl20bnr/spacemacs ~/.emacs.d`
+
 ---
 
 **参考文献:**
@@ -179,6 +182,19 @@ https://github.com/syl20bnr/spacemacs.git
 
 * CSND某博客[跳转](https://blog.csdn.net/csfreebird/article/details/52744771)
 > `https://blog.csdn.net/csfreebird/article/details/52744771`
+
+---
+
+**可参考资源补充:**
+
+* EN-手册地址[跳转](https://github.com/syl20bnr/spacemacs#linux-distros)
+> `https://github.com/syl20bnr/spacemacs#linux-distros`
+
+* CSDN-使用`.emacs.d`目录管理Emacs配置文件[跳转](https://blog.csdn.net/gxp/article/details/6970464)
+> `https://blog.csdn.net/gxp/article/details/6970464`
+
+* 某个人博客[跳转](https://bitmingw.com/2017/03/02/spacemacs-install-configuration/)
+> `https://bitmingw.com/2017/03/02/spacemacs-install-configuration/`
 
 ---
 

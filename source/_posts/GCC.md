@@ -45,11 +45,15 @@ GCC的作用是将源代码生成可执行文件大体需要四个步骤:
 ---
 **参考:**
 
-官方网站[跳转](https://gcc.gnu.org)
-`https://gcc.gnu.org/`
+* 官方网站[跳转](https://gcc.gnu.org)
+> `https://gcc.gnu.org/`
 
-获取
-`apt-get install gcc*`
+* 获取:
+> `apt-get install gcc*`
 
-涉及编译器深层原理的内容此章节不做阐述
+* 涉及编译器深层原理的内容此章节不做阐述
+
+---
+
+
 

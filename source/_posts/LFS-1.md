@@ -239,5 +239,69 @@ categories: [软件,GNU]
 
 ---
 
+### 相关书籍URL补充
+
+---
+
+**ALFS**
+
+* 仓库[跳转](http://www.linuxfromscratch.org/alfs/downloads/jhalfs/stable/)
+> `http://www.linuxfromscratch.org/alfs/downloads/jhalfs/stable/`
+
+* 官网[跳转](http://www.linuxfromscratch.org/alfs/download.html)
+> `http://www.linuxfromscratch.org/alfs/download.html`
+
+---
+
+**BLFS**
+
+* BLFS-v9.1[跳转](http://www.linuxfromscratch.org/blfs/downloads/stable/BLFS-BOOK-9.1-nochunks.html)
+> `http://www.linuxfromscratch.org/blfs/downloads/stable/BLFS-BOOK-9.1-nochunks.html`
+
+* 仓库[跳转](http://www.linuxfromscratch.org/blfs/downloads/)
+> `http://www.linuxfromscratch.org/blfs/downloads/`
+
+* 官网[跳转](http://www.linuxfromscratch.org/blfs/download.html)
+> `http://www.linuxfromscratch.org/blfs/download.html`
+
+---
+
+**CLFS**
+
+* 官网[跳转](https://trac.clfs.org/)
+> `https://trac.clfs.org/`
+
+* 下载界面[跳转](https://trac.clfs.org/wiki/download)
+> `https://trac.clfs.org/wiki/download`
+
+**CLFS书籍获取**
+
+* 稳定版
+* CLFS 3.0.0 - Systemd
+> `$ git clone git://git.clfs.org/cross-lfs.git`
+> `$ cd cross-lfs`
+> `$ git checkout clfs-3.0.0-systemd`
+
+* 稳定版
+* CLFS 3.0.0 - Sysvinit
+> `$ git clone git://git.clfs.org/cross-lfs.git`
+> `$ cd cross-lfs`
+> `$ git checkout clfs-3.0.0-sysvinit`
+
+---
+
+**其它可用参考资源:**
+
+* EN-手册地址[跳转](https://github.com/syl20bnr/spacemacs#linux-distros)
+> `https://github.com/syl20bnr/spacemacs#linux-distros`
+
+* CSDN-使用`.emacs.d`目录管理Emacs配置文件[跳转](https://blog.csdn.net/gxp/article/details/6970464)
+> `https://blog.csdn.net/gxp/article/details/6970464`
+
+* 某个人博客[跳转](https://bitmingw.com/2017/03/02/spacemacs-install-configuration/)
+> `https://bitmingw.com/2017/03/02/spacemacs-install-configuration/`
+
+---
+
 
 

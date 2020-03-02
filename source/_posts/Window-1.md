@@ -69,7 +69,7 @@ categories: [软件,X Window]
 * 安装依赖项以及`X.org/GNOME`
 > `apt-get -y install xbase-clients`
 > `apt-get -y install x-window-system-core`
-> `apt-get -y install xfonts-base (xfs为字体服务器)`
+> `apt-get -y install xfonts-base`或`apt-get -y install xfonts*` (xfs为字体服务器)
 > `apt-get -y install xserver-xorg*`
 > `apt-get -y install fvwm2`
 > `apt-get -y install menu`
@@ -131,3 +131,37 @@ categories: [软件,X Window]
 > `https://www.x.org/releases/individual/`
 
 ---
+
+### 补充内容
+
+* 能下载的就下载，即便缺斤少两也不妨碍大体运行
+
+* 补充安装方法
+> `$ apt-get install xserver-xorg` 
+> `$ apt-get install x-window-system-core` 
+> `$ dpkg-reconfigure xserver-xorg`
+> `$ apt-get install gnome-core` 
+> `$ apt-get install gdm xscreensaver`
+> `$ apt-get install ttf-arphic*`
+
+* yum体系参考: https://www.jianshu.com/p/88ae1c2becd6
+
+* 最好是添加个输入法fcitx
+
+**字体配置:**
+
+* 字体配置相关
+* terminator内字体显示出现错误(终端字符重叠问题)
+* locale相关
+* 安装完字体之后重启终端
+* 安装字体(`ttf-wqy-zenhei`在默认的`apt-get`仓库内可能没有):
+> `$ apt-get install ttf-wqy-microhei ttf-wqy-zenhei xfonts-wqy`
+> `$ apt-get install ttf-wqy-microhei xfonts-wqy`
+
+* 参考: https://blog.csdn.net/magaiou/article/details/80322396
+* 参考: http://www.legendsec.org/1534.html
+
+---
+
+
+

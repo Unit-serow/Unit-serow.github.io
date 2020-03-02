@@ -218,3 +218,57 @@ https://github.com/syl20bnr/spacemacs.git
 
 ---
 
+### 补充内容(spacemacs): 
+
+**spacemacs基本操作简述**
+
+* spacemacs只是一份emacs的配置文件
+* 通常只需要把克隆来的spacemacs放到`~/`目录下就可以直接启动与初始化了
+
+* 以下为emacs匹配不到spacemacs的配置文件的解决方法:
+
+* 先将原`~/.emacs.d`文件进行备份与移动，将由Git工具克隆来的文件下载到`~/`目录下(当前用户的根目录，默认非root)
+* 再指定emacs启动文件的用户所有权(这里将emacs的启动文件的执行权交给了root)
+> `chown root:root emcas.d`
+
+* 启动emacs编辑器时，加载指定用户的初始化文件(这里用root用户来初始化emcas启动文件)
+> `emacs -u root`
+
+* 其它基本说明:
+> 更新emacs配置，并重新加载emacs(.emacs.d)配置文件
+> 备份并移动`~/.emacs`文件，并且拥有`~/.emacs.d`的执行所有权
+> `~/.emacs.d/init.el`为emacs的启动脚本，任何关于emacs的配置都在这里进行
+> `~/.emacs`为启动文件
+> `~/.emacs.d`为启动配置文件
+> 现在通常只有下者了
+
+* 还有其它的解决办法
+> 初始化emacs程序(将其卸载并重新安装)
+> 保证emacs第一次启动的启动脚本的配置是spacemacs应该也可以
+
+---
+
+**相关资料归纳:**
+
+* CN-Spacemacs 使用总结[跳转](https://scarletsky.github.io/2016/01/22/spacemacs-usage/)
+> `https://scarletsky.github.io/2016/01/22/spacemacs-usage/`
+
+* CN-Emacs学习(1)[跳转](https://www.jianshu.com/p/a7b8d1659b9b)
+> `https://www.jianshu.com/p/a7b8d1659b9b`
+
+* CN-15分钟学会Emacs Lisp (v0.2a)[跳转](https://learnxinyminutes.com/docs/zh-cn/elisp-cn/)
+> `https://learnxinyminutes.com/docs/zh-cn/elisp-cn/`
+
+* EN-Learn X in Y minutes(x分钟速成y技术)[跳转](https://learnxinyminutes.com/)
+> `https://learnxinyminutes.com/`
+
+* CN-Spacemacs入门与基本用法[跳转](https://ifun.dev/post/spacemacs_usage/)
+> `https://ifun.dev/post/spacemacs_usage/`
+
+* CN-emacs指令说明[跳转](https://wangchujiang.com/linux-command/c/emacs.html)
+> `https://wangchujiang.com/linux-command/c/emacs.html`
+
+---
+
+
+

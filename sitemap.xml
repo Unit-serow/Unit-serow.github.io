@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://unit-serow.github.io/2020/02/21/Emacs-1/</loc>
+    
+    <lastmod>2020-03-02T17:09:08.188Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://unit-serow.github.io/2020/02/01/GCC/</loc>
+    
+    <lastmod>2020-03-02T14:32:20.006Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://unit-serow.github.io/2020/03/02/text/</loc>
     
     <lastmod>2020-03-02T12:52:39.064Z</lastmod>
@@ -292,13 +306,6 @@
     <loc>https://unit-serow.github.io/2020/02/21/Zsh-1/</loc>
     
     <lastmod>2020-02-21T14:38:32.278Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://unit-serow.github.io/2020/02/21/Emacs-1/</loc>
-    
-    <lastmod>2020-02-21T12:46:42.482Z</lastmod>
     
   </url>
   
@@ -740,13 +747,6 @@
     <loc>https://unit-serow.github.io/2020/02/01/Make/</loc>
     
     <lastmod>2020-02-01T13:49:41.013Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://unit-serow.github.io/2020/02/01/GCC/</loc>
-    
-    <lastmod>2020-02-01T13:39:02.294Z</lastmod>
     
   </url>
   

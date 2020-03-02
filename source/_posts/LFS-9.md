@@ -186,4 +186,60 @@ categories: [软件,GNU]
 ---
 
 
+### LFS-补充内容
+
+* 临时系统环境搭建(分区)
+* 临时工具链安装与说明
+* 临时工具链配置与说明
+
+* 目标系统环境搭建(chroot)
+* 目标工具链安装与说明
+* 目标工具链配置与说明
+
+* 然后以chroot进入纯粹的目标系统进行程序编译与安装
+* 再然后进行对启动脚本与其它系统所需的最基本脚本进行配置
+* 最后再创建fstab与编译并配置内核，重启系统结束
+
+* 具体的脚本配置根据当前本地主机的内核版本而定
+* 可参考LFS官方文案，这里不做过多赘述
+
+---
+
+* LFS-v6.2/v6.3所需的最基本脚本配置文件与程序
+
+1. 配置，编译并安装 LFS-Bootscripts-6.3
+2. 配置setclock脚本 (Configuring the setclock Script) 
+3. 配置Linux控制台 (Configuring the Linux Console)
+4. 配置sysklogd脚本 (Configuring the sysklogd Script)
+5. 创建/etc/inputrc文件 (Creating the /etc/inputrc File)
+6. 配置Bash Shell启动文件 (The Bash Shell Startup Files)
+7.配置localnet脚本 (Configuring the localnet Script) 
+8. 自定义/etc/hosts文件 (Customizing the /etc/hosts File)
+9. 创建到设备的自定义符号链接 (Creating Custom Symlinks to Devices)
+10. 配置网络脚本 (Configuring the network Script)
+11. 配置网络脚本 (Creating the /etc/fstab File)
+12. 配置，编译并安装Linux-2.6.22.5
+13. 配置GRUB以使得系统可引导 (Making the LFS System Bootable)
+14. 重启操作系统 (Rebooting the System)
+
+---
+
+**参考资料:**
+
+* LFS-v6.2/v6.3
+
+* EN-LFS-书籍仓库[跳转](http://www.linuxfromscratch.org/lfs/downloads/)
+> `http://www.linuxfromscratch.org/lfs/downloads/`
+
+* EN-LFS-v6.2[跳转](http://www.linuxfromscratch.org/lfs/downloads/6.2/)
+> `http://www.linuxfromscratch.org/lfs/downloads/6.2/`
+
+* EN-LFS-v6.3[跳转](http://www.linuxfromscratch.org/lfs/downloads/6.3/)
+> `http://www.linuxfromscratch.org/lfs/downloads/6.3/`
+
+* 具体的中文版可参考金钟国及其所属团队的译本
+
+---
+
+
 

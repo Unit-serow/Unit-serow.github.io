@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://unit-serow.github.io/"/>
-  <updated>2020-03-03T14:25:25.598Z</updated>
+  <updated>2020-03-03T23:31:50.244Z</updated>
   <id>https://unit-serow.github.io/</id>
   
   <author>
@@ -17,17 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>TEXT</title>
-    <link href="https://unit-serow.github.io/2020/03/02/text/"/>
-    <id>https://unit-serow.github.io/2020/03/02/text/</id>
-    <published>2020-03-02T12:46:19.000Z</published>
-    <updated>2020-03-03T14:25:25.598Z</updated>
+    <title>Test</title>
+    <link href="https://unit-serow.github.io/2020/03/04/test/"/>
+    <id>https://unit-serow.github.io/2020/03/04/test/</id>
+    <published>2020-03-03T23:18:27.000Z</published>
+    <updated>2020-03-03T23:31:50.244Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Tue Mar 03 2020 22:25:57 GMT+0800 (中国标准时间) --><p><strong>样式实验文档</strong></p><a id="more"></a><p><span id="inline-blue">text.md</span></p><p><i class="fa fa-pencil"></i></p><hr><p><strong>URL收藏目录</strong></p><ul><li><p>他人学习笔记-BLFS/CLFS<a href="https://www.cnblogs.com/renren-study-notes/p/10385413.html" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://www.cnblogs.com/renren-study-notes/p/10385413.html</code></p></blockquote></li><li><p>免费高清壁纸-宇宙<a href="https://joer.ru/?id=23&start=294" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://joer.ru/?id=23&amp;start=294</code></p></blockquote></li></ul><hr><ul><li>更换图片教程<a href="https://www.jianshu.com/p/30bf702f533c" target="_blank" rel="noopener">跳转</a><blockquote><p><code>https://www.jianshu.com/p/30bf702f533c</code></p></blockquote></li></ul><hr><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<!-- build time:Wed Mar 04 2020 07:32:20 GMT+0800 (中国标准时间) --><center><strong>常驻Test文档</strong></center><a id="more"></a><p><strong>常驻随笔文档</strong></p><ul><li>无<blockquote><p>无很容易理解<br>但很难做到<br>很难在现实中实现?<br>不<br>无不属于现实<br>无则为无<br>空源于无<br>世界源于空<br>思维源于世界<br>而思维终将归于无</p></blockquote></li></ul><hr><!-- rebuild by neat -->]]></content>
     
     <summary type="html">
     
-      &lt;!-- build time:Tue Mar 03 2020 22:25:57 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;&lt;strong&gt;样式实验文档&lt;/strong&gt;&lt;/p&gt;
+      &lt;!-- build time:Wed Mar 04 2020 07:32:20 GMT+0800 (中国标准时间) --&gt;&lt;center&gt;&lt;strong&gt;常驻Test文档&lt;/strong&gt;&lt;/center&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Text</title>
+    <link href="https://unit-serow.github.io/2020/03/02/text/"/>
+    <id>https://unit-serow.github.io/2020/03/02/text/</id>
+    <published>2020-03-02T12:46:19.000Z</published>
+    <updated>2020-03-03T23:32:12.775Z</updated>
+    
+    <content type="html"><![CDATA[<!-- build time:Wed Mar 04 2020 07:32:20 GMT+0800 (中国标准时间) --><center><strong>常驻Text文档</strong></center><a id="more"></a><p><strong>样式实验文档</strong></p><p><span id="inline-blue">text.md</span></p><p><i class="fa fa-pencil"></i></p><hr><p><strong>URL收藏目录</strong></p><ul><li><p>他人学习笔记-BLFS/CLFS<a href="https://www.cnblogs.com/renren-study-notes/p/10385413.html" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://www.cnblogs.com/renren-study-notes/p/10385413.html</code></p></blockquote></li><li><p>免费高清壁纸-宇宙<a href="https://joer.ru/?id=23&start=294" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://joer.ru/?id=23&amp;start=294</code></p></blockquote></li></ul><hr><ul><li>更换图片教程<a href="https://www.jianshu.com/p/30bf702f533c" target="_blank" rel="noopener">跳转</a><blockquote><p><code>https://www.jianshu.com/p/30bf702f533c</code></p></blockquote></li></ul><hr><!-- rebuild by neat -->]]></content>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Wed Mar 04 2020 07:32:20 GMT+0800 (中国标准时间) --&gt;&lt;center&gt;&lt;strong&gt;常驻Text文档&lt;/strong&gt;&lt;/center&gt;
     
     </summary>
     
@@ -40,9 +61,9 @@
     <link href="https://unit-serow.github.io/2020/03/02/%E9%9A%8F%E7%AC%94-2020-03-02/"/>
     <id>https://unit-serow.github.io/2020/03/02/%E9%9A%8F%E7%AC%94-2020-03-02/</id>
     <published>2020-03-01T21:33:55.000Z</published>
-    <updated>2020-03-03T14:24:49.080Z</updated>
+    <updated>2020-03-03T23:18:09.450Z</updated>
     
-    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">输入密码</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="ebcd8b218940e42a5b0af12189da24e15b8b3510f52de62487474d2baedea0b5">0267ec72f19b8c198697a4f72870a3a898cafee11754200ad4cd8730fb30093baeb387c8c98f0f0b5c4db93938532d435c51076a62f83648cf04167fe010b78a124ef61958f5be2521e3cc1803fdbb0cfd1e2d1c12f17b672b13213943418152eb88873ed1d0cf7dbf1b803102d82147dd9de8c3e416d38c629031d5873f6e287c74789aaf5f83c292654620d162172dd094bf81691ec1e1191aea7694bb126c22c571d9222440b4ee6dd01f99a73b68e0db6f72c01e5b9319e9def141cb5d1aaace55adc5daf224ecc68c15a548cc3f6a05539fcc77834c86990831af168decb14190cd43ce37cd16e25c78b56d116e68b78f1aeb417f81572f915306993de48166f2b41a8abde4a488ff65960bc23d12a42b137d6edfa9ef4c03e66314bce8ea5de35b0567cf121cb004f6bc54dff695262550577e9108c1aa7317872af8d4841c949f1e09f179ce73f9ba6af6dbde054eef897d94cf4719b2ecbe71603a492735fb814c61f707c3357df8328104809fb6fd59cdb961818455fade88420f9820238037c72d92b835780c52e8fe8316e61dae51eb9bd2f481ac57b600e718eec07b658207d3fb06d7a512d257647787ab7d79f25f54c82236939b6e25e9880acc9dcf3bf202b892a25de2e332662c85a6dca4ddf03d3871d60c86f683e42e1e14909bb5ae23a584852caabab9e14c5ca587a3a0b3b19000c45c4c55baf78efb2e27d9abf2b3f5efa4f2366ddbecc7c43f68afb478f05374df317cb0d0fd0cd4ef11208de9c14833dbbc60ba7f5695fa8043a98721ec9ad7a0025eb4812b2394dd3e39b7082c6eba55eef568af4aaad522dd8fa5eb151c46de4a38044c41134212c20a446c6e1d9d61c6b44c702b376c194230f0204d05b94465a96c0c27ea026ad249083a9351d6a26afd85bcac490b6038c4927930ac3d22f7f30a1412ea7e1a2c178073946a999ebf18a287cfa9be5385a23f0ff4b1d4cf3320247f3b123aca3504b351bb4e73abd0007de217b4f0</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">输入密码</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="386dd3f6de81f038eb865018ba5834e86767868faaeb8e1cd545532dcff09729">0267ec72f19b8c198697a4f72870a3a8c264ef98a63fa01842be75af96d3546268387f7992527e4c6bcdb9d94c82fcc742e737e386e394c4719222ac27ca288ad9c03128ac727a28144489ca6590a320addec6ea02db05d4b27482af24378652e5915c320e746db4360f4926475091dc021300b05452715a71ff786999e80d27b0e721dc4b9e7db708b2540ed3549d1b6f40c3c0aacf90b806d2e00318db85a70e055b4e15ac9837e8976d460b25dcc5c88444da1df3cf8f25bd9a6f4300ec8fe028f05e4ed0c24a51f052c400631e8e11a7d2b57f57bc6bde0d29370bab70f53e4137beb9c1beb15aa3b607c42ea006f7a6b84a276049f1e56333c4a6b81ec21c513e4a741c6158891af135d87b896976733a7a35888bd95b0ae69c270212f2370ef604903bc90b401baaa9dc521ac31447d3a102e907bc2c72dfd9f7939074fda11f499920212affcd1116e8f0c9d4587e7e4de64ec68970bee908a302a0587fa88f0f231346fb7bad7d6f372dc62729ceb9322b7cf38b87b011f3ceb3848277b2cf2db5833c928133d009f2d368d7c4e24e4e419c062af3c48acadd9e72b9ca59f6f09c3cca62e76dc570d81a75bdbdc3e7b3b88b37d7c8510ad743672ac378d2f34fc149a546a9c0cde158b87e1a3ecdd83be6e1e6a92dfaa84c946e19082878d231f3f6163fd2f5be3db4589fc6912415037fb12b2f0b93c7df2409b44e57f3008000deae869902caa12abc59272eee248165fd54c1cf98a2ee808da36506a49e13832bbc55fffbc389d532e8706e05b800bb07b2b14601de2657ad8631637ae8349674e9382b7d27c417f30c531edee4e32adc11546fa7a61d20783f337a228686ff3ea41e0617ee76c4ffb539414f28fcc7929c8c33c6dd0673d13e07365da2e8d3fb8c60ea29945e5d6f9bb692713613a7d7ba8599cec9bdf3e163a68392cf8905760e4b7722e9cc78a68f4cc1d46ec8d81c56c7680830453a17727699e8b9172fe4b728f57688e70e21593cb74eca100caf9ca67723fd8ad61355eebb99e1c570f690c88ba3f3978e8c1a6c107428edc9a5b549c15b61a128e8d32f94b4c381b3a396d2cb875aca6c563aa1019fb222af723beff41f276a59bec4d08a1ee5d2c5614d126bb6072e37739456a08b267b8326b85f8610fd100d4a436f2a5c6d2adc2463f89f7bbcdee9c43d4ba455ade3d28db58fbb849e8669ea4c0455f745fc8d8c435a6e9ec278372a75443e9baed78a2a05c4542c976bb426e92a501c3486cc33c665fa90f4a35c27bf9376b38d6fc617a4dfb0df807a521a2e2d61b22f9b78a5541bfd937394f5d532e54d7ea19fe765b6a20ea2dfdb9bac5f833cb4911081f5d65090aeca4500ea4139e77351a8eb9ebe68281836010295ab0e47b7a560e62b2ff26b96a859e486480b0572cadd2d733bb7dc8b38923e404e5921efbe748da48704986d06845678f7620f93c862b6050d03a1054dfb6424c544bda52b528fa752fb40d105a0b92e8bd4413a78002ee0908c7c50ece7e260b853dc0db29f7c087c01f22c40de810be553acd9b8d782a8d1d82458e2c325b51f2466f3ea0bf11796cfdf1ef0d4b6e91670acf3fcbd696ef5c98887faeaa5ad4d7c13baa3b272a24057f3c0b52d5e159364745586cef84406bb4de25ffe5495ac75e5372eb67be4fb0391e677b2c3bf50d361fe41ffa4806f32ceab8f48f2608a5eec2a1f8bb2832ccb09615c38383891a2492a46ea78eb38a0da3dbc31b40a80636991996d7fa63535449a27fae69d2b1c28a8880cb43073141d7624649d5b3820d8127e1dd2cda756fda3cb134cfa7f1394249ef9c877f2141244b9a05f0b4a9df2243256c713c4d75c6e7b0e2d3b0b67a7cf13e31c2ac42770cd546f293d5c7eec4b4c6dd176a271c9537294f8d3b95515847a811169f5fc4eb1f05de9c819f194f1ac98f8ac318cc4165e0dca0559efe5e9d423b4f1f641cfe411e030ca2ac782ccdb408954961240fbafcbe27c3c06008ddbb658aaa5ca061fc604efea0daf090a37f1e84890be7008a59a8ff0178ee2cd748ed3f95f5571902cd5e9af644bd8fc2b77537c3c0f9c4007738fbdfd44701da353698c8674a5b1f5af5cd642c64423d33c2d7f23d0bf5516f01dc7ed7862b1a543e463a902a586fef463e4864229dab8b5747c651932e0ac21fa82a77a8fc6611332af8d29dc6f864a62050181989d034fe0ab79a66fc3f52045af33935594fed3a79d4d22bff1334dda9ec0bcdd8ad5b1f5f429ac2f40b491faf2a4a15fd07e3438eb1aeab47e94e5a9e5e5a2e144c3d23a1fef76b07ef84b79d5559fed0a93ffd8901c8de3d245dc56ea20f8a8cdf33c04ebb61b27939accb774df92bad1aef3fee39bdf7292ad9c08c834e53d39f6074f39e08a160364ef9858acc400c9bb2240899de4610acd63d827ad9d87d4ddd46d17a66f296c66e0ac0fb9999b29d5ec6f83c283bdc1b7bd736d86359efb0581a53a7ba6ee32ce788ab4479d77d94b64f2c71007091f5de207f23579ee91b359929148d745f75f65315db05cf17cfbbc87a9b375c1301c026c073b898be1317bd248b6450134f5097320c987dd7a1282a6df78af048329825bb8f872f3dac5440708d30dfe80ce3804b4f1b04573738ad590a0ff53b75c3beb06aa768a72893d39de89640254caf25d1ac676c5ee566e67586659db2d8f92fe3f6db44e1bb7d5ba5e245f1f851f4c7a51acff6e9ee86b41c031a8329108660c38ddf314c372293527e7b65fa5091d014a62bac2f94dcab459c417c9b93f0e8fd65884774cf8e6f92cbb90a6ba13d8178eb3fc5eca3b3b1ec10d9368bc53c567a3ea30d7987a9649ae156ac135b86c630344c7e1632d280891bbde66fe4e22b154db43ad9eab50d0fb0e705733833a6cae1dc9882f50928e20097d804ffbeaaca25fbf99ffe9b0cf3a412c72abe776ba1e25b8fd0361394b42ee6ed0e0f53e3eeb923a64b6bf292fe78bf860aca77211e9d7b880a3015466bffae3693a020a79e135d6051dac2e9c76f2970c5f8333208295c05375d1bfab1e3c31292b5e0beb17da0fc8e2a4453404dd9b1e02cf5c8fc8024fc20742238550583e3ccff96355a561272dc7869dbfdd39d22f67fd44b17252e6ec08733a7a6d6e96673a8eebc81cbe57275395fcf44171763f64b0470d435f0b62a4ae7534ac8596de82fbc56242d3a35d4decde0a5f885acef55945a1f2f0bc4b9f964b3360869bc544047815e5b819dfcd8bd57d76ad6ede53c0fd5bb3ec588c3012b4342593beebc455008096d327809c21e93e95daf4b2ab2f6bc846c57555bee6c6650a7966c345b1987fe14be522ed41eb7716006b50a114f5535df4a724c76e32e4884eadf8d273e345dff85eb2f143ca552a76c784fffe1d7cef4bc35cbf91fa6980049c68d171ad6c0801f9296579203b8bd6f4fa19843f2fb2e4659dd0c835cb9609c0efa9f5ea7fe25334ac8887be5cf804223d3593e3f90ea20319bd0e8c7bed23811572d7bf286c76a1e9101650bee07c9210c2dd075037feba103046f9ea9bd6bad88101f4759f7455203b54580d9eb52b4c17e82b3b25f6bbf54b3091a9018a06c40b9b285e646bcd15d9c507fc78604112248927cd1b1b4aaf46e4c65bc6f95d1e1f3b0525110132e5b0d073e0a599a464830b9be1073b3733416f4904eae92f2d981f47f844a45600f813f388fec3b6748d2fbbbd5c9b4fe90d864a920eb5b60e2edec95a5f7955c4b9646b0fc15e84f2dd4bbbc8129ec5264f9deb90b1540fc9220c86bc8a9c84830af6f839b99321daeccc5b28ce90d814e3045b7f45da7e041403334752ff8c110e4ad8fb7c39e4d8ec13f60c7aad4a</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
@@ -548,36 +569,6 @@
       <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
     
       <category term="Password" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/Password/"/>
-    
-    
-      <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>
-    
-      <category term="随笔" scheme="https://unit-serow.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux Containers/LXC-1</title>
-    <link href="https://unit-serow.github.io/2020/02/24/LXC-1/"/>
-    <id>https://unit-serow.github.io/2020/02/24/LXC-1/</id>
-    <published>2020-02-24T08:32:34.000Z</published>
-    <updated>2020-02-24T08:34:54.444Z</updated>
-    
-    <content type="html"><![CDATA[<!-- build time:Mon Mar 02 2020 21:36:30 GMT+0800 (中国标准时间) --><h2 id="Linux-Containers-LXC-1"><a href="#Linux-Containers-LXC-1" class="headerlink" title="Linux Containers/LXC-1"></a>Linux Containers/LXC-1</h2><p><strong>相关内容:</strong></p><ul><li>LXC(Linux Containers)</li><li>linux内核映射文件</li><li>文件映射</li></ul><hr><h3 id="LXC-Linux-Containers"><a href="#LXC-Linux-Containers" class="headerlink" title="LXC(Linux Containers)"></a>LXC(Linux Containers)</h3><p><strong>概述:</strong></p><ul><li>其名称来自Linux软件容器(Linux Containers)的缩写</li><li>是一种操作系统层虚拟化（Operating system–level virtualization)技术</li><li>作用是为Linux内核容器功能的一个用户空间接口</li></ul><hr><h3 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h3><ol><li><strong>实现方法:</strong></li></ol><ul><li>在Linux内核中，提供了cgroups功能，来达成资源的区隔化<blockquote><p>它同时也提供了名称空间区隔化的功能，使应用程序看到的操作系统环境被区隔成独立区间，包括行程树，网络，用户id，以及挂载的文件系统<br>但是cgroups并不一定需要引导任何虚拟机<br>LXC利用cgroups与名称空间的功能，提供应用软件一个独立的操作系统环境<br>LXC不需要Hypervisor这个软件层，软件容器(Container)本身极为轻量化，提升了创建虚拟机的速度<br>软件Docker被用来管理LXC的环境</p></blockquote></li></ul><hr><ul><li>执行流程简述:<blockquote><p>它将应用软件系统打包成一个软件容器(Container)，内含应用软件本身的代码，以及所需要的操作系统核心和库<br>透过统一的名字空间和共享API来分配不同软件容器的可用硬件资源，创造出应用程序的独立沙箱运行环境<br>从而使得Linux用户可以容易的创建和管理系统或应用容器</p></blockquote></li></ul><hr><ol start="2"><li><strong>具体实现:</strong></li></ol><ul><li><p>当前的LXC使用下列内核功能来控制进程:</p><blockquote><p>内核名字空间(进程间通信，uts，mount，pid，network和user)<br>AppArmor和SELinux配置<br>Seccomp策略<br>chroot(使用<code>pivot_root</code>)<br>Kernel Capibilities<br>控制组(cgroups)</p></blockquote></li><li><p>因此，LXC通常被认为介于“加强版”的chroot和完全成熟的虚拟机之间的技术。LXC的目标是创建一个尽可能与标准安装的Linux相同但又不需要分离内核的环境</p></li></ul><hr><ol start="3"><li><strong>具体使用:</strong></li></ol><ul><li>Proxmox VE:它直到4.0版才使用LXC技术，在此之前的版本都是使用OpenVZ技术</li><li>Docker:它在0.9版之前都是使用LXC技术，但在0.9版之后，已不再是唯一且默认的运行环境</li></ul><hr><h3 id="内存映射文件"><a href="#内存映射文件" class="headerlink" title="内存映射文件"></a>内存映射文件</h3><p><strong>概述:</strong></p><ul><li>内存映射文件(Memory-mapped file)，或称”文件映射”与”映射文件”</li><li>是一段虚内存逐字节对应于一个文件或类文件的资源，使得应用程序处理映射部分如同访问主内存</li></ul><hr><p><strong>内存映射文件分为以下两种:</strong></p><ul><li>Persisted<blockquote><p>Persisted文件与硬盘文件相关联，当关闭内存映射时，数据被写入对应的硬盘文件中<br>适合于很大的文件</p></blockquote></li><li>Non-persisted<blockquote><p>Non-persisted文件并不关联于硬盘文件。当关闭内存映射文件，所有数据被抛弃<br>适用于创建进程间通信的共享内存</p></blockquote></li></ul><p><strong>作用:</strong></p><ol><li>最常见用途是绝大多数操作系统(包括Microsoft Windows与Unix-like系统)用于加载进程</li><li>另一个用途是多个进程的共享内存</li><li>第三个用途是对大文件的读写</li></ol><p><strong>优势:</strong></p><ol><li>主要用处是增加I/O性能，特别是用于大文件</li><li>对于小文件，内存映射文件会导致碎片空间浪费，因为内存映射总是要对齐页边界，这起码是4 KiB<blockquote><p>因而一个5 KiB文件将会映射占用8 KiB内存，浪费了3 KiB内存</p></blockquote></li><li>访问内存映射文件比直接文件读写要快几个数量级</li></ol><p><strong>缺点(弊端):</strong></p><ol><li>内存映射文件需要在进程的占用一块很大的连续逻辑地址空间</li><li>对于Intel的IA-32的4 GiB逻辑地址空间，可用的连续地址空间远远小于<code>2---3GiB</code><blockquote><p>相关联的文件的I/O错误(如可拔出驱动器或光驱被弹出，磁盘满时写操作等)的内存映射文件会向应用程序报告SIGSEGV/SIGBUS信号(POSIX环境)<br>或<code>EXECUTE_IN_PAGE_ERROR</code>结构化异常(Windows环境)<br>但通常的内存操作是无需考虑这些异常的</p></blockquote></li><li>有内存管理单元(MMU)才支持内存映射文件</li></ol><hr><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ul><li><p>官方网站<a href="https://linuxcontainers.org/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://linuxcontainers.org/</code></p></blockquote></li><li><p>LXC官方文档<a href="https://linuxcontainers.org/lxc/introduction/" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://linuxcontainers.org/lxc/introduction/</code></p></blockquote></li></ul><hr><p><strong>以下内容参考自中文维基:</strong></p><ul><li><p>虚拟内存<a href="https://zh.wikipedia.org/wiki/Category:%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://zh.wikipedia.org/wiki/Category:%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98</code></p></blockquote></li><li><p>磁盘文件系统<a href="https://zh.wikipedia.org/wiki/Category:%E7%A3%81%E7%9B%98%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://zh.wikipedia.org/wiki/Category:%E7%A3%81%E7%9B%98%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F</code></p></blockquote></li><li><p>Linux容器化<a href="https://zh.wikipedia.org/wiki/Category:Linux%E5%AE%B9%E5%99%A8%E5%8C%96" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://zh.wikipedia.org/wiki/Category:Linux%E5%AE%B9%E5%99%A8%E5%8C%96</code></p></blockquote></li><li><p>Linux内核功能<a href="https://zh.wikipedia.org/wiki/Category:Linux%E5%86%85%E6%A0%B8%E5%8A%9F%E8%83%BD" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://zh.wikipedia.org/wiki/Category:Linux%E5%86%85%E6%A0%B8%E5%8A%9F%E8%83%BD</code></p></blockquote></li><li><p>操作系统层虚拟化<a href="https://zh.wikipedia.org/wiki/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E5%B1%A4%E8%99%9B%E6%93%AC%E5%8C%96" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://zh.wikipedia.org/wiki/%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%E5%B1%A4%E8%99%9B%E6%93%AC%E5%8C%96</code></p></blockquote></li><li><p>DevOps<a href="https://zh.wikipedia.org/wiki/DevOps" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://zh.wikipedia.org/wiki/DevOps</code></p></blockquote></li><li><p>虚拟化技术(Virtualization)<a href="https://zh.wikipedia.org/wiki/%E8%99%9B%E6%93%AC%E5%8C%96" target="_blank" rel="noopener">跳转</a></p><blockquote><p><code>https://zh.wikipedia.org/wiki/%E8%99%9B%E6%93%AC%E5%8C%96</code></p></blockquote></li></ul><hr><!-- rebuild by neat -->]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;!-- build time:Mon Mar 02 2020 21:36:30 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;Linux-Containers-LXC-1&quot;&gt;&lt;a href=&quot;#Linux-Containers-LXC-1&quot; class=&quot;heade
-      
-    
-    </summary>
-    
-    
-      <category term="软件" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-      <category term="虚拟化" scheme="https://unit-serow.github.io/categories/%E8%BD%AF%E4%BB%B6/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
     
     
       <category term="GNU/Linux" scheme="https://unit-serow.github.io/tags/GNU-Linux/"/>

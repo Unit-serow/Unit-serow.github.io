@@ -311,7 +311,7 @@ https://github.com/syl20bnr/spacemacs.git
 
 ---
 
-### 补充内容-2
+### 补充内容(Spacemacs)-2
 
 **spacemacs配置相关:**
 
@@ -357,6 +357,113 @@ https://github.com/syl20bnr/spacemacs.git
 
 ---
 
+### 补充内容(Spacemacs)-3
+
+**自动补全功能实现:**
+
+* Org-mode
+> Org-模式(Org-mode)是文本编辑软件Emacs的一种支持内容分级显示的编辑模式
+> 这种模式支持写`to-do`列表，日志管理，做笔记，做工程计划或者写网页
+> 意思就是大体作用类似于markdown
+> 参考自: https://www.cnblogs.com/qlwy/archive/2012/06/15/2551034.html#sec-1
+> 参考自: https://baike.baidu.com/item/org-mode/3339684?fr=aladdin
+
+* spacemacs安装与配置[跳转](https://baike.baidu.com/item/org-mode/3339684?fr=aladdin)
+> `http://www.fidding.me/article/12`
+
+---
+
+**Emacs/Spacemacs自动补全**
+
+* 最基本需要用到以下插件(layer)中的自动补全支持
+* 在`dotspacemacs-configuration-layers`里面新增所需layer
+> auto-complete 自动弹窗
+> yasnippet 自动补全
+> popup 自动弹窗
+> company 自动补全
+> lsp-mode 自动补全
+> Django 自动补全
+> anaconda-mode(python)自动补全
+* 这里的例子就举这么多，实际上数不胜数
+
+---
+
+* 配置文件
+> auto-complete.el
+> popup.el
+
+---
+
+**可用URL参考目录:**
+
+* emacs 自动补全[跳转](https://blog.csdn.net/promanz/article/details/89384129?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task)
+> `https://blog.csdn.net/promanz/article/details/89384129?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task`
+
+* Emacs-107-开启全局自动补全模式[跳转](https://blog.csdn.net/grey_csdn/article/details/79477169?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task)
+> `https://blog.csdn.net/grey_csdn/article/details/79477169?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task`
+
+* Emacs基本配置，自动补全[跳转](https://blog.csdn.net/hengrjgc/article/details/43231327?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task)
+> `https://blog.csdn.net/hengrjgc/article/details/43231327?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task`
+
+* emacs代码补全插件介绍[跳转](https://blog.csdn.net/topgun_chenlingyun/article/details/9447755?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task)
+> `https://blog.csdn.net/topgun_chenlingyun/article/details/9447755?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task`
+
+* EMACS下弹出窗口式的Auto-Complete自动补全工具简单介绍[跳转](https://blog.csdn.net/hahazhouzhiqin/article/details/9735347)
+> `https://blog.csdn.net/hahazhouzhiqin/article/details/9735347`
+
+* Emacs-015-自动补全插件company的安装与使用[跳转](https://blog.csdn.net/grey_csdn/article/details/78966457)
+> `https://blog.csdn.net/grey_csdn/article/details/78966457`
+
+* spacemacs安装与配置[跳转](http://www.fidding.me/article/12)
+> `http://www.fidding.me/article/12`
+
+---
+
+## spacemacs配置简述
+
+* 从网络上下载的扩展包被放置于`~/.emacs.d/elpa`文件夹下
+* `~/.spacemacs`为spacemacs配置文件
+
+**配置文件内常见(常用)参数简述:**
+
+* `dotspacemacs-configuration-layers`是启用的layer列表
+* 初始列举的layer大多被双引号注释掉了，注释符号为`;;`
+* 其中的themes-megapack用于下载各类皮肤，dotspacemacs-themes用于设置皮肤
+* `dotspacemacs-editing-style`是默认编辑模式
+* `evil mode`默认的对应值为`'vim`
+* `dotspacemacs-maximized-at-startup`在启动时自动最大化窗口，可以将值设为`t`以开启此功能
+* `dotspacemacs-line-numbers`设置是否显示行号，`nil`隐藏，`t`显示
+* `dotspacemacs-whitespace-cleanup`删除多余的空白，推荐设置为'trailing`
+* `spacemacs`的灵魂:`auto-completion`(自动完成)和`heml`
+* `dotspacemacs-additional-packages'(web-mode)添加`web-mode`，同时也是在`dotspacemacs-additional-packages`里面添加包的基本格式
+* `dotspacemacs-elpa-https nil`用于https检测，可设为`nil`
+
+---
+
+**可自定义选项参考:**
+* user-init()选项内修改自定义配置
+* (add-hook 'after-init-hook 'global-company-mode) 激活自动补全
+
+* 默认配置
+```
+(setq-default
+
+   dotspacemacs-themes '(monokai);;设置主题
+
+   dotspacemacs-fullscreen-use-non-native t   ;;设置最大化不占用系统导航栏
+   dotspacemacs-maximized-at-startup t   ;;设置窗口启动最大化
+   dotspacemacs-line-numbers t   ;;开启行号
+   dotspacemacs-auto-resume-layouts t ;;重启后自动打开关闭前alyout
+
+)
+```
+
+---
+
+* 参考自: https://bitmingw.github.io/2017/03/02/spacemacs-install-configuration/
+* 皮肤网站: https://themegallery.robdor.com/
+
+---
 
 
 

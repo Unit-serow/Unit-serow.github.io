@@ -270,5 +270,46 @@ https://github.com/syl20bnr/spacemacs.git
 
 ---
 
+**spacemacs基本配置**
+
+* 配置Magit，用于辅助并集成Git进行远端版本管理
+
+* EditorConfig
+> 维护工具
+> 让不同的编译器和IDE都按照相同的格式来格式化代码
+
+* org-mode
+> 代码自动补全
+
+---
+
+**相关参考(URL归纳目录):**
+
+* CN-emacs自动补全[跳转](https://blog.csdn.net/hengrjgc/article/details/43231327)
+> `https://blog.csdn.net/hengrjgc/article/details/43231327`
+
+* CN-Spacemacs 与 Org-mode 配置与使用技巧[跳转](https://www.douban.com/note/706407786/)
+> `https://www.douban.com/note/706407786/`
+
+* CN-spacemacs 与 org-mode 配置与使用技巧 [跳转](http://mpwang.github.io/2019/02/06/productivity/)
+> `http://mpwang.github.io/2019/02/06/productivity/`
+
+* CN-十个高效的spacemacs配置[跳转](http://www.mamicode.com/info-detail-636363.html)
+> `http://www.mamicode.com/info-detail-636363.html`
+
+* CN-Spacemacs 使用总结[跳转](https://scarletsky.github.io/2016/01/22/spacemacs-usage/)
+> `https://scarletsky.github.io/2016/01/22/spacemacs-usage/`
+
+* spacemacs 中文教程[跳转](http://www.voidcn.com/search/bopuqg)
+> `http://www.voidcn.com/search/bopuqg`
+
+* 官方文档[跳转](https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org)
+> `https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org`
+
+* Vim User[跳转](https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org)
+> `https://github.com/syl20bnr/spacemacs/blob/master/doc/VIMUSERS.org`
+
+---
+
 
 

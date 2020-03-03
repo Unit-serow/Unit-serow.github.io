@@ -1,12 +1,14 @@
 ---
-title: TEXT
+title: Text
 date: 2020-03-02 20:46:19
 tags: 
 ---
 
-**样式实验文档**
+<center><strong>常驻Text文档</strong></center>
 
 <!-- more -->
+
+**样式实验文档**
 
 <span id="inline-blue"> text.md </span>
 

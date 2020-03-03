@@ -5,7 +5,7 @@ tags: [随笔,GNU/Linux]
 categories: [软件,GNU] 
 ---
 
-### Emacs-1
+## Emacs-1
 
 ### Emacs快捷键快速参考(参考资料整理)
 
@@ -218,7 +218,7 @@ https://github.com/syl20bnr/spacemacs.git
 
 ---
 
-### 补充内容(spacemacs): 
+### 补充内容(spacemacs)-1: 
 
 **spacemacs基本操作简述**
 
@@ -310,6 +310,53 @@ https://github.com/syl20bnr/spacemacs.git
 > `https://github.com/syl20bnr/spacemacs/blob/master/doc/VIMUSERS.org`
 
 ---
+
+### 补充内容-2
+
+**spacemacs配置相关:**
+
+* 在`~/.spacemacs`中的`dotspacemacs-additional-packages`内添加所需配置以使spacemacs支持所选服务
+
+* Layer
+> spacemacs为依赖与拓展的管理提供了独有layer(分层)机制
+> 使其已被配置且各个不同类别的插件在保证独立性的同时还大幅的简化了对插件或拓展的管理与操作难度
+> Layer基于Lisp编写与配置
+
+* Package
+> 是spacemacs默认的独立包管理器`SPC-T-s`启用package
+
+* Evil
+> 它能够为spacemacs提供vim的操作格式，为默认选项
+
+---
+
+**可用URL参考:**
+
+* CN-Spacemacs 的配置[跳转](https://www.cnblogs.com/yangwen0228/p/10193245.html)
+> `https://www.cnblogs.com/yangwen0228/p/10193245.html`
+
+* CN-视频参考[跳转](https://youtu.be/MBrU-Py3HaA?list=PL-61yFRAEMlUMOtAeoYErz2yLe9IeTKRS)
+> `https://youtu.be/MBrU-Py3HaA?list=PL-61yFRAEMlUMOtAeoYErz2yLe9IeTKRS`
+
+* CN-Spacemacs使用中的FAQ[跳转](https://www.jianshu.com/p/354896569a90)
+> `https://www.jianshu.com/p/354896569a90`
+
+* CN-某博客Spacemacs[跳转](https://wayslog.com/2017/06/30/spacemacs/)
+> `https://wayslog.com/2017/06/30/spacemacs/`
+
+* CN-spacemacs配置自己的layers[跳转](https://www.jianshu.com/p/bdd64fecddce)
+> `https://www.jianshu.com/p/bdd64fecddce`
+
+---
+
+**关键字:**
+
+* layer
+* package
+* Evil
+
+---
+
 
 
 

@@ -46,5 +46,10 @@ tags:
 
 ---
 
+* EN-GNU-An Introduction to Programming in Emacs Lisp[跳转](https://www.gnu.org/software/emacs/manual/html_mono/eintr.html)
+> `https://www.gnu.org/software/emacs/manual/html_mono/eintr.html`
+
+---
+
 
 

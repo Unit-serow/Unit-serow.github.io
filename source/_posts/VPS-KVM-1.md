@@ -116,5 +116,30 @@ categories: [软件,虚拟化]
 
 ---
 
+### Shadowsocks
+
+* 境外KVM类型的VPS大约360RMB/年(美国)
+> 最便宜的
+
+* 官网地址: https://shadowsocks.org/en/index.html
+* 仓库地址: https://github.com/shadowsocks
+
+---
+
+**可用参考:**
+
+* CN-Github-SS教程
+> https://github.com/233boy/ss/wiki/Shadowsocks%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B
+> https://ssr.tools/252
+
+* 搬瓦工 (Bandwagon Host)
+> VPS供应商，支持支付宝支付
+> https://bwh88.net/cart.php?gid=1
+> https://bwg.net/
+
+* CN2: https://blog.sprov.xyz/2019/04/09/what-is-cn2-vps/#_CN2
+
+---
+
 
 

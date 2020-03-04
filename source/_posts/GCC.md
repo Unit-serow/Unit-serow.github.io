@@ -55,5 +55,36 @@ GCC的作用是将源代码生成可执行文件大体需要四个步骤:
 
 ---
 
+### 补充内容
+
+**ANSI C 光速参考目录:**
+
+* ANSI C
+* C 预处理器
+* C Preprocessor: https://www.runoob.com/cprogramming/c-preprocessors.html
+
+**C 标准库**
+
+* `<stddef.h>` 泛用头文件
+* `<stdio.h>` 通用输入输出函数
+* `<stdlib.h>` 通用工具函数
+* `<string.h>` 字符函数
+* `<time.h>` 时间函数
+* `<assert.h>` 验证宏定义
+* `<math.h>` 数学函数与宏
+* `<ctype.h>` 字符映射/测试
+* `<errno.h>` 错误处理
+* `<float.h>` 浮点值
+* `<limits.h>` 变量类型
+* `<locale.h>` 地域设置
+* `<setjmp.h>` 绕过函数的调用与返回
+* `<signal.h>` 处理执行期的不同信号
+* `<stdarg.h>` 参数获取
+
+* 参考网站: https://www.runoob.com/cprogramming/c-standard-library.html
+* 参考网站: https://www.w3cschool.cn/c/c-standard-library.html
+
+---
+
 
 

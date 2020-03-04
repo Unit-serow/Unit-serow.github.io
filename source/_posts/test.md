@@ -1,7 +1,7 @@
 ---
 title: Test
 date: 2020-03-02 20:46:19
-tags: 
+tags: 随笔
 ---
 
 <center><strong>常驻Test文档</strong></center>
@@ -48,6 +48,41 @@ tags:
 
 * EN-GNU-An Introduction to Programming in Emacs Lisp[跳转](https://www.gnu.org/software/emacs/manual/html_mono/eintr.html)
 > `https://www.gnu.org/software/emacs/manual/html_mono/eintr.html`
+
+---
+
+**在线测试网站收藏:**
+
+* 各类教程内的在线编译测试和各类参考手册都很好用
+
+* CN-[C](https://www.tutorialspoint.com/compile_c_online.php)
+> `https://www.tutorialspoint.com/compile_c_online.php`
+
+* CN-[tools](https://tool.lu/coderunner/)
+> `https://tool.lu/coderunner/`
+
+* CN-[代码测试](http://www.dooccn.com/)
+> `http://www.dooccn.com/`
+
+* CN-[RUNOOB](https://www.runoob.com/)
+> `https://www.runoob.com/`
+
+* CN-[W3school](https://www.w3school.com.cn/)
+> `https://www.w3school.com.cn/`
+
+* CN-[离线版runoob获取](https://www.runoob.com/w3cnote/runoob-chm.html)
+> `https://www.runoob.com/w3cnote/runoob-chm.html`
+
+* CN-Git仓库地址[W3cshool](https://github.com/it-ebooks/w3school)[Runoob-PDF](https://github.com/gagayuan/runoob-PDF-/tree/master/runoob)
+> `https://github.com/it-ebooks/w3school`
+> `https://github.com/gagayuan/runoob-PDF-/tree/master/runoob`
+
+---
+
+**CN-LFS**
+
+* CN-LFS-仓库: https://lctt.github.io/LFS-BOOK/
+* CN-LFS-v9.0: https://lctt.github.io/LFS-BOOK/lfs-sysv/LFS-BOOK.pdf
 
 ---
 

@@ -15,6 +15,10 @@ top: true
 
 <i class="fa fa-pencil"></i>
 
+* 简介加粗并居中
+> `<center><strong>常驻Test文档</strong></center>`
+> `<!-- more -->`
+
 ---
 
 **URL收藏目录**

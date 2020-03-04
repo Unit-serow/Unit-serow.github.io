@@ -5,6 +5,10 @@ tags: [随笔,GNU/Linux]
 categories: [软件,虚拟化]
 ---
 
+<center><strong>VPS/KVM简要概述</strong></center>
+
+<!-- more -->
+
 ## VPS/KVM-1
 
 ---

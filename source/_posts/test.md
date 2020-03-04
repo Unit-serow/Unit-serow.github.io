@@ -2,6 +2,7 @@
 title: Test
 date: 2020-03-02 20:46:19
 tags: 随笔
+top: true
 ---
 
 <center><strong>常驻Test文档</strong></center>
@@ -28,6 +29,9 @@ tags: 随笔
 
 * 更换图片教程[跳转](https://www.jianshu.com/p/30bf702f533c)
 > `https://www.jianshu.com/p/30bf702f533c`
+
+* 调色板[跳转](https://www.colorhexa.com/)
+> `https://www.colorhexa.com/`
 
 ---
 

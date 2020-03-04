@@ -1,7 +1,7 @@
 ---
 title: 分布式版本控制系统-Git-2
 date: 2020-02-04 14:13:34
-tags: 2.应用与拓展
+tags: 随笔
 categories: [软件,Git]
 ---
 

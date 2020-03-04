@@ -1,7 +1,7 @@
 ---
 title: GNU-LFS-1
 date: 2020-02-28 23:31:21
-tags: [GNU\Linux,随笔]
+tags: [GNU/Linux,随笔]
 categories: [软件,GNU]
 ---
 

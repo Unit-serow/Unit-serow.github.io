@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://unit-serow.github.io/2020/02/05/flowchart/</loc>
+    <lastmod>2020-03-04</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/28/GNU-LFS-1/</loc>
+    <lastmod>2020-03-04</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/04/Git-2/</loc>
+    <lastmod>2020-03-04</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/02/04/Git-3/</loc>
+    <lastmod>2020-03-04</lastmod>
+  </url>  <url>
+    <loc>https://unit-serow.github.io/2020/03/05/VPS-KVM-1/</loc>
+    <lastmod>2020-03-04</lastmod>
+  </url>  <url>
     <loc>https://unit-serow.github.io/2020/03/02/test/</loc>
     <lastmod>2020-03-04</lastmod>
   </url>  <url>
@@ -43,9 +58,6 @@
     <loc>https://unit-serow.github.io/2020/03/01/LFS-8/</loc>
     <lastmod>2020-02-29</lastmod>
   </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/28/GNU-LFS-1/</loc>
-    <lastmod>2020-02-29</lastmod>
-  </url>  <url>
     <loc>https://unit-serow.github.io/2020/03/01/GNU-LFS-3-2/</loc>
     <lastmod>2020-02-29</lastmod>
   </url>  <url>
@@ -84,9 +96,6 @@
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/26/LFS-6/</loc>
     <lastmod>2020-02-26</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/04/Git-2/</loc>
-    <lastmod>2020-02-25</lastmod>
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/06/Docker-1/</loc>
     <lastmod>2020-02-24</lastmod>
@@ -150,9 +159,6 @@
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/19/RDBMS-KEY-1/</loc>
     <lastmod>2020-02-18</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/05/flowchart/</loc>
-    <lastmod>2020-02-17</lastmod>
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/16/Redis-3/</loc>
     <lastmod>2020-02-17</lastmod>
@@ -282,9 +288,6 @@
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/06/Docker-2/</loc>
     <lastmod>2020-02-06</lastmod>
-  </url>  <url>
-    <loc>https://unit-serow.github.io/2020/02/04/Git-3/</loc>
-    <lastmod>2020-02-04</lastmod>
   </url>  <url>
     <loc>https://unit-serow.github.io/2020/02/02/BFD/</loc>
     <lastmod>2020-02-02</lastmod>

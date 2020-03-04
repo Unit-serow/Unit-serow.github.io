@@ -1,26 +1,48 @@
 ---
 title: Test
-date: 2020-03-04 07:18:27
-tags: 随笔
+date: 2020-03-02 20:46:19
+tags: 
 ---
 
 <center><strong>常驻Test文档</strong></center>
 
 <!-- more -->
 
-**常驻随笔文档**
+**样式实验文档**
 
-* 无
-> 无很容易理解
-> 但很难做到
-> 很难在现实中实现?
-> 不
-> 无不属于现实
-> 无则为无
-> 空源于无
-> 世界源于空
-> 思维源于世界
-> 而思维终将归于无
+<span id="inline-blue"> text.md </span>
+
+<i class="fa fa-pencil"></i>
+
+---
+
+**URL收藏目录**
+
+* 他人学习笔记-BLFS/CLFS[跳转](https://www.cnblogs.com/renren-study-notes/p/10385413.html)
+> `https://www.cnblogs.com/renren-study-notes/p/10385413.html`
+
+* 免费高清壁纸-宇宙[跳转](https://joer.ru/?id=23&start=294)
+> `https://joer.ru/?id=23&start=294`
+
+---
+
+* 更换图片教程[跳转](https://www.jianshu.com/p/30bf702f533c)
+> `https://www.jianshu.com/p/30bf702f533c`
+
+---
+
+**Emacs**
+
+* 这里标注一个大佬-子龙山人
+
+* 知乎[跳转](https://zilongshanren.com/tags/)
+> `https://zilongshanren.com/tags/`
+
+* 博客[跳转](https://www.zhihu.com/people/zilongshanren/answers)
+> `https://www.zhihu.com/people/zilongshanren/answers`
+
+* Github-spacemacs中文教程-子龙山人[跳转](https://github.com/emacs-china/Spacemacs-rocks)
+> `https://github.com/emacs-china/Spacemacs-rocks`
 
 ---
 

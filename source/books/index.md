@@ -41,7 +41,7 @@ date: 2020-03-04 09:45:35
 * CN-帝国主义是资本主义的最高阶段 (2004版，列宁)
 * CN-大教堂与集市 (2014版，Eric S·Raymond)
 * CN-LFS/Introduction to Linux - A Hands on Guide (Michael K. Johnson/Paul L. Rogers/Eric S. Raymond)
-* 截至于: 2020-03
+* 截止于: 2020-03
 
 ---
 
@@ -55,7 +55,7 @@ date: 2020-03-04 09:45:35
 * CN-Unix编程艺术 (2006版，Eric S·Raymond)
 * CN-若为自由故: 自由软件之父理查德·斯托曼传 (2015版，Sam Williams)
 * CN-黑客 (2011版，Steven Levy)
-* 始于: 2017-11->截至于2020-03
+* 起始于: 2017-11->截止于2020-03
 
 ---
 
@@ -75,7 +75,7 @@ date: 2020-03-04 09:45:35
 * CN-论革命
 * CN-旧制度与大革命
 * Unix系统编程
-* 截至于2020-03
+* 截止于2020-03
 
 ---
 

@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://unit-serow.github.io/2020/03/05/OS-1/</loc>
+    
+    <lastmod>2020-03-05T03:39:04.173Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://unit-serow.github.io/2020/02/19/%E9%9A%8F%E7%AC%94-2020-02-19/</loc>
+    
+    <lastmod>2020-03-05T03:33:49.923Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://unit-serow.github.io/2020/03/05/VPS-KVM-1/</loc>
     
     <lastmod>2020-03-04T22:52:20.955Z</lastmod>
@@ -194,13 +208,6 @@
     <loc>https://unit-serow.github.io/2020/02/29/GNU-LFS-2-2/</loc>
     
     <lastmod>2020-02-29T00:31:56.255Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://unit-serow.github.io/2020/02/19/%E9%9A%8F%E7%AC%94-2020-02-19/</loc>
-    
-    <lastmod>2020-02-28T15:35:55.700Z</lastmod>
     
   </url>
   

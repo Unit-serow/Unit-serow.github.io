@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://unit-serow.github.io/books/index.html</loc>
+    
+    <lastmod>2020-03-05T05:13:13.484Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://unit-serow.github.io/2020/03/05/OS-1/</loc>
     
-    <lastmod>2020-03-05T03:39:04.173Z</lastmod>
+    <lastmod>2020-03-05T05:12:06.302Z</lastmod>
     
   </url>
   
@@ -68,13 +75,6 @@
     <loc>https://unit-serow.github.io/2020/02/01/GCC/</loc>
     
     <lastmod>2020-03-04T17:47:15.791Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://unit-serow.github.io/books/index.html</loc>
-    
-    <lastmod>2020-03-04T04:55:57.949Z</lastmod>
     
   </url>
   

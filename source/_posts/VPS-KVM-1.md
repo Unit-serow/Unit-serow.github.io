@@ -63,6 +63,10 @@ categories: [软件,虚拟化]
 > QEMU使用KVM以近乎原生的速度虚拟化客户机，若无KVM的话则将仅使用软件模拟
 * KVM内部使用SeaBIOS作为对16位x86 BIOS的开源模拟
 
+* KVM/QEMU环境的高级概述:
+
+<img src="/images/KVM-1.png" width="40%" height="40%">
+
 ---
 
 **相关GUI(图形化管理)工具:**

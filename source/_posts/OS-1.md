@@ -59,6 +59,25 @@ categories: [软件,OS]
 > `https://www.jb51.net/books/294083.html`
 
 ---
+**资源相关URL补充:**
+
+* Linux/UNIX编程手册(分卷压缩文件)
+> `https://download.csdn.net/download/js_gary/10216486`
+> `https://download.csdn.net/download/js_gary/10216495`
+
+* FreeBSD解析
+> https://download.csdn.net/download/starry225/6223229
+
+---
+
+**整合包获取:**
+
+* 以上PDF资源整合文件的压缩包(一共七本电子书，rar格式):
+* 百度网盘地址[永久链接](https://pan.baidu.com/s/1SPRq_DI9Seey9R4iJJp_5w)
+> `https://pan.baidu.com/s/1SPRq_DI9Seey9R4iJJp_5w`
+* 提取码: j3qc
+
+---
 
 **资源汇总:**
 

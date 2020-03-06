@@ -19,6 +19,9 @@ top: true
 > `<center><strong>常驻Test文档</strong></center>`
 > `<!-- more -->`
 
+* 插入图片
+> `<img src="图片URL" width="20%" height="20%">`
+
 ---
 
 **URL收藏目录**
@@ -138,6 +141,11 @@ top: true
 
 * 金步国作品集[跳转](http://www.jinbuguo.com/)
 > `http://www.jinbuguo.com/`
+
+---
+
+* EN-Wiki-指令处理(Category:Instruction processing)[跳转](https://en.wikipedia.org/wiki/Category:Instruction_processing)
+> `https://en.wikipedia.org/wiki/Category:Instruction_processing`
 
 ---
 

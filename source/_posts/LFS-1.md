@@ -303,5 +303,15 @@ categories: [软件,GNU]
 
 ---
 
+**资源补充:**
+
+* HLinuxH的ChinaUnix博客[跳转](http://blog.chinaunix.net/uid-25533439-id-3286334.html)
+> `http://blog.chinaunix.net/uid-25533439-id-3286334.html`
+
+* 金步国作品集[跳转](http://www.jinbuguo.com/)
+> `http://www.jinbuguo.com/`
+
+---
+
 
 

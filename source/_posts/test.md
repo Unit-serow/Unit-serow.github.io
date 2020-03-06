@@ -134,5 +134,12 @@ top: true
 
 ---
 
+**LFS-金步国**
+
+* 金步国作品集[跳转](http://www.jinbuguo.com/)
+> `http://www.jinbuguo.com/`
+
+---
+
 
 

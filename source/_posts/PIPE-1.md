@@ -2,7 +2,7 @@
 title: UNIX/PIPE-1
 date: 2020-03-05 14:37:00
 tags: [随笔,UNIX]
-categories: [软件,UNIX]
+categories: [软件,OS]
 ---
 
 <center><strong>UNIX-PIPES概述</strong></center>

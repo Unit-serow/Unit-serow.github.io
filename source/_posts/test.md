@@ -149,5 +149,53 @@ top: true
 
 ---
 
+<img src="/images/GNU-1.png" width="60%" height="60%">
+
+* 图片来源于: https://zh.wikipedia.org/wiki/GNU%E8%A8%88%E5%8A%83
+
+---
+
+### GNU/Linux相关URL目录
+
+* Linux Foundation[跳转](https://www.linux.com/)
+> `https://www.linux.com/`
+
+* Linux Listing of Wikis[跳转](https://www.wiki.kernel.org/)
+> `https://www.wiki.kernel.org/`
+
+* Linux 内核归档 (The Linux Kernel Archives)[跳转](https://www.kernel.org/)
+> `https://www.kernel.org/`
+
+* Linux 内核文档 (The Linux Kernel documentation)[跳转](https://www.kernel.org/doc/html/latest/)
+> `https://www.kernel.org/doc/html/latest/`
+
+* Linux 手册页项目 (The Linux man-pages project)[跳转](https://www.kernel.org/doc/man-pages/)
+> `https://www.kernel.org/doc/man-pages/`
+
+* Linux kernel 发行版镜像归档[跳转](https://mirrors.kernel.org/)
+> `https://mirrors.kernel.org/`
+
+* Kernel.org-Git存储库[跳转](https://git.kernel.org/)
+> `https://git.kernel.org/`
+
+* GNU[跳转](https://www.gnu.org/)
+> `https://www.gnu.org/`
+
+* FSF[跳转](https://www.linuxfoundation.org/)
+> `https://www.linuxfoundation.org/`
+
+---
+
+* GNU Hurd[跳转](https://www.gnu.org/software/hurd/)
+> `https://www.gnu.org/software/hurd/`
+
+* GNU Compiler Collection[跳转](https://gcc.gnu.org/)
+> `https://gcc.gnu.org/`
+
+* GNOME[跳转](https://www.gnome.org/)
+> `https://www.gnome.org/`
+
+---
+
 
 

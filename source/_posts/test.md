@@ -197,5 +197,20 @@ top: true
 
 ---
 
+* 廖雪峰
+> https://www.liaoxuefeng.com/
+
+* Social-icons 图标
+> https://fontawesome.com/icons?d=gallery
+> https://www.easyicon.net/iconsearch/iconset:social-icons/
+
+* next主题优化
+> https://www.dazhuanlan.com/2019/12/11/5df04019e1c6a/
+> https://bestzuo.cn/posts/blog-establish.html
+> https://io-oi.me/
+> https://enfangzhong.github.io/
+
+---
+
 
 

@@ -212,5 +212,11 @@ top: true
 
 ---
 
+* Huihoo-Free Software 相关手册
+> https://docs.huihoo.com/
+> https://docs.huihoo.com/homepage/shredderyin/emacs.html
+
+---
+
 
 

@@ -118,5 +118,22 @@ Markdown所一种可以使用普通文本编辑器编写的标记语言
 
 ---
 
+### 补充内容
+
+**NEXT主题优化参考:**
+
+* 深度优化
+> https://www.ipyker.com/2019/05/01/hexo-next.html
+> https://www.cnblogs.com/harlanzhang/p/10926305.html
+
+* 成型配置
+> https://github.com/ipyker/hexo-next-theme
+
+* Huihoo
+> https://docs.huihoo.com/
+> https://docs.huihoo.com/homepage/shredderyin/emacs.html
+
+---
+
 
 

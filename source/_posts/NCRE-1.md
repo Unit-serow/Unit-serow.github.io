@@ -2,7 +2,7 @@
 title: NCRE-1
 date: 2020-03-08 14:24:42
 tags: 随笔
-categories: [无,concept,Pure theory]
+categories: [无,concept]
 ---
 
 

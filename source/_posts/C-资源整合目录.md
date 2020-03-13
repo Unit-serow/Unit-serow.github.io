@@ -19,6 +19,9 @@ categories: [软件,C/C++]
 
 ### 参考书籍
 
+* EN-C Primer Plus
+* CN-C 程序设计语言
+* CN-数据结构与算法分析-C 语言实现
 * CN-C Primer Plus (第六版)
 > C11标准
 > 作者: Stephen Prata

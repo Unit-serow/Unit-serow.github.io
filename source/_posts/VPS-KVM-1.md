@@ -141,7 +141,43 @@ categories: [软件,虚拟化]
 > https://bwh88.net/cart.php?gid=1
 > https://bwg.net/
 
-* CN2: https://blog.sprov.xyz/2019/04/09/what-is-cn2-vps/#_CN2
+* CN2: `https://blog.sprov.xyz/2019/04/09/what-is-cn2-vps/#_CN2`
+
+---
+
+* shadowsocks server
+> https://github.com/shadowsocksr-backup/shadowsocksr
+> `$ apt-get install python-pip`
+> `$ pip install shadowsocks`
+
+* client
+> https://github.com/Jigsaw-Code/outline-client/
+> https://github.com/shadowsocks/shadowsocks-qt5/wiki/Installation
+> https://shadowsocks.org/en/download/clients.html
+
+**Debian**
+
+* 软件源
+> https://github.com/debiancn/repo
+
+* 直接拉取shadowsocks-qt5
+> `$ apt-get install shadowsocks-qt5 -y`
+
+* 软件源配置:
+```
+$ echo "deb https://repo.debiancn.org/ testing main" | sudo tee /etc/apt/sources.list.d/debiancn.list;
+$ wget https://repo.debiancn.org/pool/main/d/debiancn-keyring/debiancn-keyring_0~20161212_all.deb -O /tmp/debiancn-keyring.deb;
+$ sudo apt install /tmp/debiancn-keyring.deb;
+$ sudo apt update;
+$ rm /tmp/debiancn-keyring.deb;
+```
+
+* 清理源指令:
+```
+$ sudo apt purge debiancn-keyring;
+$ sudo rm -f /etc/apt/sources.list.d/debiancn.list;
+$ sudo apt update;
+```
 
 ---
 

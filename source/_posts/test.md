@@ -233,8 +233,12 @@ top: true
 **呈现位置规则:**
 
 * 开启mathjax: true
-* 正文公式(inline): $...$
-* 单独显示(display): $$...$$
+
+* 正文公式(inline): `$...$`
+
+* 单独显示(display): `$$...$$`
+
+* 列描述语句中若非特别指出均省略`$...$`
 
 ---
 
@@ -319,6 +323,27 @@ top: true
 
 * CN-https://www.jianshu.com/p/a0aa94ef8ab2/
 * EN-https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+
+---
+
+**区块补充内容:**
+
+* 自定义函数与其后面的字符需要由逗号分隔
+
+* 导数: `\prime`&`A′`
+
+CN-https://blog.csdn.net/liyuanbhu/article/details/50636416?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1
+CN-https://www.cnblogs.com/linxd/p/4955530.html
+CN-https://blog.csdn.net/chichoxian/article/details/76887198?utm_source=blogxgwz4
+CN-https://blog.csdn.net/l740450789/article/details/49488133/
+
+* ∑ 符号上界，下界与变数的表示方法
+> 使用`\limits`和`\nolimits`来修改符号缺省值
+> 独立公式缺省值为limits，而行间公式缺省值为nolimits
+> 表示方法: `\limits字符串`，下界在前，上界在后，有如`p = \sum\limits_{n=1}^N`
+
+* MathJax是一款运行在浏览器中的开源数学符号渲染引擎
+> 用于解析Latex、MathML和ASCIIMathML的标记语言
 
 ---
 

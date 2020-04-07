@@ -226,5 +226,101 @@ top: true
 
 ---
 
+### MathJax&LaTeX快速参考
+
+* mathjax快速参考，由latex渲染
+
+**呈现位置规则:**
+
+* 开启mathjax: true
+* 正文公式(inline): $...$
+* 单独显示(display): $$...$$
+
+---
+
+**字母修饰规则:**
+
+* 上标: `^字符`
+* 下标: `_字符`
+* 矢量: `\vec {字符串}/单一字符`
+* 字体: `\mathtt{字符串}` & `\mathbb{字符串}` & `\mathsf{字符串}`
+* 分组: `{}` 用于将相同等级的内容扩入其中，组成处理，即`10^{10}与10^10`之间的区别
+* 括号: 小括号`()`，方括号`[]`，尖括号`\langle`或`\rangle`，使用`\left`或`(\right)`使其符号大小与相邻公式相适应，该语句适用于所有括号类型，区别在于: `(\frac {x} {y})`与`\left(\frac {x} {y}\right)`
+* 求和: `\sum`字符串，有如: `\sum_{i=1}^n{a_i}`
+* 极限: `\lim`字符串，有如: `\lim_{x\to 0}`
+* 积分: `\int`字符串，有如: `\int_0^\infty{fxdx}`
+* 分式: `\frac{公式一/字符串}{公式二/字符串}`，全拼: fractions
+* 根式: `\sqrt[字符串] [字符串]`，前者为指数(根的指数)，后者为底数
+* 函数: `\函数名`，一般用于特殊函数，比如三角函数之类，`\ln x`
+* 空格: `字符\ 字符`或`字符\quad 字符`，前者为一个字符位置，后者为四个，其次LaTeX语法本身会忽略空格的存在
+
+---
+
+**矩阵修饰规则:**
+
+* 矩阵: 起始标记: \begin{matrix}，结束标记\end{matrix}，每一行末尾使用\\\来标记，元素之间以&分隔
+> 关于基本矩阵的详细内容可参考区块结尾的补充内容
+
+* 阵列: 需要array环境
+> 起始与结束的声明表示符: {array}
+> 对齐方式: 在{array}后以{}进行逐一声明
+> 左对齐: 1，居中: c，右对齐: r
+> 竖直线: 在声明对齐方式时，插入|建立竖直线
+> 插入水平线: \hline
+
+* 方程组: 需要cases环境
+> 起始与结束的声明标识符: {cases}
+
+**基本矩阵补充:**
+
+* 矩阵边框:
+> 在起始与结束标记处用下列词替换matrix
+> pmatrix: 小括号边框
+> bmatrix: 中括号边框
+> Bmatrix: 大括号边框
+> vmatrix: 单竖线边框
+> Vmatrix: 双竖线边框
+
+* 省略元素:
+> 横省略号: \cdots
+> 竖省略号: \vdots
+> 斜省略号: \ddots
+
+---
+
+**希腊字母 & 特殊符号:**
+
+|显示|命令|显示|命令|
+|:----:|:----:|:----:|:----:|
+|α|\alpha|β|\beta|
+|γ|\gamma|δ|\delta|
+|ε|\epsilon|ζ|\zeta|
+|η|\eta|θ|\theta|
+|ι|\iota|κ|\kappa|
+|λ|\lambda|μ|\mu|
+|ν|\nu|ξ|\xi| 
+|π|\pi|ρ|\rho|
+|σ|\sigma|τ|\tau|
+|υ|\upsilon|φ|\phi|
+|χ|\chi|ψ|\psi|
+|ω|\omega|
+
+* 二十三个字母
+* 大写希腊字母，将命令首字母大写
+* 斜体希腊字母，将命令前加上var前缀
+
+* 特殊符号列表图片:
+
+<img src="/images/特殊符号-1.png" width="40%" height="40%">
+
+---
+
+**参考文献:**
+
+* CN-https://www.jianshu.com/p/a0aa94ef8ab2/
+* EN-https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
+
+---
+
 
 

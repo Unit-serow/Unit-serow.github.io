@@ -228,6 +228,8 @@ top: true
 
 ### MathJax&LaTeX快速参考
 
+* 常用参考: https://www.jianshu.com/p/a7fa1ed4ca20
+
 * mathjax快速参考，由latex渲染
 
 **呈现位置规则:**
@@ -344,6 +346,13 @@ CN-https://blog.csdn.net/l740450789/article/details/49488133/
 
 * MathJax是一款运行在浏览器中的开源数学符号渲染引擎
 > 用于解析Latex、MathML和ASCIIMathML的标记语言
+
+* 复合运算符: \circ
+> 复合函数&抽象函数&可测函数
+> 复合映射乘法符号
+
+CN-https://www.jianshu.com/p/a7fa1ed4ca20
+CN-https://blog.csdn.net/xuejianbest/article/details/80391999
 
 ---
 

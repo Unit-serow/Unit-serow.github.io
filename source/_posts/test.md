@@ -490,5 +490,20 @@ CN-https://blog.csdn.net/xuejianbest/article/details/80391999
 
 ---
 
+### 相关资源
+
+* 网盘资源
+> https://m.pantianxia.com/
+
+* 数学分析-参考资源归档
+> 链接：https://pan.baidu.com/s/1RDPzkQq-GKPaoMClN0_XeQ 
+> 提取码：hf4g
+
+* 压缩包版本
+> 链接：https://pan.baidu.com/s/19ImKDQWl7MYLX3Ej_JmJ4w 
+> 提取码：mfyi
+
+---
+
 
 

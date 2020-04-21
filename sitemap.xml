@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://unit-serow.github.io/about/index.html</loc>
+    
+    <lastmod>2020-04-21T19:15:10.253Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://unit-serow.github.io/2020/01/28/%E5%9F%BA%E4%BA%8Edebian%E4%BD%BF%E7%94%A8hexo%E6%A1%86%E6%9E%B6-next%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA%E5%B9%B6%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2/</loc>
     
-    <lastmod>2020-04-21T17:44:08.716Z</lastmod>
+    <lastmod>2020-04-21T19:14:30.675Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>https://unit-serow.github.io/2020/04/16/%E9%9A%8F%E7%AC%94-2020-04-16/</loc>
     
     <lastmod>2020-04-17T21:34:48.624Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://unit-serow.github.io/about/index.html</loc>
-    
-    <lastmod>2020-04-15T19:32:43.107Z</lastmod>
     
   </url>
   

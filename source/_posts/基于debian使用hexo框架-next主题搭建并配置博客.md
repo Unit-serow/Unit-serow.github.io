@@ -142,19 +142,33 @@ Markdown所一种可以使用普通文本编辑器编写的标记语言
 **Hugo**
 
 * 基本配置：
+
 > 所需工具：hugo、apt-get、git`
+
 > 安装hugo：`$ brew install hugo`
+
 > 检查hugo：`$ hugo version`
+
 > 本地目录：`$ hugo new site file_name`
+
 > 博客根目录：`$ cd file_name`
+
 > 克隆主题：$ git clone theme_url
+
 > 主题根目录：$ cd themes
+
 > 基于主题本地启动：`$ hugo server -t theme_name --buildDrafts`
+
 > 配置文件：`$ vim config.toml`
+
 > 配置主题：`$ theme="archie"`
+
 > 创建文章且以unit为根目录：`$ hugo new unit/file_name.md`
+
 > 文章根目录：`$ cd content`
+
 > 文章目录：`$ cd unit`
+
 > 文章编辑：`$ vim file_name`
 
 * 官方主题：https://themes.gohugo.io/

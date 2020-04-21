@@ -1,5 +1,5 @@
 ---
-title: 基于debian使用hexo框架-next主题搭建并配置博客
+title: hexo & hugo
 date: 2020-01-28 23:18:46
 tags: hexo
 categories: 软件
@@ -211,6 +211,10 @@ CPC_2721304117
 serow.github.io
 2721304117@qq.com
 asd5830408 & CPC_2721304117
+
+---
+
+* 创建仓库与关联仓库时仓库的URL需要小写
 
 ---
 

@@ -135,5 +135,70 @@ Markdown所一种可以使用普通文本编辑器编写的标记语言
 
 ---
 
+### 补充内容(Hugo)-1
+
+* 2020-04-21/pm12-21
+
+**Hugo**
+
+* 基本配置：
+> 所需工具：hugo、apt-get、git`
+> 安装hugo：`$ brew install hugo`
+> 检查hugo：`$ hugo version`
+> 本地目录：`$ hugo new site file_name`
+> 博客根目录：`$ cd file_name`
+> 克隆主题：$ git clone theme_url
+> 主题根目录：$ cd themes
+> 基于主题本地启动：`$ hugo server -t theme_name --buildDrafts`
+> 配置文件：`$ vim config.toml`
+> 配置主题：`$ theme="archie"`
+> 创建文章且以unit为根目录：`$ hugo new unit/file_name.md`
+> 文章根目录：`$ cd content`
+> 文章目录：`$ cd unit`
+> 文章编辑：`$ vim file_name`
+
+* 官方主题：https://themes.gohugo.io/
+* 本地主机：localhost:1313
+
+---
+
+* 远端配置：
+> Git新建仓库：`$ unit-serow.github.io`
+> 上传至远端：`$ hugo --theme=themes_name --baseUrl="https://2721304117.github.io/" --buildDrafts`
+> 生成的pulic目录即为仓库本地博客内容
+> 2721304117.github.io
+
+* 将pulic目录推向远端：
+> 进入目录：`$ cd pulic`
+> 初始化仓库：`$ git init`
+> 添加：`$ git add .`
+> 预载：`$ git commit -m "file_name"`
+> 关联远端：`$ git remote add origin https://github.com/2721304117/2721304117.github.io.git`
+> 推到主分支：`$ git push -u origin master`
+
+---
+
+* 主题收藏（极简风）：
+> `$ git clone https://github.com/athul/archie.git`
+> `$ git submodule add https://github.com/davidhampgonsalves/hugo-black-and-light-theme.git themes/black-and-light`
+> `$ git submodule add https://gitlab.com/maxlefou/hugo.386 themes/hugo.386`
+
+* hugo：
+> 2721304117@qq.com
+> 2721304117.github.io
+
+---
+
+unit.serow@gmail.com
+CPC_2721304117 & asd/A_sd/Asd5830408
+Unit-serow.github.io
+CPC_2721304117
+
+serow.github.io
+2721304117@qq.com
+asd5830408 & CPC_2721304117
+
+---
+
 
 

@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://unit-serow.github.io/2020/02/18/Debian-1/</loc>
+    
+    <lastmod>2020-04-22T15:52:27.755Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://unit-serow.github.io/2020/04/22/%E9%9A%8F%E7%AC%94-2020-04-22/</loc>
+    
+    <lastmod>2020-04-22T15:51:22.293Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://unit-serow.github.io/about/index.html</loc>
     
     <lastmod>2020-04-21T19:15:10.253Z</lastmod>
@@ -803,13 +817,6 @@
     <loc>https://unit-serow.github.io/2020/02/23/Debian-2/</loc>
     
     <lastmod>2020-02-23T10:59:35.171Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://unit-serow.github.io/2020/02/18/Debian-1/</loc>
-    
-    <lastmod>2020-02-22T15:12:24.354Z</lastmod>
     
   </url>
   

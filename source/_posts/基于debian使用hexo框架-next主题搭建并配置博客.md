@@ -218,5 +218,11 @@ asd5830408 & CPC_2721304117
 
 ---
 
+* beginnerN
+> g2721304117@gmail.com
+> https://zhuanlan.zhihu.com/p/57361697
+
+---
+
 
 

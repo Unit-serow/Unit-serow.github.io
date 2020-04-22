@@ -277,4 +277,17 @@ dpkg-reconfigure locales
 
 ---
 
+### 补充内容-1
+
+* 卸载软件包、删除配置、找出软件包相关程序、找出所有相关文件：
+> `$ sudo apt-get --purge remove 软件`
+> `$ sudo apt-get autoremove`
+> `$ sudo dpkg --get-selections|grep 软件包`
+> `$ sudo find / -name 软件包*`
+
+* 大致的删除流程应该是：3、1、2、1、4，即先找出软件包相关程序，然后逐一删掉，然后找出软件包相关文件，逐一删掉，最后删除软件包本身。
+
+---
+
+
 

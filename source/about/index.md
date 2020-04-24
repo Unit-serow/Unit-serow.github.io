@@ -4,8 +4,7 @@ date: 2020-01-28 18:21:11
 type: "about"
 ---
 
-* 主页
-> beginnern.github.io
+* [主页](beginnern.github.io)
 
 ### 说明
 

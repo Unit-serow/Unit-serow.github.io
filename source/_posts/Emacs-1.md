@@ -465,5 +465,134 @@ https://github.com/syl20bnr/spacemacs.git
 
 ---
 
+## 补充内容
+
+### 简要说明：
+
+* emacs 参考资料：
+> https://blog.csdn.net/sea1105/article/details/52346188
+> https://www.jianshu.com/p/ab585e1ef365
+> https://www.jianshu.com/p/82d628a6f7ff#org9b503cc
+> https://v.youku.com/v_show/id_XMTUwNjU0MjE0OA==.html?spm=a2hbt.13141534.app.5~5!2~5!2~5~5~5!2~5~5!2~5!2~5!2~5~5!21~A
+> https://blog.csdn.net/elloop/article/details/50769682
+> https://www.jianshu.com/p/ebda4c071e83
+> https://my.oschina.net/noke/blog/2208018
+> http://ftp.gnu.org/gnu/emacs/windows/emacs-26/
+> https://github.com/crazylxr/spacemacas-zh_CH-doc
+> http://mpwang.github.io/2019/02/06/productivity/
+
+---
+
+* 基本：C-x C-f 新建、C-x C-s 保存、C-x C-w 另存、Cx k 关闭buffer、C-x C-c 关闭emacs
+
+* 查询：
+
+字符为单位操作：C + f 后一个、b 前一个、p 上一行、n 下一行
+单词为单位操作：M + f 后一个、b 前一个、C + a 行首、e 行尾
+以文件为单位：C + v 上一页、M + v 下一页、M-< & M-> 文件开头 & 文件末尾
+
+* 删除：
+
+C + d 删除后一个字符单位、M + d 删除后一个单词单位、删除前一个的字符与单词分别为：Del、M + Del
+C + k 移除一行
+
+* 复制 & 剪切
+
+C + @ 设定标记位置
+C + w 剪切标记区域内容
+M + w 复制标记区域内容
+C + y 召回复制或剪切的内容
+M + y 召回更早的内容
+
+* 其它：
+
+M + c 首字母大写
+C + g 停止宏
+C + x u/C + _ 撤销
+C + s 向后搜索
+C + r 向前搜索
+C + x 0/1/2/3 关闭当前窗格/关闭除当前窗格的所有窗格/水平分隔视窗/垂直分隔视窗
+C + x o 切换视窗
+
+* 帮助：
+
+C + h c 快捷键命令说明
+C + h k 快捷键指令作用
+C + h f 函数功能
+C + h b 查看当前buffer可用快捷键
+C + h t 打开emacs教程
+
+---
+
+* 对于./emacs的编辑：
+
+./emacs是当前正在使用的emacs的配置文件，由lisp所写，对其进行配置以完成定制
+通常就是向配置文件中添加lisp语句，每次配置完需要重启emacs才能看到效果
+在minibuffer内键入M + x & eval + buffer 以刷新buffer，即立即生效
+
+* 可以对软件内自带的配置进行调整，有如：
+
+```
+;; 设置标题栏，这里设置为Welcome to Emacs world! 
+(setq frame-title-format "Welcome to Emacs world! ") 
+```
+
+* 安装插件：
+
+emacs的插件文件通常以el为后缀，把插件文件下载下来后放到某一个目录当中，建议放到`~/.emacs.d/`，随后执行以下两条语句便可安装：
+
+```
+(add-to-list 'load-path "~/.emacs.d/") 
+(require 'pluginname)
+```
+
+还可以直接编辑`~/.emacs.d/init`文件，init是emacs程序线程的启动文件，所以不需要`.el`后缀
+还可以在emacs内执行：`M-x package-install` 直接安装插件
+直接在emacs内执行指令：`M-x customize RET` 进入设置页面，RET是回车键
+
+* 添加若干个包管理（用于下载插件），也就是软件源：
+
+```
+(require 'package) ;; You might already have this line
+(add-to-list 'package-archives '("仓库名（标识）" . "仓库所在URL") t)
+(add-to-list 'package-archives '("仓库名" . "仓库所在URL") t)
+(package-initialize)
+```
+
+另一种写法，这里用清华的镜像源（mirrors）：
+
+```
+(require 'package)
+(setq package-enable-at-startup nil)
+(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/") ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+(package-initialize)
+```
+
+* 删除工具栏：`(tool-bar-mode 0)`
+
+* 行列模式：
+
+```
+(global-linum-mode t) ;侧边显示行号
+(column-number-mode t) ;状态栏显示行列信息
+(show-paren-mode t) ;括号匹配高亮
+(global-hl-line-mode 1) ;当前行高亮
+```
+
+* 切换主题：`(load-theme '主题文件命名 t)`，从包管理内的仓库下载
+
+---
+
+* 几个比较强大的插件：
+
+异步编程：multiple-cursors
+显示同步：session
+自动补全：company，(add-hook 'after-init-hook'global-company-mode)
+语法检查：flycheck，(add-hook 'after-init-hook'global-flycheck-mode)
+
+* 主机配置文件：C-h v user-init-file
+
+---
+
 
 
